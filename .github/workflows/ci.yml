@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-site:
+    name: ci / build-site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate structure
+        run: python3 scripts/check_site.py --check
+
+  linkcheck:
+    name: ci / linkcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress "**/*.md"
+
