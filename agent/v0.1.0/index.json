@@ -1,0 +1,10 @@
+{
+  "schema_version": "x07.website.agent-index@0.1.0",
+  "toolchain_version": "0.1.0",
+  "docs_bundle_sha256": "1368165dc04f1a75706e07dbc3c918b9ee4e367250cdabb6d21fa925e357ac75",
+  "schemas_dir": "schemas/",
+  "skills_dir": "skills/",
+  "stdlib_index_url": "stdlib/index.json",
+  "examples_dir": "examples/",
+  "manifest_url": "manifest.json"
+}

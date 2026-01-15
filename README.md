@@ -8,7 +8,7 @@ This repo should contain the website build system and deployment configuration, 
 
 ## Repo layout
 
-- `docs/`: website-rendered human docs (synced from `x07lang/x07/docs/`)
-- `agent/`: machine-first docs (schemas/contracts/skills; synced)
-- `versions.json`: maps toolchain versions to docs bundles
-
+- `docs/`: website-rendered human docs (synced + versioned)
+- `agent/`: machine-first docs (synced + versioned; JSON files are served as-is)
+- `site/`: static site source (Docusaurus)
+- `versions/toolchain_versions.json`: maps toolchain versions to synced bundles (and marks `latest`)

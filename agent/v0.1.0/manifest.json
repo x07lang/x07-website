@@ -1,0 +1,389 @@
+{
+  "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
+  "toolchain_version": "0.1.0",
+  "docs_bundle_sha256": "1368165dc04f1a75706e07dbc3c918b9ee4e367250cdabb6d21fa925e357ac75",
+  "human_docs": [
+    {
+      "path": "SUMMARY.md",
+      "sha256": "f7163f3c3dfd4b4ff176563599cb3f4311cf5560932c3988e9392d5c2e1a7b8b",
+      "size": 1263
+    },
+    {
+      "path": "about.md",
+      "sha256": "0f9c357735bfd4283f6e03cd9cd31eb65bf20467e3fb35f4dc7b5f379518fbb4",
+      "size": 864
+    },
+    {
+      "path": "contributing.md",
+      "sha256": "21a43e61770b218d60078af2d865e2f8fddde4287a1751fd1b3d4bb691ab1d64",
+      "size": 589
+    },
+    {
+      "path": "faq.md",
+      "sha256": "9f8d5c4a402d3fdefa35110096f83ec6920fc6a28d1a8b827dee10efe36124c4",
+      "size": 889
+    },
+    {
+      "path": "getting-started/agent-workflow.md",
+      "sha256": "1f24e1c7331378c9262478ae0eb3bd9ddca09958b589c35308ebc294ef8900f8",
+      "size": 1842
+    },
+    {
+      "path": "getting-started/first-project.md",
+      "sha256": "a7d87f22f8c88d7f461f101faa18f0b0b2ff7d7eb38574349335db9a8a4cacf9",
+      "size": 1246
+    },
+    {
+      "path": "getting-started/install.md",
+      "sha256": "50b41e717029598aee8b65501f5e8e7e131f5642a09c9af396d1c2c1a2e7c5ec",
+      "size": 1596
+    },
+    {
+      "path": "governance.md",
+      "sha256": "57545cfbae20dd799f493949575929fb2d4748a0f20acb61e40b6416aa44408c",
+      "size": 611
+    },
+    {
+      "path": "guides/cli-apps.md",
+      "sha256": "0de4f2e601ff2cafb25aed9648386d02fab5cc6e045dd171a56a1cf3597be2a8",
+      "size": 713
+    },
+    {
+      "path": "guides/databases.md",
+      "sha256": "08286ba61f9797fb656fabf6818019cddfb8100e46233f4be72a97b655f29fd8",
+      "size": 676
+    },
+    {
+      "path": "guides/networking.md",
+      "sha256": "68f687465b6c9960f36ae1708ed90e34dc888cc0a619da104c3ff363f3e80a7a",
+      "size": 541
+    },
+    {
+      "path": "guides/web-apps.md",
+      "sha256": "1d47cd97f3ed66d32c06fd2b87b83909c06e425080f4b140c8a05c408b4163fa",
+      "size": 589
+    },
+    {
+      "path": "index.md",
+      "sha256": "494c5842cfe418718c362ff11d1f09b6f4ac447f69ce49f00a805be6b195c6ba",
+      "size": 3387
+    },
+    {
+      "path": "language/concurrency-multiprocessing.md",
+      "sha256": "28eea8eee7e08bd5380c9c588b7b3c956d714d0be691cb112a7d319ae65b773a",
+      "size": 960
+    },
+    {
+      "path": "language/overview.md",
+      "sha256": "10f9c7eb75600fec34baa43f75a29fad82073eb88074d485aeaed910004ee826",
+      "size": 1300
+    },
+    {
+      "path": "language/syntax-x07ast.md",
+      "sha256": "ea1e408e11554057500009815ab778784493966f79512c98628f06f2b7e1630e",
+      "size": 1462
+    },
+    {
+      "path": "language/types-memory.md",
+      "sha256": "aac03ba1368176da2c1cbfe5f141b4ea75e0865276529747dc1788581b089004",
+      "size": 1960
+    },
+    {
+      "path": "libraries/agentic-design.md",
+      "sha256": "daaec3fa4c6167b48a6e33d0b7deae91b1c94219a196c246d758762e7096f01a",
+      "size": 3016
+    },
+    {
+      "path": "libraries/external.md",
+      "sha256": "6bb27c98a6c8c23145a13eb066e3897f70ecbf8fc426e2d511cb5445753609d2",
+      "size": 577
+    },
+    {
+      "path": "libraries/stdlib.md",
+      "sha256": "c8882efa9690d17e032d41d8851eb710f858c4395e9c6b973b6e5e0af690c227",
+      "size": 292
+    },
+    {
+      "path": "official-builds.md",
+      "sha256": "513c09402c1cb26fbfacce19596a80b88416bdc4898e050abd7057fef5b8a44d",
+      "size": 338
+    },
+    {
+      "path": "packages/index.md",
+      "sha256": "a534c49a7667005daf3ad0243b9bad151ebfe57a57970ea669a8da5123a110d1",
+      "size": 492
+    },
+    {
+      "path": "packages/publishing.md",
+      "sha256": "1b19c96b6191af35696d6daf34b53a354f8bce6fe99b916595ff5f1aed1404cd",
+      "size": 426
+    },
+    {
+      "path": "references.md",
+      "sha256": "3d3a830b307ae82abb46262ccec4c6295c7093afe3d9fff7b9e9f76f14b2b0c8",
+      "size": 783
+    },
+    {
+      "path": "releases.md",
+      "sha256": "bfc71b5695311cb6dc20bd531c8d241d08fc9ba90032c2fd4d48eeeb1da33b6f",
+      "size": 503
+    },
+    {
+      "path": "spec/language-guide.md",
+      "sha256": "f760f4aa15c2c359b7ed0cbdd6308d97116cf0e8ea4789024b51b77fbc7b18ad",
+      "size": 27715
+    },
+    {
+      "path": "stability.md",
+      "sha256": "a35c75e8ab64799a9aea71188d5810adfbbdbdd1f2730f5798df2b1366e87f69",
+      "size": 443
+    },
+    {
+      "path": "toolchain/cli.md",
+      "sha256": "40b5a3804510188590c7a47884c08df4be73616bf7ab84efd7af97505b0d5889",
+      "size": 1236
+    },
+    {
+      "path": "toolchain/diagnostics-repair.md",
+      "sha256": "02b753d8a55e13eb4896e0cde8452d2da06f80eefaf54be405bb3083951cc058",
+      "size": 808
+    },
+    {
+      "path": "toolchain/testing.md",
+      "sha256": "250cc1c8bd5304cbe4f929904cdbc37c3584fce0ce1570d52dd650922e737bed",
+      "size": 602
+    },
+    {
+      "path": "versioning-policy.md",
+      "sha256": "adbd94adb5642ce3318b6200bc206fedf7aa0865b8a966fbbdbe166792f7b4af",
+      "size": 689
+    },
+    {
+      "path": "versioning.md",
+      "sha256": "413e45a64dcd0178e431e9852936df4f58a64d8880d699dfc6218a93959b2969",
+      "size": 303
+    },
+    {
+      "path": "worlds/fixture-worlds.md",
+      "sha256": "f3dee867c6fa1a7151e60f65e690b39ec9f428c2da6373218d2b968fcfbe10c6",
+      "size": 987
+    },
+    {
+      "path": "worlds/index.md",
+      "sha256": "8b30789406201b3bbc4605cbc4ae5aa730df5220761f8f2688ca72dc30070f19",
+      "size": 1108
+    },
+    {
+      "path": "worlds/os-worlds.md",
+      "sha256": "31021b2cb8c92416922c67ce23ec1660816acd8c0dd8293ccd5a5a05f9d06f72",
+      "size": 985
+    },
+    {
+      "path": "x07import/README.md",
+      "sha256": "bfe5e0b8d82d340b4f86f4f06778e6709bab4b1cf13e8bd109da99cab8789389",
+      "size": 1702
+    },
+    {
+      "path": "x07import/diagnostics.md",
+      "sha256": "9393687a6b219aea8f1b5466d6aa56790b2518da8dba13f11aeac8388493de3a",
+      "size": 1707
+    }
+  ],
+  "agent": [
+    {
+      "path": "examples/01_echo.x07.json",
+      "sha256": "a45f5071313f0e88d2378677e87a2fb5e573f54c2ecbd97a3e6270c0ad9cf8ea",
+      "size": 130
+    },
+    {
+      "path": "examples/02_length.x07.json",
+      "sha256": "15de582acb1c910524dfba0553028d5953d5b4e7cc227dee5b1d0c3a7019d235",
+      "size": 149
+    },
+    {
+      "path": "examples/03_reverse.x07.json",
+      "sha256": "6e255e73f034b95ebf8bc60286cac49b8c206c2d1143904382fd9a298b839b1f",
+      "size": 145
+    },
+    {
+      "path": "examples/04_sum_bytes.x07.json",
+      "sha256": "c083fb041a37bd96291f6dac2bb1438694880309a119b1d7a301dedc3268589d",
+      "size": 278
+    },
+    {
+      "path": "examples/05_max_byte.x07.json",
+      "sha256": "9bac3ff2420d488057ca3b82264a2ad023b4eb16833377d7d41c2942c0cc3467",
+      "size": 370
+    },
+    {
+      "path": "examples/06_count_first.x07.json",
+      "sha256": "32c9d24092a4cf71a2c7b070ebe82d8efa75ce67d844d0048fdb4b3346e2036d",
+      "size": 403
+    },
+    {
+      "path": "examples/07_first_line_len.x07.json",
+      "sha256": "bd4eb2d3891fba55e9df606027b9f8f2866e570b31551fc2e1ca662d5e323b11",
+      "size": 361
+    },
+    {
+      "path": "examples/08_is_palindrome.x07.json",
+      "sha256": "03fa06d40eee9c146298820db7fcf41d63ac321393219a1ba03fe92398d66b83",
+      "size": 601
+    },
+    {
+      "path": "examples/09_word_count.x07.json",
+      "sha256": "1213bbc5b4252b4a3a548f113270e436707b55c0863b4cc646b908334abcd472",
+      "size": 515
+    },
+    {
+      "path": "examples/10_rle_encode.x07.json",
+      "sha256": "40ce3a6c287a10c4fb58d639fbd0c7d4525e8316f0ecbe91719dc8bc4de9682d",
+      "size": 773
+    },
+    {
+      "path": "examples/11_data_analyzer.x07.json",
+      "sha256": "26d8114826ed8361235e42c7b9c8c9ef83972885cc4339fe2c6da7f38ace1767",
+      "size": 4206
+    },
+    {
+      "path": "examples/12_async_mapreduce.x07.json",
+      "sha256": "317d7b9c379ff84df4356125fd394794a91c547ae991141626cd4540905c8497",
+      "size": 7297
+    },
+    {
+      "path": "index.json",
+      "sha256": "f26f05640c1e8bf9d9e52c89d1d2db439953a1fe69c1089100ce1a11a223ce9b",
+      "size": 345
+    },
+    {
+      "path": "schemas/run-os-policy.schema.json",
+      "sha256": "ce3e740f57e7d53e9d168fe0836576db2fb585999a4e473c678341d8a267edd9",
+      "size": 13668
+    },
+    {
+      "path": "schemas/x07ast.schema.json",
+      "sha256": "7766df5c4be539f1d13ecc1f1cb0603b0857cc7db1af673fbe9f53c09063d98f",
+      "size": 5750
+    },
+    {
+      "path": "schemas/x07cli.specrows.schema.json",
+      "sha256": "5a766ebed3120883760ec7ff0b3f53f02e55029b5b29474eec173b4440aa6ec5",
+      "size": 6858
+    },
+    {
+      "path": "schemas/x07diag.schema.json",
+      "sha256": "6f3ab1cc172298e6f8a0b179c9061ba15a2ef8457e1e78c5dea47b9176ecc8c7",
+      "size": 5820
+    },
+    {
+      "path": "schemas/x07patch.schema.json",
+      "sha256": "afd2b2089acaa4cf32aaae1e2c1dd5ffe9fd31e2b10fa3e9f0522f8c39447e9b",
+      "size": 372
+    },
+    {
+      "path": "schemas/x07test.schema.json",
+      "sha256": "60b87253bf80cce3ccf6b0bb06505601f57d1e647f53952d0f44b263ec81cd70",
+      "size": 7763
+    },
+    {
+      "path": "skills/dev-scripts/x07-build-run/build_run.py",
+      "sha256": "1efec8b595d23b4f07de45b78bbd0c8ba03571ff3addc976f36bce6574cd8cd9",
+      "size": 6773
+    },
+    {
+      "path": "skills/dev-scripts/x07-ffi-c/gen_header.py",
+      "sha256": "f506b079089abe73bf9b2b1aff3f320e6e9b4eb3361d0c81486c0ed871162496",
+      "size": 3155
+    },
+    {
+      "path": "skills/dev-scripts/x07-format/format.py",
+      "sha256": "8ff02084bf4ce1085877db4d88ea77289f54936bcf44dd1392f71bf811d5a634",
+      "size": 3336
+    },
+    {
+      "path": "skills/dev-scripts/x07-lint-repair/lint_repair.py",
+      "sha256": "c16793c8018dd6eaa32d59f5f1a259e827d7cc5764ebfa1216ce3f1ad728d30b",
+      "size": 6770
+    },
+    {
+      "path": "skills/dev-scripts/x07-os-run/run_os.py",
+      "sha256": "b244b2b77816a368ae43e1f926fa32ae218dd42067383d5d39a571e2bd2bfb9b",
+      "size": 2738
+    },
+    {
+      "path": "skills/pack/.codex/skills/README.md",
+      "sha256": "7c9ef2bd6b6d411eef086fdcf2a868bbf491f781aee5a9df86cf6ae70b85158f",
+      "size": 1084
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-agent-playbook/SKILL.md",
+      "sha256": "7f04395d3ab16b853fbcb1a1d9f3cfe676152b58017d6106d19e54afb3f7bdea",
+      "size": 2058
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-agent-playbook/references/design-rails.md",
+      "sha256": "afb14e24c06b8d879f148281ba30a3ec2c69d49d024edee674f6586f758e98e9",
+      "size": 1131
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-agent-playbook/references/tooling.md",
+      "sha256": "2dd0c3951edcaf2de8c9fe057fd262312447739cd6e10fd7688157562c474ed4",
+      "size": 773
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-build-run/SKILL.md",
+      "sha256": "79d34e9c7c328e3210dbddb680297c4d211e57e32d6b7a226c979fbbb37b65f4",
+      "size": 1051
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-concurrency/SKILL.md",
+      "sha256": "aebf574f6038b0a986718fda7ff2754444af36e9e4ac92076e8bfa89bc9ced5e",
+      "size": 765
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-ffi-c/SKILL.md",
+      "sha256": "67fd99b39dc91ff4c51d044036ead4504bbeba277e9c0df3d375c5e48bdc3ebf",
+      "size": 700
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-format/SKILL.md",
+      "sha256": "7fc8c30412ee172c4e9f72cabfc651306f8ad9be5fd4b15f7dca90735996a84e",
+      "size": 644
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-io-streams/SKILL.md",
+      "sha256": "88d33d767e7adfcba9d33783168b4741d762daf3ebef9644ebbe473b6caf75f1",
+      "size": 733
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-lint-repair/SKILL.md",
+      "sha256": "aa1593cb47ca726a20f755e4ed21fe3155bff6f83a812246383175d3c3389b6b",
+      "size": 1083
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-os-run/SKILL.md",
+      "sha256": "d947364ab5c12fb0d0bf7ad81a21658fdaa19da38909a4d6cec8844c9ed0a96d",
+      "size": 1099
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-os-run/references/run-os-policy.sample.json",
+      "sha256": "2f63890b00b3d18fecc7bbd7a484dee92f61b88f0cfa9e7617f2ed24b2d5a7c7",
+      "size": 1446
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-package/SKILL.md",
+      "sha256": "5625b1fdfd5f4894daf6b684c1cbb0376ee0c590d92e9d5da57b2d716917f17f",
+      "size": 1230
+    },
+    {
+      "path": "skills/pack/.codex/skills/x07-test/SKILL.md",
+      "sha256": "fd4f5c947f5943e31a6994dfb60ea2b911c0cfe5602f31e9cebba6ffd3acde0d",
+      "size": 615
+    },
+    {
+      "path": "stdlib/index.json",
+      "sha256": "3cf427cc01ad1588ad02b3e23c23c7b01cd709bc63f1ee84d55f0ea624218993",
+      "size": 11135
+    }
+  ]
+}
