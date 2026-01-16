@@ -7,6 +7,12 @@
 # Generated files
 .docusaurus
 .cache-loader
+/docs
+/redirects.generated.ts
+/sidebars.generated.ts
+/versioned_docs
+/versioned_sidebars
+/versions.json
 /static/agent
 /static/versions
 

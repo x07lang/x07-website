@@ -13,6 +13,9 @@ die() { log "error: $*"; exit 2; }
 [[ -f "${SITE_DIR}/package-lock.json" ]] || die "missing ${SITE_DIR}/package-lock.json (run npm install once)"
 [[ -d "${STATIC_DIR}" ]] || die "missing ${STATIC_DIR}"
 
+log "site: generate docusaurus inputs"
+python3 "${ROOT}/scripts/site/gen_docusaurus_inputs.py" --repo-root "${ROOT}"
+
 rm -rf "${STATIC_DIR}/agent" "${STATIC_DIR}/versions"
 cp -R "${ROOT}/agent" "${STATIC_DIR}/agent"
 cp -R "${ROOT}/versions" "${STATIC_DIR}/versions"

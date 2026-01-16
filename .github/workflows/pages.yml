@@ -41,7 +41,7 @@ jobs:
         run: python3 scripts/check_site.py --check
 
       - name: Build site
-        run: ./scripts/site/build.sh
+        run: ./scripts/ci/check_site_build.sh
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
