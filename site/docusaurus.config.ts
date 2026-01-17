@@ -122,18 +122,22 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {label: 'Getting started', to: '/docs/getting-started/'},
-            {label: 'Language', to: '/docs/language/'},
-            {label: 'Toolchain', to: '/docs/toolchain/'},
-            {label: 'Guides', to: '/docs/guides/'},
+            {label: 'Getting started', to: '/docs/getting-started/install'},
+            {label: 'Language', to: '/docs/language/overview'},
+            {label: 'Toolchain', to: '/docs/toolchain/cli'},
+            {label: 'Guides', to: '/docs/guides/cli-apps'},
           ],
         },
         {
           title: 'Agent',
           items: [
             {label: 'Agent portal', to: '/agent'},
-            {label: 'Latest manifest', href: '/agent/latest/manifest.json'},
-            {label: 'Schemas', href: '/agent/latest/schemas/x07ast.schema.json'},
+            {
+              html: '<a href="/agent/latest/manifest.json" data-noBrokenLinkCheck>Latest manifest</a>',
+            },
+            {
+              html: '<a href="/agent/latest/schemas/x07ast.schema.json" data-noBrokenLinkCheck>Schemas</a>',
+            },
           ],
         },
         {
