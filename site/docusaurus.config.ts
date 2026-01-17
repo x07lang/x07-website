@@ -130,6 +130,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {label: 'Getting started', to: '/docs/getting-started/install'},
+            {label: 'Download builds', href: 'https://github.com/x07lang/x07/releases'},
+            {label: 'Official builds', to: '/docs/official-builds'},
             {label: 'Language', to: '/docs/language/overview'},
             {label: 'Toolchain', to: '/docs/toolchain/cli'},
             {label: 'Guides', to: '/docs/guides/cli-apps'},

@@ -1,9 +1,12 @@
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 
 import {latestSkillsIndex} from './_agent_data';
 import {AGENT_ENDPOINTS} from './_snippets';
+
+const GITHUB_RELEASES_URL = 'https://github.com/x07lang/x07/releases';
 
 export default function AgentSkills(): ReactNode {
   return (
@@ -20,6 +23,12 @@ export default function AgentSkills(): ReactNode {
             </li>
           </ul>
         </div>
+
+        <p>
+          Toolchain releases also publish a skills pack tarball (<code>x07-skills-vX.Y.Z.tar.gz</code>)
+          on <a href={GITHUB_RELEASES_URL}>{GITHUB_RELEASES_URL}</a>. See{' '}
+          <Link to="/docs/getting-started/install">Install</Link> for setup.
+        </p>
 
         <div className="table-responsive">
           <table className="table">

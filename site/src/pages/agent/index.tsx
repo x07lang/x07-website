@@ -1,8 +1,8 @@
 import type {ReactNode} from 'react';
-import {useEffect, useMemo, useState} from 'react';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
+import toolchainVersionsFile from '@site/static/versions/toolchain_versions.json';
 
 import {
   latestExamplesIndex,
@@ -24,6 +24,10 @@ type ToolchainVersionsFile = {
   versions: ToolchainVersionEntry[];
 };
 
+const TOOLCHAIN_VERSIONS = toolchainVersionsFile as ToolchainVersionsFile;
+
+const GITHUB_RELEASES_URL = 'https://github.com/x07lang/x07/releases';
+
 function semverKey(v: string): [number, number, number] | null {
   const parts = v.split('.');
   if (parts.length !== 3) return null;
@@ -35,46 +39,40 @@ function semverKey(v: string): [number, number, number] | null {
   return [major, minor, patch];
 }
 
+function githubReleaseTag(toolchainVersion: string): string {
+  return `v${toolchainVersion}`;
+}
+
+function githubReleasePageUrl(toolchainVersion: string): string {
+  return `${GITHUB_RELEASES_URL}/tag/${githubReleaseTag(toolchainVersion)}`;
+}
+
+function githubReleaseDownloadUrl(toolchainVersion: string, assetName: string): string {
+  return `${GITHUB_RELEASES_URL}/download/${githubReleaseTag(toolchainVersion)}/${assetName}`;
+}
+
+function githubToolchainAssetName(
+  toolchainVersion: string,
+  platform: 'macOS' | 'Linux' | 'Windows',
+): string {
+  const base = `x07-v${toolchainVersion}-${platform}`;
+  return platform === 'Windows' ? `${base}.zip` : `${base}.tar.gz`;
+}
+
+function githubSkillsPackAssetName(toolchainVersion: string): string {
+  return `x07-skills-v${toolchainVersion}.tar.gz`;
+}
+
 export default function AgentPortal(): ReactNode {
-  const [versions, setVersions] = useState<ToolchainVersionsFile | null>(null);
-  const [versionsError, setVersionsError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    async function load(): Promise<void> {
-      try {
-        const res = await fetch(AGENT_ENDPOINTS.toolchain_versions);
-        if (!res.ok) {
-          throw new Error(`HTTP ${res.status}`);
-        }
-        const data = (await res.json()) as ToolchainVersionsFile;
-        if (cancelled) return;
-        setVersions(data);
-      } catch (e) {
-        if (cancelled) return;
-        setVersionsError(e instanceof Error ? e.message : String(e));
-      }
-    }
-
-    void load();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const sorted = useMemo(() => {
-    const entries = versions?.versions ?? [];
-    return entries.slice().sort((a, b) => {
-      const ak = semverKey(a.toolchain_version);
-      const bk = semverKey(b.toolchain_version);
-      if (!ak || !bk) return b.toolchain_version.localeCompare(a.toolchain_version);
-      if (ak[0] !== bk[0]) return bk[0] - ak[0];
-      if (ak[1] !== bk[1]) return bk[1] - ak[1];
-      if (ak[2] !== bk[2]) return bk[2] - ak[2];
-      return b.toolchain_version.localeCompare(a.toolchain_version);
-    });
-  }, [versions]);
+  const sorted = (TOOLCHAIN_VERSIONS.versions ?? []).slice().sort((a, b) => {
+    const ak = semverKey(a.toolchain_version);
+    const bk = semverKey(b.toolchain_version);
+    if (!ak || !bk) return b.toolchain_version.localeCompare(a.toolchain_version);
+    if (ak[0] !== bk[0]) return bk[0] - ak[0];
+    if (ak[1] !== bk[1]) return bk[1] - ak[1];
+    if (ak[2] !== bk[2]) return bk[2] - ak[2];
+    return b.toolchain_version.localeCompare(a.toolchain_version);
+  });
 
   const skillsCount = latestSkillsIndex.items.length;
   const schemasCount = latestSchemasIndex.items.length;
@@ -171,7 +169,11 @@ export default function AgentPortal(): ReactNode {
             <a href={AGENT_ENDPOINTS.toolchain_versions}>
               <code>{AGENT_ENDPOINTS.toolchain_versions}</code>
             </a>{' '}
-            and install it (see <Link to="/docs/getting-started/install">Install</Link>).
+            and download the matching release assets (toolchain builds + skills pack) from{' '}
+            <a href={GITHUB_RELEASES_URL}>
+              <code>{GITHUB_RELEASES_URL}</code>
+            </a>{' '}
+            (see <Link to="/docs/getting-started/install">Install</Link>).
           </li>
           <li>
             Create a program (see{' '}
@@ -196,16 +198,14 @@ export default function AgentPortal(): ReactNode {
           <a href={AGENT_ENDPOINTS.toolchain_versions}>
             <code>{AGENT_ENDPOINTS.toolchain_versions}</code>
           </a>
-          {versions?.latest_toolchain_version ? (
+          {TOOLCHAIN_VERSIONS.latest_toolchain_version ? (
             <>
               {' '}
-              (latest toolchain: <code>{versions.latest_toolchain_version}</code>)
+              (latest toolchain: <code>{TOOLCHAIN_VERSIONS.latest_toolchain_version}</code>)
             </>
           ) : null}
         </p>
-        {versionsError ? <p>Failed to load versions: {versionsError}</p> : null}
-        {!versionsError && !versions ? <p>Loading versions…</p> : null}
-        {versions ? (
+        {sorted.length ? (
           <div className="table-responsive">
             <table className="table">
               <thead>
@@ -214,11 +214,18 @@ export default function AgentPortal(): ReactNode {
                   <th>Human docs</th>
                   <th>Agent index</th>
                   <th>Agent manifest</th>
+                  <th>Downloads</th>
                 </tr>
               </thead>
               <tbody>
                 {sorted.map((e) => {
                   const v = e.toolchain_version;
+                  const releaseUrl = githubReleasePageUrl(v);
+                  const macosUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'macOS'));
+                  const linuxUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'Linux'));
+                  const windowsUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'Windows'));
+                  const skillsUrl = githubReleaseDownloadUrl(v, githubSkillsPackAssetName(v));
+                  const manifestUrl = githubReleaseDownloadUrl(v, 'release-manifest.json');
                   return (
                     <tr key={v}>
                       <td>
@@ -233,13 +240,23 @@ export default function AgentPortal(): ReactNode {
                       <td>
                         <a href={`/agent/v${v}/manifest.json`}>{`/agent/v${v}/manifest.json`}</a>
                       </td>
+                      <td>
+                        <a href={releaseUrl}>GitHub release</a>
+                        <div>
+                          <a href={macosUrl}>macOS</a> · <a href={linuxUrl}>Linux</a> ·{' '}
+                          <a href={windowsUrl}>Windows</a> · <a href={skillsUrl}>Skills</a> ·{' '}
+                          <a href={manifestUrl}>Manifest</a>
+                        </div>
+                      </td>
                     </tr>
                   );
                 })}
               </tbody>
             </table>
           </div>
-        ) : null}
+        ) : (
+          <p>No toolchain versions are published yet.</p>
+        )}
       </main>
     </Layout>
   );

@@ -28,3 +28,11 @@ In OS worlds, safety depends on policies and host sandboxing.
 X07 compiles to C and can call native shims for performance-critical workloads.
 
 The main performance risk is agent-written O(n²) logic—so the ecosystem includes budgets, metrics, and canonical builders.
+
+## Where do I download X07?
+
+Download the toolchain archives (macOS/Linux/Windows) and the optional skills pack from GitHub releases:
+
+- https://github.com/x07lang/x07/releases
+
+See [Install X07](getting-started/install.md).
