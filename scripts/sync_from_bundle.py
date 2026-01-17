@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 from pathlib import PurePosixPath
+import subprocess
 import shutil
 import tarfile
 import tempfile
@@ -15,6 +16,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     ap = argparse.ArgumentParser()
     ap.add_argument("--toolchain-version", required=True)
     ap.add_argument("--bundle", required=True, type=Path)
+    ap.add_argument("--check", action="store_true", help="fail if repo outputs are out of date")
     ap.add_argument(
         "--toolchain-repo",
         type=Path,
@@ -120,6 +122,40 @@ def _extract_human_docs_bundle(bundle_path: Path, out_dir: Path) -> list[dict]:
     return extracted
 
 
+def _apply_docs_overlays(*, repo_root: Path, docs_out: Path) -> None:
+    overlays_root = repo_root / "docs" / "_overlays"
+    if not overlays_root.is_dir():
+        return
+
+    for src in sorted(overlays_root.rglob("*")):
+        if not src.is_file():
+            continue
+        rel = src.relative_to(overlays_root)
+        if rel.name == ".DS_Store":
+            continue
+        if any(part.startswith("._") for part in rel.parts):
+            continue
+
+        dst = docs_out / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        dst.write_bytes(src.read_bytes())
+
+
+def _ignore_macos_metadata(_: str, names: list[str]) -> set[str]:
+    ignored: set[str] = set()
+    for name in names:
+        if name == ".DS_Store" or name.startswith("._"):
+            ignored.add(name)
+    return ignored
+
+
+def _ignore_skills_copy(src_dir: str, names: list[str]) -> set[str]:
+    ignored = _ignore_macos_metadata(src_dir, names)
+    if ".codex" in names:
+        ignored.add(".codex")
+    return ignored
+
+
 def _detect_stdlib_version(toolchain_repo: Path) -> str:
     std_dir = toolchain_repo / "stdlib" / "std"
     versions = []
@@ -181,11 +217,35 @@ def _copy_tree(src: Path, dst: Path) -> None:
     shutil.copytree(src, dst)
 
 
+def _snapshot_tree(root: Path) -> list[dict]:
+    files: list[dict] = []
+    for p in sorted(root.rglob("*")):
+        if not p.is_file():
+            continue
+        rel = p.relative_to(root)
+        if rel.name == ".DS_Store":
+            continue
+        if any(part.startswith("._") for part in rel.parts):
+            continue
+
+        files.append(
+            {
+                "path": rel.as_posix(),
+                "sha256": _sha256_path(p),
+                "size": p.stat().st_size,
+            }
+        )
+
+    files.sort(key=lambda e: e["path"])
+    return files
+
+
 def _sync_agent_portal(
     toolchain_version: str,
     docs_bundle_sha256: str,
     toolchain_repo: Path,
     out_dir: Path,
+    repo_root: Path,
 ) -> list[dict]:
     if out_dir.exists():
         shutil.rmtree(out_dir)
@@ -199,67 +259,43 @@ def _sync_agent_portal(
         toolchain_repo / "spec",
         toolchain_repo / "schemas",
     ]
-    copied: list[dict] = []
     for src in schema_srcs:
         if not src.is_dir():
             continue
         for p in sorted(src.glob("*.schema.json")):
-            data = p.read_bytes()
             dst = out_dir / "schemas" / p.name
-            dst.write_bytes(data)
-            copied.append(
-                {
-                    "path": dst.relative_to(out_dir).as_posix(),
-                    "sha256": hashlib.sha256(data).hexdigest(),
-                    "size": len(data),
-                }
-            )
+            dst.write_bytes(p.read_bytes())
 
     # Skills (raw folder sync)
     skills_src = toolchain_repo / "skills"
     if skills_src.is_dir():
-        shutil.copytree(skills_src, out_dir / "skills", dirs_exist_ok=True)
-        for p in sorted((out_dir / "skills").rglob("*")):
-            if not p.is_file():
-                continue
-            data = p.read_bytes()
-            copied.append(
-                {
-                    "path": p.relative_to(out_dir).as_posix(),
-                    "sha256": hashlib.sha256(data).hexdigest(),
-                    "size": len(data),
-                }
+        shutil.copytree(
+            skills_src,
+            out_dir / "skills",
+            dirs_exist_ok=True,
+            ignore=_ignore_skills_copy,
+        )
+
+        skills_pack = skills_src / "pack" / ".codex" / "skills"
+        if skills_pack.is_dir():
+            shutil.copytree(
+                skills_pack,
+                out_dir / "skills" / "pack" / "skills",
+                dirs_exist_ok=True,
+                ignore=_ignore_macos_metadata,
             )
 
     # Stdlib index
     stdlib_index_path = out_dir / "stdlib" / "index.json"
-    stdlib_index = _generate_stdlib_index(toolchain_repo, stdlib_index_path)
-    copied.append(
-        {
-            "path": stdlib_index_path.relative_to(out_dir).as_posix(),
-            "sha256": hashlib.sha256(
-                stdlib_index_path.read_bytes()
-            ).hexdigest(),
-            "size": stdlib_index_path.stat().st_size,
-        }
-    )
+    _generate_stdlib_index(toolchain_repo, stdlib_index_path)
 
     # Examples (a small, stable subset)
     examples_src = toolchain_repo / "examples"
     if examples_src.is_dir():
         for p in sorted(examples_src.glob("*.x07.json")):
-            data = p.read_bytes()
             dst = out_dir / "examples" / p.name
-            dst.write_bytes(data)
-            copied.append(
-                {
-                    "path": dst.relative_to(out_dir).as_posix(),
-                    "sha256": hashlib.sha256(data).hexdigest(),
-                    "size": len(data),
-                }
-            )
+            dst.write_bytes(p.read_bytes())
 
-    copied.sort(key=lambda e: e["path"])
     agent_index = {
         "schema_version": "x07.website.agent-index@0.1.0",
         "toolchain_version": toolchain_version,
@@ -272,15 +308,17 @@ def _sync_agent_portal(
     }
     index_path = out_dir / "index.json"
     index_path.write_text(json.dumps(agent_index, indent=2) + "\n", encoding="utf-8")
-    copied.append(
-        {
-            "path": index_path.relative_to(out_dir).as_posix(),
-            "sha256": hashlib.sha256(index_path.read_bytes()).hexdigest(),
-            "size": index_path.stat().st_size,
-        }
+
+    subprocess.check_call(
+        [
+            sys.executable,
+            str(repo_root / "scripts" / "generate_agent_indexes.py"),
+            "--agent-dir",
+            str(out_dir.relative_to(repo_root)),
+        ]
     )
-    copied.sort(key=lambda e: e["path"])
-    return copied
+
+    return _snapshot_tree(out_dir)
 
 
 def main(argv: list[str]) -> int:
@@ -305,6 +343,53 @@ def main(argv: list[str]) -> int:
         print(f"ERROR: toolchain repo not found: {toolchain_repo}", file=sys.stderr)
         return 2
 
+    if args.check:
+        versions_path = root / "versions" / "toolchain_versions.json"
+        versions = json.loads(versions_path.read_text(encoding="utf-8"))
+        versions_list = versions.get("versions", [])
+        if not isinstance(versions_list, list):
+            raise ValueError("versions.versions must be array")
+
+        found = False
+        for entry in versions_list:
+            if not isinstance(entry, dict):
+                continue
+            if entry.get("toolchain_version") != toolchain_version:
+                continue
+            if entry.get("docs_bundle_sha256") != docs_bundle_sha256:
+                raise SystemExit(
+                    f"[CHECK] versions/toolchain_versions.json sha mismatch for {toolchain_version}"
+                )
+            found = True
+            break
+        if not found:
+            raise SystemExit(
+                f"[CHECK] versions/toolchain_versions.json missing toolchain_version {toolchain_version}"
+            )
+
+        subprocess.check_call(
+            [
+                sys.executable,
+                str(root / "scripts" / "generate_agent_indexes.py"),
+                "--check",
+                "--agent-dir",
+                f"agent/v{toolchain_version}",
+            ]
+        )
+        subprocess.check_call(
+            [
+                sys.executable,
+                str(root / "scripts" / "generate_agent_indexes.py"),
+                "--check",
+                "--agent-dir",
+                "agent/latest",
+            ]
+        )
+        subprocess.check_call([sys.executable, str(root / "scripts" / "check_site.py"), "--check"])
+
+        print(f"ok: sync outputs up to date for {toolchain_version}")
+        return 0
+
     version_dir = f"v{toolchain_version}"
     docs_out = root / "docs" / version_dir
     agent_out = root / "agent" / version_dir
@@ -316,12 +401,14 @@ def main(argv: list[str]) -> int:
         if docs_out.exists():
             shutil.rmtree(docs_out)
         shutil.copytree(tmp_docs, docs_out)
+        _apply_docs_overlays(repo_root=root, docs_out=docs_out)
 
     synced_agent_files = _sync_agent_portal(
         toolchain_version=toolchain_version,
         docs_bundle_sha256=docs_bundle_sha256,
         toolchain_repo=toolchain_repo,
         out_dir=agent_out,
+        repo_root=root,
     )
 
     # Copy latest pointers
@@ -340,6 +427,15 @@ def main(argv: list[str]) -> int:
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
     )
     _copy_tree(agent_out, root / "agent" / "latest")
+
+    subprocess.check_call(
+        [
+            sys.executable,
+            str(root / "scripts" / "generate_agent_indexes.py"),
+            "--agent-dir",
+            "agent/latest",
+        ]
+    )
 
     # Update versions map
     versions_path = root / "versions" / "toolchain_versions.json"

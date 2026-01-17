@@ -251,9 +251,19 @@
       "size": 7297
     },
     {
+      "path": "examples/index.json",
+      "sha256": "bf80e733ad354c54d4ec9368a90942f1e23b982f6657178b38a4faa1f01bc965",
+      "size": 1743
+    },
+    {
       "path": "index.json",
-      "sha256": "f26f05640c1e8bf9d9e52c89d1d2db439953a1fe69c1089100ce1a11a223ce9b",
-      "size": 345
+      "sha256": "d64f10f054a1018b05e73a2d189b3f84969a9003f6c41b65793cc1bc8e0b370b",
+      "size": 480
+    },
+    {
+      "path": "schemas/index.json",
+      "sha256": "81d9169c67c33d81bfffc974b84eb38db4400fe96634bfd4b73032611340f88a",
+      "size": 1173
     },
     {
       "path": "schemas/run-os-policy.schema.json",
@@ -261,9 +271,24 @@
       "size": 13668
     },
     {
+      "path": "schemas/x07-host-runner.report.schema.json",
+      "sha256": "39b9b652c521712301ad702d41e868201cb1df514693f4af03857be6637fbbe9",
+      "size": 9890
+    },
+    {
+      "path": "schemas/x07-os-runner.report.schema.json",
+      "sha256": "7acd44f8c0a42de7030e4b65d7e836e53306a641547de40231797ea62ba1793c",
+      "size": 8963
+    },
+    {
       "path": "schemas/x07ast.schema.json",
       "sha256": "7766df5c4be539f1d13ecc1f1cb0603b0857cc7db1af673fbe9f53c09063d98f",
       "size": 5750
+    },
+    {
+      "path": "schemas/x07c.report.schema.json",
+      "sha256": "edc31920eaae1d3ae3d5bcfa08ab437645e869a30fca715dc90e4a0496d1e0bb",
+      "size": 937
     },
     {
       "path": "schemas/x07cli.specrows.schema.json",
@@ -311,72 +336,142 @@
       "size": 2738
     },
     {
-      "path": "skills/pack/.codex/skills/README.md",
+      "path": "skills/index.json",
+      "sha256": "6e26266e2dde37404a963a48ece70960c66c92fe2078fc41aeb7d5ab53b8ddb5",
+      "size": 3038
+    },
+    {
+      "path": "skills/pack/skills/README.md",
       "sha256": "7c9ef2bd6b6d411eef086fdcf2a868bbf491f781aee5a9df86cf6ae70b85158f",
       "size": 1084
     },
     {
-      "path": "skills/pack/.codex/skills/x07-agent-playbook/SKILL.md",
+      "path": "skills/pack/skills/x07-agent-playbook/SKILL.md",
       "sha256": "7f04395d3ab16b853fbcb1a1d9f3cfe676152b58017d6106d19e54afb3f7bdea",
       "size": 2058
     },
     {
-      "path": "skills/pack/.codex/skills/x07-agent-playbook/references/design-rails.md",
+      "path": "skills/pack/skills/x07-agent-playbook/references/design-rails.md",
       "sha256": "afb14e24c06b8d879f148281ba30a3ec2c69d49d024edee674f6586f758e98e9",
       "size": 1131
     },
     {
-      "path": "skills/pack/.codex/skills/x07-agent-playbook/references/tooling.md",
+      "path": "skills/pack/skills/x07-agent-playbook/references/tooling.md",
       "sha256": "2dd0c3951edcaf2de8c9fe057fd262312447739cd6e10fd7688157562c474ed4",
       "size": 773
     },
     {
-      "path": "skills/pack/.codex/skills/x07-build-run/SKILL.md",
+      "path": "skills/pack/skills/x07-build-run/SKILL.md",
       "sha256": "79d34e9c7c328e3210dbddb680297c4d211e57e32d6b7a226c979fbbb37b65f4",
       "size": 1051
     },
     {
-      "path": "skills/pack/.codex/skills/x07-concurrency/SKILL.md",
+      "path": "skills/pack/skills/x07-concurrency/SKILL.md",
       "sha256": "aebf574f6038b0a986718fda7ff2754444af36e9e4ac92076e8bfa89bc9ced5e",
       "size": 765
     },
     {
-      "path": "skills/pack/.codex/skills/x07-ffi-c/SKILL.md",
+      "path": "skills/pack/skills/x07-ffi-c/SKILL.md",
       "sha256": "67fd99b39dc91ff4c51d044036ead4504bbeba277e9c0df3d375c5e48bdc3ebf",
       "size": 700
     },
     {
-      "path": "skills/pack/.codex/skills/x07-format/SKILL.md",
+      "path": "skills/pack/skills/x07-format/SKILL.md",
       "sha256": "7fc8c30412ee172c4e9f72cabfc651306f8ad9be5fd4b15f7dca90735996a84e",
       "size": 644
     },
     {
-      "path": "skills/pack/.codex/skills/x07-io-streams/SKILL.md",
+      "path": "skills/pack/skills/x07-io-streams/SKILL.md",
       "sha256": "88d33d767e7adfcba9d33783168b4741d762daf3ebef9644ebbe473b6caf75f1",
       "size": 733
     },
     {
-      "path": "skills/pack/.codex/skills/x07-lint-repair/SKILL.md",
+      "path": "skills/pack/skills/x07-lint-repair/SKILL.md",
       "sha256": "aa1593cb47ca726a20f755e4ed21fe3155bff6f83a812246383175d3c3389b6b",
       "size": 1083
     },
     {
-      "path": "skills/pack/.codex/skills/x07-os-run/SKILL.md",
+      "path": "skills/pack/skills/x07-os-run/SKILL.md",
       "sha256": "d947364ab5c12fb0d0bf7ad81a21658fdaa19da38909a4d6cec8844c9ed0a96d",
       "size": 1099
     },
     {
-      "path": "skills/pack/.codex/skills/x07-os-run/references/run-os-policy.sample.json",
+      "path": "skills/pack/skills/x07-os-run/references/run-os-policy.sample.json",
       "sha256": "2f63890b00b3d18fecc7bbd7a484dee92f61b88f0cfa9e7617f2ed24b2d5a7c7",
       "size": 1446
     },
     {
-      "path": "skills/pack/.codex/skills/x07-package/SKILL.md",
+      "path": "skills/pack/skills/x07-package/SKILL.md",
       "sha256": "5625b1fdfd5f4894daf6b684c1cbb0376ee0c590d92e9d5da57b2d716917f17f",
       "size": 1230
     },
     {
-      "path": "skills/pack/.codex/skills/x07-test/SKILL.md",
+      "path": "skills/pack/skills/x07-test/SKILL.md",
+      "sha256": "fd4f5c947f5943e31a6994dfb60ea2b911c0cfe5602f31e9cebba6ffd3acde0d",
+      "size": 615
+    },
+    {
+      "path": "skills/x07-agent-playbook/SKILL.md",
+      "sha256": "7f04395d3ab16b853fbcb1a1d9f3cfe676152b58017d6106d19e54afb3f7bdea",
+      "size": 2058
+    },
+    {
+      "path": "skills/x07-agent-playbook/references/design-rails.md",
+      "sha256": "afb14e24c06b8d879f148281ba30a3ec2c69d49d024edee674f6586f758e98e9",
+      "size": 1131
+    },
+    {
+      "path": "skills/x07-agent-playbook/references/tooling.md",
+      "sha256": "2dd0c3951edcaf2de8c9fe057fd262312447739cd6e10fd7688157562c474ed4",
+      "size": 773
+    },
+    {
+      "path": "skills/x07-build-run/SKILL.md",
+      "sha256": "79d34e9c7c328e3210dbddb680297c4d211e57e32d6b7a226c979fbbb37b65f4",
+      "size": 1051
+    },
+    {
+      "path": "skills/x07-concurrency/SKILL.md",
+      "sha256": "aebf574f6038b0a986718fda7ff2754444af36e9e4ac92076e8bfa89bc9ced5e",
+      "size": 765
+    },
+    {
+      "path": "skills/x07-ffi-c/SKILL.md",
+      "sha256": "67fd99b39dc91ff4c51d044036ead4504bbeba277e9c0df3d375c5e48bdc3ebf",
+      "size": 700
+    },
+    {
+      "path": "skills/x07-format/SKILL.md",
+      "sha256": "7fc8c30412ee172c4e9f72cabfc651306f8ad9be5fd4b15f7dca90735996a84e",
+      "size": 644
+    },
+    {
+      "path": "skills/x07-io-streams/SKILL.md",
+      "sha256": "88d33d767e7adfcba9d33783168b4741d762daf3ebef9644ebbe473b6caf75f1",
+      "size": 733
+    },
+    {
+      "path": "skills/x07-lint-repair/SKILL.md",
+      "sha256": "aa1593cb47ca726a20f755e4ed21fe3155bff6f83a812246383175d3c3389b6b",
+      "size": 1083
+    },
+    {
+      "path": "skills/x07-os-run/SKILL.md",
+      "sha256": "d947364ab5c12fb0d0bf7ad81a21658fdaa19da38909a4d6cec8844c9ed0a96d",
+      "size": 1099
+    },
+    {
+      "path": "skills/x07-os-run/references/run-os-policy.sample.json",
+      "sha256": "2f63890b00b3d18fecc7bbd7a484dee92f61b88f0cfa9e7617f2ed24b2d5a7c7",
+      "size": 1446
+    },
+    {
+      "path": "skills/x07-package/SKILL.md",
+      "sha256": "5625b1fdfd5f4894daf6b684c1cbb0376ee0c590d92e9d5da57b2d716917f17f",
+      "size": 1230
+    },
+    {
+      "path": "skills/x07-test/SKILL.md",
       "sha256": "fd4f5c947f5943e31a6994dfb60ea2b911c0cfe5602f31e9cebba6ffd3acde0d",
       "size": 615
     },

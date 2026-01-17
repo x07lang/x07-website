@@ -1,0 +1,11 @@
+{
+  "schema_version": "x07.agent.entrypoints@v1",
+  "latest": {
+    "manifest": "/agent/latest/manifest.json",
+    "index": "/agent/latest/index.json",
+    "skills_index": "/agent/latest/skills/index.json",
+    "schemas_index": "/agent/latest/schemas/index.json",
+    "examples_index": "/agent/latest/examples/index.json",
+    "stdlib_index": "/agent/latest/stdlib/index.json"
+  }
+}

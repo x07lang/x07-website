@@ -4,6 +4,14 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 
+import {
+  latestExamplesIndex,
+  latestSchemasIndex,
+  latestSkillsIndex,
+  latestStdlibIndexMeta,
+} from './_agent_data';
+import {AGENT_ENDPOINTS, MINIMAL_AGENT_LOOP_COMMANDS} from './_snippets';
+
 type ToolchainVersionEntry = {
   toolchain_version: string;
   docs_bundle_sha256?: string;
@@ -27,7 +35,7 @@ function semverKey(v: string): [number, number, number] | null {
   return [major, minor, patch];
 }
 
-export default function Agent(): ReactNode {
+export default function AgentPortal(): ReactNode {
   const [versions, setVersions] = useState<ToolchainVersionsFile | null>(null);
   const [versionsError, setVersionsError] = useState<string | null>(null);
 
@@ -36,7 +44,7 @@ export default function Agent(): ReactNode {
 
     async function load(): Promise<void> {
       try {
-        const res = await fetch('/versions/toolchain_versions.json');
+        const res = await fetch(AGENT_ENDPOINTS.toolchain_versions);
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }
@@ -68,6 +76,10 @@ export default function Agent(): ReactNode {
     });
   }, [versions]);
 
+  const skillsCount = latestSkillsIndex.items.length;
+  const schemasCount = latestSchemasIndex.items.length;
+  const examplesCount = latestExamplesIndex.items.length;
+
   return (
     <Layout
       title="Agent portal"
@@ -75,34 +87,115 @@ export default function Agent(): ReactNode {
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent portal</Heading>
         <p>
-          The agent surface is machine-first: stable URLs, JSON schemas, and a single manifest per
-          toolchain release.
+          Agents should consume JSON endpoints. The HTML pages under <code>/agent</code> are for
+          discoverability and link to stable, machine-first contracts.
         </p>
 
-        <Heading as="h2">Latest contracts</Heading>
+        <div className="alert alert--info">
+          <strong>Stable machine entrypoints</strong>
+          <ul>
+            <li>
+              <a href={AGENT_ENDPOINTS.entrypoints}>
+                <code>{`GET ${AGENT_ENDPOINTS.entrypoints}`}</code>
+              </a>
+            </li>
+            <li>
+              <a href={AGENT_ENDPOINTS.entry_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.entry_index}`}</code>
+              </a>
+            </li>
+            <li>
+              <a href={AGENT_ENDPOINTS.manifest}>
+                <code>{`GET ${AGENT_ENDPOINTS.manifest}`}</code>
+              </a>
+            </li>
+            <li>
+              <a href={AGENT_ENDPOINTS.schemas_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.schemas_index}`}</code>
+              </a>
+            </li>
+            <li>
+              <a href={AGENT_ENDPOINTS.skills_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.skills_index}`}</code>
+              </a>
+            </li>
+            <li>
+              <a href={AGENT_ENDPOINTS.examples_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.examples_index}`}</code>
+              </a>
+            </li>
+            <li>
+              <a href={AGENT_ENDPOINTS.stdlib_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.stdlib_index}`}</code>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <Heading as="h2">Browse</Heading>
         <ul>
           <li>
-            <a href="/agent/latest/manifest.json">/agent/latest/manifest.json</a>
+            <Link to="/agent/skills">{`Skills (${skillsCount})`}</Link>
           </li>
           <li>
-            <a href="/agent/latest/index.json">/agent/latest/index.json</a>
+            <Link to="/agent/schemas">{`Schemas (${schemasCount})`}</Link>
           </li>
           <li>
-            <a href="/agent/latest/schemas/x07ast.schema.json">
-              /agent/latest/schemas/x07ast.schema.json
-            </a>
+            <Link to="/agent/examples">{`Examples (${examplesCount})`}</Link>
           </li>
           <li>
-            <a href="/agent/latest/skills/pack/.codex/skills/README.md">
-              /agent/latest/skills/pack/.codex/skills/README.md
-            </a>
+            <Link to="/agent/stdlib">{`Stdlib index (${latestStdlibIndexMeta.module_count} modules)`}</Link>
           </li>
         </ul>
 
-        <Heading as="h2">Versioned contracts</Heading>
+        <Heading as="h2">Minimal agent loop</Heading>
+        <ul>
+          <li>
+            Docs: <Link to="/docs/getting-started/agent-workflow">Agent workflow</Link>
+          </li>
+          <li>
+            Docs: <Link to="/docs/toolchain/diagnostics-repair">Diagnostics &amp; repair</Link>
+          </li>
+          <li>
+            URL contract: <Link to="/docs/site/agent-portal-contract">Agent portal contract</Link>
+          </li>
+        </ul>
+        <pre>
+          <code>{MINIMAL_AGENT_LOOP_COMMANDS.join('\n')}</code>
+        </pre>
+
+        <Heading as="h2">Start here</Heading>
+        <ol>
+          <li>
+            Choose a toolchain version from{' '}
+            <a href={AGENT_ENDPOINTS.toolchain_versions}>
+              <code>{AGENT_ENDPOINTS.toolchain_versions}</code>
+            </a>{' '}
+            and install it (see <Link to="/docs/getting-started/install">Install</Link>).
+          </li>
+          <li>
+            Create a program (see{' '}
+            <Link to="/docs/getting-started/first-project">Your first X07 program</Link>).
+          </li>
+          <li>
+            Run lint: <code>x07c lint</code> (read <code>x07diag</code> JSON output).
+          </li>
+          <li>
+            Apply JSON Patch fixes: <code>x07c fix</code> or <code>x07c apply-patch</code>.
+          </li>
+          <li>
+            Run tests: <code>x07 test</code> (read <code>x07test</code> JSON output).
+          </li>
+        </ol>
+
+        <Heading as="h2" id="toolchains">
+          Toolchains
+        </Heading>
         <p>
           Source of truth:{' '}
-          <a href="/versions/toolchain_versions.json">/versions/toolchain_versions.json</a>
+          <a href={AGENT_ENDPOINTS.toolchain_versions}>
+            <code>{AGENT_ENDPOINTS.toolchain_versions}</code>
+          </a>
           {versions?.latest_toolchain_version ? (
             <>
               {' '}
@@ -147,22 +240,6 @@ export default function Agent(): ReactNode {
             </table>
           </div>
         ) : null}
-
-        <Heading as="h2">Consumption rules</Heading>
-        <ul>
-          <li>
-            Prefer <code>/agent/latest/manifest.json</code> unless your project pins a toolchain
-            version.
-          </li>
-          <li>
-            Use <code>/versions/toolchain_versions.json</code> to map toolchain versions to docs and
-            contracts.
-          </li>
-          <li>
-            Use <code>/docs/</code> for the human docs landing page; use <code>/docs/&lt;V&gt;/</code>{' '}
-            for versioned human docs.
-          </li>
-        </ul>
       </main>
     </Layout>
   );

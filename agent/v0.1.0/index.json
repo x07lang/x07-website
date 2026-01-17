@@ -6,5 +6,8 @@
   "skills_dir": "skills/",
   "stdlib_index_url": "stdlib/index.json",
   "examples_dir": "examples/",
-  "manifest_url": "manifest.json"
+  "manifest_url": "manifest.json",
+  "schemas_index_url": "schemas/index.json",
+  "skills_index_url": "skills/index.json",
+  "examples_index_url": "examples/index.json"
 }

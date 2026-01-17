@@ -105,9 +105,16 @@ const config: Config = {
         },
         {type: 'docsVersionDropdown', position: 'left'},
         {
-          to: '/agent',
           label: 'Agent',
           position: 'left',
+          items: [
+            {label: 'Agent portal', to: '/agent'},
+            {label: 'Skills', to: '/agent/skills'},
+            {label: 'Schemas', to: '/agent/schemas'},
+            {label: 'Examples', to: '/agent/examples'},
+            {label: 'Stdlib index', to: '/agent/stdlib'},
+            {label: 'Toolchains', to: '/agent#toolchains'},
+          ],
         },
         {
           href: 'https://github.com/x07lang/x07',
