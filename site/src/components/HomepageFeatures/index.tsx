@@ -10,29 +10,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Deterministic worlds',
+    title: 'Built for AI agents',
     description: (
       <>
-        Fixture worlds give repeatable tests and feedback loops. OS worlds are
-        opt-in for production behavior.
+        Most languages optimize for human ergonomics. X07 optimizes for
+        autonomous agents—one canonical API per capability, one encoding per
+        format, zero ambiguity. Agents write correct code on the first try.
       </>
     ),
   },
   {
-    title: 'Canonical encodings',
+    title: 'Tests you can trust',
     description: (
       <>
-        Module boundaries use stable, pinned bytes contracts so agents don&apos;t
-        guess formats or invent ad-hoc conventions.
+        Fixture worlds provide deterministic testing: stable filesystems,
+        virtual time, resource budgets. Same input, same output, every time.
+        Agents get reliable feedback loops.
       </>
     ),
   },
   {
-    title: 'Repairable by design',
+    title: 'Self-healing code',
     description: (
       <>
-        Diagnostics are stable and machine-readable, enabling automated patch
-        application and reruns.
+        Structured error IDs and machine-applicable fixes let agents
+        automatically repair broken code. Diagnostics aren&apos;t just
+        readable—they&apos;re actionable.
       </>
     ),
   },

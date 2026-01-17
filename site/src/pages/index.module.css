@@ -16,6 +16,34 @@
   }
 }
 
+.heroLogo {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+.heroLogoLight {
+  display: block;
+}
+
+.heroLogoDark {
+  display: none;
+}
+
+:global([data-theme='dark']) .heroLogoLight {
+  display: none;
+}
+
+:global([data-theme='dark']) .heroLogoDark {
+  display: block;
+}
+
+@media screen and (max-width: 996px) {
+  .heroLogo {
+    max-width: 280px;
+  }
+}
+
 .buttons {
   display: flex;
   align-items: center;

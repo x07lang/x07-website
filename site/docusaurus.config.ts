@@ -79,6 +79,14 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/social-card.svg',
+    announcementBar: {
+      id: 'active_development',
+      content:
+        'X07 is under active development. APIs and tooling may change.',
+      backgroundColor: '#25c2a0',
+      textColor: '#1b1b1d',
+      isCloseable: true,
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -86,7 +94,8 @@ const config: Config = {
       title: 'X07',
       logo: {
         alt: 'X07 Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo-icon-light.png',
+        srcDark: 'img/logo-icon-dark.png',
       },
       items: [
         {
@@ -113,28 +122,26 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Latest',
-              to: '/docs/',
-            },
+            {label: 'Getting started', to: '/docs/getting-started/'},
+            {label: 'Language', to: '/docs/language/'},
+            {label: 'Toolchain', to: '/docs/toolchain/'},
+            {label: 'Guides', to: '/docs/guides/'},
           ],
         },
         {
           title: 'Agent',
           items: [
-            {
-              label: 'Agent portal',
-              to: '/agent',
-            },
+            {label: 'Agent portal', to: '/agent'},
+            {label: 'Latest manifest', href: '/agent/latest/manifest.json'},
+            {label: 'Schemas', href: '/agent/latest/schemas/x07ast.schema.json'},
           ],
         },
         {
-          title: 'More',
+          title: 'Community',
           items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/x07lang/x07',
-            },
+            {label: 'GitHub', href: 'https://github.com/x07lang/x07'},
+            {label: 'RFCs', href: 'https://github.com/x07lang/x07-rfcs'},
+            {label: 'Contributing', to: '/docs/contributing'},
           ],
         },
       ],

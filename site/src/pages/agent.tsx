@@ -82,33 +82,27 @@ export default function Agent(): ReactNode {
         <Heading as="h2">Latest contracts</Heading>
         <ul>
           <li>
-            <Link href="/agent/latest/manifest.json" data-noBrokenLinkCheck>
-              /agent/latest/manifest.json
-            </Link>
+            <a href="/agent/latest/manifest.json">/agent/latest/manifest.json</a>
           </li>
           <li>
-            <Link href="/agent/latest/index.json" data-noBrokenLinkCheck>
-              /agent/latest/index.json
-            </Link>
+            <a href="/agent/latest/index.json">/agent/latest/index.json</a>
           </li>
           <li>
-            <Link href="/agent/latest/schemas/x07ast.schema.json" data-noBrokenLinkCheck>
+            <a href="/agent/latest/schemas/x07ast.schema.json">
               /agent/latest/schemas/x07ast.schema.json
-            </Link>
+            </a>
           </li>
           <li>
-            <Link href="/agent/latest/skills/pack/.codex/skills/README.md" data-noBrokenLinkCheck>
+            <a href="/agent/latest/skills/pack/.codex/skills/README.md">
               /agent/latest/skills/pack/.codex/skills/README.md
-            </Link>
+            </a>
           </li>
         </ul>
 
         <Heading as="h2">Versioned contracts</Heading>
         <p>
           Source of truth:{' '}
-          <Link href="/versions/toolchain_versions.json" data-noBrokenLinkCheck>
-            /versions/toolchain_versions.json
-          </Link>
+          <a href="/versions/toolchain_versions.json">/versions/toolchain_versions.json</a>
           {versions?.latest_toolchain_version ? (
             <>
               {' '}
@@ -141,14 +135,10 @@ export default function Agent(): ReactNode {
                         <Link to={`/docs/${v}/`}>{`/docs/${v}/`}</Link>
                       </td>
                       <td>
-                        <Link href={`/agent/v${v}/index.json`} data-noBrokenLinkCheck>
-                          {`/agent/v${v}/index.json`}
-                        </Link>
+                        <a href={`/agent/v${v}/index.json`}>{`/agent/v${v}/index.json`}</a>
                       </td>
                       <td>
-                        <Link href={`/agent/v${v}/manifest.json`} data-noBrokenLinkCheck>
-                          {`/agent/v${v}/manifest.json`}
-                        </Link>
+                        <a href={`/agent/v${v}/manifest.json`}>{`/agent/v${v}/manifest.json`}</a>
                       </td>
                     </tr>
                   );
