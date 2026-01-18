@@ -117,6 +117,11 @@ const config: Config = {
           ],
         },
         {
+          href: 'https://x07.io',
+          label: 'Registry',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/x07lang/x07',
           label: 'GitHub',
           position: 'right',
@@ -153,6 +158,7 @@ const config: Config = {
           title: 'Community',
           items: [
             {label: 'GitHub', href: 'https://github.com/x07lang/x07'},
+            {label: 'Registry', href: 'https://x07.io'},
             {label: 'RFCs', href: 'https://github.com/x07lang/x07-rfcs'},
             {label: 'Contributing', to: '/docs/contributing'},
           ],

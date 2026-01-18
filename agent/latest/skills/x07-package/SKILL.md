@@ -20,6 +20,9 @@ Use this skill when:
 
 ## Canonical commands
 
+- Add a dependency (edits `x07.json`):
+  - `x07 pkg add <name>@<version>`
+
 - Generate or update a project lockfile:
   - `x07 pkg lock --project x07.json --index <url>`
 
@@ -27,10 +30,11 @@ Use this skill when:
   - `x07 pkg lock --project x07.json --check`
 
 - Pack a package directory deterministically:
-  - `x07 pkg pack --package <dir> --out <out.tar.gz>`
+  - `x07 pkg pack --package <dir> --out <out.tar>`
 
 - Login (store credentials for an index):
-  - `x07 pkg login --index <url> --token <token>`
+  - `x07 pkg login --index <url>`
+  - `printf '%s' "$X07_TOKEN" | x07 pkg login --index <url> --token-stdin`
 
 - Publish:
   - `x07 pkg publish --package <dir> --index <url>`
