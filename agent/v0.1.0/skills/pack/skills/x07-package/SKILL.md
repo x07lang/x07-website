@@ -11,6 +11,21 @@ metadata:
 
 This skill documents the single canonical workflow for dependency management in X07 using the built-in package manager (`x07 pkg ...`).
 
+## Official registry onboarding (x07.io)
+
+The official registry is hosted at `https://x07.io`:
+
+- Browse packages: `https://x07.io/packages`
+- Index URL: `sparse+https://registry.x07.io/index/`
+
+To publish to the official registry, you need a bearer token:
+
+1. Sign in with GitHub at `https://x07.io/settings/tokens`
+2. Create a token with the `publish` scope (copy it now; you won’t be able to see it again)
+3. Ensure your GitHub account has a verified email (publishing requires it)
+
+Do not share tokens between people.
+
 ## When to use
 
 Use this skill when:
@@ -41,5 +56,6 @@ Use this skill when:
 
 ## Notes
 
+- `x07 pkg login` stores credentials in `~/.x07/credentials.json` (or in `X07_PKG_HOME/credentials.json`).
 - The lockfile path is controlled by `x07.json` (`lockfile`) and defaults to `x07.lock.json`.
 - If dependencies are already present on disk, `x07 pkg lock` can run without `--index` using `--offline`.

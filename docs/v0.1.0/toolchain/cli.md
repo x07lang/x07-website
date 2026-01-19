@@ -28,9 +28,13 @@ X07 ships multiple small CLIs with JSON-first contracts so both humans and agent
 
 ### Packages (pack/lock/publish)
 
+- `x07 pkg add <name>@<version>`
 - `x07 pkg lock --project x07.json --index <registry_url>`
 - `x07 pkg pack --package <dir> --out <path>`
+- `x07 pkg login --index <registry_url>`
 - `x07 pkg publish --package <dir> --index <registry_url>`
+
+See [Publishing](../packages/publishing.md) for GitHub sign-in and token setup.
 
 ## JSON outputs (agent-friendly)
 

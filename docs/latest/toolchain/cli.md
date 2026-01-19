@@ -39,6 +39,8 @@ X07 ships multiple small CLIs with JSON-first contracts so both humans and agent
 - `x07 pkg login --index <registry_url>`
 - `x07 pkg publish --package <dir> --index <registry_url>`
 
+See [Publishing](../packages/publishing.md) for GitHub sign-in and token setup.
+
 ## JSON outputs (agent-friendly)
 
 Commands that emit structured outputs must guarantee:
