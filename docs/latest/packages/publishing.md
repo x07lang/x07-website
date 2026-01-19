@@ -46,8 +46,6 @@ x07 pkg login --index sparse+https://registry.x07.io/index/
 printf '%s' "$X07_TOKEN" | x07 pkg login --index sparse+https://registry.x07.io/index/ --token-stdin
 ```
 
-`x07 pkg login` stores credentials in `~/.x07/credentials.json` (or in `X07_PKG_HOME/credentials.json`).
-
 ### Publishing
 
 Ensure `x07-package.json` contains a `description` (that’s what shows up on https://x07.io/packages), bump the `version`,
@@ -56,13 +54,6 @@ then publish the directory:
 ```bash
 x07 pkg publish --index sparse+https://registry.x07.io/index/ --package .
 ```
-
-### Ownership
-
-- The first publish of a new package name creates the package and assigns you as the initial owner.
-- To publish a new version of an existing package, your account must be listed as an owner.
-- Owners can add other owners via the registry API (`POST https://registry.x07.io/v1/packages/<name>/owners` with JSON
-  `{"handle":"<github_handle>"}`), using a bearer token with the `owner.manage` scope.
 
 ## Versioning
 

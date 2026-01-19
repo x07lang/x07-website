@@ -19,23 +19,9 @@ See [platform support and smoke tests](../worlds/os-worlds.md#platform-support).
 
 ## Option A: install a prebuilt release
 
-Official release artifacts are published on GitHub:
-
-- https://github.com/x07lang/x07/releases
-
-Each release includes:
-
-- Toolchain builds:
-  - macOS: `x07-vX.Y.Z-macOS.tar.gz`
-  - Linux: `x07-vX.Y.Z-Linux.tar.gz`
-  - Windows: `x07-vX.Y.Z-Windows.zip`
-- Skills pack (optional, for Codex): `x07-skills-vX.Y.Z.tar.gz`
-- Release manifest: `release-manifest.json` (integrity + inventory)
-
-1. Download the toolchain archive for your platform.
-2. (Optional) Download the matching skills pack for Codex.
-3. Unpack the toolchain archive.
-4. Add the `bin/` directory to your `PATH`.
+1. Download the latest X07 release artifact for your platform (from the project’s releases).
+2. Unpack it.
+3. Add the `bin/` directory to your `PATH`.
 
 If the archive does not contain a `bin/` directory, the binaries are at the archive root; add that directory to your `PATH` instead.
 
@@ -44,13 +30,6 @@ Verify:
 - `x07 --help`
 - `x07c --help`
 - `x07-host-runner --help`
-
-Skills pack install (optional):
-
-- Extract `x07-skills-vX.Y.Z.tar.gz`.
-- Copy the skill folders into `~/.codex/skills/` (user-scoped) or `<project>/.codex/skills/` (repo-scoped).
-
-See [official builds](../official-builds.md) for the integrity rules and the release manifest contract.
 
 ## Option B: build from source (Rust toolchain)
 

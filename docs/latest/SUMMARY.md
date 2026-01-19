@@ -22,6 +22,7 @@
 - [CLI](toolchain/cli.md)
 - [Diagnostics & repair](toolchain/diagnostics-repair.md)
 - [Testing](toolchain/testing.md)
+- [Performance comparisons](dev/perf-compare.md)
 
 ## Packages
 - [Packages & workspaces](packages/index.md)
@@ -44,5 +45,6 @@
 
 ## Project
 - [About](about.md)
+- [Repositories](project/repositories.md)
 - [Governance](governance.md)
 - [Contributing](contributing.md)

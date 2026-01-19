@@ -15,6 +15,14 @@
       "url": "/agent/v0.1.0/schemas/x07-os-runner.report.schema.json"
     },
     {
+      "id": "x07.native-backends.schema.json",
+      "url": "/agent/v0.1.0/schemas/x07.native-backends.schema.json"
+    },
+    {
+      "id": "x07.native-requires.schema.json",
+      "url": "/agent/v0.1.0/schemas/x07.native-requires.schema.json"
+    },
+    {
       "id": "x07ast.schema.json",
       "url": "/agent/v0.1.0/schemas/x07ast.schema.json"
     },

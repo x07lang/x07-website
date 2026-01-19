@@ -44,6 +44,12 @@ export const latestSkillsIndex = {
       "report_schema_url": null
     },
     {
+      "id": "x07-language-guide",
+      "summary": "Canonical X07 language + stdlib reference (mirrors `x07c guide` output) for end-user skill packs.",
+      "docs_url": "/agent/latest/skills/x07-language-guide/SKILL.md",
+      "report_schema_url": null
+    },
+    {
       "id": "x07-lint-repair",
       "summary": "Lint X07 x07AST JSON and converge via deterministic quickfixes (x07c fix) or explicit JSON Patch (x07 ast apply-patch).",
       "docs_url": "/agent/latest/skills/x07-lint-repair/SKILL.md",
@@ -85,6 +91,14 @@ export const latestSchemasIndex = {
     {
       "id": "x07-os-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-os-runner.report.schema.json"
+    },
+    {
+      "id": "x07.native-backends.schema.json",
+      "url": "/agent/latest/schemas/x07.native-backends.schema.json"
+    },
+    {
+      "id": "x07.native-requires.schema.json",
+      "url": "/agent/latest/schemas/x07.native-requires.schema.json"
     },
     {
       "id": "x07ast.schema.json",

@@ -46,8 +46,6 @@ x07 pkg login --index sparse+https://registry.x07.io/index/
 printf '%s' "$X07_TOKEN" | x07 pkg login --index sparse+https://registry.x07.io/index/ --token-stdin
 ```
 
-`x07 pkg login` stores credentials in `~/.x07/credentials.json` (or in `X07_PKG_HOME/credentials.json`).
-
 ### Publishing
 
 Ensure `x07-package.json` contains a `description` (that’s what shows up on https://x07.io/packages), bump the `version`,
