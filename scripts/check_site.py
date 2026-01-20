@@ -279,13 +279,24 @@ def main(argv: list[str]) -> int:
     if not versions_path.is_file():
         return err("missing versions/toolchain_versions.json")
 
+    static_versions_path = root / "site" / "static" / "versions" / "toolchain_versions.json"
+    if not static_versions_path.is_file():
+        return err("missing site/static/versions/toolchain_versions.json")
+
     try:
         versions = read_json(versions_path)
     except ValueError as e:
         return err(str(e))
 
+    try:
+        static_versions = read_json(static_versions_path)
+    except ValueError as e:
+        return err(str(e))
+
     if not isinstance(versions, dict):
         return err("versions/toolchain_versions.json must be a JSON object")
+    if versions != static_versions:
+        return err("site/static/versions/toolchain_versions.json must match versions/toolchain_versions.json")
     if versions.get("schema_version") != "x07.website.toolchain-versions@0.1.0":
         return err("versions/toolchain_versions.json schema_version mismatch")
     if versions.get("latest_toolchain_version") is not None and not isinstance(

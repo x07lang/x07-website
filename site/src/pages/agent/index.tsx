@@ -63,6 +63,10 @@ function githubSkillsPackAssetName(toolchainVersion: string): string {
   return `x07-skills-v${toolchainVersion}.tar.gz`;
 }
 
+function githubDocsBundleAssetName(toolchainVersion: string): string {
+  return `x07-docs-v${toolchainVersion}.tar.gz`;
+}
+
 export default function AgentPortal(): ReactNode {
   const sorted = (TOOLCHAIN_VERSIONS.versions ?? []).slice().sort((a, b) => {
     const ak = semverKey(a.toolchain_version);
@@ -169,7 +173,8 @@ export default function AgentPortal(): ReactNode {
             <a href={AGENT_ENDPOINTS.toolchain_versions}>
               <code>{AGENT_ENDPOINTS.toolchain_versions}</code>
             </a>{' '}
-            and download the matching release assets (toolchain builds + skills pack) from{' '}
+            and download the matching release assets (toolchain builds + skills pack + docs bundle)
+            from{' '}
             <a href={GITHUB_RELEASES_URL}>
               <code>{GITHUB_RELEASES_URL}</code>
             </a>{' '}
@@ -225,6 +230,7 @@ export default function AgentPortal(): ReactNode {
                   const linuxUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'Linux'));
                   const windowsUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'Windows'));
                   const skillsUrl = githubReleaseDownloadUrl(v, githubSkillsPackAssetName(v));
+                  const docsUrl = githubReleaseDownloadUrl(v, githubDocsBundleAssetName(v));
                   const manifestUrl = githubReleaseDownloadUrl(v, 'release-manifest.json');
                   return (
                     <tr key={v}>
@@ -245,7 +251,7 @@ export default function AgentPortal(): ReactNode {
                         <div>
                           <a href={macosUrl}>macOS</a> · <a href={linuxUrl}>Linux</a> ·{' '}
                           <a href={windowsUrl}>Windows</a> · <a href={skillsUrl}>Skills</a> ·{' '}
-                          <a href={manifestUrl}>Manifest</a>
+                          <a href={docsUrl}>Docs</a> · <a href={manifestUrl}>Manifest</a>
                         </div>
                       </td>
                     </tr>

@@ -468,6 +468,10 @@ def main(argv: list[str]) -> int:
         versions["latest_toolchain_version"] = toolchain_version
     versions_path.write_text(json.dumps(versions, indent=2) + "\n", encoding="utf-8")
 
+    static_versions_path = root / "site" / "static" / "versions" / "toolchain_versions.json"
+    static_versions_path.parent.mkdir(parents=True, exist_ok=True)
+    static_versions_path.write_text(json.dumps(versions, indent=2) + "\n", encoding="utf-8")
+
     print(f"ok: synced docs+agent for {toolchain_version}")
     return 0
 
