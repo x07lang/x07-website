@@ -9,13 +9,13 @@ export const latestSkillsIndex = {
   "items": [
     {
       "id": "x07-agent-playbook",
-      "summary": "Agent-first workflow and design rails for building X07 programs with the released toolchain (no repo-only dependencies).",
+      "summary": "Agent-first workflow and design rails for building X07 programs with the released toolchain (no repo-only dependencies). Canonical execution is via `x07 run`.",
       "docs_url": "/agent/latest/skills/x07-agent-playbook/SKILL.md",
       "report_schema_url": null
     },
     {
       "id": "x07-build-run",
-      "summary": "Compile and run deterministic solve-world X07 programs via x07-host-runner, producing a machine-readable JSON report.",
+      "summary": "Expert backend for deterministic solve-world execution via x07-host-runner. Prefer `x07 run` as the canonical agent entry point.",
       "docs_url": "/agent/latest/skills/x07-build-run/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
@@ -33,7 +33,7 @@ export const latestSkillsIndex = {
     },
     {
       "id": "x07-format",
-      "summary": "Canonically format X07 x07AST JSON files using x07c fmt (check/write) with a machine-readable JSON report.",
+      "summary": "Canonically format X07 x07AST JSON files using `x07 fmt` (check/write) with a machine-readable JSON report.",
       "docs_url": "/agent/latest/skills/x07-format/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07c.report.schema.json"
     },
@@ -44,14 +44,20 @@ export const latestSkillsIndex = {
       "report_schema_url": null
     },
     {
+      "id": "x07-language-guide",
+      "summary": "Canonical X07 language + stdlib reference (mirrors `x07c guide` output) for end-user skill packs.",
+      "docs_url": "/agent/latest/skills/x07-language-guide/SKILL.md",
+      "report_schema_url": null
+    },
+    {
       "id": "x07-lint-repair",
-      "summary": "Lint X07 x07AST JSON and converge via deterministic quickfixes (x07c fix) or explicit JSON Patch (x07 ast apply-patch).",
+      "summary": "Lint X07 x07AST JSON and converge via deterministic quickfixes (`x07 fix`) or explicit JSON Patch (`x07 ast apply-patch`).",
       "docs_url": "/agent/latest/skills/x07-lint-repair/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07c.report.schema.json"
     },
     {
       "id": "x07-os-run",
-      "summary": "Run X07 programs in run-os / run-os-sandboxed worlds using x07-os-runner, producing machine-readable runner reports.",
+      "summary": "Expert backend for run-os / run-os-sandboxed execution via x07-os-runner. Prefer `x07 run --os` as the canonical agent entry point.",
       "docs_url": "/agent/latest/skills/x07-os-run/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07-os-runner.report.schema.json"
     },
@@ -59,6 +65,12 @@ export const latestSkillsIndex = {
       "id": "x07-package",
       "summary": "Manage X07 project dependencies and lockfiles for reproducible builds (lock, publish). Designed for autonomous agents.",
       "docs_url": "/agent/latest/skills/x07-package/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-run",
+      "summary": "Canonical execution front door for X07 programs (solve-* and run-os*), producing pass-through runner reports.",
+      "docs_url": "/agent/latest/skills/x07-run/SKILL.md",
       "report_schema_url": null
     },
     {
@@ -85,6 +97,18 @@ export const latestSchemasIndex = {
     {
       "id": "x07-os-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-os-runner.report.schema.json"
+    },
+    {
+      "id": "x07-run.report.schema.json",
+      "url": "/agent/latest/schemas/x07-run.report.schema.json"
+    },
+    {
+      "id": "x07.native-backends.schema.json",
+      "url": "/agent/latest/schemas/x07.native-backends.schema.json"
+    },
+    {
+      "id": "x07.native-requires.schema.json",
+      "url": "/agent/latest/schemas/x07.native-requires.schema.json"
     },
     {
       "id": "x07ast.schema.json",
