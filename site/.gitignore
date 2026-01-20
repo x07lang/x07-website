@@ -14,7 +14,9 @@
 /versioned_sidebars
 /versions.json
 /static/agent
-/static/versions
+/static/versions/*
+!/static/versions/schema.json
+!/static/versions/toolchain_versions.json
 
 # Misc
 .DS_Store
