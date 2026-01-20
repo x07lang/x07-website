@@ -48,6 +48,7 @@ Then verify with the same commands above.
 If Gatekeeper blocks the binary:
 
 - remove the quarantine attribute on the unpacked binaries (or sign them in your org).
+  - example: `xattr -rd com.apple.quarantine <toolchain-dir>/bin`
 
 ### “C compiler not found”
 

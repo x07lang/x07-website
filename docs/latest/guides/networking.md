@@ -15,6 +15,8 @@ To discover available packages and versions, use the index catalog:
 
 - https://registry.x07.io/index/catalog.json
 
+Avoid yanked versions (they remain downloadable for reproducibility, but should not be used for new installs). In particular, `ext-curl-c@0.1.0` is yanked because the published archive was missing required `ffi/` sources; use a newer version.
+
 ## Canonical approach
 
 - Always construct requests through pack/unpack helpers:
