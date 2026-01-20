@@ -2,10 +2,10 @@
 
 X07 ships as a small toolchain with stable, JSON-first contracts:
 
-- `x07` — test harness + helpers (`test`, `ast`, `pkg`)
-- `x07c` — compiler + agent tooling (`fmt`, `lint`, `fix`, `apply-patch`, `lock`, `build`, `compile`)
-- `x07-host-runner` — deterministic native runner (solve-* worlds)
-- `x07-os-runner` — standalone runner (run-os* worlds)
+- `x07` — canonical CLI (init, ast, fmt/lint/fix, run, test, pkg, build)
+- `x07c` — compiler backend (advanced)
+- `x07-host-runner` — deterministic runner backend (solve-* worlds; advanced)
+- `x07-os-runner` — OS runner backend (run-os* worlds; advanced)
 
 ## Supported platforms
 
@@ -19,44 +19,24 @@ See [platform support and smoke tests](../worlds/os-worlds.md#platform-support).
 
 ## Option A: install a prebuilt release
 
-Official release artifacts are published on GitHub:
-
-- https://github.com/x07lang/x07/releases
-
-Each release includes:
-
-- Toolchain builds:
-  - macOS: `x07-vX.Y.Z-macOS.tar.gz`
-  - Linux: `x07-vX.Y.Z-Linux.tar.gz`
-  - Windows: `x07-vX.Y.Z-Windows.zip`
-- Skills pack (optional, for Codex): `x07-skills-vX.Y.Z.tar.gz`
-- Release manifest: `release-manifest.json` (integrity + inventory)
-
-1. Download the toolchain archive for your platform.
-2. (Optional) Download the matching skills pack for Codex.
-3. Unpack the toolchain archive.
-4. Add the `bin/` directory to your `PATH`.
+1. Download the latest X07 release artifact for your platform (from the project’s releases).
+2. Unpack it.
+3. Add the `bin/` directory to your `PATH`.
 
 If the archive does not contain a `bin/` directory, the binaries are at the archive root; add that directory to your `PATH` instead.
 
 Verify:
 
 - `x07 --help`
-- `x07c --help`
-- `x07-host-runner --help`
-
-Skills pack install (optional):
-
-- Extract `x07-skills-vX.Y.Z.tar.gz`.
-- Copy the skill folders into `~/.codex/skills/` (user-scoped) or `<project>/.codex/skills/` (repo-scoped).
-
-See [official builds](../official-builds.md) for the integrity rules and the release manifest contract.
+- `x07 run --help`
+- `x07 ast apply-patch --help`
+- optional (advanced): `x07c --help`, `x07-host-runner --help`, `x07-os-runner --help`
 
 ## Option B: build from source (Rust toolchain)
 
 If you have `cargo` installed:
 
-- `cargo build -p x07 -p x07c -p x07-host-runner --release`
+- `cargo build -p x07 -p x07c -p x07-host-runner -p x07-os-runner --release`
 - the resulting binaries will be in `target/release/`
 
 Then verify with the same commands above.
@@ -81,7 +61,10 @@ Install:
 
 ### “I can run `x07` but `x07 run` fails”
 
-Use `x07-host-runner --help` and ensure a working `cc` is available (override via `X07_CC`).
+`x07 run` dispatches to `x07-host-runner` / `x07-os-runner`.
+
+- ensure the runner binaries are on your `PATH` (or installed next to `x07`)
+- ensure a working C compiler is available (override via `X07_CC`)
 
 ### “could not locate stdlib/os module root”
 

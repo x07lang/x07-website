@@ -99,6 +99,11 @@ const config: Config = {
       },
       items: [
         {
+          to: '/docs/getting-started/agent-quickstart',
+          position: 'left',
+          label: 'Start here',
+        },
+        {
           to: '/docs/',
           position: 'left',
           label: 'Docs',
@@ -134,6 +139,7 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
+            {label: 'Start here', to: '/docs/getting-started/agent-quickstart'},
             {label: 'Getting started', to: '/docs/getting-started/install'},
             {label: 'Download builds', href: 'https://github.com/x07lang/x07/releases'},
             {label: 'Official builds', to: '/docs/official-builds'},
