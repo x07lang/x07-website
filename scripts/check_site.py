@@ -235,6 +235,39 @@ def main(argv: list[str]) -> int:
         if skill_ids != sorted(skill_ids):
             return err(f"{(agent_dir / skills_index_url).relative_to(root)} items must be sorted by id")
 
+        skills_root = agent_dir / skills_dir
+        expected_skill_json = {"index.json"} | {f"{sid}.json" for sid in skill_ids}
+        actual_skill_json = sorted(p.name for p in skills_root.glob("*.json"))
+        if actual_skill_json != sorted(expected_skill_json):
+            return err(f"{skills_root.relative_to(root)} JSON files mismatch")
+
+        for it in skill_items:
+            sid = it.get("id")
+            docs_url = it.get("docs_url")
+            report_schema_url = it.get("report_schema_url")
+            if not isinstance(sid, str) or not sid:
+                return err(f"{(agent_dir / skills_index_url).relative_to(root)} item.id must be non-empty string")
+
+            descriptor_path = skills_root / f"{sid}.json"
+            if not descriptor_path.is_file():
+                return err(f"missing {descriptor_path.relative_to(root)}")
+            try:
+                descriptor = read_json(descriptor_path)
+            except ValueError as e:
+                return err(str(e))
+            if not isinstance(descriptor, dict):
+                return err(f"{descriptor_path.relative_to(root)} must be a JSON object")
+            if descriptor.get("schema_version") != "x07.website.agent.skill@v1":
+                return err(f"{descriptor_path.relative_to(root)} schema_version mismatch")
+            if descriptor.get("id") != sid:
+                return err(f"{descriptor_path.relative_to(root)} id mismatch")
+            if descriptor.get("docs_url") != docs_url:
+                return err(f"{descriptor_path.relative_to(root)} docs_url mismatch")
+            if descriptor.get("report_schema_url") != report_schema_url:
+                return err(f"{descriptor_path.relative_to(root)} report_schema_url mismatch")
+            if not isinstance(descriptor.get("summary"), str):
+                return err(f"{descriptor_path.relative_to(root)} summary must be a string")
+
         # ---- entrypoints (latest only) ----
         if agent_rel == "agent/latest":
             entrypoints_path = agent_dir / "entrypoints.json"

@@ -22,6 +22,7 @@ for rel in \
   "agent/latest/schemas/index.json" \
   "agent/latest/examples/index.json" \
   "agent/latest/stdlib/index.json" \
+  "agent/latest/skills/x07-io-streams.json" \
   "agent/latest/skills/x07-build-run/SKILL.md" \
 ; do
   [[ -f "${BUILD_DIR}/${rel}" ]] || { echo "missing ${BUILD_DIR}/${rel}" >&2; exit 2; }

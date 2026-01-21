@@ -221,7 +221,19 @@ export function createRedirects(existingPath: string): string[] | undefined {{
     return undefined;
   }}
   if (existingPath.startsWith('/docs/') && !isVersionedDocsPath(existingPath)) {{
-    return [`/docs/latest${{existingPath.slice('/docs'.length)}}`];
+    const redirects = [`/docs/latest${{existingPath.slice('/docs'.length)}}`];
+
+    if (existingPath === '/docs/getting-started/install') {{
+      redirects.push('/install');
+    }}
+    if (existingPath === '/docs/toolchain/cli') {{
+      redirects.push('/docs/cli');
+    }}
+    if (existingPath === '/docs/worlds/os-worlds') {{
+      redirects.push('/docs/worlds/os');
+    }}
+
+    return redirects;
   }}
 
   // Versioned docs legacy URLs: /docs/vX.Y.Z/*

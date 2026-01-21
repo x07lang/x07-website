@@ -228,6 +228,73 @@ def _generate_skills_index(
     }
 
 
+def _generate_skill_descriptor(
+    *,
+    rel_agent_dir: Path,
+    skill_id: str,
+    summary: str,
+    docs_url: str,
+    report_schema_url: str | None,
+) -> dict:
+    return {
+        "schema_version": "x07.website.agent.skill@v1",
+        "generated_from": f"{rel_agent_dir.as_posix()}/skills/{skill_id}/SKILL.md",
+        "id": skill_id,
+        "summary": summary,
+        "docs_url": docs_url,
+        "report_schema_url": report_schema_url,
+    }
+
+
+def _sync_skill_descriptors(*, agent_dir: Path, rel_agent_dir: Path, skills_index: dict, check: bool) -> None:
+    skills_dir = agent_dir / "skills"
+    items = skills_index.get("items", [])
+    if not isinstance(items, list):
+        raise SystemExit(f"invalid skills index items: {skills_dir.relative_to(agent_dir)}/index.json")
+
+    expected_names: set[str] = set()
+    for it in items:
+        if not isinstance(it, dict):
+            raise SystemExit(f"invalid skills index item: {skills_dir.relative_to(agent_dir)}/index.json")
+        skill_id = it.get("id")
+        summary = it.get("summary")
+        docs_url = it.get("docs_url")
+        report_schema_url = it.get("report_schema_url")
+        if not isinstance(skill_id, str) or not skill_id:
+            raise SystemExit(f"invalid skills index item.id: {skills_dir.relative_to(agent_dir)}/index.json")
+        if not isinstance(summary, str):
+            raise SystemExit(f"invalid skills index item.summary: {skills_dir.relative_to(agent_dir)}/index.json")
+        if not isinstance(docs_url, str) or not docs_url:
+            raise SystemExit(f"invalid skills index item.docs_url: {skills_dir.relative_to(agent_dir)}/index.json")
+        if report_schema_url is not None and not isinstance(report_schema_url, str):
+            raise SystemExit(
+                f"invalid skills index item.report_schema_url: {skills_dir.relative_to(agent_dir)}/index.json"
+            )
+
+        descriptor_name = f"{skill_id}.json"
+        expected_names.add(descriptor_name)
+        _write_json_if_changed(
+            path=skills_dir / descriptor_name,
+            obj=_generate_skill_descriptor(
+                rel_agent_dir=rel_agent_dir,
+                skill_id=skill_id,
+                summary=summary,
+                docs_url=docs_url,
+                report_schema_url=report_schema_url,
+            ),
+            check=check,
+        )
+
+    for p in sorted(skills_dir.glob("*.json"), key=lambda x: x.name):
+        if p.name == "index.json":
+            continue
+        if p.name in expected_names:
+            continue
+        if check:
+            raise SystemExit(f"[CHECK] unexpected skill descriptor: {p.relative_to(agent_dir)}")
+        p.unlink()
+
+
 def _update_agent_index_json(*, agent_dir: Path, check: bool) -> None:
     index_path = agent_dir / "index.json"
     if not index_path.is_file():
@@ -364,6 +431,12 @@ def main(argv: list[str]) -> int:
     _write_json_if_changed(
         path=agent_dir / "skills" / "index.json",
         obj=skills_index,
+        check=args.check,
+    )
+    _sync_skill_descriptors(
+        agent_dir=agent_dir,
+        rel_agent_dir=rel_agent_dir,
+        skills_index=skills_index,
         check=args.check,
     )
 

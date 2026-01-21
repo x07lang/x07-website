@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.1.0/skills/x07-os-run/SKILL.md",
+  "id": "x07-os-run",
+  "summary": "Run X07 programs in run-os / run-os-sandboxed worlds using x07-os-runner, producing machine-readable runner reports.",
+  "docs_url": "/agent/v0.1.0/skills/x07-os-run/SKILL.md",
+  "report_schema_url": "/agent/v0.1.0/schemas/x07-os-runner.report.schema.json"
+}

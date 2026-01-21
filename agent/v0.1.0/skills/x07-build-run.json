@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.1.0/skills/x07-build-run/SKILL.md",
+  "id": "x07-build-run",
+  "summary": "Compile and run deterministic solve-world X07 programs via x07-host-runner, producing a machine-readable JSON report.",
+  "docs_url": "/agent/v0.1.0/skills/x07-build-run/SKILL.md",
+  "report_schema_url": "/agent/v0.1.0/schemas/x07-host-runner.report.schema.json"
+}
