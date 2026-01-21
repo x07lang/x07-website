@@ -23,6 +23,14 @@ jobs:
             const repo = context.repo.repo;
             const pull_number = context.payload.pull_request.number;
 
+            const pr = context.payload.pull_request;
+            const headRef = pr.head?.ref ?? "";
+            const author = pr.user?.login ?? "";
+            if (author === "webodik" && headRef.startsWith("bot/website-sync-v")) {
+              core.notice("ok: auto-approved website sync PR");
+              return;
+            }
+
             const reviews = await github.paginate(
               github.rest.pulls.listReviews,
               { owner, repo, pull_number, per_page: 100 },
