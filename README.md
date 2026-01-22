@@ -12,3 +12,9 @@ This repo should contain the website build system and deployment configuration, 
 - `agent/`: machine-first docs (synced + versioned; JSON files are served as-is)
 - `site/`: static site source (Docusaurus)
 - `versions/toolchain_versions.json`: maps toolchain versions to synced bundles (and marks `latest`)
+
+## Related repositories
+
+- https://github.com/x07lang/x07 (toolchain + canonical docs source)
+- https://github.com/x07lang/x07-registry (registry API)
+- https://github.com/x07lang/x07-registry-web (x07.io UI)
