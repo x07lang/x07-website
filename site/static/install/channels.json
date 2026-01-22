@@ -1,0 +1,90 @@
+{
+  "channels": {
+    "stable": {
+      "toolchain": "v0.0.19",
+      "x07up": "v0.0.19"
+    }
+  },
+  "schema_version": "x07.install.channels@0.1.0",
+  "toolchains": {
+    "v0.0.19": {
+      "assets": {
+        "aarch64-apple-darwin": {
+          "format": "tar.gz",
+          "sha256": "250c3af6f773612d972825eb8138f48618cbe3dc0ded3a5ee906614c248ebae6",
+          "size_bytes": 70985433,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-aarch64-apple-darwin.tar.gz"
+        },
+        "x86_64-apple-darwin": {
+          "format": "tar.gz",
+          "sha256": "f067c06c74614c107747797158aa969a16cf9eb2821a3f8615e993bf24da8efb",
+          "size_bytes": 72653030,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-x86_64-apple-darwin.tar.gz"
+        },
+        "x86_64-pc-windows-msvc": {
+          "format": "zip",
+          "sha256": "f8110bf7fc0f4127d8f8751e6615862f81b499e29140e87eb27f93c217d8c046",
+          "size_bytes": 9353695,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-x86_64-pc-windows-msvc.zip"
+        },
+        "x86_64-unknown-linux-gnu": {
+          "format": "tar.gz",
+          "sha256": "842bd036c72f8dfc8ec27bf07a1cc4f57d3805aab6bdefa85cc9fb48134ed64f",
+          "size_bytes": 76961932,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-x86_64-unknown-linux-gnu.tar.gz"
+        }
+      },
+      "components": {
+        "docs": {
+          "format": "tar.gz",
+          "sha256": "d229dc3831db150fbec4c9c966082c3d3305ead9259f970c991b4aa74c820f2f",
+          "size_bytes": 41562,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-docs-v0.0.19.tar.gz"
+        },
+        "skills": {
+          "format": "tar.gz",
+          "sha256": "5ca492cc252eddea8bfe44d7fddba8f37895881733cc404b9b21cb9fade4c0d5",
+          "size_bytes": 16366,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-skills-v0.0.19.tar.gz"
+        }
+      },
+      "min_required": {
+        "x07up": "v0.0.19"
+      },
+      "notes": "Stable release.",
+      "published_at": "2026-01-22T06:56:58Z"
+    }
+  },
+  "updated_at": "2026-01-22T06:56:58Z",
+  "x07up": {
+    "v0.0.19": {
+      "assets": {
+        "aarch64-apple-darwin": {
+          "format": "tar.gz",
+          "sha256": "f1248fad70856c5c8ec94b3be335b07cf139aa75ea6c3da1d4fe68b8587d8d29",
+          "size_bytes": 1866476,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-aarch64-apple-darwin.tar.gz"
+        },
+        "x86_64-apple-darwin": {
+          "format": "tar.gz",
+          "sha256": "5e7d5f4316946f76751b4a7aeb5814a73423281638524c6f1727dc2c2b141300",
+          "size_bytes": 2004047,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-x86_64-apple-darwin.tar.gz"
+        },
+        "x86_64-pc-windows-msvc": {
+          "format": "zip",
+          "sha256": "49e4ba19a83bac9b6441998213303f007118469a4192337a72be100131c9112d",
+          "size_bytes": 1825602,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-x86_64-pc-windows-msvc.zip"
+        },
+        "x86_64-unknown-linux-gnu": {
+          "format": "tar.gz",
+          "sha256": "459e5275df4598b0173f934b12c1f69a479b6c9e45871517f34b367fc3786374",
+          "size_bytes": 2111098,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-x86_64-unknown-linux-gnu.tar.gz"
+        }
+      },
+      "published_at": "2026-01-22T06:56:58Z"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "x07.website.package-index@0.1.0",
+  "name": "ext-error",
+  "version": "0.1.2",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "ext.error.chain",
+      "path": "ext/error/chain.x07.json",
+      "exports": [
+        "ext.error.chain.chain_errors",
+        "ext.error.chain.wrap_error"
+      ]
+    },
+    {
+      "module_id": "ext.error.context",
+      "path": "ext/error/context.x07.json",
+      "exports": [
+        "ext.error.context.context_count",
+        "ext.error.context.err_from_code",
+        "ext.error.context.err_from_msg",
+        "ext.error.context.error_code",
+        "ext.error.context.error_msg",
+        "ext.error.context.get_context",
+        "ext.error.context.with_context"
+      ]
+    },
+    {
+      "module_id": "ext.error.fmt",
+      "path": "ext/error/fmt.x07.json",
+      "exports": [
+        "ext.error.fmt.format_error",
+        "ext.error.fmt.format_error_chain"
+      ]
+    },
+    {
+      "module_id": "ext.error.tests",
+      "path": "ext/error/tests.x07.json",
+      "exports": [
+        "ext.error.tests.test_err_from_code_roundtrip",
+        "ext.error.tests.test_err_from_msg_roundtrip",
+        "ext.error.tests.test_format_error_basic",
+        "ext.error.tests.test_with_context_adds_context"
+      ]
+    }
+  ]
+}

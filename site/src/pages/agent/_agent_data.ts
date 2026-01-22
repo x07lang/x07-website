@@ -95,6 +95,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
     {
+      "id": "x07-install.channels.schema.json",
+      "url": "/agent/latest/schemas/x07-install.channels.schema.json"
+    },
+    {
       "id": "x07-os-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-os-runner.report.schema.json"
     },
