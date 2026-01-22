@@ -1,90 +1,90 @@
 {
   "channels": {
     "stable": {
-      "toolchain": "v0.0.19",
-      "x07up": "v0.0.19"
+      "toolchain": "v0.0.20",
+      "x07up": "v0.0.20"
     }
   },
   "schema_version": "x07.install.channels@0.1.0",
   "toolchains": {
-    "v0.0.19": {
+    "v0.0.20": {
       "assets": {
         "aarch64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "250c3af6f773612d972825eb8138f48618cbe3dc0ded3a5ee906614c248ebae6",
-          "size_bytes": 70985433,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-aarch64-apple-darwin.tar.gz"
+          "sha256": "de349329cb05b7dd027979b8aced9d0d2d2f5056885e48c3e54b337cd1bb12c7",
+          "size_bytes": 70992778,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07-v0.0.20-aarch64-apple-darwin.tar.gz"
         },
         "x86_64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "f067c06c74614c107747797158aa969a16cf9eb2821a3f8615e993bf24da8efb",
-          "size_bytes": 72653030,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-x86_64-apple-darwin.tar.gz"
+          "sha256": "f17672e9922a131a89769b25d5aa3eddaa6a55d7ba594d4eb26d76a26fa2236e",
+          "size_bytes": 72652434,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07-v0.0.20-x86_64-apple-darwin.tar.gz"
         },
         "x86_64-pc-windows-msvc": {
           "format": "zip",
-          "sha256": "f8110bf7fc0f4127d8f8751e6615862f81b499e29140e87eb27f93c217d8c046",
-          "size_bytes": 9353695,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-x86_64-pc-windows-msvc.zip"
+          "sha256": "3833c967ffffe7d19f316200b386653d7c67bc37c6aada16ff3294a38dd7a111",
+          "size_bytes": 9357780,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07-v0.0.20-x86_64-pc-windows-msvc.zip"
         },
         "x86_64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "842bd036c72f8dfc8ec27bf07a1cc4f57d3805aab6bdefa85cc9fb48134ed64f",
-          "size_bytes": 76961932,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-v0.0.19-x86_64-unknown-linux-gnu.tar.gz"
+          "sha256": "be4e84d8e96bea4173d76089d7eb26755906e45e69fda2a343f2007140971c0f",
+          "size_bytes": 76964633,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07-v0.0.20-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
       "components": {
         "docs": {
           "format": "tar.gz",
-          "sha256": "d229dc3831db150fbec4c9c966082c3d3305ead9259f970c991b4aa74c820f2f",
-          "size_bytes": 41562,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-docs-v0.0.19.tar.gz"
+          "sha256": "d215f2128f24d66b7b53fe5d9aa228fb5c40235a908a1da46d7280a8df75c5cc",
+          "size_bytes": 43482,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07-docs-v0.0.20.tar.gz"
         },
         "skills": {
           "format": "tar.gz",
           "sha256": "5ca492cc252eddea8bfe44d7fddba8f37895881733cc404b9b21cb9fade4c0d5",
           "size_bytes": 16366,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07-skills-v0.0.19.tar.gz"
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07-skills-v0.0.20.tar.gz"
         }
       },
       "min_required": {
-        "x07up": "v0.0.19"
+        "x07up": "v0.0.20"
       },
       "notes": "Stable release.",
-      "published_at": "2026-01-22T06:56:58Z"
+      "published_at": "2026-01-22T16:12:02Z"
     }
   },
-  "updated_at": "2026-01-22T06:56:58Z",
+  "updated_at": "2026-01-22T16:12:02Z",
   "x07up": {
-    "v0.0.19": {
+    "v0.0.20": {
       "assets": {
         "aarch64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "f1248fad70856c5c8ec94b3be335b07cf139aa75ea6c3da1d4fe68b8587d8d29",
-          "size_bytes": 1866476,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-aarch64-apple-darwin.tar.gz"
+          "sha256": "5847b710c807d6466f8631e56a48331bedb46ce4355081f5a5adf99535b8da60",
+          "size_bytes": 1866153,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07up-v0.0.20-aarch64-apple-darwin.tar.gz"
         },
         "x86_64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "5e7d5f4316946f76751b4a7aeb5814a73423281638524c6f1727dc2c2b141300",
-          "size_bytes": 2004047,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-x86_64-apple-darwin.tar.gz"
+          "sha256": "763a698191b7014e996eb9bd0552ebff15c7478eb301c5171f945cbcdd139965",
+          "size_bytes": 2004080,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07up-v0.0.20-x86_64-apple-darwin.tar.gz"
         },
         "x86_64-pc-windows-msvc": {
           "format": "zip",
-          "sha256": "49e4ba19a83bac9b6441998213303f007118469a4192337a72be100131c9112d",
-          "size_bytes": 1825602,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-x86_64-pc-windows-msvc.zip"
+          "sha256": "fff9dcbf3c045bbd75719787878370d84d28ded30754b61172e163bee80db72a",
+          "size_bytes": 1825695,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07up-v0.0.20-x86_64-pc-windows-msvc.zip"
         },
         "x86_64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "459e5275df4598b0173f934b12c1f69a479b6c9e45871517f34b367fc3786374",
-          "size_bytes": 2111098,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.19/x07up-v0.0.19-x86_64-unknown-linux-gnu.tar.gz"
+          "sha256": "61e191df51f82c1fcb174a22516c6a820815f5fad2e3208e3caa7ac5c9806859",
+          "size_bytes": 2110682,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.20/x07up-v0.0.20-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
-      "published_at": "2026-01-22T06:56:58Z"
+      "published_at": "2026-01-22T16:12:02Z"
     }
   }
 }
