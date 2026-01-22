@@ -169,6 +169,18 @@ export default function AgentPortal(): ReactNode {
             Docs: <Link to="/docs/toolchain/diagnostics-repair">Diagnostics &amp; repair</Link>
           </li>
           <li>
+            Docs: <Link to="/docs/worlds/sandbox-policy-walkthrough">Sandbox policy walkthrough</Link>
+          </li>
+          <li>
+            Docs: <Link to="/docs/packages/publishing-by-example">Publishing by example</Link>
+          </li>
+          <li>
+            Docs: <Link to="/docs/x07import/porting-by-example">Porting by example</Link>
+          </li>
+          <li>
+            Docs: <Link to="/docs/toolchain/testing-by-example">Testing by example</Link>
+          </li>
+          <li>
             URL contract: <Link to="/docs/site/agent-portal-contract">Agent portal contract</Link>
           </li>
         </ul>
