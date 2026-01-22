@@ -1,0 +1,636 @@
+{
+  "schema_version": "x07.website.agent.packages_index@v1",
+  "generated_from": "agent/v0.0.23/packages/*/*/index.json",
+  "items": [
+    {
+      "name": "ext-aho-corasick-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-aho-corasick-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-aho-corasick-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-aho-corasick-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-aho-corasick-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-aho-corasick-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-base64-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-base64-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-base64-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-base64-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-base64-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-base64-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-byteorder-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-byteorder-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-byteorder-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-byteorder-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-byteorder-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-byteorder-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-cli",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-cli/0.1.0/index.json"
+    },
+    {
+      "name": "ext-cli",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-cli/0.1.1/index.json"
+    },
+    {
+      "name": "ext-cli",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-cli/0.1.2/index.json"
+    },
+    {
+      "name": "ext-cli",
+      "version": "0.1.3",
+      "url": "/agent/v0.0.23/packages/ext-cli/0.1.3/index.json"
+    },
+    {
+      "name": "ext-compress-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-compress-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-compress-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-compress-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-compress-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-compress-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-crypto-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-crypto-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-crypto-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-crypto-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-crypto-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-crypto-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-csv-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-csv-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-csv-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-csv-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-csv-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-csv-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-curl-c",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-curl-c/0.1.0/index.json"
+    },
+    {
+      "name": "ext-curl-c",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-curl-c/0.1.1/index.json"
+    },
+    {
+      "name": "ext-curl-c",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-curl-c/0.1.2/index.json"
+    },
+    {
+      "name": "ext-curl-c",
+      "version": "0.1.3",
+      "url": "/agent/v0.0.23/packages/ext-curl-c/0.1.3/index.json"
+    },
+    {
+      "name": "ext-data-model",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-data-model/0.1.0/index.json"
+    },
+    {
+      "name": "ext-data-model",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-data-model/0.1.1/index.json"
+    },
+    {
+      "name": "ext-data-model",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-data-model/0.1.2/index.json"
+    },
+    {
+      "name": "ext-db-core",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-db-core/0.1.0/index.json"
+    },
+    {
+      "name": "ext-db-core",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-db-core/0.1.1/index.json"
+    },
+    {
+      "name": "ext-db-core",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-db-core/0.1.2/index.json"
+    },
+    {
+      "name": "ext-db-mysql",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-db-mysql/0.1.0/index.json"
+    },
+    {
+      "name": "ext-db-mysql",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-db-mysql/0.1.1/index.json"
+    },
+    {
+      "name": "ext-db-mysql",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-db-mysql/0.1.2/index.json"
+    },
+    {
+      "name": "ext-db-postgres",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-db-postgres/0.1.0/index.json"
+    },
+    {
+      "name": "ext-db-postgres",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-db-postgres/0.1.1/index.json"
+    },
+    {
+      "name": "ext-db-postgres",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-db-postgres/0.1.2/index.json"
+    },
+    {
+      "name": "ext-db-redis",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-db-redis/0.1.0/index.json"
+    },
+    {
+      "name": "ext-db-redis",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-db-redis/0.1.1/index.json"
+    },
+    {
+      "name": "ext-db-redis",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-db-redis/0.1.2/index.json"
+    },
+    {
+      "name": "ext-db-sqlite",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-db-sqlite/0.1.0/index.json"
+    },
+    {
+      "name": "ext-db-sqlite",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-db-sqlite/0.1.1/index.json"
+    },
+    {
+      "name": "ext-db-sqlite",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-db-sqlite/0.1.2/index.json"
+    },
+    {
+      "name": "ext-error",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-error/0.1.0/index.json"
+    },
+    {
+      "name": "ext-error",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-error/0.1.1/index.json"
+    },
+    {
+      "name": "ext-error",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-error/0.1.2/index.json"
+    },
+    {
+      "name": "ext-fs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-fs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-fs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-fs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-fs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-fs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-hex-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-hex-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-hex-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-hex-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-hex-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-hex-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-ini-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-ini-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-ini-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-ini-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-ini-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-ini-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-json-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-json-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-json-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-json-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-json-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-json-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-log",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-log/0.1.0/index.json"
+    },
+    {
+      "name": "ext-log",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-log/0.1.1/index.json"
+    },
+    {
+      "name": "ext-log",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-log/0.1.2/index.json"
+    },
+    {
+      "name": "ext-math",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-math/0.1.0/index.json"
+    },
+    {
+      "name": "ext-math",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-math/0.1.1/index.json"
+    },
+    {
+      "name": "ext-math",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-math/0.1.2/index.json"
+    },
+    {
+      "name": "ext-memchr-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-memchr-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-memchr-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-memchr-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-memchr-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-memchr-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-net",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-net/0.1.0/index.json"
+    },
+    {
+      "name": "ext-net",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-net/0.1.1/index.json"
+    },
+    {
+      "name": "ext-net",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-net/0.1.2/index.json"
+    },
+    {
+      "name": "ext-openssl-c",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-openssl-c/0.1.0/index.json"
+    },
+    {
+      "name": "ext-openssl-c",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-openssl-c/0.1.1/index.json"
+    },
+    {
+      "name": "ext-openssl-c",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-openssl-c/0.1.2/index.json"
+    },
+    {
+      "name": "ext-openssl-c",
+      "version": "0.1.3",
+      "url": "/agent/v0.0.23/packages/ext-openssl-c/0.1.3/index.json"
+    },
+    {
+      "name": "ext-pb-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-pb-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-pb-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-pb-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-pb-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-pb-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-regex",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-regex/0.1.0/index.json"
+    },
+    {
+      "name": "ext-regex",
+      "version": "0.2.0",
+      "url": "/agent/v0.0.23/packages/ext-regex/0.2.0/index.json"
+    },
+    {
+      "name": "ext-regex",
+      "version": "0.2.1",
+      "url": "/agent/v0.0.23/packages/ext-regex/0.2.1/index.json"
+    },
+    {
+      "name": "ext-regex",
+      "version": "0.2.2",
+      "url": "/agent/v0.0.23/packages/ext-regex/0.2.2/index.json"
+    },
+    {
+      "name": "ext-semver-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-semver-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-semver-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-semver-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-semver-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-semver-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-sockets-c",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-sockets-c/0.1.0/index.json"
+    },
+    {
+      "name": "ext-sockets-c",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-sockets-c/0.1.1/index.json"
+    },
+    {
+      "name": "ext-sockets-c",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-sockets-c/0.1.2/index.json"
+    },
+    {
+      "name": "ext-sockets-c",
+      "version": "0.1.3",
+      "url": "/agent/v0.0.23/packages/ext-sockets-c/0.1.3/index.json"
+    },
+    {
+      "name": "ext-streams",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-streams/0.1.0/index.json"
+    },
+    {
+      "name": "ext-streams",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-streams/0.1.1/index.json"
+    },
+    {
+      "name": "ext-streams",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-streams/0.1.2/index.json"
+    },
+    {
+      "name": "ext-tar-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-tar-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-tar-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-tar-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-tar-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-tar-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-time-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-time-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-time-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-time-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-time-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-time-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-toml-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-toml-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-toml-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-toml-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-toml-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-toml-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-tracing",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-tracing/0.1.0/index.json"
+    },
+    {
+      "name": "ext-tracing",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-tracing/0.1.1/index.json"
+    },
+    {
+      "name": "ext-tracing",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-tracing/0.1.2/index.json"
+    },
+    {
+      "name": "ext-u64-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-u64-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-u64-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-u64-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-u64-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-u64-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-unicode-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-unicode-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-unicode-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-unicode-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-unicode-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-unicode-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-url-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-url-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-url-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-url-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-url-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-url-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-uuid-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-uuid-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-uuid-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-uuid-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-uuid-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-uuid-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-xml-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-xml-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-xml-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-xml-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-xml-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-xml-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-yaml-rs",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-yaml-rs/0.1.0/index.json"
+    },
+    {
+      "name": "ext-yaml-rs",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-yaml-rs/0.1.1/index.json"
+    },
+    {
+      "name": "ext-yaml-rs",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-yaml-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-zlib-c",
+      "version": "0.1.0",
+      "url": "/agent/v0.0.23/packages/ext-zlib-c/0.1.0/index.json"
+    },
+    {
+      "name": "ext-zlib-c",
+      "version": "0.1.1",
+      "url": "/agent/v0.0.23/packages/ext-zlib-c/0.1.1/index.json"
+    },
+    {
+      "name": "ext-zlib-c",
+      "version": "0.1.2",
+      "url": "/agent/v0.0.23/packages/ext-zlib-c/0.1.2/index.json"
+    },
+    {
+      "name": "ext-zlib-c",
+      "version": "0.1.3",
+      "url": "/agent/v0.0.23/packages/ext-zlib-c/0.1.3/index.json"
+    }
+  ]
+}
