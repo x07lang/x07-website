@@ -131,6 +131,49 @@ def _generate_examples_index(*, agent_dir: Path, rel_agent_dir: Path, url_prefix
     }
 
 
+def _parse_semver(v: str) -> tuple[int, int, int] | None:
+    parts = v.split(".")
+    if len(parts) != 3:
+        return None
+    try:
+        major = int(parts[0])
+        minor = int(parts[1])
+        patch = int(parts[2])
+    except ValueError:
+        return None
+    if major < 0 or minor < 0 or patch < 0:
+        return None
+    return (major, minor, patch)
+
+
+def _generate_packages_index(*, agent_dir: Path, rel_agent_dir: Path, url_prefix: str) -> dict:
+    packages_dir = agent_dir / "packages"
+    items: list[dict] = []
+    for pkg_dir in sorted(packages_dir.iterdir(), key=lambda p: p.name):
+        if not pkg_dir.is_dir():
+            continue
+        for ver_dir in sorted(
+            [p for p in pkg_dir.iterdir() if p.is_dir() and _parse_semver(p.name) is not None],
+            key=lambda p: _parse_semver(p.name) or (0, 0, 0),
+        ):
+            idx_path = ver_dir / "index.json"
+            if not idx_path.is_file():
+                continue
+            items.append(
+                {
+                    "name": pkg_dir.name,
+                    "version": ver_dir.name,
+                    "url": f"{url_prefix}/packages/{pkg_dir.name}/{ver_dir.name}/index.json",
+                }
+            )
+    items.sort(key=lambda it: (it["name"], _parse_semver(it["version"]) or (0, 0, 0), it["version"]))
+    return {
+        "schema_version": "x07.website.agent.packages_index@v1",
+        "generated_from": f"{rel_agent_dir.as_posix()}/packages/*/*/index.json",
+        "items": items,
+    }
+
+
 def _compare_trees(*, a: Path, b: Path, label: str) -> None:
     a_files = _iter_files_sorted(a)
     b_files = _iter_files_sorted(b)
@@ -312,6 +355,8 @@ def _update_agent_index_json(*, agent_dir: Path, check: bool) -> None:
         "skills_index_url": "skills/index.json",
         "examples_index_url": "examples/index.json",
     }
+    if (agent_dir / "packages").is_dir():
+        expected["packages_index_url"] = "packages/index.json"
     if check:
         for k, v in expected.items():
             if index.get(k) != v:
@@ -336,6 +381,9 @@ def _generate_site_agent_data_ts(*, repo_root: Path, check: bool) -> None:
     examples_index = json.loads(
         (agent_latest / "examples" / "index.json").read_text(encoding="utf-8")
     )
+    packages_index = json.loads(
+        (agent_latest / "packages" / "index.json").read_text(encoding="utf-8")
+    )
     stdlib_index = json.loads((agent_latest / "stdlib" / "index.json").read_text(encoding="utf-8"))
     stdlib_modules = stdlib_index.get("modules", [])
     module_count = len(stdlib_modules) if isinstance(stdlib_modules, list) else 0
@@ -349,6 +397,7 @@ def _generate_site_agent_data_ts(*, repo_root: Path, check: bool) -> None:
         f"export const latestSkillsIndex = {json.dumps(skills_index, indent=2)} as const;\n\n"
         f"export const latestSchemasIndex = {json.dumps(schemas_index, indent=2)} as const;\n\n"
         f"export const latestExamplesIndex = {json.dumps(examples_index, indent=2)} as const;\n\n"
+        f"export const latestPackagesIndex = {json.dumps(packages_index, indent=2)} as const;\n\n"
         "export const latestStdlibIndexMeta = {\n"
         "  url: '/agent/latest/stdlib/index.json',\n"
         f"  module_count: {module_count},\n"
@@ -366,6 +415,7 @@ def _generate_entrypoints_json(*, url_prefix: str) -> dict:
             "skills_index": f"{url_prefix}/skills/index.json",
             "schemas_index": f"{url_prefix}/schemas/index.json",
             "examples_index": f"{url_prefix}/examples/index.json",
+            "packages_index": f"{url_prefix}/packages/index.json",
             "stdlib_index": f"{url_prefix}/stdlib/index.json",
         },
     }
@@ -400,6 +450,9 @@ def main(argv: list[str]) -> int:
     if not (agent_dir / "examples").is_dir():
         print(f"ERROR: missing examples dir: {rel_agent_dir}/examples", file=sys.stderr)
         return 2
+    if not (agent_dir / "packages").is_dir():
+        print(f"ERROR: missing packages dir: {rel_agent_dir}/packages", file=sys.stderr)
+        return 2
 
     _update_agent_index_json(agent_dir=agent_dir, check=args.check)
 
@@ -418,6 +471,15 @@ def main(argv: list[str]) -> int:
     _write_json_if_changed(
         path=agent_dir / "examples" / "index.json",
         obj=examples_index,
+        check=args.check,
+    )
+
+    packages_index = _generate_packages_index(
+        agent_dir=agent_dir, rel_agent_dir=rel_agent_dir, url_prefix=url_prefix
+    )
+    _write_json_if_changed(
+        path=agent_dir / "packages" / "index.json",
+        obj=packages_index,
         check=args.check,
     )
 

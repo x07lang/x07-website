@@ -53,14 +53,28 @@ def main(argv: list[str]) -> int:
                 return None
             return v
 
+        def opt_str_field(name: str) -> str | None:
+            v = index.get(name)
+            if v is None:
+                return None
+            if not isinstance(v, str) or not v:
+                print(
+                    f"ERROR: {index_path.relative_to(root)} {name} must be non-empty string when present",
+                    file=sys.stderr,
+                )
+                return ""
+            return v
+
         manifest_url = req_str_field("manifest_url")
         schemas_dir = req_str_field("schemas_dir")
         skills_dir = req_str_field("skills_dir")
         stdlib_index_url = req_str_field("stdlib_index_url")
         examples_dir = req_str_field("examples_dir")
+        packages_dir = opt_str_field("packages_dir")
         schemas_index_url = req_str_field("schemas_index_url")
         skills_index_url = req_str_field("skills_index_url")
         examples_index_url = req_str_field("examples_index_url")
+        packages_index_url = opt_str_field("packages_index_url")
         if None in (
             manifest_url,
             schemas_dir,
@@ -72,6 +86,8 @@ def main(argv: list[str]) -> int:
             examples_index_url,
         ):
             return 1
+        if "" in (packages_dir, packages_index_url):
+            return 1
 
         if not (agent_dir / manifest_url).is_file():
             return err(f"missing {agent_dir.relative_to(root)}/{manifest_url}")
@@ -81,6 +97,8 @@ def main(argv: list[str]) -> int:
             return err(f"missing {agent_dir.relative_to(root)}/{skills_dir}")
         if not (agent_dir / examples_dir).is_dir():
             return err(f"missing {agent_dir.relative_to(root)}/{examples_dir}")
+        if packages_dir and not (agent_dir / packages_dir).is_dir():
+            return err(f"missing {agent_dir.relative_to(root)}/{packages_dir}")
         if not (agent_dir / stdlib_index_url).is_file():
             return err(f"missing {agent_dir.relative_to(root)}/{stdlib_index_url}")
         if not (agent_dir / schemas_index_url).is_file():
@@ -89,6 +107,8 @@ def main(argv: list[str]) -> int:
             return err(f"missing {agent_dir.relative_to(root)}/{skills_index_url}")
         if not (agent_dir / examples_index_url).is_file():
             return err(f"missing {agent_dir.relative_to(root)}/{examples_index_url}")
+        if packages_index_url and not (agent_dir / packages_index_url).is_file():
+            return err(f"missing {agent_dir.relative_to(root)}/{packages_index_url}")
 
         codex_dirs = list(agent_dir.rglob(".codex"))
         if codex_dirs:
@@ -189,6 +209,80 @@ def main(argv: list[str]) -> int:
         )
         if example_ids != expected_example_ids:
             return err(f"{(agent_dir / examples_index_url).relative_to(root)} items do not match examples_dir")
+
+        # ---- packages index (optional for older toolchains) ----
+        if packages_index_url:
+            rc, packages_index = check_index_common(
+                index_path=agent_dir / packages_index_url,
+                expected_schema_version="x07.website.agent.packages_index@v1",
+                required_item_keys=["name", "version", "url"],
+            )
+            if rc != 0 or packages_index is None:
+                return 1
+
+            def parse_semver(v: str) -> tuple[int, int, int] | None:
+                parts = v.split(".")
+                if len(parts) != 3:
+                    return None
+                try:
+                    major = int(parts[0])
+                    minor = int(parts[1])
+                    patch = int(parts[2])
+                except ValueError:
+                    return None
+                if major < 0 or minor < 0 or patch < 0:
+                    return None
+                return (major, minor, patch)
+
+            pkg_items = packages_index.get("items", [])
+            pkg_tuples: list[tuple[str, str]] = []
+            for it in pkg_items:
+                name = it.get("name")
+                version = it.get("version")
+                url = it.get("url")
+                if not isinstance(name, str) or not name:
+                    return err(
+                        f"{(agent_dir / packages_index_url).relative_to(root)} item.name must be non-empty string"
+                    )
+                if not isinstance(version, str) or not version:
+                    return err(
+                        f"{(agent_dir / packages_index_url).relative_to(root)} item.version must be non-empty string"
+                    )
+                if not isinstance(url, str) or not url:
+                    return err(
+                        f"{(agent_dir / packages_index_url).relative_to(root)} item.url must be non-empty string"
+                    )
+                if not url.startswith(f"{agent_url_prefix}/packages/"):
+                    return err(
+                        f"{(agent_dir / packages_index_url).relative_to(root)} item.url must start with {agent_url_prefix}/packages/"
+                    )
+                if not (root / url.lstrip("/")).is_file():
+                    return err(
+                        f"{(agent_dir / packages_index_url).relative_to(root)} missing file for url: {url}"
+                    )
+                pkg_tuples.append((name, version))
+
+            expected_sorted = sorted(
+                pkg_tuples, key=lambda t: (t[0], parse_semver(t[1]) or (0, 0, 0), t[1])
+            )
+            if pkg_tuples != expected_sorted:
+                return err(f"{(agent_dir / packages_index_url).relative_to(root)} items must be sorted")
+
+            packages_root = agent_dir / (packages_dir or "packages")
+            expected: list[tuple[str, str]] = []
+            if packages_root.is_dir():
+                for pkg_dir in sorted(packages_root.iterdir(), key=lambda p: p.name):
+                    if not pkg_dir.is_dir():
+                        continue
+                    for ver_dir in sorted(pkg_dir.iterdir(), key=lambda p: p.name):
+                        if not ver_dir.is_dir():
+                            continue
+                        if not (ver_dir / "index.json").is_file():
+                            continue
+                        expected.append((pkg_dir.name, ver_dir.name))
+            expected = sorted(expected, key=lambda t: (t[0], parse_semver(t[1]) or (0, 0, 0), t[1]))
+            if pkg_tuples != expected:
+                return err(f"{(agent_dir / packages_index_url).relative_to(root)} items do not match packages dir")
 
         # ---- skills index ----
         rc, skills_index = check_index_common(

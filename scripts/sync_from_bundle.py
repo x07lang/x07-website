@@ -211,6 +211,81 @@ def _generate_stdlib_index(toolchain_repo: Path, out_path: Path) -> dict:
     return idx
 
 
+def _extract_module_exports(doc: dict) -> list[str]:
+    exports: list[str] = []
+    for decl in doc.get("decls", []):
+        if not isinstance(decl, dict):
+            continue
+        if decl.get("kind") != "export":
+            continue
+        names = decl.get("names", [])
+        if not isinstance(names, list):
+            continue
+        exports.extend([n for n in names if isinstance(n, str) and n])
+    return sorted(set(exports))
+
+
+def _generate_external_package_indexes(*, toolchain_repo: Path, out_dir: Path) -> None:
+    packages_root = toolchain_repo / "packages" / "ext"
+    if not packages_root.is_dir():
+        return
+
+    out_root = out_dir / "packages"
+    out_root.mkdir(parents=True, exist_ok=True)
+
+    for pkg_dir in sorted(packages_root.iterdir(), key=lambda p: p.name):
+        if not pkg_dir.is_dir():
+            continue
+        versions = []
+        for child in pkg_dir.iterdir():
+            if not child.is_dir():
+                continue
+            if _parse_semver(child.name) is None:
+                continue
+            versions.append(child)
+
+        for version_dir in sorted(versions, key=lambda p: _parse_semver(p.name) or (0, 0, 0)):
+            manifest_path = version_dir / "x07-package.json"
+            if not manifest_path.is_file():
+                continue
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            name = manifest.get("name")
+            version = manifest.get("version")
+            module_root = manifest.get("module_root")
+            modules = manifest.get("modules", [])
+            if not isinstance(name, str) or not name:
+                raise ValueError(f"package manifest missing name: {manifest_path}")
+            if not isinstance(version, str) or not version:
+                raise ValueError(f"package manifest missing version: {manifest_path}")
+            if not isinstance(module_root, str) or not module_root:
+                raise ValueError(f"package manifest missing module_root: {manifest_path}")
+            if not isinstance(modules, list) or not all(isinstance(m, str) for m in modules):
+                raise ValueError(f"package manifest invalid modules list: {manifest_path}")
+
+            modules_root = version_dir / module_root
+            module_items: list[dict] = []
+            for module_id in sorted(set(modules)):
+                rel = module_id.replace(".", "/") + ".x07.json"
+                module_path = modules_root / rel
+                if not module_path.is_file():
+                    raise ValueError(f"missing module file for {name}@{version}: {module_path}")
+                doc = json.loads(module_path.read_text(encoding="utf-8"))
+                exports = _extract_module_exports(doc)
+                module_items.append({"module_id": module_id, "path": rel, "exports": exports})
+
+            idx = {
+                "schema_version": "x07.website.package-index@0.1.0",
+                "name": name,
+                "version": version,
+                "module_root": module_root,
+                "meta": manifest.get("meta"),
+                "modules": module_items,
+            }
+            out_path = out_root / name / version / "index.json"
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path.write_text(json.dumps(idx, indent=2) + "\n", encoding="utf-8")
+
+
 def _copy_tree(src: Path, dst: Path) -> None:
     if dst.exists():
         shutil.rmtree(dst)
@@ -253,6 +328,7 @@ def _sync_agent_portal(
     (out_dir / "skills").mkdir(parents=True, exist_ok=True)
     (out_dir / "stdlib").mkdir(parents=True, exist_ok=True)
     (out_dir / "examples").mkdir(parents=True, exist_ok=True)
+    (out_dir / "packages").mkdir(parents=True, exist_ok=True)
 
     # Schemas
     schema_srcs = [
@@ -289,6 +365,9 @@ def _sync_agent_portal(
     stdlib_index_path = out_dir / "stdlib" / "index.json"
     _generate_stdlib_index(toolchain_repo, stdlib_index_path)
 
+    # External packages index (official packages/ext)
+    _generate_external_package_indexes(toolchain_repo=toolchain_repo, out_dir=out_dir)
+
     # Examples (a small, stable subset)
     examples_src = toolchain_repo / "examples"
     if examples_src.is_dir():
@@ -304,6 +383,7 @@ def _sync_agent_portal(
         "skills_dir": "skills/",
         "stdlib_index_url": "stdlib/index.json",
         "examples_dir": "examples/",
+        "packages_dir": "packages/",
         "manifest_url": "manifest.json",
     }
     index_path = out_dir / "index.json"

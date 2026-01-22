@@ -5,13 +5,16 @@ export const AGENT_ENDPOINTS = {
   schemas_index: '/agent/latest/schemas/index.json',
   skills_index: '/agent/latest/skills/index.json',
   examples_index: '/agent/latest/examples/index.json',
+  packages_index: '/agent/latest/packages/index.json',
   stdlib_index: '/agent/latest/stdlib/index.json',
   toolchain_versions: '/versions/toolchain_versions.json',
 } as const;
 
 export const MINIMAL_AGENT_LOOP_COMMANDS = [
-  'x07 ast init --world solve-pure --module main --kind entry --out main.x07.json',
-  'x07c lint --input main.x07.json --world solve-pure',
-  'x07c fix --input main.x07.json --world solve-pure --write',
+  'x07 --init',
+  'x07 fmt --input src/main.x07.json --write',
+  'x07 lint --input src/main.x07.json --world solve-pure',
+  'x07 fix --input src/main.x07.json --world solve-pure --write',
+  'x07 run',
   'x07 test --manifest tests/tests.json',
 ] as const;

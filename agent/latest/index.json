@@ -1,13 +1,15 @@
 {
   "schema_version": "x07.website.agent-index@0.1.0",
   "toolchain_version": "0.0.17",
-  "docs_bundle_sha256": "c80862a04e3a37b1099ee64f9b4583318924bd4ada93afd183c01aeb6018ee53",
+  "docs_bundle_sha256": "1e456767fff220ecf5d3caee827367027a24c9bfc493daea7382bd63ba584813",
   "schemas_dir": "schemas/",
   "skills_dir": "skills/",
   "stdlib_index_url": "stdlib/index.json",
   "examples_dir": "examples/",
+  "packages_dir": "packages/",
   "manifest_url": "manifest.json",
   "schemas_index_url": "schemas/index.json",
   "skills_index_url": "skills/index.json",
-  "examples_index_url": "examples/index.json"
+  "examples_index_url": "examples/index.json",
+  "packages_index_url": "packages/index.json"
 }

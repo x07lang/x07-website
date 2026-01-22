@@ -6,6 +6,7 @@ import toolchainVersionsFile from '@site/static/versions/toolchain_versions.json
 
 import {
   latestExamplesIndex,
+  latestPackagesIndex,
   latestSchemasIndex,
   latestSkillsIndex,
   latestStdlibIndexMeta,
@@ -81,6 +82,7 @@ export default function AgentPortal(): ReactNode {
   const skillsCount = latestSkillsIndex.items.length;
   const schemasCount = latestSchemasIndex.items.length;
   const examplesCount = latestExamplesIndex.items.length;
+  const packagesCount = latestPackagesIndex.items.length;
 
   return (
     <Layout
@@ -127,6 +129,11 @@ export default function AgentPortal(): ReactNode {
               </a>
             </li>
             <li>
+              <a href={AGENT_ENDPOINTS.packages_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.packages_index}`}</code>
+              </a>
+            </li>
+            <li>
               <a href={AGENT_ENDPOINTS.stdlib_index}>
                 <code>{`GET ${AGENT_ENDPOINTS.stdlib_index}`}</code>
               </a>
@@ -144,6 +151,9 @@ export default function AgentPortal(): ReactNode {
           </li>
           <li>
             <Link to="/agent/examples">{`Examples (${examplesCount})`}</Link>
+          </li>
+          <li>
+            <Link to="/agent/packages">{`Packages (${packagesCount})`}</Link>
           </li>
           <li>
             <Link to="/agent/stdlib">{`Stdlib index (${latestStdlibIndexMeta.module_count} modules)`}</Link>
@@ -181,14 +191,14 @@ export default function AgentPortal(): ReactNode {
             (see <Link to="/docs/getting-started/install">Install</Link>).
           </li>
           <li>
-            Create a program (see{' '}
+            Create a project with <code>x07 --init</code> (see{' '}
             <Link to="/docs/getting-started/first-project">Your first X07 program</Link>).
           </li>
           <li>
-            Run lint: <code>x07c lint</code> (read <code>x07diag</code> JSON output).
+            Run lint: <code>x07 lint</code> (read <code>x07diag</code> JSON output).
           </li>
           <li>
-            Apply JSON Patch fixes: <code>x07c fix</code> or <code>x07c apply-patch</code>.
+            Apply JSON Patch fixes: <code>x07 fix</code> or <code>x07 ast apply-patch</code>.
           </li>
           <li>
             Run tests: <code>x07 test</code> (read <code>x07test</code> JSON output).
