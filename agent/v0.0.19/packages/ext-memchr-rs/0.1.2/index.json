@@ -1,0 +1,43 @@
+{
+  "schema_version": "x07.website.package-index@0.1.0",
+  "name": "ext-memchr-rs",
+  "version": "0.1.2",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.memchr",
+      "path": "ext/memchr.x07.json",
+      "exports": [
+        "ext.memchr.memchr",
+        "ext.memchr.memchr2",
+        "ext.memchr.memchr3",
+        "ext.memchr.memrchr",
+        "ext.memchr.memrchr2",
+        "ext.memchr.memrchr3"
+      ]
+    },
+    {
+      "module_id": "ext.memchr.tests",
+      "path": "ext/memchr/tests.x07.json",
+      "exports": [
+        "ext.memchr.tests.test_memchr",
+        "ext.memchr.tests.test_memchr2",
+        "ext.memchr.tests.test_memchr3",
+        "ext.memchr.tests.test_memrchr"
+      ]
+    }
+  ]
+}
