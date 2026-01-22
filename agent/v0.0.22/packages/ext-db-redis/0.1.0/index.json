@@ -1,0 +1,56 @@
+{
+  "schema_version": "x07.website.package-index@0.1.0",
+  "name": "ext-db-redis",
+  "version": "0.1.0",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "std.db.redis",
+      "path": "std/db/redis.x07.json",
+      "exports": [
+        "std.db.redis._not_implemented_note_v1",
+        "std.db.redis.caps_default_v1",
+        "std.db.redis.close_v1",
+        "std.db.redis.cmd_doc_v1",
+        "std.db.redis.cmd_v1",
+        "std.db.redis.open_tcp_v1",
+        "std.db.redis.open_unix_v1",
+        "std.db.redis.open_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.redis.argv",
+      "path": "std/db/redis/argv.x07.json",
+      "exports": [
+        "std.db.redis.argv.empty_v1",
+        "std.db.redis.argv.from1_v1",
+        "std.db.redis.argv.from2_v1",
+        "std.db.redis.argv.from3_v1",
+        "std.db.redis.argv.push_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.redis.spec",
+      "path": "std/db/redis/spec.x07.json",
+      "exports": [
+        "std.db.redis.spec.caps_default_v1",
+        "std.db.redis.spec.caps_pack_v1",
+        "std.db.redis.spec.close_req_v1",
+        "std.db.redis.spec.cmd_req_v1",
+        "std.db.redis.spec.flags_none_v1",
+        "std.db.redis.spec.open_kind_tcp_v1",
+        "std.db.redis.spec.open_kind_unix_v1",
+        "std.db.redis.spec.open_req_tcp_v1",
+        "std.db.redis.spec.open_req_unix_v1"
+      ]
+    }
+  ]
+}

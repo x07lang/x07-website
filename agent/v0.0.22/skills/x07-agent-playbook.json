@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.0.22/skills/x07-agent-playbook/SKILL.md",
+  "id": "x07-agent-playbook",
+  "summary": "Agent-first workflow and design rails for building X07 programs with the released toolchain (no repo-only dependencies). Canonical execution is via `x07 run`.",
+  "docs_url": "/agent/v0.0.22/skills/x07-agent-playbook/SKILL.md",
+  "report_schema_url": null
+}
