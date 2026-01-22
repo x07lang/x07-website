@@ -57,7 +57,7 @@ export const latestSkillsIndex = {
     },
     {
       "id": "x07-os-run",
-      "summary": "Expert backend for run-os / run-os-sandboxed execution via x07-os-runner. Prefer `x07 run --os` as the canonical agent entry point.",
+      "summary": "Expert backend for run-os / run-os-sandboxed execution via x07-os-runner. Prefer `x07 run --profile os` / `x07 run --profile sandbox`.",
       "docs_url": "/agent/latest/skills/x07-os-run/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07-os-runner.report.schema.json"
     },

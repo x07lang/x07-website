@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.0.17",
-  "docs_bundle_sha256": "1e456767fff220ecf5d3caee827367027a24c9bfc493daea7382bd63ba584813",
+  "docs_bundle_sha256": "80141819598dd50d5ca4b0b1a7a7fefe567d905793a4aa3ac89965f49ab1a01e",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -150,13 +150,58 @@
     },
     {
       "path": "recipes/index.md",
-      "sha256": "83ea2b44c151ab3b6b7d95b90b295bf52182b7ada013d0257df47a1e44879f71",
-      "size": 1597
+      "sha256": "c271486b9d6791f385798cdd5b767d1d2e0882f6b94463bb232096472e80d4be",
+      "size": 11811
+    },
+    {
+      "path": "recipes/patches/async-hello.app.patch.json",
+      "sha256": "f71e9dbf4f6877fd204644866e85183869edda97cb01c8ba09a21c21809631d6",
+      "size": 533
+    },
+    {
+      "path": "recipes/patches/ext-cli-name.app.patch.json",
+      "sha256": "7d2888e6a5155e8af36eddcf9d4115c267c9ceea24ab230e388ab8cbff962600",
+      "size": 1801
+    },
+    {
+      "path": "recipes/patches/find-literal.app.patch.json",
+      "sha256": "c8af3d6b1c56340df4ff9ab937cc22300c0d9f7494da80c96338f1276bf38b92",
+      "size": 563
     },
     {
       "path": "recipes/patches/hello-output.app.patch.json",
-      "sha256": "462d8fc6eebe13ba0cc87956e624a21d3118f76b419fc8b200de542a9439db31",
-      "size": 125
+      "sha256": "0e41de4d2a69b8621f9eaba1ff1d5bc530813e337bdae061ff355ec0f4f6419a",
+      "size": 127
+    },
+    {
+      "path": "recipes/patches/json-canonicalize.app.patch.json",
+      "sha256": "3f6b2ff9ec338dc25e50e2f82f5245ab60711dfd844cab71ac5d9c45acc6c665",
+      "size": 206
+    },
+    {
+      "path": "recipes/patches/kth-line.app.patch.json",
+      "sha256": "f3393eedf3f26230dbd61ee595c3ab104213409e9c7fa0c6c1f3a70afafff815",
+      "size": 267
+    },
+    {
+      "path": "recipes/patches/prefix-input.app.patch.json",
+      "sha256": "bbb3e77f8c6e6f6abfeb52446e7e02fd59ebefbd0db80623dbc849a79564c510",
+      "size": 214
+    },
+    {
+      "path": "recipes/patches/sandbox-http-get.app.patch.json",
+      "sha256": "7fd027c1a5d68d8f870d8292a0806923703aab4a8e26379253e68ecae1e60e56",
+      "size": 1522
+    },
+    {
+      "path": "recipes/patches/sandbox-write-file.app.patch.json",
+      "sha256": "8879b286e331afde5da1c0aabc3d7a185a88623ea562794f51c7c0ce1a7e6ac9",
+      "size": 341
+    },
+    {
+      "path": "recipes/patches/solve-fs-read-file.app.patch.json",
+      "sha256": "9a93eea56cd07d2b318c5c3c03a77cefdf15f7565723a3a4ecafd477ae0ae197",
+      "size": 281
     },
     {
       "path": "recipes/patches/solve-rr-fetch.app.patch.json",
@@ -302,7 +347,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "f936b4c65c5e2c0a951e738ba22ff10f37cf4352048311a7424ca793c6860371",
+      "sha256": "4fcf7339afd6829ffeeb1a3f816c91194f26e3c157f7aa1ed33edb26aecca158",
       "size": 559
     },
     {
@@ -987,8 +1032,8 @@
     },
     {
       "path": "schemas/x07c.report.schema.json",
-      "sha256": "edc31920eaae1d3ae3d5bcfa08ab437645e869a30fca715dc90e4a0496d1e0bb",
-      "size": 937
+      "sha256": "edae9f5414a5ebf24e137a7daf9181b8ea0aecc454cbfa23acb0f8f52d03dea3",
+      "size": 959
     },
     {
       "path": "schemas/x07cli.specrows.schema.json",
@@ -1037,8 +1082,8 @@
     },
     {
       "path": "skills/index.json",
-      "sha256": "8e965d628b2b7bb751ed289cdaab9b37b137a7dc5d7f60f430674664dbd50162",
-      "size": 3654
+      "sha256": "41f514d217e68dd0f3df558cbe3f96af7160b349a745d9cef7503a8b306ab46b",
+      "size": 3657
     },
     {
       "path": "skills/pack/skills/README.md",
@@ -1102,8 +1147,8 @@
     },
     {
       "path": "skills/pack/skills/x07-os-run/SKILL.md",
-      "sha256": "8d97bcfbc20aa46b01415b4e605319620b91be425ec04891959912efc8572b4f",
-      "size": 3219
+      "sha256": "45a8fe19c7aa2a60533a14d24371d533192024f37e247f1f65c78e35625d03ad",
+      "size": 3222
     },
     {
       "path": "skills/pack/skills/x07-os-run/references/run-os-policy.sample.json",
@@ -1222,13 +1267,13 @@
     },
     {
       "path": "skills/x07-os-run.json",
-      "sha256": "8dadfac5ba44ed79809049200857ad653640ffd8735d8482aafcd044714af0e7",
-      "size": 428
+      "sha256": "328326feac2d2b991c1430bd0b2e97c59b95db37b624fe79b1cdb14b4fdaeb9d",
+      "size": 431
     },
     {
       "path": "skills/x07-os-run/SKILL.md",
-      "sha256": "8d97bcfbc20aa46b01415b4e605319620b91be425ec04891959912efc8572b4f",
-      "size": 3219
+      "sha256": "45a8fe19c7aa2a60533a14d24371d533192024f37e247f1f65c78e35625d03ad",
+      "size": 3222
     },
     {
       "path": "skills/x07-os-run/references/run-os-policy.sample.json",
