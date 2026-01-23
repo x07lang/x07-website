@@ -1,7 +1,12 @@
 {
   "schema_version": "x07.website.toolchain-versions@0.1.0",
-  "latest_toolchain_version": "0.0.24",
+  "latest_toolchain_version": "0.0.25",
   "versions": [
+    {
+      "toolchain_version": "0.0.25",
+      "docs_bundle_sha256": "eeed9271339e422cbccc24227196118541eb7c2dd370297c86968706e7fb922f",
+      "published_at_utc": null
+    },
     {
       "toolchain_version": "0.0.24",
       "docs_bundle_sha256": "eddb62ed674611a835bc20caff25052ce0aa291fbd3c0f18b781417dd62d0cbc",
