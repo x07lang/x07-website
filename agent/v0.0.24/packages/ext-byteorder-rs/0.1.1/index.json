@@ -1,0 +1,44 @@
+{
+  "schema_version": "x07.website.package-index@0.1.0",
+  "name": "ext-byteorder-rs",
+  "version": "0.1.1",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.byteorder",
+      "path": "ext/byteorder.x07.json",
+      "exports": [
+        "ext.byteorder.byteorder_read_u16_be_or",
+        "ext.byteorder.byteorder_read_u16_le_or",
+        "ext.byteorder.byteorder_read_u32_be_or",
+        "ext.byteorder.byteorder_read_u32_le_or",
+        "ext.byteorder.byteorder_write_u16_be",
+        "ext.byteorder.byteorder_write_u16_le",
+        "ext.byteorder.byteorder_write_u32_be",
+        "ext.byteorder.byteorder_write_u32_le"
+      ]
+    },
+    {
+      "module_id": "ext.byteorder.tests",
+      "path": "ext/byteorder/tests.x07.json",
+      "exports": [
+        "ext.byteorder.tests.test_read_default_oob",
+        "ext.byteorder.tests.test_u16_le_be_roundtrip",
+        "ext.byteorder.tests.test_u32_le_be_roundtrip"
+      ]
+    }
+  ]
+}
