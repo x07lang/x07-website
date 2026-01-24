@@ -45,6 +45,9 @@ curl -fsSL "${BASE}/agent/latest/manifest.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/schemas/index.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/skills/index.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/examples/index.json" >/dev/null
+curl -fsSL "${BASE}/agent/latest/packages/index.json" >/dev/null
+curl -fsSL "${BASE}/agent/latest/catalog/index.json" >/dev/null
+curl -fsSL "${BASE}/agent/latest/catalog/capabilities.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/stdlib/index.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/skills/x07-build-run/SKILL.md" >/dev/null
 

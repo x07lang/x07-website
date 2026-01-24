@@ -91,6 +91,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/run-os-policy.schema.json"
     },
     {
+      "id": "x07-capabilities.schema.json",
+      "url": "/agent/latest/schemas/x07-capabilities.schema.json"
+    },
+    {
       "id": "x07-host-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
@@ -99,16 +103,32 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-install.channels.schema.json"
     },
     {
+      "id": "x07-lock.schema.json",
+      "url": "/agent/latest/schemas/x07-lock.schema.json"
+    },
+    {
       "id": "x07-os-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-os-runner.report.schema.json"
+    },
+    {
+      "id": "x07-package.schema.json",
+      "url": "/agent/latest/schemas/x07-package.schema.json"
     },
     {
       "id": "x07-policy-init.report.schema.json",
       "url": "/agent/latest/schemas/x07-policy-init.report.schema.json"
     },
     {
+      "id": "x07-project.schema.json",
+      "url": "/agent/latest/schemas/x07-project.schema.json"
+    },
+    {
       "id": "x07-run.report.schema.json",
       "url": "/agent/latest/schemas/x07-run.report.schema.json"
+    },
+    {
+      "id": "x07-website.package-index.schema.json",
+      "url": "/agent/latest/schemas/x07-website.package-index.schema.json"
     },
     {
       "id": "x07.native-backends.schema.json",
@@ -467,6 +487,11 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-fs/0.1.2/index.json"
     },
     {
+      "name": "ext-glob-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-glob-rs/0.1.0/index.json"
+    },
+    {
       "name": "ext-hex-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-hex-rs/0.1.0/index.json"
@@ -480,6 +505,11 @@ export const latestPackagesIndex = {
       "name": "ext-hex-rs",
       "version": "0.1.2",
       "url": "/agent/latest/packages/ext-hex-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-html-lite-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-html-lite-rs/0.1.0/index.json"
     },
     {
       "name": "ext-ini-rs",
@@ -627,6 +657,11 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-regex/0.2.2/index.json"
     },
     {
+      "name": "ext-robots-txt-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-robots-txt-rs/0.1.0/index.json"
+    },
+    {
       "name": "ext-semver-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-semver-rs/0.1.0/index.json"
@@ -640,6 +675,11 @@ export const latestPackagesIndex = {
       "name": "ext-semver-rs",
       "version": "0.1.2",
       "url": "/agent/latest/packages/ext-semver-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-sitemap-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-sitemap-rs/0.1.0/index.json"
     },
     {
       "name": "ext-sockets-c",
@@ -795,6 +835,11 @@ export const latestPackagesIndex = {
       "name": "ext-uuid-rs",
       "version": "0.1.2",
       "url": "/agent/latest/packages/ext-uuid-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-walkdir-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-walkdir-rs/0.1.0/index.json"
     },
     {
       "name": "ext-xml-rs",

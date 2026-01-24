@@ -11,6 +11,8 @@ The `/agent` surface is **machine-first**: agents should consume JSON endpoints,
 - `GET /agent/latest/skills/index.json`
 - `GET /agent/latest/examples/index.json`
 - `GET /agent/latest/packages/index.json`
+- `GET /agent/latest/catalog/index.json`
+- `GET /agent/latest/catalog/capabilities.json`
 - `GET /agent/latest/stdlib/index.json`
 
 ## Human docs

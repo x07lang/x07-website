@@ -174,6 +174,28 @@ def _generate_packages_index(*, agent_dir: Path, rel_agent_dir: Path, url_prefix
     }
 
 
+def _generate_catalog_index(*, agent_dir: Path, rel_agent_dir: Path, url_prefix: str) -> dict | None:
+    catalog_dir = agent_dir / "catalog"
+    if not catalog_dir.is_dir():
+        return None
+
+    items: list[dict] = []
+    for p in sorted(catalog_dir.glob("*.json"), key=lambda x: x.name):
+        if p.name == "index.json":
+            continue
+        item_id = _strip_suffix(p.name, ".json")
+        items.append({"id": item_id, "url": f"{url_prefix}/catalog/{p.name}"})
+
+    if not items:
+        return None
+
+    return {
+        "schema_version": "x07.website.agent.catalog_index@v1",
+        "generated_from": f"{rel_agent_dir.as_posix()}/catalog/*.json",
+        "items": items,
+    }
+
+
 def _compare_trees(*, a: Path, b: Path, label: str) -> None:
     a_files = _iter_files_sorted(a)
     b_files = _iter_files_sorted(b)
@@ -357,6 +379,8 @@ def _update_agent_index_json(*, agent_dir: Path, check: bool) -> None:
     }
     if (agent_dir / "packages").is_dir():
         expected["packages_index_url"] = "packages/index.json"
+    if (agent_dir / "catalog").is_dir():
+        expected["catalog_index_url"] = "catalog/index.json"
     if check:
         for k, v in expected.items():
             if index.get(k) != v:
@@ -417,6 +441,8 @@ def _generate_entrypoints_json(*, url_prefix: str) -> dict:
             "examples_index": f"{url_prefix}/examples/index.json",
             "packages_index": f"{url_prefix}/packages/index.json",
             "stdlib_index": f"{url_prefix}/stdlib/index.json",
+            "catalog_index": f"{url_prefix}/catalog/index.json",
+            "capabilities": f"{url_prefix}/catalog/capabilities.json",
         },
     }
 
@@ -482,6 +508,16 @@ def main(argv: list[str]) -> int:
         obj=packages_index,
         check=args.check,
     )
+
+    catalog_index = _generate_catalog_index(
+        agent_dir=agent_dir, rel_agent_dir=rel_agent_dir, url_prefix=url_prefix
+    )
+    if catalog_index is not None:
+        _write_json_if_changed(
+            path=agent_dir / "catalog" / "index.json",
+            obj=catalog_index,
+            check=args.check,
+        )
 
     skill_ids = _export_skills_pack(agent_dir=agent_dir, check=args.check)
     skills_index = _generate_skills_index(

@@ -24,6 +24,77 @@ def main(argv: list[str]) -> int:
         print(f"ERROR: {msg}", file=sys.stderr)
         return 1
 
+    def iter_files_sorted(dir_path: Path) -> list[Path]:
+        out: list[Path] = []
+        for p in dir_path.rglob("*"):
+            if not p.is_file():
+                continue
+            rel = p.relative_to(dir_path)
+            if rel.name == ".DS_Store":
+                continue
+            if any(part.startswith("._") for part in rel.parts):
+                continue
+            out.append(rel)
+        return sorted(out, key=lambda p: p.as_posix())
+
+    def compare_trees(*, a: Path, b: Path, label: str) -> int:
+        a_files = iter_files_sorted(a)
+        b_files = iter_files_sorted(b)
+        if a_files != b_files:
+            return err(f"tree mismatch ({label}): {a} vs {b}")
+        for rel in a_files:
+            if (a / rel).read_bytes() != (b / rel).read_bytes():
+                return err(f"file differs ({label}): {rel}")
+        return 0
+
+    def compare_agent_payload(*, latest_dir: Path, version_dir: Path) -> int:
+        # agent/latest and agent/vX.Y.Z differ in index metadata because they embed URL prefixes.
+        # Compare the underlying published payload to prevent accidental manual edits.
+
+        def iter_payload_files(agent_dir: Path) -> list[Path]:
+            out: list[Path] = []
+            for p in agent_dir.rglob("*"):
+                if not p.is_file():
+                    continue
+                rel = p.relative_to(agent_dir)
+                if rel.name == ".DS_Store":
+                    continue
+                if any(part.startswith("._") for part in rel.parts):
+                    continue
+
+                # Exclude index metadata files that include URL prefixes or generated_from paths.
+                if rel == Path("index.json"):
+                    continue
+                if rel == Path("entrypoints.json"):
+                    continue
+                if rel == Path("manifest.json"):
+                    continue
+                if rel == Path("schemas/index.json"):
+                    continue
+                if rel == Path("examples/index.json"):
+                    continue
+                if rel == Path("packages/index.json"):
+                    continue
+                if rel == Path("catalog/index.json"):
+                    continue
+                if rel == Path("skills/index.json"):
+                    continue
+                if rel.parent == Path("skills") and rel.suffix == ".json":
+                    # skills/<skill_id>.json descriptors embed docs_url/report_schema_url.
+                    continue
+
+                out.append(rel)
+            return sorted(out, key=lambda p: p.as_posix())
+
+        latest_files = iter_payload_files(latest_dir)
+        version_files = iter_payload_files(version_dir)
+        if latest_files != version_files:
+            return err(f"tree mismatch (agent/latest payload): {latest_dir} vs {version_dir}")
+        for rel in latest_files:
+            if (latest_dir / rel).read_bytes() != (version_dir / rel).read_bytes():
+                return err(f"file differs (agent/latest payload): {rel}")
+        return 0
+
     def read_json(path: Path) -> dict | list | str | int | float | bool | None:
         try:
             return json.loads(path.read_text(encoding="utf-8"))
@@ -75,6 +146,7 @@ def main(argv: list[str]) -> int:
         skills_index_url = req_str_field("skills_index_url")
         examples_index_url = req_str_field("examples_index_url")
         packages_index_url = opt_str_field("packages_index_url")
+        catalog_index_url = opt_str_field("catalog_index_url")
         if None in (
             manifest_url,
             schemas_dir,
@@ -86,7 +158,7 @@ def main(argv: list[str]) -> int:
             examples_index_url,
         ):
             return 1
-        if "" in (packages_dir, packages_index_url):
+        if "" in (packages_dir, packages_index_url, catalog_index_url):
             return 1
 
         if not (agent_dir / manifest_url).is_file():
@@ -109,6 +181,8 @@ def main(argv: list[str]) -> int:
             return err(f"missing {agent_dir.relative_to(root)}/{examples_index_url}")
         if packages_index_url and not (agent_dir / packages_index_url).is_file():
             return err(f"missing {agent_dir.relative_to(root)}/{packages_index_url}")
+        if catalog_index_url and not (agent_dir / catalog_index_url).is_file():
+            return err(f"missing {agent_dir.relative_to(root)}/{catalog_index_url}")
 
         codex_dirs = list(agent_dir.rglob(".codex"))
         if codex_dirs:
@@ -284,6 +358,48 @@ def main(argv: list[str]) -> int:
             if pkg_tuples != expected:
                 return err(f"{(agent_dir / packages_index_url).relative_to(root)} items do not match packages dir")
 
+        # ---- catalog index (optional for older toolchains) ----
+        if catalog_index_url:
+            rc, catalog_index = check_index_common(
+                index_path=agent_dir / catalog_index_url,
+                expected_schema_version="x07.website.agent.catalog_index@v1",
+                required_item_keys=["id", "url"],
+            )
+            if rc != 0 or catalog_index is None:
+                return 1
+
+            cat_items = catalog_index.get("items", [])
+            cat_ids: list[str] = []
+            for it in cat_items:
+                cid = it.get("id")
+                url = it.get("url")
+                if not isinstance(cid, str) or not cid:
+                    return err(
+                        f"{(agent_dir / catalog_index_url).relative_to(root)} item.id must be non-empty string"
+                    )
+                if not isinstance(url, str) or not url:
+                    return err(
+                        f"{(agent_dir / catalog_index_url).relative_to(root)} item.url must be non-empty string"
+                    )
+                if not url.startswith(f"{agent_url_prefix}/catalog/"):
+                    return err(
+                        f"{(agent_dir / catalog_index_url).relative_to(root)} item.url must start with {agent_url_prefix}/catalog/"
+                    )
+                if not (root / url.lstrip("/")).is_file():
+                    return err(f"{(agent_dir / catalog_index_url).relative_to(root)} missing file for url: {url}")
+                cat_ids.append(cid)
+
+            if cat_ids != sorted(cat_ids):
+                return err(f"{(agent_dir / catalog_index_url).relative_to(root)} items must be sorted by id")
+
+            expected_cat_ids = sorted(
+                p.name.removesuffix(".json")
+                for p in (agent_dir / "catalog").glob("*.json")
+                if p.name != "index.json"
+            )
+            if cat_ids != expected_cat_ids:
+                return err(f"{(agent_dir / catalog_index_url).relative_to(root)} items do not match catalog dir")
+
         # ---- skills index ----
         rc, skills_index = check_index_common(
             index_path=agent_dir / skills_index_url,
@@ -384,7 +500,10 @@ def main(argv: list[str]) -> int:
                 "skills_index": "/agent/latest/skills/index.json",
                 "schemas_index": "/agent/latest/schemas/index.json",
                 "examples_index": "/agent/latest/examples/index.json",
+                "packages_index": "/agent/latest/packages/index.json",
                 "stdlib_index": "/agent/latest/stdlib/index.json",
+                "catalog_index": "/agent/latest/catalog/index.json",
+                "capabilities": "/agent/latest/catalog/capabilities.json",
             }
             for k, v in expected_latest.items():
                 if latest_obj.get(k) != v:
@@ -462,6 +581,19 @@ def main(argv: list[str]) -> int:
         for d in ["docs/latest", "agent/latest"]:
             if not (root / d).is_dir():
                 return err(f"missing directory: {d}/")
+        rc = compare_trees(
+            a=root / "docs" / "latest",
+            b=root / "docs" / f"v{latest}",
+            label="docs/latest",
+        )
+        if rc != 0:
+            return rc
+        rc = compare_agent_payload(
+            latest_dir=root / "agent" / "latest",
+            version_dir=root / "agent" / f"v{latest}",
+        )
+        if rc != 0:
+            return rc
         rc = check_agent_dir(root / "agent" / "latest")
         if rc != 0:
             return rc

@@ -251,16 +251,29 @@ def _generate_external_package_indexes(*, toolchain_repo: Path, out_dir: Path) -
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             name = manifest.get("name")
             version = manifest.get("version")
+            description = manifest.get("description")
+            docs = manifest.get("docs")
             module_root = manifest.get("module_root")
             modules = manifest.get("modules", [])
             if not isinstance(name, str) or not name:
                 raise ValueError(f"package manifest missing name: {manifest_path}")
             if not isinstance(version, str) or not version:
                 raise ValueError(f"package manifest missing version: {manifest_path}")
+            if description is None:
+                description = ""
+            if not isinstance(description, str):
+                raise ValueError(f"package manifest invalid description: {manifest_path}")
+            if docs is None:
+                docs = ""
+            if not isinstance(docs, str):
+                raise ValueError(f"package manifest invalid docs: {manifest_path}")
             if not isinstance(module_root, str) or not module_root:
                 raise ValueError(f"package manifest missing module_root: {manifest_path}")
             if not isinstance(modules, list) or not all(isinstance(m, str) for m in modules):
                 raise ValueError(f"package manifest invalid modules list: {manifest_path}")
+            meta = manifest.get("meta")
+            if not isinstance(meta, dict):
+                raise ValueError(f"package manifest missing/invalid meta: {manifest_path}")
 
             modules_root = version_dir / module_root
             module_items: list[dict] = []
@@ -274,11 +287,13 @@ def _generate_external_package_indexes(*, toolchain_repo: Path, out_dir: Path) -
                 module_items.append({"module_id": module_id, "path": rel, "exports": exports})
 
             idx = {
-                "schema_version": "x07.website.package-index@0.1.0",
+                "schema_version": "x07.website.package-index@0.2.0",
                 "name": name,
                 "version": version,
+                "description": description,
+                "docs": docs,
                 "module_root": module_root,
-                "meta": manifest.get("meta"),
+                "meta": meta,
                 "modules": module_items,
             }
             out_path = out_root / name / version / "index.json"
@@ -324,6 +339,7 @@ def _sync_agent_portal(
 ) -> list[dict]:
     if out_dir.exists():
         shutil.rmtree(out_dir)
+    (out_dir / "catalog").mkdir(parents=True, exist_ok=True)
     (out_dir / "schemas").mkdir(parents=True, exist_ok=True)
     (out_dir / "skills").mkdir(parents=True, exist_ok=True)
     (out_dir / "stdlib").mkdir(parents=True, exist_ok=True)
@@ -367,6 +383,11 @@ def _sync_agent_portal(
 
     # External packages index (official packages/ext)
     _generate_external_package_indexes(toolchain_repo=toolchain_repo, out_dir=out_dir)
+
+    # Agent catalog (capabilities map, etc.)
+    capabilities_src = toolchain_repo / "catalog" / "capabilities.json"
+    if capabilities_src.is_file():
+        (out_dir / "catalog" / "capabilities.json").write_bytes(capabilities_src.read_bytes())
 
     # Examples (a small, stable subset)
     examples_src = toolchain_repo / "examples"

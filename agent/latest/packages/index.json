@@ -253,6 +253,11 @@
       "url": "/agent/latest/packages/ext-fs/0.1.2/index.json"
     },
     {
+      "name": "ext-glob-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-glob-rs/0.1.0/index.json"
+    },
+    {
       "name": "ext-hex-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-hex-rs/0.1.0/index.json"
@@ -266,6 +271,11 @@
       "name": "ext-hex-rs",
       "version": "0.1.2",
       "url": "/agent/latest/packages/ext-hex-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-html-lite-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-html-lite-rs/0.1.0/index.json"
     },
     {
       "name": "ext-ini-rs",
@@ -413,6 +423,11 @@
       "url": "/agent/latest/packages/ext-regex/0.2.2/index.json"
     },
     {
+      "name": "ext-robots-txt-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-robots-txt-rs/0.1.0/index.json"
+    },
+    {
       "name": "ext-semver-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-semver-rs/0.1.0/index.json"
@@ -426,6 +441,11 @@
       "name": "ext-semver-rs",
       "version": "0.1.2",
       "url": "/agent/latest/packages/ext-semver-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-sitemap-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-sitemap-rs/0.1.0/index.json"
     },
     {
       "name": "ext-sockets-c",
@@ -581,6 +601,11 @@
       "name": "ext-uuid-rs",
       "version": "0.1.2",
       "url": "/agent/latest/packages/ext-uuid-rs/0.1.2/index.json"
+    },
+    {
+      "name": "ext-walkdir-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-walkdir-rs/0.1.0/index.json"
     },
     {
       "name": "ext-xml-rs",

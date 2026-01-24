@@ -21,6 +21,9 @@ for rel in \
   "agent/latest/skills/index.json" \
   "agent/latest/schemas/index.json" \
   "agent/latest/examples/index.json" \
+  "agent/latest/packages/index.json" \
+  "agent/latest/catalog/index.json" \
+  "agent/latest/catalog/capabilities.json" \
   "agent/latest/stdlib/index.json" \
   "agent/latest/skills/x07-io-streams.json" \
   "agent/latest/skills/x07-build-run/SKILL.md" \
