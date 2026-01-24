@@ -279,6 +279,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-base64-rs/0.1.2/index.json#docs"
     },
     {
+      "name": "ext-bigint-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-bigint-rs/0.1.0/index.json",
+      "description": "Big integer utilities (codec_v1, parse, format, basic ops).",
+      "docs_url": "/agent/latest/packages/ext-bigint-rs/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-byteorder-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-byteorder-rs/0.1.0/index.json",
@@ -298,6 +305,20 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-byteorder-rs/0.1.2/index.json",
       "description": "Endian-aware integer encoding and decoding.",
       "docs_url": "/agent/latest/packages/ext-byteorder-rs/0.1.2/index.json#docs"
+    },
+    {
+      "name": "ext-cbor-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-cbor-rs/0.1.0/index.json",
+      "description": "CBOR encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-cbor-rs/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-checksum-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-checksum-rs/0.1.0/index.json",
+      "description": "Fast non-cryptographic checksums (CRC32C, xxhash64).",
+      "docs_url": "/agent/latest/packages/ext-checksum-rs/0.1.0/index.json#docs"
     },
     {
       "name": "ext-cli",
@@ -347,6 +368,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-compress-rs/0.1.2/index.json",
       "description": "Compression primitives and ZIP archives.",
       "docs_url": "/agent/latest/packages/ext-compress-rs/0.1.2/index.json#docs"
+    },
+    {
+      "name": "ext-compress-rs",
+      "version": "0.1.3",
+      "url": "/agent/latest/packages/ext-compress-rs/0.1.3/index.json",
+      "description": "Compression primitives and ZIP archives.",
+      "docs_url": "/agent/latest/packages/ext-compress-rs/0.1.3/index.json#docs"
     },
     {
       "name": "ext-crypto-rs",
@@ -545,6 +573,20 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-db-sqlite/0.1.2/index.json#docs"
     },
     {
+      "name": "ext-decimal-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-decimal-rs/0.1.0/index.json",
+      "description": "Fixed-point decimal utilities (codec_v1, parse, format, basic ops).",
+      "docs_url": "/agent/latest/packages/ext-decimal-rs/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-diff-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-diff-rs/0.1.0/index.json",
+      "description": "Deterministic diff + patch helpers (bytes/lines) with a stable patch_v1 format.",
+      "docs_url": "/agent/latest/packages/ext-diff-rs/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-error",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-error/0.1.0/index.json",
@@ -592,6 +634,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-glob-rs/0.1.0/index.json",
       "description": "Wildcard (glob-like) matching for ASCII paths and tokens.",
       "docs_url": "/agent/latest/packages/ext-glob-rs/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-glob-rs",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-glob-rs/0.1.1/index.json",
+      "description": "Wildcard (glob-like) matching for ASCII paths and tokens.",
+      "docs_url": "/agent/latest/packages/ext-glob-rs/0.1.1/index.json#docs"
     },
     {
       "name": "ext-hex-rs",
@@ -727,6 +776,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-memchr-rs/0.1.2/index.json#docs"
     },
     {
+      "name": "ext-msgpack-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-msgpack-rs/0.1.0/index.json",
+      "description": "MessagePack encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-msgpack-rs/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-net",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-net/0.1.0/index.json",
@@ -774,6 +830,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-openssl-c/0.1.3/index.json",
       "description": "OpenSSL bindings: hashes, RNG, and Ed25519 (run-os only).",
       "docs_url": "/agent/latest/packages/ext-openssl-c/0.1.3/index.json#docs"
+    },
+    {
+      "name": "ext-path-glob-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-path-glob-rs/0.1.0/index.json",
+      "description": "OS-world glob + walk helpers under std.os.fs.* (deterministic ordering).",
+      "docs_url": "/agent/latest/packages/ext-path-glob-rs/0.1.0/index.json#docs"
     },
     {
       "name": "ext-pb-rs",
@@ -930,6 +993,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-tar-rs/0.1.2/index.json#docs"
     },
     {
+      "name": "ext-text",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-text/0.1.0/index.json",
+      "description": "Text utilities (trim/split/join/find/lines) built on bytes.",
+      "docs_url": "/agent/latest/packages/ext-text/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-time-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-time-rs/0.1.0/index.json",
@@ -1033,6 +1103,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-unicode-rs/0.1.2/index.json",
       "description": "Unicode character and string utilities.",
       "docs_url": "/agent/latest/packages/ext-unicode-rs/0.1.2/index.json#docs"
+    },
+    {
+      "name": "ext-unicode-rs",
+      "version": "0.1.3",
+      "url": "/agent/latest/packages/ext-unicode-rs/0.1.3/index.json",
+      "description": "Unicode character and string utilities.",
+      "docs_url": "/agent/latest/packages/ext-unicode-rs/0.1.3/index.json#docs"
     },
     {
       "name": "ext-url-rs",

@@ -1,0 +1,40 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-glob-rs",
+  "version": "0.1.1",
+  "description": "Wildcard (glob-like) matching for ASCII paths and tokens.",
+  "docs": "Wildcard (glob-like) matching for ASCII paths and tokens.\n\nModules:\n- ext.glob\n- ext.glob.tests\n\nNotes:\n- This package implements a small wildcard matcher (* and ?).\n\nUsage:\n- Add dependency: x07 pkg add ext-glob-rs@0.1.1 --sync\n- Import ext.glob.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "ext.glob",
+      "path": "ext/glob.x07.json",
+      "exports": [
+        "ext.glob.filter_lines_v1",
+        "ext.glob.match_v1"
+      ]
+    },
+    {
+      "module_id": "ext.glob.tests",
+      "path": "ext/glob/tests.x07.json",
+      "exports": [
+        "ext.glob.tests.test_filter_lines_basic",
+        "ext.glob.tests.test_match_basic"
+      ]
+    }
+  ]
+}
