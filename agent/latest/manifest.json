@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.0.27",
-  "docs_bundle_sha256": "4f87c90bdb664fbfedd0375da627246cd749205dc6b6792b790cb9e20df25dc9",
+  "docs_bundle_sha256": "f71f562f2655c7170a66513afdf0484eddf66563e2deb051364c33dd3aa2bb7b",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -40,13 +40,13 @@
     },
     {
       "path": "getting-started/agent-quickstart.md",
-      "sha256": "7f0fe7501e5992abe5280bae47577e99bd65f40f17d37c4e2c978b6ca546922a",
-      "size": 6064
+      "sha256": "b3f63b43b2cb4d9852a9a7e82f2bdc45f575a993112e4565f93e6790c7f70684",
+      "size": 6163
     },
     {
       "path": "getting-started/agent-workflow.md",
-      "sha256": "7375c7e9109ec5df02ecb985799b1246bef15f13a02d94d096103ee2f80a682e",
-      "size": 2182
+      "sha256": "f2aae9d075ea613bd0c2bdae77875e1e9e55afd4c23305100d45dc8e7139eba8",
+      "size": 5453
     },
     {
       "path": "getting-started/available-skills.md",
@@ -432,7 +432,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "fb60b539364f1ff7f1f91ed7af0888ceeedcfe131d2a7b22f1ccb30fd81f99ee",
+      "sha256": "61546d40998444c43c934fa89db9a314022bcdc0b94f508873699213aedbf8ed",
       "size": 604
     },
     {
