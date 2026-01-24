@@ -2,6 +2,8 @@
 
 This repo hosts the X07 public website and documentation site.
 
+Support: see `SUPPORT.md`.
+
 **Single canonical source of docs content:** `x07lang/x07/docs/`.
 
 This repo should contain the website build system and deployment configuration, and it should consume released docs content from `x07lang/x07` (release artifacts or an automated sync).

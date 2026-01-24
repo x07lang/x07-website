@@ -4,6 +4,11 @@
 
 Participation in this project is governed by `CODE_OF_CONDUCT.md`.
 
+## Support / questions
+
+If you're unsure where to file an issue (toolchain vs site) or need troubleshooting help, see
+`SUPPORT.md`.
+
 ## Development workflow
 
 - Prefer small PRs with a clear intent.
