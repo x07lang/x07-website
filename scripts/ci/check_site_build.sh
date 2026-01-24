@@ -12,6 +12,9 @@ python3 "${ROOT}/scripts/check_site.py" --check
 echo "[check] agent indexes are up to date"
 python3 "${ROOT}/scripts/generate_agent_indexes.py" --check --agent-dir agent/latest
 
+echo "[check] agent package indexes validate"
+python3 "${ROOT}/scripts/ci/validate_agent_package_indexes.py" --check --agent-dir agent/latest
+
 echo "[check] built agent endpoints exist"
 BUILD_DIR="${ROOT}/site/build"
 for rel in \
