@@ -159,11 +159,22 @@ def _generate_packages_index(*, agent_dir: Path, rel_agent_dir: Path, url_prefix
             idx_path = ver_dir / "index.json"
             if not idx_path.is_file():
                 continue
+            idx = json.loads(_read_text(idx_path))
+            desc = idx.get("description")
+            docs = idx.get("docs")
             items.append(
                 {
                     "name": pkg_dir.name,
                     "version": ver_dir.name,
                     "url": f"{url_prefix}/packages/{pkg_dir.name}/{ver_dir.name}/index.json",
+                    **({"description": desc} if isinstance(desc, str) else {}),
+                    **(
+                        {
+                            "docs_url": f"{url_prefix}/packages/{pkg_dir.name}/{ver_dir.name}/index.json#docs"
+                        }
+                        if isinstance(docs, str)
+                        else {}
+                    ),
                 }
             )
     items.sort(key=lambda it: (it["name"], _parse_semver(it["version"]) or (0, 0, 0), it["version"]))
