@@ -1092,8 +1092,8 @@
     },
     {
       "path": "packages/index.json",
-      "sha256": "dcd22c4a28bd3ebd4e99dce8eb2b44ce623b69ddd2ec87189d117138b1d885af",
-      "size": 18030
+      "sha256": "97df2cc6157f81e1dac8d0c2df740bbb171e456425a34bb9b7e94e8d550c56d9",
+      "size": 35652
     },
     {
       "path": "schemas/index.json",
