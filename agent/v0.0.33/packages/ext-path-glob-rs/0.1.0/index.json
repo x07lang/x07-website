@@ -1,0 +1,55 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-path-glob-rs",
+  "version": "0.1.0",
+  "description": "OS-world glob + walk helpers under std.os.fs.* (deterministic ordering).",
+  "docs": "OS-world glob + walk helpers.\n\nModules:\n- std.os.fs.glob\n- std.os.fs.walk\n- std.os.fs.ignore\n- std.os.fs.globwalk.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-path-glob-rs@0.1.0 --sync\n- Import std.os.fs.walk and std.os.fs.ignore.\n\nNotes:\n- Worlds: run-os only\n- Deterministic output: sort paths lexicographically\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-error@0.1.2",
+      "ext-fs@0.1.2",
+      "ext-glob-rs@0.1.1"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.os.fs.glob",
+      "path": "std/os/fs/glob.x07.json",
+      "exports": [
+        "std.os.fs.glob.filter_lines_v1",
+        "std.os.fs.glob.match_v1"
+      ]
+    },
+    {
+      "module_id": "std.os.fs.globwalk.tests",
+      "path": "std/os/fs/globwalk/tests.x07.json",
+      "exports": [
+        "std.os.fs.globwalk.tests.test_glob_match_v1",
+        "std.os.fs.globwalk.tests.test_ignore_filter_v1"
+      ]
+    },
+    {
+      "module_id": "std.os.fs.ignore",
+      "path": "std/os/fs/ignore.x07.json",
+      "exports": [
+        "std.os.fs.ignore.filter_lines_v1"
+      ]
+    },
+    {
+      "module_id": "std.os.fs.walk",
+      "path": "std/os/fs/walk.x07.json",
+      "exports": [
+        "std.os.fs.walk.walk_glob_sorted_text_v1",
+        "std.os.fs.walk.walk_sorted_text_v1"
+      ]
+    }
+  ]
+}
