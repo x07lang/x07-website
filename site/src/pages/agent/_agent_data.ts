@@ -20,6 +20,12 @@ export const latestSkillsIndex = {
       "report_schema_url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
     {
+      "id": "x07-bundle",
+      "summary": "Produce distributable native executables (normal CLI ABI) via `x07 bundle`.",
+      "docs_url": "/agent/latest/skills/x07-bundle/SKILL.md",
+      "report_schema_url": null
+    },
+    {
       "id": "x07-concurrency",
       "summary": "Canonical deterministic concurrency patterns in X07 (defasync + task.* + chan.bytes.*), including the determinism constraints.",
       "docs_url": "/agent/latest/skills/x07-concurrency/SKILL.md",
@@ -89,6 +95,10 @@ export const latestSchemasIndex = {
     {
       "id": "run-os-policy.schema.json",
       "url": "/agent/latest/schemas/run-os-policy.schema.json"
+    },
+    {
+      "id": "x07-bundle.report.schema.json",
+      "url": "/agent/latest/schemas/x07-bundle.report.schema.json"
     },
     {
       "id": "x07-capabilities.schema.json",

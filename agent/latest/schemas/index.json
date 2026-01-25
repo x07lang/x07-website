@@ -7,6 +7,10 @@
       "url": "/agent/latest/schemas/run-os-policy.schema.json"
     },
     {
+      "id": "x07-bundle.report.schema.json",
+      "url": "/agent/latest/schemas/x07-bundle.report.schema.json"
+    },
+    {
       "id": "x07-capabilities.schema.json",
       "url": "/agent/latest/schemas/x07-capabilities.schema.json"
     },
