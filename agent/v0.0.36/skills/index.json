@@ -1,0 +1,84 @@
+{
+  "schema_version": "x07.website.agent.skills_index@v1",
+  "generated_from": "agent/v0.0.36/skills/*/SKILL.md",
+  "items": [
+    {
+      "id": "x07-agent-playbook",
+      "summary": "Agent-first workflow and design rails for building X07 programs with the released toolchain (no repo-only dependencies). Canonical execution is via `x07 run`.",
+      "docs_url": "/agent/v0.0.36/skills/x07-agent-playbook/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-build-run",
+      "summary": "Expert backend for deterministic solve-world execution via x07-host-runner. Prefer `x07 run` as the canonical agent entry point.",
+      "docs_url": "/agent/v0.0.36/skills/x07-build-run/SKILL.md",
+      "report_schema_url": "/agent/v0.0.36/schemas/x07-host-runner.report.schema.json"
+    },
+    {
+      "id": "x07-bundle",
+      "summary": "Produce distributable native executables (normal CLI ABI) via `x07 bundle`.",
+      "docs_url": "/agent/v0.0.36/skills/x07-bundle/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-concurrency",
+      "summary": "Canonical deterministic concurrency patterns in X07 (defasync + task.* + chan.bytes.*), including the determinism constraints.",
+      "docs_url": "/agent/v0.0.36/skills/x07-concurrency/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-ffi-c",
+      "summary": "Emit C output and a C header for embedding X07 in C/C++ via `x07 build --emit-c-header`.",
+      "docs_url": "/agent/v0.0.36/skills/x07-ffi-c/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-format",
+      "summary": "Canonically format X07 x07AST JSON files using `x07 fmt` (check/write) with a machine-readable JSON report.",
+      "docs_url": "/agent/v0.0.36/skills/x07-format/SKILL.md",
+      "report_schema_url": "/agent/v0.0.36/schemas/x07c.report.schema.json"
+    },
+    {
+      "id": "x07-io-streams",
+      "summary": "Canonical streaming I/O patterns in X07 using std.io / std.io.bufread and world adapters.",
+      "docs_url": "/agent/v0.0.36/skills/x07-io-streams/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-language-guide",
+      "summary": "Canonical X07 language + stdlib reference (mirrors `x07 guide` output) for end-user skill packs.",
+      "docs_url": "/agent/v0.0.36/skills/x07-language-guide/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-lint-repair",
+      "summary": "Lint X07 x07AST JSON and converge via deterministic quickfixes (`x07 fix`) or explicit JSON Patch (`x07 ast apply-patch`).",
+      "docs_url": "/agent/v0.0.36/skills/x07-lint-repair/SKILL.md",
+      "report_schema_url": "/agent/v0.0.36/schemas/x07c.report.schema.json"
+    },
+    {
+      "id": "x07-os-run",
+      "summary": "Expert backend for run-os / run-os-sandboxed execution via x07-os-runner. Prefer `x07 run --profile os` / `x07 run --profile sandbox`.",
+      "docs_url": "/agent/v0.0.36/skills/x07-os-run/SKILL.md",
+      "report_schema_url": "/agent/v0.0.36/schemas/x07-os-runner.report.schema.json"
+    },
+    {
+      "id": "x07-package",
+      "summary": "Manage X07 project dependencies and lockfiles for reproducible builds (lock, publish). Designed for autonomous agents.",
+      "docs_url": "/agent/v0.0.36/skills/x07-package/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-run",
+      "summary": "Canonical execution front door for X07 programs (solve-* and run-os*), producing pass-through runner reports.",
+      "docs_url": "/agent/v0.0.36/skills/x07-run/SKILL.md",
+      "report_schema_url": null
+    },
+    {
+      "id": "x07-test",
+      "summary": "Run project tests using the X07 test harness (x07 test), producing a machine-readable JSON report.",
+      "docs_url": "/agent/v0.0.36/skills/x07-test/SKILL.md",
+      "report_schema_url": "/agent/v0.0.36/schemas/x07test.schema.json"
+    }
+  ]
+}
