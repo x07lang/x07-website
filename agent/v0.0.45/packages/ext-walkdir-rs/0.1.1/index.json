@@ -1,0 +1,30 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-walkdir-rs",
+  "version": "0.1.1",
+  "description": "Directory traversal helpers for OS worlds (wrap std.os.fs.walk_glob_sorted_text_v1).",
+  "docs": "Directory traversal helpers for OS worlds.\n\nModules:\n- ext.walkdir\n\nUsage:\n- Add dependency: x07 pkg add ext-walkdir-rs@0.1.1\n- Import ext.walkdir.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-fs@0.1.3"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "ext.walkdir",
+      "path": "ext/walkdir.x07.json",
+      "exports": [
+        "ext.walkdir.walk_glob_sorted_text_v1",
+        "ext.walkdir.walk_sorted_text_v1"
+      ]
+    }
+  ]
+}
