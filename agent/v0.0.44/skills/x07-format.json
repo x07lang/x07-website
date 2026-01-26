@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.0.44/skills/x07-format/SKILL.md",
+  "id": "x07-format",
+  "summary": "Canonically format X07 x07AST JSON files using `x07 fmt` (check/write) with a machine-readable JSON report.",
+  "docs_url": "/agent/v0.0.44/skills/x07-format/SKILL.md",
+  "report_schema_url": "/agent/v0.0.44/schemas/x07c.report.schema.json"
+}
