@@ -458,12 +458,13 @@ def main(argv: list[str]) -> int:
         print(f"ok: installed X07 to {root}")
         print(report["path_hint"])
         print("")
-        print("next (agent workflow):")
-        print("  mkdir myapp && cd myapp")
-        print("  x07 init")
+        print("next: create a project")
+        print("  mkdir myapp && cd myapp && x07 init")
         print("  x07 run")
         print("  x07 test --manifest tests/tests.json")
-        print("  x07up docs path --json")
+        print("")
+        print("next: create a publishable package repo")
+        print("  mkdir mypkg && cd mypkg && x07 init --package")
     return 0
 
 
