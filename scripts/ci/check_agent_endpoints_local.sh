@@ -49,6 +49,6 @@ curl -fsSL "${BASE}/agent/latest/packages/index.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/catalog/index.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/catalog/capabilities.json" >/dev/null
 curl -fsSL "${BASE}/agent/latest/stdlib/index.json" >/dev/null
-curl -fsSL "${BASE}/agent/latest/skills/x07-build-run/SKILL.md" >/dev/null
+curl -fsSL "${BASE}/agent/latest/skills/x07-run/SKILL.md" >/dev/null
 
 printf 'OK %s\n' "$(basename "$0")"
