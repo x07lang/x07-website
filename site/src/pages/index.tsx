@@ -41,7 +41,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="x07lang.org"
-      description="X07 is an agent-first systems language with deterministic testing and canonical contracts.">
+      description="X07 is an agent-first systems language with sandboxed execution and canonical contracts.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -14,12 +14,6 @@ export const latestSkillsIndex = {
       "report_schema_url": null
     },
     {
-      "id": "x07-build-run",
-      "summary": "Expert backend for deterministic solve-world execution via x07-host-runner. Prefer `x07 run` as the canonical agent entry point.",
-      "docs_url": "/agent/latest/skills/x07-build-run/SKILL.md",
-      "report_schema_url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
-    },
-    {
       "id": "x07-bundle",
       "summary": "Produce distributable native executables (normal CLI ABI) via `x07 bundle`.",
       "docs_url": "/agent/latest/skills/x07-bundle/SKILL.md",
@@ -27,7 +21,7 @@ export const latestSkillsIndex = {
     },
     {
       "id": "x07-concurrency",
-      "summary": "Canonical deterministic concurrency patterns in X07 (defasync + task.* + chan.bytes.*), including the determinism constraints.",
+      "summary": "Canonical concurrency patterns in X07 (defasync + task.* + chan.bytes.*), including sandbox constraints.",
       "docs_url": "/agent/latest/skills/x07-concurrency/SKILL.md",
       "report_schema_url": null
     },
@@ -57,7 +51,7 @@ export const latestSkillsIndex = {
     },
     {
       "id": "x07-lint-repair",
-      "summary": "Lint X07 x07AST JSON and converge via deterministic quickfixes (`x07 fix`) or explicit JSON Patch (`x07 ast apply-patch`).",
+      "summary": "Lint X07 x07AST JSON and converge via quickfixes (`x07 fix`) or explicit JSON Patch (`x07 ast apply-patch`).",
       "docs_url": "/agent/latest/skills/x07-lint-repair/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07c.report.schema.json"
     },
@@ -75,7 +69,7 @@ export const latestSkillsIndex = {
     },
     {
       "id": "x07-run",
-      "summary": "Canonical execution front door for X07 programs (solve-* and run-os*), producing pass-through runner reports.",
+      "summary": "Canonical execution front door for X07 programs (run-os / run-os-sandboxed), producing runner reports.",
       "docs_url": "/agent/latest/skills/x07-run/SKILL.md",
       "report_schema_url": null
     },

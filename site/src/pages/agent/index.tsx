@@ -87,7 +87,7 @@ export default function AgentPortal(): ReactNode {
   return (
     <Layout
       title="Agent portal"
-      description="Machine-first indexes, schemas, and deterministic entry points for coding agents.">
+      description="Machine-first indexes, schemas, and stable entry points for coding agents.">
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent portal</Heading>
         <p>
@@ -203,7 +203,7 @@ export default function AgentPortal(): ReactNode {
             (see <Link to="/docs/getting-started/install">Install</Link>).
           </li>
           <li>
-            Create a project with <code>x07 --init</code> (see{' '}
+            Create a project with <code>x07 init</code> (see{' '}
             <Link to="/docs/getting-started/first-project">Your first X07 program</Link>).
           </li>
           <li>

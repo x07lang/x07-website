@@ -11,10 +11,10 @@ export const AGENT_ENDPOINTS = {
 } as const;
 
 export const MINIMAL_AGENT_LOOP_COMMANDS = [
-  'x07 --init',
+  'x07 init',
   'x07 fmt --input src/main.x07.json --write',
-  'x07 lint --input src/main.x07.json --world solve-pure',
-  'x07 fix --input src/main.x07.json --world solve-pure --write',
+  'x07 lint --input src/main.x07.json',
+  'x07 fix --input src/main.x07.json --write',
   'x07 run',
   'x07 test --manifest tests/tests.json',
 ] as const;

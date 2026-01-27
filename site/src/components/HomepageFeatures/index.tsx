@@ -23,9 +23,9 @@ const FeatureList: FeatureItem[] = [
     title: 'Tests you can trust',
     description: (
       <>
-        Fixture worlds provide deterministic testing: stable filesystems,
-        virtual time, resource budgets. Same input, same output, every time.
-        Agents get reliable feedback loops.
+        Sandboxed execution provides policy-enforced I/O and resource budgets.
+        Agents get reliable feedback loops without guessing what the program is
+        allowed to do.
       </>
     ),
   },
