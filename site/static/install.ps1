@@ -220,4 +220,11 @@ if ($Json) {
 } else {
   Write-Host "ok: installed X07 to $Root"
   Write-Host $pathHint
+  Write-Host ""
+  Write-Host "next (agent workflow):"
+  Write-Host "  mkdir myapp && cd myapp"
+  Write-Host "  x07 init"
+  Write-Host "  x07 run"
+  Write-Host "  x07 test --manifest tests/tests.json"
+  Write-Host "  x07up docs path --json"
 }

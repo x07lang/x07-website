@@ -457,6 +457,13 @@ def main(argv: list[str]) -> int:
     else:
         print(f"ok: installed X07 to {root}")
         print(report["path_hint"])
+        print("")
+        print("next (agent workflow):")
+        print("  mkdir myapp && cd myapp")
+        print("  x07 init")
+        print("  x07 run")
+        print("  x07 test --manifest tests/tests.json")
+        print("  x07up docs path --json")
     return 0
 
 

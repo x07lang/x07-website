@@ -184,10 +184,12 @@ def main(argv: list[str]) -> int:
         if catalog_index_url and not (agent_dir / catalog_index_url).is_file():
             return err(f"missing {agent_dir.relative_to(root)}/{catalog_index_url}")
 
-        codex_dirs = list(agent_dir.rglob(".codex"))
-        if codex_dirs:
-            rel = codex_dirs[0].relative_to(root)
-            return err(f"hidden directory .codex must not be published: {rel}")
+        hidden_dirs = []
+        for hidden_dir in (".agent", ".codex"):
+            hidden_dirs.extend(agent_dir.rglob(hidden_dir))
+        if hidden_dirs:
+            rel = hidden_dirs[0].relative_to(root)
+            return err(f"hidden directory {hidden_dirs[0].name} must not be published: {rel}")
 
         schema_files = list((agent_dir / schemas_dir).glob("*.schema.json"))
         if not schema_files:
@@ -418,9 +420,9 @@ def main(argv: list[str]) -> int:
                 return err(f"{(agent_dir / skills_index_url).relative_to(root)} item.id must be non-empty string")
             if not isinstance(docs_url, str) or not docs_url:
                 return err(f"{(agent_dir / skills_index_url).relative_to(root)} item.docs_url must be non-empty string")
-            if "/.codex/" in docs_url:
+            if any(x in docs_url for x in ("/.agent/", "/.codex/")):
                 return err(
-                    f"{(agent_dir / skills_index_url).relative_to(root)} item.docs_url must not contain /.codex/: {docs_url}"
+                    f"{(agent_dir / skills_index_url).relative_to(root)} item.docs_url must not contain hidden paths: {docs_url}"
                 )
             if not docs_url.startswith(f"{agent_url_prefix}/skills/"):
                 return err(

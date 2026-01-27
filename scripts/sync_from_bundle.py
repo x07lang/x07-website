@@ -90,9 +90,13 @@ def _extract_human_docs_bundle(bundle_path: Path, out_dir: Path) -> list[dict]:
             if not member.isreg():
                 raise ValueError(f"unsupported tar entry type: {member.name}")
 
-            if member_path.parts[0] != "docs":
+            rel: PurePosixPath | None = None
+            if member_path.parts[0] == "docs":
+                rel = PurePosixPath(*member_path.parts[1:])
+            elif member_path.parts[:2] == (".agent", "docs"):
+                rel = PurePosixPath(*member_path.parts[2:])
+            if rel is None:
                 continue
-            rel = PurePosixPath(*member_path.parts[1:])
             if rel == PurePosixPath():
                 continue
 
@@ -151,8 +155,9 @@ def _ignore_macos_metadata(_: str, names: list[str]) -> set[str]:
 
 def _ignore_skills_copy(src_dir: str, names: list[str]) -> set[str]:
     ignored = _ignore_macos_metadata(src_dir, names)
-    if ".codex" in names:
-        ignored.add(".codex")
+    for hidden_dir in (".agent", ".codex"):
+        if hidden_dir in names:
+            ignored.add(hidden_dir)
     return ignored
 
 
@@ -368,7 +373,7 @@ def _sync_agent_portal(
             ignore=_ignore_skills_copy,
         )
 
-        skills_pack = skills_src / "pack" / ".codex" / "skills"
+        skills_pack = skills_src / "pack" / ".agent" / "skills"
         if skills_pack.is_dir():
             shutil.copytree(
                 skills_pack,

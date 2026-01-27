@@ -35,8 +35,8 @@ for rel in \
 done
 echo "[ok] built agent endpoints"
 
-if find "${BUILD_DIR}/agent" -path "*/.codex/*" -print -quit | grep -q .; then
-  echo "found .codex in build output under ${BUILD_DIR}/agent" >&2
+if find "${BUILD_DIR}/agent" \( -path "*/.agent/*" -o -path "*/.codex/*" \) -print -quit | grep -q .; then
+  echo "found hidden dir in build output under ${BUILD_DIR}/agent" >&2
   exit 2
 fi
 
