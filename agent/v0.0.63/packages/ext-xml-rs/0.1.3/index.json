@@ -1,0 +1,71 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-xml-rs",
+  "version": "0.1.3",
+  "description": "XML parsing and ext.data_model integration.",
+  "docs": "XML parsing and ext.data_model integration.\n\nModules:\n- ext.xml\n- ext.xml.data_model\n- ext.xml.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-xml-rs@0.1.3\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.xml",
+      "path": "ext/xml.x07.json",
+      "exports": [
+        "ext.xml.xml_events_attr_count",
+        "ext.xml.xml_events_attr_key",
+        "ext.xml.xml_events_attr_value",
+        "ext.xml.xml_events_is_err",
+        "ext.xml.xml_events_kind",
+        "ext.xml.xml_events_len",
+        "ext.xml.xml_events_name",
+        "ext.xml.xml_events_parse",
+        "ext.xml.xml_events_text",
+        "ext.xml.xml_tree_attr_count",
+        "ext.xml.xml_tree_attr_key",
+        "ext.xml.xml_tree_attr_value",
+        "ext.xml.xml_tree_child_at",
+        "ext.xml.xml_tree_child_count",
+        "ext.xml.xml_tree_is_err",
+        "ext.xml.xml_tree_node_count",
+        "ext.xml.xml_tree_node_kind",
+        "ext.xml.xml_tree_node_name",
+        "ext.xml.xml_tree_node_parent",
+        "ext.xml.xml_tree_node_text",
+        "ext.xml.xml_tree_parse",
+        "ext.xml.xml_tree_root"
+      ]
+    },
+    {
+      "module_id": "ext.xml.data_model",
+      "path": "ext/xml/data_model.x07.json",
+      "exports": [
+        "ext.xml.data_model.parse"
+      ]
+    },
+    {
+      "module_id": "ext.xml.tests",
+      "path": "ext/xml/tests.x07.json",
+      "exports": [
+        "ext.xml.tests.test_doctype_is_err",
+        "ext.xml.tests.test_entity_decode",
+        "ext.xml.tests.test_error_doc_layout",
+        "ext.xml.tests.test_events_basic",
+        "ext.xml.tests.test_mismatched_end_is_err",
+        "ext.xml.tests.test_tree_basic",
+        "ext.xml.tests.test_tree_nested"
+      ]
+    }
+  ]
+}
