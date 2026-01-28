@@ -54,10 +54,10 @@ function githubReleaseDownloadUrl(toolchainVersion: string, assetName: string): 
 
 function githubToolchainAssetName(
   toolchainVersion: string,
-  platform: 'macOS' | 'Linux' | 'Windows',
+  platform: 'macOS' | 'Linux',
 ): string {
   const base = `x07-v${toolchainVersion}-${platform}`;
-  return platform === 'Windows' ? `${base}.zip` : `${base}.tar.gz`;
+  return `${base}.tar.gz`;
 }
 
 function githubSkillsPackAssetName(toolchainVersion: string): string {
@@ -250,7 +250,6 @@ export default function AgentPortal(): ReactNode {
                   const releaseUrl = githubReleasePageUrl(v);
                   const macosUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'macOS'));
                   const linuxUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'Linux'));
-                  const windowsUrl = githubReleaseDownloadUrl(v, githubToolchainAssetName(v, 'Windows'));
                   const skillsUrl = githubReleaseDownloadUrl(v, githubSkillsPackAssetName(v));
                   const docsUrl = githubReleaseDownloadUrl(v, githubDocsBundleAssetName(v));
                   const manifestUrl = githubReleaseDownloadUrl(v, 'release-manifest.json');
@@ -272,8 +271,8 @@ export default function AgentPortal(): ReactNode {
                         <a href={releaseUrl}>GitHub release</a>
                         <div>
                           <a href={macosUrl}>macOS</a> · <a href={linuxUrl}>Linux</a> ·{' '}
-                          <a href={windowsUrl}>Windows</a> · <a href={skillsUrl}>Skills</a> ·{' '}
-                          <a href={docsUrl}>Docs</a> · <a href={manifestUrl}>Manifest</a>
+                          <a href={skillsUrl}>Skills</a> · <a href={docsUrl}>Docs</a> ·{' '}
+                          <a href={manifestUrl}>Manifest</a>
                         </div>
                       </td>
                     </tr>
