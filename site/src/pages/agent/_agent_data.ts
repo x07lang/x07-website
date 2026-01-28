@@ -416,6 +416,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-cli/0.1.5/index.json#docs"
     },
     {
+      "name": "ext-cli",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-cli/0.1.6/index.json",
+      "description": "Command-line argument parsing, help, and shell completion.",
+      "docs_url": "/agent/latest/packages/ext-cli/0.1.6/index.json#docs"
+    },
+    {
       "name": "ext-compress-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-compress-rs/0.1.0/index.json",
@@ -540,6 +547,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-curl-c/0.1.4/index.json",
       "description": "HTTP(S) client bindings via libcurl (run-os only).",
       "docs_url": "/agent/latest/packages/ext-curl-c/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-curl-c",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-curl-c/0.1.5/index.json",
+      "description": "HTTP(S) client bindings via libcurl (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-curl-c/0.1.5/index.json#docs"
     },
     {
       "name": "ext-data-model",
@@ -1088,6 +1102,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-net/0.1.4/index.json#docs"
     },
     {
+      "name": "ext-net",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-net/0.1.5/index.json",
+      "description": "Networking APIs (DNS, TCP/UDP, TLS, HTTP) (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-net/0.1.5/index.json#docs"
+    },
+    {
       "name": "ext-openssl-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-openssl-c/0.1.0/index.json",
@@ -1289,6 +1310,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-sockets-c/0.1.4/index.json",
       "description": "Sockets + TLS FFI backend for std.net (run-os only).",
       "docs_url": "/agent/latest/packages/ext-sockets-c/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-sockets-c",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-sockets-c/0.1.5/index.json",
+      "description": "Sockets + TLS FFI backend for std.net (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-sockets-c/0.1.5/index.json#docs"
     },
     {
       "name": "ext-streams",
