@@ -353,6 +353,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-cbor-rs/0.1.1/index.json#docs"
     },
     {
+      "name": "ext-cbor-rs",
+      "version": "0.1.2",
+      "url": "/agent/latest/packages/ext-cbor-rs/0.1.2/index.json",
+      "description": "CBOR encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-cbor-rs/0.1.2/index.json#docs"
+    },
+    {
       "name": "ext-checksum-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-checksum-rs/0.1.0/index.json",
@@ -400,6 +407,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-cli/0.1.4/index.json",
       "description": "Command-line argument parsing, help, and shell completion.",
       "docs_url": "/agent/latest/packages/ext-cli/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-cli",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-cli/0.1.5/index.json",
+      "description": "Command-line argument parsing, help, and shell completion.",
+      "docs_url": "/agent/latest/packages/ext-cli/0.1.5/index.json#docs"
     },
     {
       "name": "ext-compress-rs",
@@ -556,6 +570,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-data-model/0.1.3/index.json#docs"
     },
     {
+      "name": "ext-data-model",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-data-model/0.1.4/index.json",
+      "description": "Typed data model with JSON/TOML/YAML codecs.",
+      "docs_url": "/agent/latest/packages/ext-data-model/0.1.4/index.json#docs"
+    },
+    {
       "name": "ext-db-core",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-db-core/0.1.0/index.json",
@@ -589,6 +610,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-db-core/0.1.4/index.json",
       "description": "Database interfaces, query specs, and pooling (run-os only).",
       "docs_url": "/agent/latest/packages/ext-db-core/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-db-core",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-db-core/0.1.5/index.json",
+      "description": "Database interfaces, query specs, and pooling (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-db-core/0.1.5/index.json#docs"
     },
     {
       "name": "ext-db-mysql",
@@ -708,6 +736,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-db-sqlite/0.1.4/index.json",
       "description": "SQLite driver for std.db (run-os only).",
       "docs_url": "/agent/latest/packages/ext-db-sqlite/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-db-sqlite",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-db-sqlite/0.1.5/index.json",
+      "description": "SQLite driver for std.db (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-db-sqlite/0.1.5/index.json#docs"
     },
     {
       "name": "ext-decimal-rs",
@@ -1009,6 +1044,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-msgpack-rs/0.1.1/index.json",
       "description": "MessagePack encode/decode with ext.data_model integration.",
       "docs_url": "/agent/latest/packages/ext-msgpack-rs/0.1.1/index.json#docs"
+    },
+    {
+      "name": "ext-msgpack-rs",
+      "version": "0.1.2",
+      "url": "/agent/latest/packages/ext-msgpack-rs/0.1.2/index.json",
+      "description": "MessagePack encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-msgpack-rs/0.1.2/index.json#docs"
     },
     {
       "name": "ext-net",
