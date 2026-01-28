@@ -232,6 +232,15 @@ export function createRedirects(existingPath: string): string[] | undefined {{
     if (existingPath === '/docs/worlds/os-worlds') {{
       redirects.push('/docs/worlds/os');
     }}
+    if (existingPath === '/docs/guides/networking') {{
+      redirects.push('/docs/stdlib/http');
+    }}
+    if (existingPath === '/docs/guides/databases') {{
+      redirects.push('/docs/stdlib/sqlite');
+    }}
+    if (existingPath === '/docs/language/concurrency-multiprocessing') {{
+      redirects.push('/docs/language/async');
+    }}
 
     return redirects;
   }}
