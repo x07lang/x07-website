@@ -1,8 +1,0 @@
-{
-  "schema_version": "x07.website.agent.skill@v1",
-  "generated_from": "agent/v0.0.59/skills/x07-os-run/SKILL.md",
-  "id": "x07-os-run",
-  "summary": "Expert backend for run-os / run-os-sandboxed execution via x07-os-runner. Prefer `x07 run --profile os` / `x07 run --profile sandbox`.",
-  "docs_url": "/agent/v0.0.59/skills/x07-os-run/SKILL.md",
-  "report_schema_url": "/agent/v0.0.59/schemas/x07-os-runner.report.schema.json"
-}

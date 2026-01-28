@@ -1,8 +1,0 @@
-{
-  "schema_version": "x07.website.agent.skill@v1",
-  "generated_from": "agent/v0.0.23/skills/x07-test/SKILL.md",
-  "id": "x07-test",
-  "summary": "Run project tests using the X07 test harness (x07 test), producing a machine-readable JSON report.",
-  "docs_url": "/agent/v0.0.23/skills/x07-test/SKILL.md",
-  "report_schema_url": "/agent/v0.0.23/schemas/x07test.schema.json"
-}

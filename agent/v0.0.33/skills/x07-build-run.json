@@ -1,8 +1,0 @@
-{
-  "schema_version": "x07.website.agent.skill@v1",
-  "generated_from": "agent/v0.0.33/skills/x07-build-run/SKILL.md",
-  "id": "x07-build-run",
-  "summary": "Expert backend for deterministic solve-world execution via x07-host-runner. Prefer `x07 run` as the canonical agent entry point.",
-  "docs_url": "/agent/v0.0.33/skills/x07-build-run/SKILL.md",
-  "report_schema_url": "/agent/v0.0.33/schemas/x07-host-runner.report.schema.json"
-}

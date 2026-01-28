@@ -1,8 +1,0 @@
-{
-  "schema_version": "x07.website.agent.skill@v1",
-  "generated_from": "agent/v0.0.29/skills/x07-package/SKILL.md",
-  "id": "x07-package",
-  "summary": "Manage X07 project dependencies and lockfiles for reproducible builds (lock, publish). Designed for autonomous agents.",
-  "docs_url": "/agent/v0.0.29/skills/x07-package/SKILL.md",
-  "report_schema_url": null
-}
