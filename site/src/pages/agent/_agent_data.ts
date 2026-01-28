@@ -584,6 +584,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-db-core/0.1.3/index.json#docs"
     },
     {
+      "name": "ext-db-core",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-db-core/0.1.4/index.json",
+      "description": "Database interfaces, query specs, and pooling (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-db-core/0.1.4/index.json#docs"
+    },
+    {
       "name": "ext-db-mysql",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-db-mysql/0.1.0/index.json",
@@ -694,6 +701,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-db-sqlite/0.1.3/index.json",
       "description": "SQLite driver for std.db (run-os only).",
       "docs_url": "/agent/latest/packages/ext-db-sqlite/0.1.3/index.json#docs"
+    },
+    {
+      "name": "ext-db-sqlite",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-db-sqlite/0.1.4/index.json",
+      "description": "SQLite driver for std.db (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-db-sqlite/0.1.4/index.json#docs"
     },
     {
       "name": "ext-decimal-rs",
@@ -1023,6 +1037,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-net/0.1.3/index.json",
       "description": "Networking APIs (DNS, TCP/UDP, TLS, HTTP) (run-os only).",
       "docs_url": "/agent/latest/packages/ext-net/0.1.3/index.json#docs"
+    },
+    {
+      "name": "ext-net",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-net/0.1.4/index.json",
+      "description": "Networking APIs (DNS, TCP/UDP, TLS, HTTP) (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-net/0.1.4/index.json#docs"
     },
     {
       "name": "ext-openssl-c",
