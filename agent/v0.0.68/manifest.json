@@ -1,12 +1,12 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.0.68",
-  "docs_bundle_sha256": "b766ef8e81a7075e7e8ee856c1e095be3ba0fdb5023b96960fb267e101f5cd46",
+  "docs_bundle_sha256": "197c5d03fdaa8458ae0d4f522da7afe44004301fadd170a786e4678347d7f806",
   "human_docs": [
     {
       "path": "SUMMARY.md",
-      "sha256": "747b439b95024711c5c0885fa92b271ac2859265d30c410861ad224200abf620",
-      "size": 2157
+      "sha256": "9bfb679e9c74c85086c537b6a7a2c2d366598ffed4c44a7c36e0ba14c9b772cf",
+      "size": 3014
     },
     {
       "path": "_bundle_meta.json",
@@ -29,6 +29,36 @@
       "size": 571
     },
     {
+      "path": "db/db-v1.md",
+      "sha256": "07535744048171fea9e6c4f781401f2aa40a4a2f45f5da5543318e2080cb44d0",
+      "size": 5829
+    },
+    {
+      "path": "db/mysql-v1.md",
+      "sha256": "1f4eeccecf09ed284ac1aa698b5b63f0d58c1bfc50f047a9a0354a944ad2d533",
+      "size": 3613
+    },
+    {
+      "path": "db/pool-v1.md",
+      "sha256": "460d32c9cd4225954a1335c40dd838728823c668dc30e741f85363e6e3e706ad",
+      "size": 2403
+    },
+    {
+      "path": "db/postgres-v1.md",
+      "sha256": "4b0fca17c87447cc15f633e80054133c3583b3f67067d894499695d18c85d7d1",
+      "size": 3641
+    },
+    {
+      "path": "db/redis-v1.md",
+      "sha256": "a6c43f2d0149e47aae4baddece18646ad41457488c335b75e9da4b977641c2f9",
+      "size": 3024
+    },
+    {
+      "path": "db/sqlite-v1.md",
+      "sha256": "4bf7873238217cae7efb60973103fb9a19e74bad5f29f8aa756213aa08c33966",
+      "size": 3465
+    },
+    {
       "path": "dev/perf-compare.md",
       "sha256": "00c256ff4c9c7fc12fdf20ed2969722bfe699355f7c53a2f2abaf4af8a936017",
       "size": 415
@@ -37,6 +67,11 @@
       "path": "faq.md",
       "sha256": "9f8d5c4a402d3fdefa35110096f83ec6920fc6a28d1a8b827dee10efe36124c4",
       "size": 889
+    },
+    {
+      "path": "fs/fs-v1.md",
+      "sha256": "e015954ba15c23fe726d18c65074e66d763d5fae4075f7234cebf4dc130d62b3",
+      "size": 7115
     },
     {
       "path": "getting-started/agent-quickstart.md",
@@ -80,8 +115,8 @@
     },
     {
       "path": "guides/databases.md",
-      "sha256": "69b8f58a8c57361b45729cb9e44ab53957532c2d4fd4c52cd5203d8a5ea4ca6d",
-      "size": 3509
+      "sha256": "e70e663eccb48e241f2e1ea53b6cc2a58aba1f5d9850186e1d90e2eb3294b88a",
+      "size": 3709
     },
     {
       "path": "guides/networking.md",
@@ -139,9 +174,44 @@
       "size": 425
     },
     {
+      "path": "math/math-v1.md",
+      "sha256": "21faf15ff6cca0a6d5d931013de455baf7c8c100e9be412426ca3d7b00009d42",
+      "size": 3224
+    },
+    {
+      "path": "math/native-backend-v1.md",
+      "sha256": "a6915cef1a491d7e98518939395a6c1f01978cc61c60057133251632ae9f7154",
+      "size": 1031
+    },
+    {
+      "path": "math/smoke-suites-v1.md",
+      "sha256": "2f10dbb2e84584a7b9ae18192ed49c427a5a98c71958184e0e5c8eedd00321c9",
+      "size": 676
+    },
+    {
+      "path": "math/vendor-v1.md",
+      "sha256": "b22b93e117b505c14a2d703067b9069a312faa7d1c332693abe563707b4e53c9",
+      "size": 828
+    },
+    {
+      "path": "net/errors-v1.md",
+      "sha256": "c92296fa600f98ac1b411cbc985aa77a37881b61ea6ef1045b0d0a729340ac7e",
+      "size": 1442
+    },
+    {
+      "path": "net/net-v1.md",
+      "sha256": "dbefaf84d28bd723db390f02513e6e320d90b9dd873a02800b06c00a5169e203",
+      "size": 6840
+    },
+    {
       "path": "official-builds.md",
       "sha256": "513c09402c1cb26fbfacce19596a80b88416bdc4898e050abd7057fef5b8a44d",
       "size": 338
+    },
+    {
+      "path": "os/process-abi-v1.md",
+      "sha256": "f5111b9465d90119d40e12a430f14b28926950578c520321072cc206bfbbb5a4",
+      "size": 3439
     },
     {
       "path": "packages/external.md",
@@ -252,6 +322,46 @@
       "path": "stability.md",
       "sha256": "a35c75e8ab64799a9aea71188d5810adfbbdbdd1f2730f5798df2b1366e87f69",
       "size": 443
+    },
+    {
+      "path": "text/regex-v1.md",
+      "sha256": "a780939ccc67d03e9e784fff25a9b6a10168f864bbbe0b6b125a485135f262c8",
+      "size": 3311
+    },
+    {
+      "path": "text/x7sl-v1.md",
+      "sha256": "88ff39d23cdcdb1af28aa5af9b68e423063c195b43314fdd1bb24e7eed4cac00",
+      "size": 2789
+    },
+    {
+      "path": "time/civil-v1.md",
+      "sha256": "095d69e05e26651575d9db5dfef69155cfb94edada92df98a6befd2cd6413271",
+      "size": 3490
+    },
+    {
+      "path": "time/duration-v1.md",
+      "sha256": "addc9fd5dc204aa403a97da44d5cfeb4627546ba8717bee06b9524a6494dce21",
+      "size": 1970
+    },
+    {
+      "path": "time/os-time-v1.md",
+      "sha256": "6bcf148bafa12278dfea269966bbd59ccd5ca3a61b211139743b48e4ab2dfcd1",
+      "size": 1303
+    },
+    {
+      "path": "time/rfc3339-v1.md",
+      "sha256": "5179677c63caefe47bd8f5523fe7c59fa49721c0e870a0a2a276cb83798d773a",
+      "size": 1942
+    },
+    {
+      "path": "time/time-v1.md",
+      "sha256": "43433fec1697c06123674a7fb0c779404140f471a7ddc53025d863081c3b09ab",
+      "size": 1222
+    },
+    {
+      "path": "time/tzdb-v1.md",
+      "sha256": "36fdfd9769be632f7e42aaa520a36e1020510dfdbe0fd2886e71f4cbd279826a",
+      "size": 1422
     },
     {
       "path": "toolchain/cli.md",
@@ -417,7 +527,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "690d4545dd870e1b744b6049ba2073e11302c8784a845c92a67264fe1aa9aadc",
+      "sha256": "1c22470ddfc8cdc3d5f0c6741cc7f0a979af3a20123fb2692052433ae127ca3b",
       "size": 604
     },
     {
