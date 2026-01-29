@@ -95,6 +95,16 @@ If you edit a net-enabled base policy manually, keep `net.allow_dns: true` (requ
 - Unit-test pure request/response transforms with `x07 test`.
 - Smoke-test networking with `x07 run --profile sandbox --allow-host ...` in CI.
 
+## Cooperative concurrency (tasks)
+
+When you run multiple `defasync` tasks (for example: a local HTTP server and a client in the same program), prefer the yield-friendly `*_task_v1` wrappers in `ext-net@0.1.6`:
+
+- `std.net.tcp.{accept,connect,stream_read,stream_write}_task_v1`
+- `std.net.io.write_all_task_v1`
+- `std.net.http.server.{read_req,write_response}_task_v1`
+
+These wrappers use poll-only caps + `task.yield` loops with a deterministic `max_iters`. In this pattern, `timeout` (`std.net.err.code_timeout_v1()`) means “not ready yet” rather than a fatal error; use `std.net.err.is_err_doc_v1` / `std.net.err.err_code_v1` to inspect error docs.
+
 ## Expert (native deps + policy details)
 
 - If `x07 doctor` reports link errors, install the system development packages for your TLS/HTTP stack (for example, libcurl + OpenSSL headers) and re-run `x07 doctor`.
