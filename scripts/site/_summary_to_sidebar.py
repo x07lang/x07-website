@@ -160,7 +160,7 @@ def parse_summary_md(summary_text: str) -> List[SummaryNode]:
             label = rest
             node = SummaryNode(kind="category", label=label, children=[])
             parent_children.append(node)
-            stack.append((level + 1, node.children or []))
+            stack.append((level + 1, node.children if node.children is not None else []))
 
     flush_section()
     return root
@@ -186,4 +186,3 @@ def _node_to_sidebar_item(node: SummaryNode) -> SidebarItem:
 
 def summary_nodes_to_sidebar_items(nodes: List[SummaryNode]) -> List[SidebarItem]:
     return [_node_to_sidebar_item(n) for n in nodes]
-
