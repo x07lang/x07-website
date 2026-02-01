@@ -7,6 +7,50 @@
       "url": "/agent/latest/schemas/run-os-policy.schema.json"
     },
     {
+      "id": "x07-arch.budgets.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.budgets.index.schema.json"
+    },
+    {
+      "id": "x07-arch.contracts.lock.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.contracts.lock.schema.json"
+    },
+    {
+      "id": "x07-arch.manifest.lock.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.manifest.lock.schema.json"
+    },
+    {
+      "id": "x07-arch.manifest.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.manifest.schema.json"
+    },
+    {
+      "id": "x07-arch.patchset.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.patchset.schema.json"
+    },
+    {
+      "id": "x07-arch.report.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.report.schema.json"
+    },
+    {
+      "id": "x07-arch.rr.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.rr.index.schema.json"
+    },
+    {
+      "id": "x07-arch.rr.policy.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.rr.policy.schema.json"
+    },
+    {
+      "id": "x07-arch.rr.sanitize.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.rr.sanitize.schema.json"
+    },
+    {
+      "id": "x07-arch.sm.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.sm.index.schema.json"
+    },
+    {
+      "id": "x07-budget.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-budget.profile.schema.json"
+    },
+    {
       "id": "x07-bundle.report.schema.json",
       "url": "/agent/latest/schemas/x07-bundle.report.schema.json"
     },
@@ -45,6 +89,10 @@
     {
       "id": "x07-run.report.schema.json",
       "url": "/agent/latest/schemas/x07-run.report.schema.json"
+    },
+    {
+      "id": "x07-sm.spec.schema.json",
+      "url": "/agent/latest/schemas/x07-sm.spec.schema.json"
     },
     {
       "id": "x07-website.package-index.schema.json",

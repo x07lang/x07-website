@@ -1,0 +1,57 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-unicode-rs",
+  "version": "0.1.1",
+  "description": "Unicode character and string utilities.",
+  "docs": "",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.unicode",
+      "path": "ext/unicode.x07.json",
+      "exports": [
+        "ext.unicode.unicode_decode_latin1_to_utf8",
+        "ext.unicode.unicode_decode_utf16_be_to_utf8",
+        "ext.unicode.unicode_decode_utf16_le_to_utf8",
+        "ext.unicode.unicode_decode_windows1252_to_utf8",
+        "ext.unicode.unicode_encode_utf8_to_latin1",
+        "ext.unicode.unicode_encode_utf8_to_utf16_be",
+        "ext.unicode.unicode_encode_utf8_to_utf16_le",
+        "ext.unicode.unicode_encode_utf8_to_windows1252",
+        "ext.unicode.unicode_err_code",
+        "ext.unicode.unicode_get_bytes",
+        "ext.unicode.unicode_grapheme_slices",
+        "ext.unicode.unicode_is_err",
+        "ext.unicode.unicode_nfkc_basic",
+        "ext.unicode.unicode_utf8_decode_u32le",
+        "ext.unicode.unicode_utf8_encode_u32le",
+        "ext.unicode.unicode_utf8_is_valid"
+      ]
+    },
+    {
+      "module_id": "ext.unicode.tests",
+      "path": "ext/unicode/tests.x07.json",
+      "exports": [
+        "ext.unicode.tests.test_grapheme_slices_basic",
+        "ext.unicode.tests.test_latin1_decode",
+        "ext.unicode.tests.test_nfkc_basic",
+        "ext.unicode.tests.test_utf16le_roundtrip",
+        "ext.unicode.tests.test_utf8_u32le_roundtrip",
+        "ext.unicode.tests.test_windows1252_decode_and_error"
+      ]
+    }
+  ]
+}
