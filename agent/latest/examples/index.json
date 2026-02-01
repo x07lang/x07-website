@@ -61,6 +61,16 @@
       "id": "12_async_mapreduce",
       "purpose": "async mapreduce",
       "url": "/agent/latest/examples/12_async_mapreduce.x07.json"
+    },
+    {
+      "id": "13_stream_pipe_split_lines",
+      "purpose": "stream pipe split lines",
+      "url": "/agent/latest/examples/13_stream_pipe_split_lines.x07.json"
+    },
+    {
+      "id": "14_task_scope_slots",
+      "purpose": "task scope slots",
+      "url": "/agent/latest/examples/14_task_scope_slots.x07.json"
     }
   ]
 }
