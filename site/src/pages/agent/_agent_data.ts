@@ -131,6 +131,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-arch.sm.index.schema.json"
     },
     {
+      "id": "x07-arch.stream-plugin.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.stream-plugin.schema.json"
+    },
+    {
+      "id": "x07-arch.stream-plugins.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.stream-plugins.index.schema.json"
+    },
+    {
       "id": "x07-budget.profile.schema.json",
       "url": "/agent/latest/schemas/x07-budget.profile.schema.json"
     },
