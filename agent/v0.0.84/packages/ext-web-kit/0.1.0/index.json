@@ -1,0 +1,77 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-web-kit",
+  "version": "0.1.0",
+  "description": "Web service kit: router + canonical errors + OpenAPI 3.1 generation (pinned via arch/web).",
+  "docs": "Web service kit: router + canonical errors + OpenAPI 3.1 generation (pinned via arch/web).\n\nModules:\n- std.web.core\n- std.web.router\n- std.web.middleware\n- std.web.errors\n- std.web.openapi\n- std.web.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-web-kit@0.1.0\n- Pin your API catalog in arch/web.\n- Compile a router with std.web.router.compile_from_arch_v1.\n- Route requests with std.web.router.route_v1.\n- Render OpenAPI with std.web.openapi.render_v1.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "mixed",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-data-model@0.1.7",
+      "ext-json-rs@0.1.4"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.web.core",
+      "path": "std/web/core.x07.json",
+      "exports": [
+        "std.web.core.doc_err_code_v1",
+        "std.web.core.doc_err_msg_v1",
+        "std.web.core.doc_err_v1",
+        "std.web.core.doc_get_bytes_v1",
+        "std.web.core.doc_is_err_v1",
+        "std.web.core.doc_ok_bytes_v1"
+      ]
+    },
+    {
+      "module_id": "std.web.errors",
+      "path": "std/web/errors.x07.json",
+      "exports": [
+        "std.web.errors.encode_v1"
+      ]
+    },
+    {
+      "module_id": "std.web.middleware",
+      "path": "std/web/middleware.x07.json",
+      "exports": [
+        "std.web.middleware.chain_v1"
+      ]
+    },
+    {
+      "module_id": "std.web.openapi",
+      "path": "std/web/openapi.x07.json",
+      "exports": [
+        "std.web.openapi.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.web.router",
+      "path": "std/web/router.x07.json",
+      "exports": [
+        "std.web.router.compile_from_arch_v1",
+        "std.web.router.route_v1"
+      ]
+    },
+    {
+      "module_id": "std.web.tests",
+      "path": "std/web/tests.x07.json",
+      "exports": [
+        "std.web.tests.test_errors_encode_v1",
+        "std.web.tests.test_openapi_render_v1",
+        "std.web.tests.test_router_compile_v1"
+      ]
+    }
+  ]
+}

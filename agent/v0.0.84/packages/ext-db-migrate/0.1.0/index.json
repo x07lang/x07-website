@@ -1,0 +1,55 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-db-migrate",
+  "version": "0.1.0",
+  "description": "DB migrations + RR-backed DB fixture adapter (contracts-as-data under arch/db).",
+  "docs": "Deterministic DB migration plans + RR cassette helpers pinned by arch/db contracts.\n\nModules:\n- std.db.migrate\n- std.db.rr\n- std.db.migrate.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-db-migrate@0.1.0\n- Use std.db.migrate.apply_from_arch_v1 with plans under arch/db.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "mixed",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-rr",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-crypto-rs@0.1.0",
+      "ext-data-model@0.1.7",
+      "ext-db-core@0.1.8",
+      "ext-db-sqlite@0.1.8",
+      "ext-hex-rs@0.1.0",
+      "ext-json-rs@0.1.4"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.db.migrate",
+      "path": "std/db/migrate.x07.json",
+      "exports": [
+        "std.db.migrate.apply_from_arch_v1",
+        "std.db.migrate.plan_parse_v1",
+        "std.db.migrate.verify_from_arch_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.migrate.tests",
+      "path": "std/db/migrate/tests.x07.json",
+      "exports": [
+        "std.db.migrate.tests.test_plan_parse_v1",
+        "std.db.migrate.tests.test_rr_key_stability_v1",
+        "std.db.migrate.tests.test_sqlite_apply_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.rr",
+      "path": "std/db/rr.x07.json",
+      "exports": [
+        "std.db.rr.entry_encode_v1",
+        "std.db.rr.key_sha256_hex_v1"
+      ]
+    }
+  ]
+}

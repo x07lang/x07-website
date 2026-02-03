@@ -103,8 +103,24 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-arch.budgets.index.schema.json"
     },
     {
+      "id": "x07-arch.cli.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.cli.index.schema.json"
+    },
+    {
+      "id": "x07-arch.cli.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.cli.profile.schema.json"
+    },
+    {
       "id": "x07-arch.contracts.lock.schema.json",
       "url": "/agent/latest/schemas/x07-arch.contracts.lock.schema.json"
+    },
+    {
+      "id": "x07-arch.crawl.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.crawl.index.schema.json"
+    },
+    {
+      "id": "x07-arch.crawl.policy.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.crawl.policy.schema.json"
     },
     {
       "id": "x07-arch.crypto.index.schema.json",
@@ -129,6 +145,30 @@ export const latestSchemasIndex = {
     {
       "id": "x07-arch.manifest.schema.json",
       "url": "/agent/latest/schemas/x07-arch.manifest.schema.json"
+    },
+    {
+      "id": "x07-arch.msg.amqp.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.msg.amqp.index.schema.json"
+    },
+    {
+      "id": "x07-arch.msg.amqp.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.msg.amqp.profile.schema.json"
+    },
+    {
+      "id": "x07-arch.msg.amqp.topology.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.msg.amqp.topology.schema.json"
+    },
+    {
+      "id": "x07-arch.msg.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.msg.index.schema.json"
+    },
+    {
+      "id": "x07-arch.msg.kafka.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.msg.kafka.index.schema.json"
+    },
+    {
+      "id": "x07-arch.msg.kafka.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.msg.kafka.profile.schema.json"
     },
     {
       "id": "x07-arch.net.grpc.services.schema.json",
@@ -173,6 +213,18 @@ export const latestSchemasIndex = {
     {
       "id": "x07-arch.stream-plugins.index.schema.json",
       "url": "/agent/latest/schemas/x07-arch.stream-plugins.index.schema.json"
+    },
+    {
+      "id": "x07-arch.web.api.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.web.api.schema.json"
+    },
+    {
+      "id": "x07-arch.web.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.web.index.schema.json"
+    },
+    {
+      "id": "x07-arch.web.openapi_profile.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.web.openapi_profile.schema.json"
     },
     {
       "id": "x07-budget.profile.schema.json",
@@ -633,6 +685,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-cli/0.1.10/index.json",
       "description": "Command-line argument parsing, help, and shell completion.",
       "docs_url": "/agent/latest/packages/ext-cli/0.1.10/index.json#docs"
+    },
+    {
+      "name": "ext-cli-ux",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-cli-ux/0.1.0/index.json",
+      "description": "CLI UX primitives: deterministic progress, tables, and JSONL output (pinned via arch/cli).",
+      "docs_url": "/agent/latest/packages/ext-cli-ux/0.1.0/index.json#docs"
     },
     {
       "name": "ext-compress-rs",
@@ -1475,6 +1534,27 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-memchr-rs/0.1.4/index.json#docs"
     },
     {
+      "name": "ext-msg-amqp-c",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-msg-amqp-c/0.1.0/index.json",
+      "description": "AMQP 0-9-1 driver using rabbitmq-c; integrates with std.msg envelope and RR replay (pinned via arch/msg/amqp).",
+      "docs_url": "/agent/latest/packages/ext-msg-amqp-c/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-msg-core",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-msg-core/0.1.0/index.json",
+      "description": "Messaging core: canonical msg.envelope_v1 + msg.rr.entry_v1 + driver interface (pinned via arch/msg).",
+      "docs_url": "/agent/latest/packages/ext-msg-core/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-msg-kafka-c",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-msg-kafka-c/0.1.0/index.json",
+      "description": "Kafka driver using librdkafka; integrates with std.msg envelope and RR replay (pinned via arch/msg/kafka).",
+      "docs_url": "/agent/latest/packages/ext-msg-kafka-c/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-msgpack-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-msgpack-rs/0.1.0/index.json",
@@ -1830,6 +1910,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-sitemap-rs/0.1.3/index.json",
       "description": "Sitemap XML helpers (extract <loc> URLs).",
       "docs_url": "/agent/latest/packages/ext-sitemap-rs/0.1.3/index.json#docs"
+    },
+    {
+      "name": "ext-sitemap-rs",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-sitemap-rs/0.1.4/index.json",
+      "description": "Sitemap XML helpers (extract <loc> URLs).",
+      "docs_url": "/agent/latest/packages/ext-sitemap-rs/0.1.4/index.json#docs"
     },
     {
       "name": "ext-sockets-c",
@@ -2257,6 +2344,20 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-walkdir-rs/0.1.2/index.json",
       "description": "Directory traversal helpers for OS worlds (wrap std.os.fs.walk_glob_sorted_text_v1).",
       "docs_url": "/agent/latest/packages/ext-walkdir-rs/0.1.2/index.json#docs"
+    },
+    {
+      "name": "ext-web-crawl",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-web-crawl/0.1.0/index.json",
+      "description": "Robots (RFC 9309) + Sitemaps + deterministic crawl scheduling (pinned via arch/crawl).",
+      "docs_url": "/agent/latest/packages/ext-web-crawl/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-web-kit",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-web-kit/0.1.0/index.json",
+      "description": "Web service kit: router + canonical errors + OpenAPI 3.1 generation (pinned via arch/web).",
+      "docs_url": "/agent/latest/packages/ext-web-kit/0.1.0/index.json#docs"
     },
     {
       "name": "ext-xml-rs",
