@@ -31,7 +31,7 @@ _WORLD_IDS = {
     "run-os",
     "run-os-sandboxed",
 }
-_DETERMINISM_TIERS = {"pure", "os-world-only"}
+_DETERMINISM_TIERS = {"pure", "os-world-only", "mixed"}
 _IMPORT_MODES = {"handwritten", "x07import", "ffi"}
 _VISIBILITY = {"canonical", "advanced", "experimental"}
 
