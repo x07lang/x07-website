@@ -91,6 +91,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/run-os-policy.schema.json"
     },
     {
+      "id": "x07-arch.archive.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.archive.index.schema.json"
+    },
+    {
+      "id": "x07-arch.archive.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.archive.profile.schema.json"
+    },
+    {
       "id": "x07-arch.budgets.index.schema.json",
       "url": "/agent/latest/schemas/x07-arch.budgets.index.schema.json"
     },
@@ -99,12 +107,40 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-arch.contracts.lock.schema.json"
     },
     {
+      "id": "x07-arch.crypto.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.crypto.index.schema.json"
+    },
+    {
+      "id": "x07-arch.crypto.jwt_profiles.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.crypto.jwt_profiles.schema.json"
+    },
+    {
+      "id": "x07-arch.db.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.db.index.schema.json"
+    },
+    {
+      "id": "x07-arch.db.queries.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.db.queries.schema.json"
+    },
+    {
       "id": "x07-arch.manifest.lock.schema.json",
       "url": "/agent/latest/schemas/x07-arch.manifest.lock.schema.json"
     },
     {
       "id": "x07-arch.manifest.schema.json",
       "url": "/agent/latest/schemas/x07-arch.manifest.schema.json"
+    },
+    {
+      "id": "x07-arch.net.grpc.services.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.net.grpc.services.schema.json"
+    },
+    {
+      "id": "x07-arch.net.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.net.index.schema.json"
+    },
+    {
+      "id": "x07-arch.obs.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.obs.index.schema.json"
     },
     {
       "id": "x07-arch.patchset.schema.json",
@@ -151,6 +187,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-capabilities.schema.json"
     },
     {
+      "id": "x07-db.migrate.plan.schema.json",
+      "url": "/agent/latest/schemas/x07-db.migrate.plan.schema.json"
+    },
+    {
       "id": "x07-host-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
@@ -161,6 +201,14 @@ export const latestSchemasIndex = {
     {
       "id": "x07-lock.schema.json",
       "url": "/agent/latest/schemas/x07-lock.schema.json"
+    },
+    {
+      "id": "x07-obs.exporter.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-obs.exporter.profile.schema.json"
+    },
+    {
+      "id": "x07-obs.metrics.registry.schema.json",
+      "url": "/agent/latest/schemas/x07-obs.metrics.registry.schema.json"
     },
     {
       "id": "x07-os-runner.report.schema.json",
@@ -340,6 +388,20 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-aho-corasick-rs/0.1.4/index.json",
       "description": "Aho\u2013Corasick multi-pattern substring search.",
       "docs_url": "/agent/latest/packages/ext-aho-corasick-rs/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-archive-c",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-archive-c/0.1.0/index.json",
+      "description": "Archive parsing/extraction helpers + pinned archive policies (tar/tgz v1).",
+      "docs_url": "/agent/latest/packages/ext-archive-c/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-auth-jwt",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-auth-jwt/0.1.0/index.json",
+      "description": "Ed25519 + JWT (profiles pinned under arch/crypto). Deterministic token generation via canonical JSON payloads.",
+      "docs_url": "/agent/latest/packages/ext-auth-jwt/0.1.0/index.json#docs"
     },
     {
       "name": "ext-base64-rs",
@@ -851,6 +913,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-db-core/0.1.8/index.json",
       "description": "Database interfaces, query specs, and pooling (run-os only).",
       "docs_url": "/agent/latest/packages/ext-db-core/0.1.8/index.json#docs"
+    },
+    {
+      "name": "ext-db-migrate",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-db-migrate/0.1.0/index.json",
+      "description": "DB migrations + RR-backed DB fixture adapter (contracts-as-data under arch/db).",
+      "docs_url": "/agent/latest/packages/ext-db-migrate/0.1.0/index.json#docs"
     },
     {
       "name": "ext-db-mysql",
@@ -1497,6 +1566,20 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-net/0.1.7/index.json#docs"
     },
     {
+      "name": "ext-net-protos-c",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json",
+      "description": "HTTP/2 + WebSocket + gRPC helpers, pinned by arch/net contracts.",
+      "docs_url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-obs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-obs/0.1.0/index.json",
+      "description": "Metrics snapshot + OpenMetrics + OTLP encoding/export (contracts-as-data under arch/obs).",
+      "docs_url": "/agent/latest/packages/ext-obs/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-openssl-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-openssl-c/0.1.0/index.json",
@@ -1537,6 +1620,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-openssl-c/0.1.5/index.json",
       "description": "OpenSSL bindings: hashes, RNG, and Ed25519 (run-os only).",
       "docs_url": "/agent/latest/packages/ext-openssl-c/0.1.5/index.json#docs"
+    },
+    {
+      "name": "ext-openssl-c",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-openssl-c/0.1.6/index.json",
+      "description": "OpenSSL bindings: hashes, RNG, and Ed25519 (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-openssl-c/0.1.6/index.json#docs"
     },
     {
       "name": "ext-path-glob-rs",

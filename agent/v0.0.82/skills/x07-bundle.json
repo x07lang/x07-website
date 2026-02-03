@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.0.82/skills/x07-bundle/SKILL.md",
+  "id": "x07-bundle",
+  "summary": "Produce distributable native executables (normal CLI ABI) via `x07 bundle`.",
+  "docs_url": "/agent/v0.0.82/skills/x07-bundle/SKILL.md",
+  "report_schema_url": null
+}

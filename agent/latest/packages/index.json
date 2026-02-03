@@ -38,6 +38,20 @@
       "docs_url": "/agent/latest/packages/ext-aho-corasick-rs/0.1.4/index.json#docs"
     },
     {
+      "name": "ext-archive-c",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-archive-c/0.1.0/index.json",
+      "description": "Archive parsing/extraction helpers + pinned archive policies (tar/tgz v1).",
+      "docs_url": "/agent/latest/packages/ext-archive-c/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-auth-jwt",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-auth-jwt/0.1.0/index.json",
+      "description": "Ed25519 + JWT (profiles pinned under arch/crypto). Deterministic token generation via canonical JSON payloads.",
+      "docs_url": "/agent/latest/packages/ext-auth-jwt/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-base64-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-base64-rs/0.1.0/index.json",
@@ -547,6 +561,13 @@
       "url": "/agent/latest/packages/ext-db-core/0.1.8/index.json",
       "description": "Database interfaces, query specs, and pooling (run-os only).",
       "docs_url": "/agent/latest/packages/ext-db-core/0.1.8/index.json#docs"
+    },
+    {
+      "name": "ext-db-migrate",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-db-migrate/0.1.0/index.json",
+      "description": "DB migrations + RR-backed DB fixture adapter (contracts-as-data under arch/db).",
+      "docs_url": "/agent/latest/packages/ext-db-migrate/0.1.0/index.json#docs"
     },
     {
       "name": "ext-db-mysql",
@@ -1193,6 +1214,20 @@
       "docs_url": "/agent/latest/packages/ext-net/0.1.7/index.json#docs"
     },
     {
+      "name": "ext-net-protos-c",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json",
+      "description": "HTTP/2 + WebSocket + gRPC helpers, pinned by arch/net contracts.",
+      "docs_url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-obs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-obs/0.1.0/index.json",
+      "description": "Metrics snapshot + OpenMetrics + OTLP encoding/export (contracts-as-data under arch/obs).",
+      "docs_url": "/agent/latest/packages/ext-obs/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-openssl-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-openssl-c/0.1.0/index.json",
@@ -1233,6 +1268,13 @@
       "url": "/agent/latest/packages/ext-openssl-c/0.1.5/index.json",
       "description": "OpenSSL bindings: hashes, RNG, and Ed25519 (run-os only).",
       "docs_url": "/agent/latest/packages/ext-openssl-c/0.1.5/index.json#docs"
+    },
+    {
+      "name": "ext-openssl-c",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-openssl-c/0.1.6/index.json",
+      "description": "OpenSSL bindings: hashes, RNG, and Ed25519 (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-openssl-c/0.1.6/index.json#docs"
     },
     {
       "name": "ext-path-glob-rs",

@@ -7,6 +7,14 @@
       "url": "/agent/latest/schemas/run-os-policy.schema.json"
     },
     {
+      "id": "x07-arch.archive.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.archive.index.schema.json"
+    },
+    {
+      "id": "x07-arch.archive.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.archive.profile.schema.json"
+    },
+    {
       "id": "x07-arch.budgets.index.schema.json",
       "url": "/agent/latest/schemas/x07-arch.budgets.index.schema.json"
     },
@@ -15,12 +23,40 @@
       "url": "/agent/latest/schemas/x07-arch.contracts.lock.schema.json"
     },
     {
+      "id": "x07-arch.crypto.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.crypto.index.schema.json"
+    },
+    {
+      "id": "x07-arch.crypto.jwt_profiles.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.crypto.jwt_profiles.schema.json"
+    },
+    {
+      "id": "x07-arch.db.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.db.index.schema.json"
+    },
+    {
+      "id": "x07-arch.db.queries.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.db.queries.schema.json"
+    },
+    {
       "id": "x07-arch.manifest.lock.schema.json",
       "url": "/agent/latest/schemas/x07-arch.manifest.lock.schema.json"
     },
     {
       "id": "x07-arch.manifest.schema.json",
       "url": "/agent/latest/schemas/x07-arch.manifest.schema.json"
+    },
+    {
+      "id": "x07-arch.net.grpc.services.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.net.grpc.services.schema.json"
+    },
+    {
+      "id": "x07-arch.net.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.net.index.schema.json"
+    },
+    {
+      "id": "x07-arch.obs.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.obs.index.schema.json"
     },
     {
       "id": "x07-arch.patchset.schema.json",
@@ -67,6 +103,10 @@
       "url": "/agent/latest/schemas/x07-capabilities.schema.json"
     },
     {
+      "id": "x07-db.migrate.plan.schema.json",
+      "url": "/agent/latest/schemas/x07-db.migrate.plan.schema.json"
+    },
+    {
       "id": "x07-host-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
@@ -77,6 +117,14 @@
     {
       "id": "x07-lock.schema.json",
       "url": "/agent/latest/schemas/x07-lock.schema.json"
+    },
+    {
+      "id": "x07-obs.exporter.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-obs.exporter.profile.schema.json"
+    },
+    {
+      "id": "x07-obs.metrics.registry.schema.json",
+      "url": "/agent/latest/schemas/x07-obs.metrics.registry.schema.json"
     },
     {
       "id": "x07-os-runner.report.schema.json",
