@@ -1226,6 +1226,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-db-sqlite/0.1.8/index.json#docs"
     },
     {
+      "name": "ext-db-sqlite",
+      "version": "0.1.9",
+      "url": "/agent/latest/packages/ext-db-sqlite/0.1.9/index.json",
+      "description": "SQLite driver for std.db (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-db-sqlite/0.1.9/index.json#docs"
+    },
+    {
       "name": "ext-decimal-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-decimal-rs/0.1.0/index.json",
