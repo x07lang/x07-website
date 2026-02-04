@@ -1,90 +1,90 @@
 {
   "channels": {
     "stable": {
-      "toolchain": "v0.0.86",
-      "x07up": "v0.0.86"
+      "toolchain": "v0.0.87",
+      "x07up": "v0.0.87"
     }
   },
   "schema_version": "x07.install.channels@0.1.0",
   "toolchains": {
-    "v0.0.86": {
+    "v0.0.87": {
       "assets": {
         "aarch64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "9a3ba9d2159110c6bdd5ac9f6922171bc11f6af67c0e7a19b24e4a91d2c1bc8f",
-          "size_bytes": 81151349,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07-v0.0.86-aarch64-apple-darwin.tar.gz"
+          "sha256": "f724efa56499015e2d0aa42e65eb630bcf43db9b63238ea14ba1d6d30b1d3094",
+          "size_bytes": 81152506,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07-v0.0.87-aarch64-apple-darwin.tar.gz"
         },
         "aarch64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "82c851cd7befecc9e44b177612fe605192403e39cadab696326f2e636287a2df",
-          "size_bytes": 85696940,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07-v0.0.86-aarch64-unknown-linux-gnu.tar.gz"
+          "sha256": "9419fa26637c4e24c75333a9f1ab47c7280e0788b5d4fd81d5ea049e84329da1",
+          "size_bytes": 85704115,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07-v0.0.87-aarch64-unknown-linux-gnu.tar.gz"
         },
         "x86_64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "4772b6885822136a9abfc9877afad0cfb0791bffd2bf720fddfd5cac3680f0d8",
-          "size_bytes": 83272610,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07-v0.0.86-x86_64-apple-darwin.tar.gz"
+          "sha256": "e917badeefee903dc59754d3d85e385155a1bd3cdb1ff5de6a4115138588b5f6",
+          "size_bytes": 83276112,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07-v0.0.87-x86_64-apple-darwin.tar.gz"
         },
         "x86_64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "2fe331eef1b758791d90b8cb8e654081e15b25bd9716f9ebca782f3fa58cea3d",
-          "size_bytes": 87750935,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07-v0.0.86-x86_64-unknown-linux-gnu.tar.gz"
+          "sha256": "23e1f9deb6e484b195c51b4bd131cf37349d2b5c07cd96bb494b73103b468dd4",
+          "size_bytes": 87766807,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07-v0.0.87-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
       "components": {
         "docs": {
           "format": "tar.gz",
-          "sha256": "eda0a25891d09ad17f2d6206eb3e215be7b3cff6fad6e58fd4b131d3027b1502",
-          "size_bytes": 99046,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07-docs-v0.0.86.tar.gz"
+          "sha256": "8580885c92496f5293bffe5fd461422bfa849c730cff70738adb18a6bfd087ac",
+          "size_bytes": 99045,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07-docs-v0.0.87.tar.gz"
         },
         "skills": {
           "format": "tar.gz",
-          "sha256": "bd82c5ea478d488a358f0ca6b7207b6499b7b0d90b7b9738168b0ba8ae0561d3",
+          "sha256": "61d971ae47629d0ec63e4d4bff8ac9eb2d1838a3130ab610741d1c5af3c4fd92",
           "size_bytes": 18874,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07-skills-v0.0.86.tar.gz"
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07-skills-v0.0.87.tar.gz"
         }
       },
       "min_required": {
-        "x07up": "v0.0.86"
+        "x07up": "v0.0.87"
       },
       "notes": "Stable release.",
-      "published_at": "2026-02-04T15:49:57Z"
+      "published_at": "2026-02-04T17:26:16Z"
     }
   },
-  "updated_at": "2026-02-04T15:49:57Z",
+  "updated_at": "2026-02-04T17:26:16Z",
   "x07up": {
-    "v0.0.86": {
+    "v0.0.87": {
       "assets": {
         "aarch64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "b62419065ae98da326bc5b4ecb03e279352569cb6fae8f8b8f4704f067c740ad",
-          "size_bytes": 1868961,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07up-v0.0.86-aarch64-apple-darwin.tar.gz"
+          "sha256": "2b26398a5a82131af424bd505155cad2d72d47e15d2c29b2c97bd13ebf77ee63",
+          "size_bytes": 1874969,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07up-v0.0.87-aarch64-apple-darwin.tar.gz"
         },
         "aarch64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "e6d16e1d5afd1d57cd2ebd8f53cfcd4ec382b741bc492f4f63ac78a1753e7fef",
-          "size_bytes": 2065957,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07up-v0.0.86-aarch64-unknown-linux-gnu.tar.gz"
+          "sha256": "759495478183397a12287dc34032334f61efdf6fed4b4e89da214a15320fc5aa",
+          "size_bytes": 2073149,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07up-v0.0.87-aarch64-unknown-linux-gnu.tar.gz"
         },
         "x86_64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "85ab0317e4ce69e3f24e4c9eb724b6aa6fade78f73dad9a39947d074a37f216c",
-          "size_bytes": 2006741,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07up-v0.0.86-x86_64-apple-darwin.tar.gz"
+          "sha256": "448517b6fd0e08ab68c635aa747909f6595f9fb14ff4c2fd97b6f672b7373b1d",
+          "size_bytes": 2013188,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07up-v0.0.87-x86_64-apple-darwin.tar.gz"
         },
         "x86_64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "4f0f35c1a192b5d761969f6442807d3d840d0793c354378bea9160ac90321981",
-          "size_bytes": 2114066,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.0.86/x07up-v0.0.86-x86_64-unknown-linux-gnu.tar.gz"
+          "sha256": "8d359b624cd496c00f52f6615dddb6f79f7d9e0099478ea54df11138c985f87d",
+          "size_bytes": 2120845,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.0.87/x07up-v0.0.87-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
-      "published_at": "2026-02-04T15:49:57Z"
+      "published_at": "2026-02-04T17:26:16Z"
     }
   }
 }
