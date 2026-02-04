@@ -1,0 +1,71 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-msg-core",
+  "version": "0.1.0",
+  "description": "Messaging core: canonical msg.envelope_v1 + msg.rr.entry_v1 + driver interface (pinned via arch/msg).",
+  "docs": "Messaging core: canonical msg.envelope_v1 + msg.rr.entry_v1 + driver interface (pinned via arch/msg).\n\nModules:\n- std.msg.spec\n- std.msg.envelope\n- std.msg.rr\n- std.msg.driver\n- std.msg.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-msg-core@0.1.0\n- Pin topics in arch/msg/index.x07msg.json.\n- Encode envelopes with std.msg.envelope.encode_v1.\n- Decode envelopes with std.msg.envelope.decode_v1.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "mixed",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-data-model@0.1.7",
+      "ext-json-rs@0.1.4",
+      "ext-unicode-rs@0.1.5"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.msg.driver",
+      "path": "std/msg/driver.x07.json",
+      "exports": [
+        "std.msg.driver.poll_v1",
+        "std.msg.driver.publish_v1",
+        "std.msg.driver.replay_handle_v1"
+      ]
+    },
+    {
+      "module_id": "std.msg.envelope",
+      "path": "std/msg/envelope.x07.json",
+      "exports": [
+        "std.msg.envelope.decode_v1",
+        "std.msg.envelope.encode_v1"
+      ]
+    },
+    {
+      "module_id": "std.msg.rr",
+      "path": "std/msg/rr.x07.json",
+      "exports": [
+        "std.msg.rr.parse_v1",
+        "std.msg.rr.record_deliver_v1",
+        "std.msg.rr.record_publish_v1"
+      ]
+    },
+    {
+      "module_id": "std.msg.spec",
+      "path": "std/msg/spec.x07.json",
+      "exports": [
+        "std.msg.spec.rr_policy_id_from_arch_v1",
+        "std.msg.spec.topic_is_known_from_arch_v1",
+        "std.msg.spec.topic_max_value_bytes_from_arch_v1"
+      ]
+    },
+    {
+      "module_id": "std.msg.tests",
+      "path": "std/msg/tests.x07.json",
+      "exports": [
+        "std.msg.tests.test_envelope_encode_decode_v1",
+        "std.msg.tests.test_rr_entry_stability_v1"
+      ]
+    }
+  ]
+}

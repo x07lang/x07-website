@@ -1,0 +1,76 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-cli",
+  "version": "0.1.6",
+  "description": "Command-line argument parsing, help, and shell completion.",
+  "docs": "Specrows-based CLI parsing.\n\n- Compile a specrows JSON command spec with ext.cli.specrows.compile.\n- Parse argv bytes with ext.cli.parse_specrows(spec_json_bytes, argv_v1_bytes).\n- On error, use ext.cli.err_msg / ext.cli.err_usage.\n- On success, use ext.cli.matches_cmd and ext.cli.matches_get.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "requires_packages": [
+      "ext-data-model@0.1.4",
+      "ext-json-rs@0.1.3"
+    ],
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "ext.cli",
+      "path": "ext/cli.x07.json",
+      "exports": [
+        "ext.cli.err_code",
+        "ext.cli.err_msg",
+        "ext.cli.err_usage",
+        "ext.cli.is_ok",
+        "ext.cli.matches_cmd",
+        "ext.cli.matches_get",
+        "ext.cli.parse_compiled",
+        "ext.cli.parse_specrows"
+      ]
+    },
+    {
+      "module_id": "ext.cli.complete",
+      "path": "ext/cli/complete.x07.json",
+      "exports": [
+        "ext.cli.complete.render"
+      ]
+    },
+    {
+      "module_id": "ext.cli.help",
+      "path": "ext/cli/help.x07.json",
+      "exports": [
+        "ext.cli.help.render"
+      ]
+    },
+    {
+      "module_id": "ext.cli.specrows",
+      "path": "ext/cli/specrows.x07.json",
+      "exports": [
+        "ext.cli.specrows.compile",
+        "ext.cli.specrows.validate"
+      ]
+    },
+    {
+      "module_id": "ext.cli.tests",
+      "path": "ext/cli/tests.x07.json",
+      "exports": [
+        "ext.cli.tests.test_dashdash_delimiter",
+        "ext.cli.tests.test_implied_help_flag",
+        "ext.cli.tests.test_long_opt_equals",
+        "ext.cli.tests.test_long_opt_next_token",
+        "ext.cli.tests.test_missing_required_arg",
+        "ext.cli.tests.test_missing_required_opt",
+        "ext.cli.tests.test_short_bundle_flags"
+      ]
+    }
+  ]
+}

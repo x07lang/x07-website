@@ -449,11 +449,25 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-archive-c/0.1.0/index.json#docs"
     },
     {
+      "name": "ext-archive-c",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-archive-c/0.1.1/index.json",
+      "description": "Archive parsing/extraction helpers + pinned archive policies (tar/tgz v1).",
+      "docs_url": "/agent/latest/packages/ext-archive-c/0.1.1/index.json#docs"
+    },
+    {
       "name": "ext-auth-jwt",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-auth-jwt/0.1.0/index.json",
       "description": "Ed25519 + JWT (profiles pinned under arch/crypto). Deterministic token generation via canonical JSON payloads.",
       "docs_url": "/agent/latest/packages/ext-auth-jwt/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-auth-jwt",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-auth-jwt/0.1.1/index.json",
+      "description": "Ed25519 + JWT (profiles pinned under arch/crypto). Deterministic token generation via canonical JSON payloads.",
+      "docs_url": "/agent/latest/packages/ext-auth-jwt/0.1.1/index.json#docs"
     },
     {
       "name": "ext-base64-rs",
@@ -589,6 +603,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-cbor-rs/0.1.5/index.json#docs"
     },
     {
+      "name": "ext-cbor-rs",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-cbor-rs/0.1.6/index.json",
+      "description": "CBOR encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-cbor-rs/0.1.6/index.json#docs"
+    },
+    {
       "name": "ext-checksum-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-checksum-rs/0.1.0/index.json",
@@ -687,11 +708,25 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-cli/0.1.10/index.json#docs"
     },
     {
+      "name": "ext-cli",
+      "version": "0.1.11",
+      "url": "/agent/latest/packages/ext-cli/0.1.11/index.json",
+      "description": "Command-line argument parsing, help, and shell completion.",
+      "docs_url": "/agent/latest/packages/ext-cli/0.1.11/index.json#docs"
+    },
+    {
       "name": "ext-cli-ux",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-cli-ux/0.1.0/index.json",
       "description": "CLI UX primitives: deterministic progress, tables, and JSONL output (pinned via arch/cli).",
       "docs_url": "/agent/latest/packages/ext-cli-ux/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-cli-ux",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-cli-ux/0.1.1/index.json",
+      "description": "CLI UX primitives: deterministic progress, tables, and JSONL output (pinned via arch/cli).",
+      "docs_url": "/agent/latest/packages/ext-cli-ux/0.1.1/index.json#docs"
     },
     {
       "name": "ext-compress-rs",
@@ -806,6 +841,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-csv-rs/0.1.4/index.json#docs"
     },
     {
+      "name": "ext-csv-rs",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-csv-rs/0.1.5/index.json",
+      "description": "CSV parsing and writing.",
+      "docs_url": "/agent/latest/packages/ext-csv-rs/0.1.5/index.json#docs"
+    },
+    {
       "name": "ext-curl-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-curl-c/0.1.0/index.json",
@@ -911,6 +953,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-data-model/0.1.7/index.json#docs"
     },
     {
+      "name": "ext-data-model",
+      "version": "0.1.8",
+      "url": "/agent/latest/packages/ext-data-model/0.1.8/index.json",
+      "description": "Typed data model with JSON/TOML/YAML/XML/INI/CSV codecs.",
+      "docs_url": "/agent/latest/packages/ext-data-model/0.1.8/index.json#docs"
+    },
+    {
       "name": "ext-db-core",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-db-core/0.1.0/index.json",
@@ -974,11 +1023,25 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-db-core/0.1.8/index.json#docs"
     },
     {
+      "name": "ext-db-core",
+      "version": "0.1.9",
+      "url": "/agent/latest/packages/ext-db-core/0.1.9/index.json",
+      "description": "Database interfaces, query specs, and pooling (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-db-core/0.1.9/index.json#docs"
+    },
+    {
       "name": "ext-db-migrate",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-db-migrate/0.1.0/index.json",
       "description": "DB migrations + RR-backed DB fixture adapter (contracts-as-data under arch/db).",
       "docs_url": "/agent/latest/packages/ext-db-migrate/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-db-migrate",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-db-migrate/0.1.1/index.json",
+      "description": "DB migrations + RR-backed DB fixture adapter (contracts-as-data under arch/db).",
+      "docs_url": "/agent/latest/packages/ext-db-migrate/0.1.1/index.json#docs"
     },
     {
       "name": "ext-db-mysql",
@@ -1548,6 +1611,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-msg-core/0.1.0/index.json#docs"
     },
     {
+      "name": "ext-msg-core",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-msg-core/0.1.1/index.json",
+      "description": "Messaging core: canonical msg.envelope_v1 + msg.rr.entry_v1 + driver interface (pinned via arch/msg).",
+      "docs_url": "/agent/latest/packages/ext-msg-core/0.1.1/index.json#docs"
+    },
+    {
       "name": "ext-msg-kafka-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-msg-kafka-c/0.1.0/index.json",
@@ -1595,6 +1665,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-msgpack-rs/0.1.5/index.json",
       "description": "MessagePack encode/decode with ext.data_model integration.",
       "docs_url": "/agent/latest/packages/ext-msgpack-rs/0.1.5/index.json#docs"
+    },
+    {
+      "name": "ext-msgpack-rs",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-msgpack-rs/0.1.6/index.json",
+      "description": "MessagePack encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-msgpack-rs/0.1.6/index.json#docs"
     },
     {
       "name": "ext-net",
@@ -1660,11 +1737,25 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json#docs"
     },
     {
+      "name": "ext-net-protos-c",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-net-protos-c/0.1.1/index.json",
+      "description": "HTTP/2 + WebSocket + gRPC helpers, pinned by arch/net contracts.",
+      "docs_url": "/agent/latest/packages/ext-net-protos-c/0.1.1/index.json#docs"
+    },
+    {
       "name": "ext-obs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-obs/0.1.0/index.json",
       "description": "Metrics snapshot + OpenMetrics + OTLP encoding/export (contracts-as-data under arch/obs).",
       "docs_url": "/agent/latest/packages/ext-obs/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-obs",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-obs/0.1.1/index.json",
+      "description": "Metrics snapshot + OpenMetrics + OTLP encoding/export (contracts-as-data under arch/obs).",
+      "docs_url": "/agent/latest/packages/ext-obs/0.1.1/index.json#docs"
     },
     {
       "name": "ext-openssl-c",
@@ -2001,6 +2092,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-streams/0.1.4/index.json",
       "description": "Create io readers from bytes and collections.",
       "docs_url": "/agent/latest/packages/ext-streams/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-streams",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-streams/0.1.5/index.json",
+      "description": "Create io readers from bytes, collections, and fs.",
+      "docs_url": "/agent/latest/packages/ext-streams/0.1.5/index.json#docs"
     },
     {
       "name": "ext-tar-rs",
@@ -2353,11 +2451,25 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-web-crawl/0.1.0/index.json#docs"
     },
     {
+      "name": "ext-web-crawl",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-web-crawl/0.1.1/index.json",
+      "description": "Robots (RFC 9309) + Sitemaps + deterministic crawl scheduling (pinned via arch/crawl).",
+      "docs_url": "/agent/latest/packages/ext-web-crawl/0.1.1/index.json#docs"
+    },
+    {
       "name": "ext-web-kit",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-web-kit/0.1.0/index.json",
       "description": "Web service kit: router + canonical errors + OpenAPI 3.1 generation (pinned via arch/web).",
       "docs_url": "/agent/latest/packages/ext-web-kit/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-web-kit",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-web-kit/0.1.1/index.json",
+      "description": "Web service kit: router + canonical errors + OpenAPI 3.1 generation (pinned via arch/web).",
+      "docs_url": "/agent/latest/packages/ext-web-kit/0.1.1/index.json#docs"
     },
     {
       "name": "ext-xml-rs",
