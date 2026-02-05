@@ -395,7 +395,7 @@ def _sync_agent_portal(
         (out_dir / "catalog" / "capabilities.json").write_bytes(capabilities_src.read_bytes())
 
     # Examples (a small, stable subset)
-    examples_src = toolchain_repo / "examples"
+    examples_src = toolchain_repo / "docs" / "examples"
     if examples_src.is_dir():
         for p in sorted(examples_src.glob("*.x07.json")):
             dst = out_dir / "examples" / p.name

@@ -71,6 +71,11 @@
       "id": "14_task_scope_slots",
       "purpose": "task scope slots",
       "url": "/agent/v0.0.92/examples/14_task_scope_slots.x07.json"
+    },
+    {
+      "id": "15_text_slices_branded",
+      "purpose": "text slices branded",
+      "url": "/agent/v0.0.92/examples/15_text_slices_branded.x07.json"
     }
   ]
 }

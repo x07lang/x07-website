@@ -398,6 +398,11 @@ export const latestExamplesIndex = {
       "id": "14_task_scope_slots",
       "purpose": "task scope slots",
       "url": "/agent/latest/examples/14_task_scope_slots.x07.json"
+    },
+    {
+      "id": "15_text_slices_branded",
+      "purpose": "text slices branded",
+      "url": "/agent/latest/examples/15_text_slices_branded.x07.json"
     }
   ]
 } as const;
