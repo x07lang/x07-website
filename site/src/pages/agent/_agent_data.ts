@@ -1611,6 +1611,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-msg-amqp-c/0.1.0/index.json#docs"
     },
     {
+      "name": "ext-msg-amqp-c",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-msg-amqp-c/0.1.1/index.json",
+      "description": "AMQP 0-9-1 driver using rabbitmq-c; integrates with std.msg envelope and RR replay (pinned via arch/msg/amqp).",
+      "docs_url": "/agent/latest/packages/ext-msg-amqp-c/0.1.1/index.json#docs"
+    },
+    {
       "name": "ext-msg-core",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-msg-core/0.1.0/index.json",
@@ -1630,6 +1637,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-msg-kafka-c/0.1.0/index.json",
       "description": "Kafka driver using librdkafka; integrates with std.msg envelope and RR replay (pinned via arch/msg/kafka).",
       "docs_url": "/agent/latest/packages/ext-msg-kafka-c/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-msg-kafka-c",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-msg-kafka-c/0.1.1/index.json",
+      "description": "Kafka driver using librdkafka; integrates with std.msg envelope and RR replay (pinned via arch/msg/kafka).",
+      "docs_url": "/agent/latest/packages/ext-msg-kafka-c/0.1.1/index.json#docs"
     },
     {
       "name": "ext-msgpack-rs",
