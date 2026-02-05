@@ -1382,6 +1382,13 @@
       "docs_url": "/agent/latest/packages/ext-obs/0.1.1/index.json#docs"
     },
     {
+      "name": "ext-obs",
+      "version": "0.1.2",
+      "url": "/agent/latest/packages/ext-obs/0.1.2/index.json",
+      "description": "Metrics snapshot + OpenMetrics + OTLP encoding/export (contracts-as-data under arch/obs).",
+      "docs_url": "/agent/latest/packages/ext-obs/0.1.2/index.json#docs"
+    },
+    {
       "name": "ext-openssl-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-openssl-c/0.1.0/index.json",
@@ -2080,6 +2087,13 @@
       "url": "/agent/latest/packages/ext-web-crawl/0.1.1/index.json",
       "description": "Robots (RFC 9309) + Sitemaps + deterministic crawl scheduling (pinned via arch/crawl).",
       "docs_url": "/agent/latest/packages/ext-web-crawl/0.1.1/index.json#docs"
+    },
+    {
+      "name": "ext-web-crawl",
+      "version": "0.1.2",
+      "url": "/agent/latest/packages/ext-web-crawl/0.1.2/index.json",
+      "description": "Robots (RFC 9309) + Sitemaps + deterministic crawl scheduling (pinned via arch/crawl).",
+      "docs_url": "/agent/latest/packages/ext-web-crawl/0.1.2/index.json#docs"
     },
     {
       "name": "ext-web-kit",
