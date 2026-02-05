@@ -1751,6 +1751,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-net/0.1.7/index.json#docs"
     },
     {
+      "name": "ext-net",
+      "version": "0.1.8",
+      "url": "/agent/latest/packages/ext-net/0.1.8/index.json",
+      "description": "Networking APIs (DNS, TCP/UDP, TLS, HTTP) (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-net/0.1.8/index.json#docs"
+    },
+    {
       "name": "ext-net-protos-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json",
