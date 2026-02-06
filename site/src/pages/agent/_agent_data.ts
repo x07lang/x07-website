@@ -227,6 +227,18 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-arch.web.openapi_profile.schema.json"
     },
     {
+      "id": "x07-bench.instance.schema.json",
+      "url": "/agent/latest/schemas/x07-bench.instance.schema.json"
+    },
+    {
+      "id": "x07-bench.report.schema.json",
+      "url": "/agent/latest/schemas/x07-bench.report.schema.json"
+    },
+    {
+      "id": "x07-bench.suite.schema.json",
+      "url": "/agent/latest/schemas/x07-bench.suite.schema.json"
+    },
+    {
       "id": "x07-budget.profile.schema.json",
       "url": "/agent/latest/schemas/x07-budget.profile.schema.json"
     },
