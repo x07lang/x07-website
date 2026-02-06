@@ -1,0 +1,54 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-db-mysql",
+  "version": "0.1.5",
+  "description": "MySQL driver for std.db (run-os only).",
+  "docs": "MySQL driver for std.db (run-os only).\n\nModules:\n- std.db.mysql\n- std.db.mysql.spec\n- std.db.mysql.pool\n\nUsage:\n- Add dependency: x07 pkg add ext-db-mysql@0.1.5\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "std.db.mysql",
+      "path": "std/db/mysql.x07.json",
+      "exports": [
+        "std.db.mysql._not_implemented_note_v1",
+        "std.db.mysql.caps_default_v1",
+        "std.db.mysql.close_v1",
+        "std.db.mysql.exec_v1",
+        "std.db.mysql.open_v1",
+        "std.db.mysql.query_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.mysql.pool",
+      "path": "std/db/mysql/pool.x07.json",
+      "exports": [
+        "std.db.mysql.pool._not_implemented_note_v1",
+        "std.db.mysql.pool.close_v1",
+        "std.db.mysql.pool.exec0_async_v1",
+        "std.db.mysql.pool.new_uri_v1",
+        "std.db.mysql.pool.query0_async_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.mysql.spec",
+      "path": "std/db/mysql/spec.x07.json",
+      "exports": [
+        "std.db.mysql.spec.caps_default_v1",
+        "std.db.mysql.spec.caps_pack_v1",
+        "std.db.mysql.spec.close_req_v1",
+        "std.db.mysql.spec.exec_req_v1",
+        "std.db.mysql.spec.flags_none_v1",
+        "std.db.mysql.spec.open_req_v1",
+        "std.db.mysql.spec.query_req_v1"
+      ]
+    }
+  ]
+}
