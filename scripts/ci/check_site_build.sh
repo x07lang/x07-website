@@ -24,6 +24,8 @@ for rel in \
   "agent/latest/skills/index.json" \
   "agent/latest/schemas/index.json" \
   "agent/latest/examples/index.json" \
+  "agent/latest/examples/catalog.json" \
+  "agent/latest/examples/catalog-files/01_echo.x07.json" \
   "agent/latest/packages/index.json" \
   "agent/latest/catalog/index.json" \
   "agent/latest/catalog/capabilities.json" \
@@ -39,5 +41,8 @@ if find "${BUILD_DIR}/agent" \( -path "*/.agent/*" -o -path "*/.codex/*" \) -pri
   echo "found hidden dir in build output under ${BUILD_DIR}/agent" >&2
   exit 2
 fi
+
+echo "[check] built agent index URLs resolve"
+bash "${ROOT}/scripts/ci/check_agent_endpoints_local.sh"
 
 printf 'OK %s\n' "$(basename "$0")"

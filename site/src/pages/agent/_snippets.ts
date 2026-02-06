@@ -5,6 +5,7 @@ export const AGENT_ENDPOINTS = {
   schemas_index: '/agent/latest/schemas/index.json',
   skills_index: '/agent/latest/skills/index.json',
   examples_index: '/agent/latest/examples/index.json',
+  examples_catalog_index: '/agent/latest/examples/catalog.json',
   packages_index: '/agent/latest/packages/index.json',
   stdlib_index: '/agent/latest/stdlib/index.json',
   toolchain_versions: '/versions/toolchain_versions.json',

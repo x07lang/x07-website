@@ -131,6 +131,94 @@ def _generate_examples_index(*, agent_dir: Path, rel_agent_dir: Path, url_prefix
     }
 
 
+def _resolve_docs_examples_source(*, repo_root: Path, rel_agent_dir: Path) -> tuple[Path, str] | None:
+    rel = rel_agent_dir.as_posix()
+    if rel == "agent/latest":
+        docs_dir = repo_root / "docs" / "latest" / "examples"
+        generated_from = "docs/latest/examples/**/*.x07.json"
+    elif rel.startswith("agent/v"):
+        version = rel.removeprefix("agent/v")
+        docs_dir = repo_root / "docs" / f"v{version}" / "examples"
+        generated_from = f"docs/v{version}/examples/**/*.x07.json"
+    else:
+        return None
+
+    if not docs_dir.is_dir():
+        return None
+    return (docs_dir, generated_from)
+
+
+def _iter_examples_catalog_rel_paths(docs_examples_dir: Path) -> list[Path]:
+    rel_paths: list[Path] = []
+    for p in docs_examples_dir.rglob("*.x07.json"):
+        rel = p.relative_to(docs_examples_dir)
+        if rel.name == ".DS_Store":
+            continue
+        if any(part.startswith("._") for part in rel.parts):
+            continue
+        rel_paths.append(rel)
+    return sorted(rel_paths, key=lambda p: p.as_posix())
+
+
+def _sync_examples_catalog_files(*, agent_dir: Path, docs_examples_dir: Path, check: bool) -> list[Path]:
+    rel_paths = _iter_examples_catalog_rel_paths(docs_examples_dir)
+    catalog_files_dir = agent_dir / "examples" / "catalog-files"
+
+    if check:
+        if not catalog_files_dir.is_dir():
+            raise SystemExit(f"[CHECK] missing {catalog_files_dir}")
+        actual = sorted(catalog_files_dir.rglob("*.x07.json"), key=lambda p: p.relative_to(catalog_files_dir).as_posix())
+        actual_rel = [p.relative_to(catalog_files_dir) for p in actual]
+        if actual_rel != rel_paths:
+            raise SystemExit(f"[CHECK] examples catalog files out of date: {catalog_files_dir}")
+        for rel in rel_paths:
+            src = docs_examples_dir / rel
+            dst = catalog_files_dir / rel
+            if src.read_bytes() != dst.read_bytes():
+                raise SystemExit(f"[CHECK] examples catalog file differs: {dst}")
+        return rel_paths
+
+    if catalog_files_dir.exists():
+        shutil.rmtree(catalog_files_dir)
+    catalog_files_dir.mkdir(parents=True, exist_ok=True)
+    for rel in rel_paths:
+        src = docs_examples_dir / rel
+        dst = catalog_files_dir / rel
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        dst.write_bytes(src.read_bytes())
+    return rel_paths
+
+
+def _generate_examples_catalog_index(
+    *,
+    rel_paths: list[Path],
+    generated_from: str,
+    url_prefix: str,
+) -> dict:
+    items: list[dict] = []
+    for rel in rel_paths:
+        rel_posix = rel.as_posix()
+        example_id = _strip_suffix(rel_posix, ".x07.json")
+        leaf_id = rel_posix.rsplit("/", 1)[-1]
+        leaf_id = _strip_suffix(leaf_id, ".x07.json")
+        items.append(
+            {
+                "id": example_id,
+                "purpose": _infer_example_purpose(leaf_id),
+                "scope": "top_level" if len(rel.parts) == 1 else "nested",
+                "path": rel_posix,
+                "url": f"{url_prefix}/examples/catalog-files/{rel_posix}",
+            }
+        )
+    items.sort(key=lambda it: it["id"])
+
+    return {
+        "schema_version": "x07.website.agent.examples_catalog_index@v1",
+        "generated_from": generated_from,
+        "items": items,
+    }
+
+
 def _parse_semver(v: str) -> tuple[int, int, int] | None:
     parts = v.split(".")
     if len(parts) != 3:
@@ -371,7 +459,7 @@ def _sync_skill_descriptors(*, agent_dir: Path, rel_agent_dir: Path, skills_inde
         p.unlink()
 
 
-def _update_agent_index_json(*, agent_dir: Path, check: bool) -> None:
+def _update_agent_index_json(*, agent_dir: Path, check: bool, has_examples_catalog: bool) -> None:
     index_path = agent_dir / "index.json"
     if not index_path.is_file():
         raise SystemExit(f"missing agent index: {index_path}")
@@ -388,6 +476,8 @@ def _update_agent_index_json(*, agent_dir: Path, check: bool) -> None:
         "skills_index_url": "skills/index.json",
         "examples_index_url": "examples/index.json",
     }
+    if has_examples_catalog:
+        expected["examples_catalog_index_url"] = "examples/catalog.json"
     if (agent_dir / "packages").is_dir():
         expected["packages_index_url"] = "packages/index.json"
     if (agent_dir / "catalog").is_dir():
@@ -450,6 +540,7 @@ def _generate_entrypoints_json(*, url_prefix: str) -> dict:
             "skills_index": f"{url_prefix}/skills/index.json",
             "schemas_index": f"{url_prefix}/schemas/index.json",
             "examples_index": f"{url_prefix}/examples/index.json",
+            "examples_catalog_index": f"{url_prefix}/examples/catalog.json",
             "packages_index": f"{url_prefix}/packages/index.json",
             "stdlib_index": f"{url_prefix}/stdlib/index.json",
             "catalog_index": f"{url_prefix}/catalog/index.json",
@@ -491,7 +582,12 @@ def main(argv: list[str]) -> int:
         print(f"ERROR: missing packages dir: {rel_agent_dir}/packages", file=sys.stderr)
         return 2
 
-    _update_agent_index_json(agent_dir=agent_dir, check=args.check)
+    docs_examples_source = _resolve_docs_examples_source(repo_root=repo_root, rel_agent_dir=rel_agent_dir)
+    _update_agent_index_json(
+        agent_dir=agent_dir,
+        check=args.check,
+        has_examples_catalog=docs_examples_source is not None,
+    )
 
     schemas_index = _generate_schemas_index(
         agent_dir=agent_dir, rel_agent_dir=rel_agent_dir, url_prefix=url_prefix
@@ -510,6 +606,34 @@ def main(argv: list[str]) -> int:
         obj=examples_index,
         check=args.check,
     )
+    if docs_examples_source is not None:
+        docs_examples_dir, generated_from = docs_examples_source
+        rel_paths = _sync_examples_catalog_files(
+            agent_dir=agent_dir,
+            docs_examples_dir=docs_examples_dir,
+            check=args.check,
+        )
+        examples_catalog_index = _generate_examples_catalog_index(
+            rel_paths=rel_paths,
+            generated_from=generated_from,
+            url_prefix=url_prefix,
+        )
+        _write_json_if_changed(
+            path=agent_dir / "examples" / "catalog.json",
+            obj=examples_catalog_index,
+            check=args.check,
+        )
+    else:
+        catalog_path = agent_dir / "examples" / "catalog.json"
+        catalog_files_dir = agent_dir / "examples" / "catalog-files"
+        if args.check and catalog_path.exists():
+            raise SystemExit(f"[CHECK] unexpected file: {catalog_path}")
+        if args.check and catalog_files_dir.exists():
+            raise SystemExit(f"[CHECK] unexpected directory: {catalog_files_dir}")
+        if not args.check and catalog_path.exists():
+            catalog_path.unlink()
+        if not args.check and catalog_files_dir.exists():
+            shutil.rmtree(catalog_files_dir)
 
     packages_index = _generate_packages_index(
         agent_dir=agent_dir, rel_agent_dir=rel_agent_dir, url_prefix=url_prefix

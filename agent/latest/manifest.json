@@ -1,12 +1,12 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.0.93",
-  "docs_bundle_sha256": "7aff0d2a9de6edd1e53e4b972bb7ac951157cecbf807a972fdac7dbdb1798363",
+  "docs_bundle_sha256": "ab3eb97dd088c3a3f21627ee4247e8ff41b2b1716935351efdd13474bc036045",
   "human_docs": [
     {
       "path": "SUMMARY.md",
-      "sha256": "7413e4b8d6fc4a918b1d8feb79034a371f10dbf9a42b5957602f5875b6e313c9",
-      "size": 3506
+      "sha256": "82ef343d6972e841767f38d9f50ed2c059df5d5bb109fb92de27e7534ae78579",
+      "size": 3552
     },
     {
       "path": "_bundle_meta.json",
@@ -15,13 +15,13 @@
     },
     {
       "path": "about.md",
-      "sha256": "428abbf7522b72feb440e6a0668ec45fcba33c71186bd178241de99297d16bcf",
-      "size": 1643
+      "sha256": "57c5127f8a0603c149493cd2c8d5cec5769181e11e9121c3e6b7ab861e7040e0",
+      "size": 1644
     },
     {
       "path": "agent/contract.md",
-      "sha256": "72f5b52390535d47580311d2f99fb3ea2161b6a1612d3e1291f16fe9bff11709",
-      "size": 1822
+      "sha256": "d28d86b8df1fafca6dcfc7db97a9f4c6364f6f46e2c35eb703fd09afcd938cc6",
+      "size": 2098
     },
     {
       "path": "agent/readiness-checks.md",
@@ -2085,8 +2085,8 @@
     },
     {
       "path": "faq.md",
-      "sha256": "d81f6c75e894176b00276f107f928c3ea8725c39c86876fab25c5fbe790ddf0c",
-      "size": 1589
+      "sha256": "a4f95458aeb61f56b860b2af8299b67ecbc94e673a8689912d07c228113138f3",
+      "size": 2617
     },
     {
       "path": "fs/fs-v1.md",
@@ -2095,18 +2095,18 @@
     },
     {
       "path": "getting-started/agent-quickstart.md",
-      "sha256": "e90c96c96016887f995fc9d8cffc8ec955d4e0af04b6936de56217b5e660d01c",
-      "size": 10661
+      "sha256": "6684ec83833ecb4746cd568147ba8613380c9e180d8e3f40201f6810e73aa9a4",
+      "size": 10662
     },
     {
       "path": "getting-started/agent-workflow.md",
-      "sha256": "e436cf1e0f9dc69fb8c98246c9bf585be6cda145daf48276a044482232baf4e9",
-      "size": 6132
+      "sha256": "b128a62beade111d600712c3cbe05b1b1fa550fe634a713b3144d3757ebeaaa1",
+      "size": 6133
     },
     {
       "path": "getting-started/available-skills.md",
-      "sha256": "c8021ef1761449c649010283de392af2001dd798ff8d1dc239958313102409e6",
-      "size": 1628
+      "sha256": "1259091fab117fc49425eddc99143af03375a4fa13d5fee7bfa0fd685489eca5",
+      "size": 1701
     },
     {
       "path": "getting-started/first-project.md",
@@ -2150,8 +2150,8 @@
     },
     {
       "path": "guides/messaging.md",
-      "sha256": "164e91aff5df6fb46dd58d9e27eac0f58a79d690d0350e6c24f67a7d8af208f6",
-      "size": 2418
+      "sha256": "3af6bf02f3e98cc658f04e1c9e651a0c6590f36bb8bdba3dec84c5a4e3048af6",
+      "size": 2994
     },
     {
       "path": "guides/networking.md",
@@ -2294,6 +2294,11 @@
       "size": 643
     },
     {
+      "path": "recipes/agent-patterns.md",
+      "sha256": "a1fc96d08cbd54ff85c4239b8fcf05d902d572e4fcfdb37913993d2cb363362e",
+      "size": 6133
+    },
+    {
       "path": "recipes/index.md",
       "sha256": "4df574f4822fe377d0c14e2b2d42ddebc08cd649264b4706e653eda93527993d",
       "size": 10521
@@ -2410,8 +2415,8 @@
     },
     {
       "path": "toolchain/arch-check.md",
-      "sha256": "4928b96e6de17645709d52adf34dafca7973d50329769dcd44310b596dc3201c",
-      "size": 9256
+      "sha256": "e32902352f52f4db4ed6fbabd9b79d60689e3e0685acd78901cb84cb5fb864d1",
+      "size": 10195
     },
     {
       "path": "toolchain/cli.md",
@@ -2455,13 +2460,13 @@
     },
     {
       "path": "toolchain/state-machines.md",
-      "sha256": "26660651ca6226b915ca50cc5e3750fa70527e9bb2c75f6ae1ad7f657f9d239c",
-      "size": 2145
+      "sha256": "f830070f618b409cba3cf8815bc976739de84bffe8778e568dda0fc06bb2b50e",
+      "size": 4166
     },
     {
       "path": "toolchain/testing-by-example.md",
-      "sha256": "ca6e2f3d917ecb9feb1efe22e7584d237d0a05cf79d9a9041176c21ce8aa096c",
-      "size": 2919
+      "sha256": "5ce0ed37a7d828063b72f530c5c62ed0acf6473462dd1e13cd69bdebc8bcb15a",
+      "size": 4097
     },
     {
       "path": "toolchain/testing.md",
@@ -2495,8 +2500,8 @@
     },
     {
       "path": "worlds/record-replay.md",
-      "sha256": "45826c1040a9abcb8613ade57b1100d2e84dfa5e8b26f998021b20324304e9e1",
-      "size": 3673
+      "sha256": "09760477ac7a3b2ccdf4901925399c3ef900642eec41d677bc3e4aa839d92fde",
+      "size": 5035
     },
     {
       "path": "worlds/sandbox-policy-walkthrough.md",
@@ -2606,14 +2611,19 @@
       "size": 1708
     },
     {
+      "path": "examples/catalog.json",
+      "sha256": "b1e369182c8ed4a604b1216b27d72f2be9b4934ad1367b22b19ca7a7cf270e88",
+      "size": 28815
+    },
+    {
       "path": "examples/index.json",
       "sha256": "ca0100de4bc05bb958d9724594acbb9109186d7a2f6e0f55f164354122a4c77e",
       "size": 2245
     },
     {
       "path": "index.json",
-      "sha256": "a802e2d33a3003bdd85e543f251d0904663ee134a96ca689e6046c7f9e7f7f6e",
-      "size": 604
+      "sha256": "561fe879b68554a5584a3c7e8e980a4a8e1f2b4159c49ac15bdc70b5e4e38be8",
+      "size": 661
     },
     {
       "path": "packages/ext-aho-corasick-rs/0.1.0/index.json",

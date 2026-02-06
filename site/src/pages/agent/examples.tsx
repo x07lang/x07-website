@@ -12,10 +12,19 @@ export default function AgentExamples(): ReactNode {
         <Heading as="h1">Agent examples</Heading>
         <div className="alert alert--info">
           <strong>Machine-first index</strong>
+          <p>
+            Use <code>examples/index.json</code> for the compact starter set. Use{' '}
+            <code>examples/catalog.json</code> for the full recursive docs examples catalog.
+          </p>
           <ul>
             <li>
               <a href={AGENT_ENDPOINTS.examples_index}>
                 <code>{`GET ${AGENT_ENDPOINTS.examples_index}`}</code>
+              </a>
+            </li>
+            <li>
+              <a href={AGENT_ENDPOINTS.examples_catalog_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.examples_catalog_index}`}</code>
               </a>
             </li>
           </ul>

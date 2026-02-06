@@ -6,6 +6,7 @@
     "skills_index": "/agent/latest/skills/index.json",
     "schemas_index": "/agent/latest/schemas/index.json",
     "examples_index": "/agent/latest/examples/index.json",
+    "examples_catalog_index": "/agent/latest/examples/catalog.json",
     "packages_index": "/agent/latest/packages/index.json",
     "stdlib_index": "/agent/latest/stdlib/index.json",
     "catalog_index": "/agent/latest/catalog/index.json",

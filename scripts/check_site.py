@@ -73,6 +73,8 @@ def main(argv: list[str]) -> int:
                     continue
                 if rel == Path("examples/index.json"):
                     continue
+                if rel == Path("examples/catalog.json"):
+                    continue
                 if rel == Path("packages/index.json"):
                     continue
                 if rel == Path("catalog/index.json"):
@@ -145,6 +147,7 @@ def main(argv: list[str]) -> int:
         schemas_index_url = req_str_field("schemas_index_url")
         skills_index_url = req_str_field("skills_index_url")
         examples_index_url = req_str_field("examples_index_url")
+        examples_catalog_index_url = opt_str_field("examples_catalog_index_url")
         packages_index_url = opt_str_field("packages_index_url")
         catalog_index_url = opt_str_field("catalog_index_url")
         if None in (
@@ -158,7 +161,7 @@ def main(argv: list[str]) -> int:
             examples_index_url,
         ):
             return 1
-        if "" in (packages_dir, packages_index_url, catalog_index_url):
+        if "" in (packages_dir, examples_catalog_index_url, packages_index_url, catalog_index_url):
             return 1
 
         if not (agent_dir / manifest_url).is_file():
@@ -179,6 +182,8 @@ def main(argv: list[str]) -> int:
             return err(f"missing {agent_dir.relative_to(root)}/{skills_index_url}")
         if not (agent_dir / examples_index_url).is_file():
             return err(f"missing {agent_dir.relative_to(root)}/{examples_index_url}")
+        if examples_catalog_index_url and not (agent_dir / examples_catalog_index_url).is_file():
+            return err(f"missing {agent_dir.relative_to(root)}/{examples_catalog_index_url}")
         if packages_index_url and not (agent_dir / packages_index_url).is_file():
             return err(f"missing {agent_dir.relative_to(root)}/{packages_index_url}")
         if catalog_index_url and not (agent_dir / catalog_index_url).is_file():
@@ -285,6 +290,108 @@ def main(argv: list[str]) -> int:
         )
         if example_ids != expected_example_ids:
             return err(f"{(agent_dir / examples_index_url).relative_to(root)} items do not match examples_dir")
+
+        # ---- examples catalog index (optional) ----
+        if examples_catalog_index_url:
+            rc, examples_catalog_index = check_index_common(
+                index_path=agent_dir / examples_catalog_index_url,
+                expected_schema_version="x07.website.agent.examples_catalog_index@v1",
+                required_item_keys=["id", "url", "path"],
+            )
+            if rc != 0 or examples_catalog_index is None:
+                return 1
+
+            if agent_rel == "agent/latest":
+                docs_examples_root = root / "docs" / "latest" / "examples"
+            elif agent_rel.startswith("agent/v"):
+                version = agent_rel.removeprefix("agent/v")
+                docs_examples_root = root / "docs" / f"v{version}" / "examples"
+            else:
+                return err(f"unsupported agent dir for examples catalog: {agent_rel}")
+
+            if not docs_examples_root.is_dir():
+                return err(f"missing docs examples root for catalog: {docs_examples_root.relative_to(root)}")
+            catalog_files_root = agent_dir / "examples" / "catalog-files"
+            if not catalog_files_root.is_dir():
+                return err(f"missing catalog files dir: {catalog_files_root.relative_to(root)}")
+
+            cat_items = examples_catalog_index.get("items", [])
+            cat_ids: list[str] = []
+            for it in cat_items:
+                eid = it.get("id")
+                url = it.get("url")
+                rel_path = it.get("path")
+                purpose = it.get("purpose")
+                scope = it.get("scope")
+                if not isinstance(eid, str) or not eid:
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.id must be non-empty string"
+                    )
+                if not isinstance(url, str) or not url:
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.url must be non-empty string"
+                    )
+                if not isinstance(rel_path, str) or not rel_path:
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.path must be non-empty string"
+                    )
+                if purpose is not None and not isinstance(purpose, str):
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.purpose must be string|null"
+                    )
+                if scope is not None and scope not in ("top_level", "nested"):
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.scope must be top_level|nested|null"
+                    )
+                if not rel_path.endswith(".x07.json"):
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.path must end with .x07.json"
+                    )
+                expected_url = f"{agent_url_prefix}/examples/catalog-files/{rel_path}"
+                if url != expected_url:
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.url mismatch: expected {expected_url}"
+                    )
+                target = catalog_files_root / rel_path
+                if not target.is_file():
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} missing catalog file: {target.relative_to(root)}"
+                    )
+                source = docs_examples_root / rel_path
+                if not source.is_file():
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} missing source docs example file: {source.relative_to(root)}"
+                    )
+                if source.read_bytes() != target.read_bytes():
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} catalog file differs from docs source: {target.relative_to(root)}"
+                    )
+                expected_scope = "top_level" if len(Path(rel_path).parts) == 1 else "nested"
+                if scope is not None and scope != expected_scope:
+                    return err(
+                        f"{(agent_dir / examples_catalog_index_url).relative_to(root)} item.scope mismatch for {rel_path}"
+                    )
+                cat_ids.append(eid)
+
+            if cat_ids != sorted(cat_ids):
+                return err(f"{(agent_dir / examples_catalog_index_url).relative_to(root)} items must be sorted by id")
+
+            expected_cat_ids = sorted(
+                p.relative_to(docs_examples_root).as_posix().removesuffix(".x07.json")
+                for p in docs_examples_root.rglob("*.x07.json")
+            )
+            if cat_ids != expected_cat_ids:
+                return err(
+                    f"{(agent_dir / examples_catalog_index_url).relative_to(root)} items do not match docs examples"
+                )
+            actual_catalog_paths = sorted(
+                p.relative_to(catalog_files_root).as_posix().removesuffix(".x07.json")
+                for p in catalog_files_root.rglob("*.x07.json")
+            )
+            if actual_catalog_paths != expected_cat_ids:
+                return err(
+                    f"{(agent_dir / examples_catalog_index_url).relative_to(root)} catalog-files tree does not match docs examples"
+                )
 
         # ---- packages index (optional for older toolchains) ----
         if packages_index_url:
@@ -502,6 +609,7 @@ def main(argv: list[str]) -> int:
                 "skills_index": "/agent/latest/skills/index.json",
                 "schemas_index": "/agent/latest/schemas/index.json",
                 "examples_index": "/agent/latest/examples/index.json",
+                "examples_catalog_index": "/agent/latest/examples/catalog.json",
                 "packages_index": "/agent/latest/packages/index.json",
                 "stdlib_index": "/agent/latest/stdlib/index.json",
                 "catalog_index": "/agent/latest/catalog/index.json",

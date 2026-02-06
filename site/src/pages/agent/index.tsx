@@ -129,6 +129,11 @@ export default function AgentPortal(): ReactNode {
               </a>
             </li>
             <li>
+              <a href={AGENT_ENDPOINTS.examples_catalog_index}>
+                <code>{`GET ${AGENT_ENDPOINTS.examples_catalog_index}`}</code>
+              </a>
+            </li>
+            <li>
               <a href={AGENT_ENDPOINTS.packages_index}>
                 <code>{`GET ${AGENT_ENDPOINTS.packages_index}`}</code>
               </a>

@@ -165,6 +165,8 @@ const config: Config = {
           items: [
             {label: 'GitHub', href: 'https://github.com/x07lang/x07'},
             {label: 'Registry', href: 'https://x07.io'},
+            {label: 'Discord', href: 'https://discord.gg/59xuEuPN47'},
+            {label: 'Email', href: 'mailto:support@x07lang.org'},
             {label: 'RFCs', href: 'https://github.com/x07lang/x07-rfcs'},
             {label: 'Contributing', to: '/docs/contributing'},
           ],
