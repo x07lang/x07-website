@@ -255,6 +255,18 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-db.migrate.plan.schema.json"
     },
     {
+      "id": "x07-diag.catalog.schema.json",
+      "url": "/agent/latest/schemas/x07-diag.catalog.schema.json"
+    },
+    {
+      "id": "x07-diag.coverage.schema.json",
+      "url": "/agent/latest/schemas/x07-diag.coverage.schema.json"
+    },
+    {
+      "id": "x07-doc.report.schema.json",
+      "url": "/agent/latest/schemas/x07-doc.report.schema.json"
+    },
+    {
       "id": "x07-host-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
@@ -297,6 +309,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-sm.spec.schema.json",
       "url": "/agent/latest/schemas/x07-sm.spec.schema.json"
+    },
+    {
+      "id": "x07-spec.index.schema.json",
+      "url": "/agent/latest/schemas/x07-spec.index.schema.json"
     },
     {
       "id": "x07-website.package-index.schema.json",
