@@ -303,6 +303,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-project.schema.json"
     },
     {
+      "id": "x07-review.diff.schema.json",
+      "url": "/agent/latest/schemas/x07-review.diff.schema.json"
+    },
+    {
       "id": "x07-run.report.schema.json",
       "url": "/agent/latest/schemas/x07-run.report.schema.json"
     },
@@ -313,6 +317,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-spec.index.schema.json",
       "url": "/agent/latest/schemas/x07-spec.index.schema.json"
+    },
+    {
+      "id": "x07-trust.report.schema.json",
+      "url": "/agent/latest/schemas/x07-trust.report.schema.json"
     },
     {
       "id": "x07-website.package-index.schema.json",
