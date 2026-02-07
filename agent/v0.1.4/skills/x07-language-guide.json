@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.1.4/skills/x07-language-guide/SKILL.md",
+  "id": "x07-language-guide",
+  "summary": "Canonical X07 language + stdlib reference (mirrors `x07 guide` output) for end-user skill packs.",
+  "docs_url": "/agent/v0.1.4/skills/x07-language-guide/SKILL.md",
+  "report_schema_url": null
+}

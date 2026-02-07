@@ -1,0 +1,706 @@
+{
+  "schema_version": "x07.website.agent.examples_catalog_index@v1",
+  "generated_from": "docs/v0.1.4/examples/**/*.x07.json",
+  "items": [
+    {
+      "id": "01_echo",
+      "purpose": "echo",
+      "scope": "top_level",
+      "path": "01_echo.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/01_echo.x07.json"
+    },
+    {
+      "id": "02_length",
+      "purpose": "length",
+      "scope": "top_level",
+      "path": "02_length.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/02_length.x07.json"
+    },
+    {
+      "id": "03_reverse",
+      "purpose": "reverse",
+      "scope": "top_level",
+      "path": "03_reverse.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/03_reverse.x07.json"
+    },
+    {
+      "id": "04_sum_bytes",
+      "purpose": "sum bytes",
+      "scope": "top_level",
+      "path": "04_sum_bytes.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/04_sum_bytes.x07.json"
+    },
+    {
+      "id": "05_max_byte",
+      "purpose": "max byte",
+      "scope": "top_level",
+      "path": "05_max_byte.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/05_max_byte.x07.json"
+    },
+    {
+      "id": "06_count_first",
+      "purpose": "count first",
+      "scope": "top_level",
+      "path": "06_count_first.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/06_count_first.x07.json"
+    },
+    {
+      "id": "07_first_line_len",
+      "purpose": "first line len",
+      "scope": "top_level",
+      "path": "07_first_line_len.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/07_first_line_len.x07.json"
+    },
+    {
+      "id": "08_is_palindrome",
+      "purpose": "is palindrome",
+      "scope": "top_level",
+      "path": "08_is_palindrome.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/08_is_palindrome.x07.json"
+    },
+    {
+      "id": "09_word_count",
+      "purpose": "word count",
+      "scope": "top_level",
+      "path": "09_word_count.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/09_word_count.x07.json"
+    },
+    {
+      "id": "10_rle_encode",
+      "purpose": "rle encode",
+      "scope": "top_level",
+      "path": "10_rle_encode.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/10_rle_encode.x07.json"
+    },
+    {
+      "id": "11_data_analyzer",
+      "purpose": "data analyzer",
+      "scope": "top_level",
+      "path": "11_data_analyzer.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/11_data_analyzer.x07.json"
+    },
+    {
+      "id": "12_async_mapreduce",
+      "purpose": "async mapreduce",
+      "scope": "top_level",
+      "path": "12_async_mapreduce.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/12_async_mapreduce.x07.json"
+    },
+    {
+      "id": "13_stream_pipe_split_lines",
+      "purpose": "stream pipe split lines",
+      "scope": "top_level",
+      "path": "13_stream_pipe_split_lines.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/13_stream_pipe_split_lines.x07.json"
+    },
+    {
+      "id": "14_task_scope_slots",
+      "purpose": "task scope slots",
+      "scope": "top_level",
+      "path": "14_task_scope_slots.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/14_task_scope_slots.x07.json"
+    },
+    {
+      "id": "15_text_slices_branded",
+      "purpose": "text slices branded",
+      "scope": "top_level",
+      "path": "15_text_slices_branded.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/15_text_slices_branded.x07.json"
+    },
+    {
+      "id": "agent-gate/checksum-fast/smoke/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/checksum-fast/smoke/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/checksum-fast/smoke/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/checksum-fast/smoke/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/checksum-fast/smoke/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/checksum-fast/smoke/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-ext-cli/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/cli-ext-cli/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/cli-ext-cli/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-ext-cli/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/cli-ext-cli/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/cli-ext-cli/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-ext-cli/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "agent-gate/cli-ext-cli/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/cli-ext-cli/tests/smoke.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-newline/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/cli-newline/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/cli-newline/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-newline/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/cli-newline/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/cli-newline/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-newline/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "agent-gate/cli-newline/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/cli-newline/tests/smoke.x07.json"
+    },
+    {
+      "id": "agent-gate/compress-zstd/roundtrip/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/compress-zstd/roundtrip/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/compress-zstd/roundtrip/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/compress-zstd/roundtrip/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/compress-zstd/roundtrip/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/compress-zstd/roundtrip/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/data-cbor/roundtrip/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/data-cbor/roundtrip/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/data-cbor/roundtrip/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/data-cbor/roundtrip/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/data-cbor/roundtrip/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/data-cbor/roundtrip/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/data-msgpack/roundtrip/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/data-msgpack/roundtrip/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/data-msgpack/roundtrip/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/data-msgpack/roundtrip/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/data-msgpack/roundtrip/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/data-msgpack/roundtrip/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/diff-patch/apply/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/diff-patch/apply/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/diff-patch/apply/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/diff-patch/apply/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/diff-patch/apply/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/diff-patch/apply/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/fs-globwalk/list-files/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/fs-globwalk/list-files/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/http-client-get/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/http-client-get/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/http-client-get/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/http-client-get/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/http-client-get/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/http-client-get/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/math-bigint/factorial-100/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/math-bigint/factorial-100/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/math-bigint/factorial-100/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/math-bigint/factorial-100/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/math-bigint/factorial-100/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/math-bigint/factorial-100/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/math-decimal/money-format/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/math-decimal/money-format/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/math-decimal/money-format/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/math-decimal/money-format/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/math-decimal/money-format/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/math-decimal/money-format/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/protos-framing-loopback/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/protos-framing-loopback/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/protos-framing-loopback/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/protos-framing-loopback/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/protos-framing-loopback/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/protos-framing-loopback/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/protos-framing-loopback/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "agent-gate/protos-framing-loopback/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/protos-framing-loopback/tests/smoke.x07.json"
+    },
+    {
+      "id": "agent-gate/text-core/text-utils/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/text-core/text-utils/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/text-core/text-utils/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/text-core/text-utils/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/text-core/text-utils/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/text-core/text-utils/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/text-unicode/normalize-casefold/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/text-unicode/normalize-casefold/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/text-unicode/normalize-casefold/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/text-unicode/normalize-casefold/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/text-unicode/normalize-casefold/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/text-unicode/normalize-casefold/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/web-crawler-local/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/agent-gate/web-crawler-local/src/main.x07.json"
+    },
+    {
+      "id": "os-read-file/read_file_by_stdin",
+      "purpose": "read file by stdin",
+      "scope": "nested",
+      "path": "os-read-file/read_file_by_stdin.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/os-read-file/read_file_by_stdin.x07.json"
+    },
+    {
+      "id": "project-multi-module/pkgs/appkit/0.1.0/modules/appkit/vec",
+      "purpose": "vec",
+      "scope": "nested",
+      "path": "project-multi-module/pkgs/appkit/0.1.0/modules/appkit/vec.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/project-multi-module/pkgs/appkit/0.1.0/modules/appkit/vec.x07.json"
+    },
+    {
+      "id": "project-multi-module/src/app/rle",
+      "purpose": "rle",
+      "scope": "nested",
+      "path": "project-multi-module/src/app/rle.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/project-multi-module/src/app/rle.x07.json"
+    },
+    {
+      "id": "project-multi-module/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "project-multi-module/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/project-multi-module/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-artifact-integrity-pipeline/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-artifact-integrity-pipeline/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-artifact-integrity-pipeline/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-artifact-integrity-pipeline/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-artifact-integrity-pipeline/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-artifact-integrity-pipeline/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-artifact-integrity-pipeline/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-artifact-integrity-pipeline/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-artifact-integrity-pipeline/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-core-conformance/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-core-conformance/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-core-conformance/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-core-conformance/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-core-conformance/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-core-conformance/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-core-conformance/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-core-conformance/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-core-conformance/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-data-interop-lab/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-data-interop-lab/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-data-interop-lab/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-data-interop-lab/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-data-interop-lab/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-data-interop-lab/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-data-interop-lab/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-data-interop-lab/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-data-interop-lab/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-db-fs-indexer/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-db-fs-indexer/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-db-fs-indexer/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-db-fs-indexer/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-db-fs-indexer/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-db-fs-indexer/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-db-fs-indexer/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-db-fs-indexer/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-db-fs-indexer/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-messaging-rr-lab/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-messaging-rr-lab/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-messaging-rr-lab/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-messaging-rr-lab/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-messaging-rr-lab/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-messaging-rr-lab/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-messaging-rr-lab/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-messaging-rr-lab/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-messaging-rr-lab/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/src/server",
+      "purpose": "server",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/src/server.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/src/server.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sandbox-web-stack/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sandbox-web-stack/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sandbox-web-stack/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sandbox-web-stack/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sandbox-web-stack/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sandbox-web-stack/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sandbox-web-stack/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sandbox-web-stack/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sandbox-web-stack/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1",
+      "purpose": "event line v1",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1/tests.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1/tests.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1",
+      "purpose": "frame payload v1",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1/tests.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1/tests.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/src/brand_registry",
+      "purpose": "brand registry",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/src/brand_registry.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/src/brand_registry.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/tests/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1",
+      "purpose": "lifecycle v1",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1/tests.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1/tests.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/src/actions",
+      "purpose": "actions",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/actions.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/actions.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json"
+    },
+    {
+      "id": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo",
+      "purpose": "acme hello demo",
+      "scope": "nested",
+      "path": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo.x07.json"
+    },
+    {
+      "id": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo/tests.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo/tests.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/app.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/app.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/app.step2_fs_write",
+      "purpose": "app.step2 fs write",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/app.step2_fs_write.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/app.step2_fs_write.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/app.step3_http_fetch",
+      "purpose": "app.step3 http fetch",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/app.step3_http_fetch.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/app.step3_http_fetch.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/main.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/main.x07.json"
+    },
+    {
+      "id": "tutorials/testing_by_example/modules/demo",
+      "purpose": "demo",
+      "scope": "nested",
+      "path": "tutorials/testing_by_example/modules/demo.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/testing_by_example/modules/demo.x07.json"
+    },
+    {
+      "id": "tutorials/testing_by_example/modules/demo/tests_fs",
+      "purpose": "tests fs",
+      "scope": "nested",
+      "path": "tutorials/testing_by_example/modules/demo/tests_fs.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/testing_by_example/modules/demo/tests_fs.x07.json"
+    },
+    {
+      "id": "tutorials/testing_by_example/modules/demo/tests_pure",
+      "purpose": "tests pure",
+      "scope": "nested",
+      "path": "tutorials/testing_by_example/modules/demo/tests_pure.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/testing_by_example/modules/demo/tests_pure.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/x07import_c_smoke_pkg/modules/ext/smoke.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke/tests.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/x07import_c_smoke_pkg/modules/ext/smoke/tests.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_rust_hex_pkg/modules/ext/hex",
+      "purpose": "hex",
+      "scope": "nested",
+      "path": "tutorials/x07import_rust_hex_pkg/modules/ext/hex.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/x07import_rust_hex_pkg/modules/ext/hex.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests.x07.json",
+      "url": "/agent/v0.1.4/examples/catalog-files/tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests.x07.json"
+    }
+  ]
+}

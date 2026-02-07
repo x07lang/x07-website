@@ -319,6 +319,258 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-spec.index.schema.json"
     },
     {
+      "id": "x07-tool-arch-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-arch-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-arch.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-arch.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-apply-patch.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-apply-patch.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-canon.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-canon.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-get.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-get.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-grammar.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-grammar.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-init.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-init.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-schema.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-schema.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-validate.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-validate.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast.report.schema.json"
+    },
+    {
+      "id": "x07-tool-bench-eval.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-bench-eval.report.schema.json"
+    },
+    {
+      "id": "x07-tool-bench-list.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-bench-list.report.schema.json"
+    },
+    {
+      "id": "x07-tool-bench-validate.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-bench-validate.report.schema.json"
+    },
+    {
+      "id": "x07-tool-bench.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-bench.report.schema.json"
+    },
+    {
+      "id": "x07-tool-build.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-build.report.schema.json"
+    },
+    {
+      "id": "x07-tool-bundle.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-bundle.report.schema.json"
+    },
+    {
+      "id": "x07-tool-cli-spec-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-cli-spec-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-cli-spec-compile.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-cli-spec-compile.report.schema.json"
+    },
+    {
+      "id": "x07-tool-cli-spec-fmt.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-cli-spec-fmt.report.schema.json"
+    },
+    {
+      "id": "x07-tool-cli-spec.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-cli-spec.report.schema.json"
+    },
+    {
+      "id": "x07-tool-cli.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-cli.report.schema.json"
+    },
+    {
+      "id": "x07-tool-diag-catalog.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-diag-catalog.report.schema.json"
+    },
+    {
+      "id": "x07-tool-diag-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-diag-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-diag-coverage.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-diag-coverage.report.schema.json"
+    },
+    {
+      "id": "x07-tool-diag-explain.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-diag-explain.report.schema.json"
+    },
+    {
+      "id": "x07-tool-diag-init-catalog.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-diag-init-catalog.report.schema.json"
+    },
+    {
+      "id": "x07-tool-diag-sarif.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-diag-sarif.report.schema.json"
+    },
+    {
+      "id": "x07-tool-diag.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-diag.report.schema.json"
+    },
+    {
+      "id": "x07-tool-doctor.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-doctor.report.schema.json"
+    },
+    {
+      "id": "x07-tool-fix.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-fix.report.schema.json"
+    },
+    {
+      "id": "x07-tool-fmt.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-fmt.report.schema.json"
+    },
+    {
+      "id": "x07-tool-guide.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-guide.report.schema.json"
+    },
+    {
+      "id": "x07-tool-init.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-init.report.schema.json"
+    },
+    {
+      "id": "x07-tool-lint.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-lint.report.schema.json"
+    },
+    {
+      "id": "x07-tool-patch-apply.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-patch-apply.report.schema.json"
+    },
+    {
+      "id": "x07-tool-patch.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-patch.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-add.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-add.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-lock.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-lock.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-login.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-login.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-pack.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-pack.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-provides.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-provides.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-publish.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-publish.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-remove.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-remove.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-versions.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-versions.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg.report.schema.json"
+    },
+    {
+      "id": "x07-tool-policy-init.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-policy-init.report.schema.json"
+    },
+    {
+      "id": "x07-tool-policy.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-policy.report.schema.json"
+    },
+    {
+      "id": "x07-tool-review-diff.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-review-diff.report.schema.json"
+    },
+    {
+      "id": "x07-tool-review.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-review.report.schema.json"
+    },
+    {
+      "id": "x07-tool-root.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-root.report.schema.json"
+    },
+    {
+      "id": "x07-tool-rr-record.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-rr-record.report.schema.json"
+    },
+    {
+      "id": "x07-tool-rr.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-rr.report.schema.json"
+    },
+    {
+      "id": "x07-tool-run.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-run.report.schema.json"
+    },
+    {
+      "id": "x07-tool-schema-derive.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-schema-derive.report.schema.json"
+    },
+    {
+      "id": "x07-tool-schema.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-schema.report.schema.json"
+    },
+    {
+      "id": "x07-tool-sm-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-sm-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-sm-gen.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-sm-gen.report.schema.json"
+    },
+    {
+      "id": "x07-tool-sm.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-sm.report.schema.json"
+    },
+    {
+      "id": "x07-tool-test.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-test.report.schema.json"
+    },
+    {
+      "id": "x07-tool-trust-report.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust-report.report.schema.json"
+    },
+    {
+      "id": "x07-tool-trust.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust.report.schema.json"
+    },
+    {
+      "id": "x07-tool.events.schema.json",
+      "url": "/agent/latest/schemas/x07-tool.events.schema.json"
+    },
+    {
+      "id": "x07-tool.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool.report.schema.json"
+    },
+    {
       "id": "x07-trust.report.schema.json",
       "url": "/agent/latest/schemas/x07-trust.report.schema.json"
     },
@@ -335,8 +587,16 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07.native-requires.schema.json"
     },
     {
+      "id": "x07.patchset.schema.json",
+      "url": "/agent/latest/schemas/x07.patchset.schema.json"
+    },
+    {
       "id": "x07ast.schema.json",
       "url": "/agent/latest/schemas/x07ast.schema.json"
+    },
+    {
+      "id": "x07ast.semantic.schema.json",
+      "url": "/agent/latest/schemas/x07ast.semantic.schema.json"
     },
     {
       "id": "x07c.report.schema.json",
