@@ -195,6 +195,10 @@
       "url": "/agent/latest/schemas/x07-lock.schema.json"
     },
     {
+      "id": "x07-mono.map.schema.json",
+      "url": "/agent/latest/schemas/x07-mono.map.schema.json"
+    },
+    {
       "id": "x07-obs.exporter.profile.schema.json",
       "url": "/agent/latest/schemas/x07-obs.exporter.profile.schema.json"
     },
@@ -513,6 +517,14 @@
     {
       "id": "x07ast.semantic.schema.json",
       "url": "/agent/latest/schemas/x07ast.semantic.schema.json"
+    },
+    {
+      "id": "x07ast.v0.3.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.3.0.schema.json"
+    },
+    {
+      "id": "x07ast.v0.4.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.4.0.schema.json"
     },
     {
       "id": "x07c.report.schema.json",

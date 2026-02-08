@@ -279,6 +279,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-lock.schema.json"
     },
     {
+      "id": "x07-mono.map.schema.json",
+      "url": "/agent/latest/schemas/x07-mono.map.schema.json"
+    },
+    {
       "id": "x07-obs.exporter.profile.schema.json",
       "url": "/agent/latest/schemas/x07-obs.exporter.profile.schema.json"
     },
@@ -597,6 +601,14 @@ export const latestSchemasIndex = {
     {
       "id": "x07ast.semantic.schema.json",
       "url": "/agent/latest/schemas/x07ast.semantic.schema.json"
+    },
+    {
+      "id": "x07ast.v0.3.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.3.0.schema.json"
+    },
+    {
+      "id": "x07ast.v0.4.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.4.0.schema.json"
     },
     {
       "id": "x07c.report.schema.json",
@@ -2437,6 +2449,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-streams/0.1.5/index.json#docs"
     },
     {
+      "name": "ext-streams",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-streams/0.1.6/index.json",
+      "description": "Create io readers from bytes, collections, and fs.",
+      "docs_url": "/agent/latest/packages/ext-streams/0.1.6/index.json#docs"
+    },
+    {
       "name": "ext-tar-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-tar-rs/0.1.0/index.json",
@@ -2931,5 +2950,5 @@ export const latestPackagesIndex = {
 
 export const latestStdlibIndexMeta = {
   url: '/agent/latest/stdlib/index.json',
-  module_count: 40,
+  module_count: 42,
 } as const;

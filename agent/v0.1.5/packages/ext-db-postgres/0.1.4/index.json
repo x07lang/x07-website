@@ -1,0 +1,54 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-db-postgres",
+  "version": "0.1.4",
+  "description": "PostgreSQL driver for std.db (run-os only).",
+  "docs": "PostgreSQL driver for std.db (run-os only).\n\nModules:\n- std.db.pg\n- std.db.pg.spec\n- std.db.pg.pool\n\nUsage:\n- Add dependency: x07 pkg add ext-db-postgres@0.1.4\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "std.db.pg",
+      "path": "std/db/pg.x07.json",
+      "exports": [
+        "std.db.pg._not_implemented_note_v1",
+        "std.db.pg.caps_default_v1",
+        "std.db.pg.close_v1",
+        "std.db.pg.exec_v1",
+        "std.db.pg.open_v1",
+        "std.db.pg.query_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.pg.pool",
+      "path": "std/db/pg/pool.x07.json",
+      "exports": [
+        "std.db.pg.pool._not_implemented_note_v1",
+        "std.db.pg.pool.close_v1",
+        "std.db.pg.pool.exec0_async_v1",
+        "std.db.pg.pool.new_uri_v1",
+        "std.db.pg.pool.query0_async_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.pg.spec",
+      "path": "std/db/pg/spec.x07.json",
+      "exports": [
+        "std.db.pg.spec.caps_default_v1",
+        "std.db.pg.spec.caps_pack_v1",
+        "std.db.pg.spec.close_req_v1",
+        "std.db.pg.spec.exec_req_v1",
+        "std.db.pg.spec.flags_none_v1",
+        "std.db.pg.spec.open_req_v1",
+        "std.db.pg.spec.query_req_v1"
+      ]
+    }
+  ]
+}
