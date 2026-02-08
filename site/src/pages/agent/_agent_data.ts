@@ -579,6 +579,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-trust.report.schema.json"
     },
     {
+      "id": "x07-typecheck.diagdata@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07-typecheck.diagdata@0.1.0.schema.json"
+    },
+    {
       "id": "x07-website.package-index.schema.json",
       "url": "/agent/latest/schemas/x07-website.package-index.schema.json"
     },
