@@ -599,6 +599,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07.patchset.schema.json"
     },
     {
+      "id": "x07.pbt.params@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.pbt.params@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.pbt.repro@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.pbt.repro@0.1.0.schema.json"
+    },
+    {
       "id": "x07ast.schema.json",
       "url": "/agent/latest/schemas/x07ast.schema.json"
     },
@@ -2964,5 +2972,5 @@ export const latestPackagesIndex = {
 
 export const latestStdlibIndexMeta = {
   url: '/agent/latest/stdlib/index.json',
-  module_count: 42,
+  module_count: 45,
 } as const;
