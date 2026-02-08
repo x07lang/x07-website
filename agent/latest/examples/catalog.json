@@ -108,6 +108,20 @@
       "url": "/agent/latest/examples/catalog-files/15_text_slices_branded.x07.json"
     },
     {
+      "id": "16_generics_identity",
+      "purpose": "generics identity",
+      "scope": "top_level",
+      "path": "16_generics_identity.x07.json",
+      "url": "/agent/latest/examples/catalog-files/16_generics_identity.x07.json"
+    },
+    {
+      "id": "17_generics_containers",
+      "purpose": "generics containers",
+      "scope": "top_level",
+      "path": "17_generics_containers.x07.json",
+      "url": "/agent/latest/examples/catalog-files/17_generics_containers.x07.json"
+    },
+    {
       "id": "agent-gate/checksum-fast/smoke/src/app",
       "purpose": "app",
       "scope": "nested",

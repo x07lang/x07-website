@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.1.6/skills/x07-ffi-c/SKILL.md",
+  "id": "x07-ffi-c",
+  "summary": "Emit C output and a C header for embedding X07 in C/C++ via `x07 build --emit-c-header`.",
+  "docs_url": "/agent/v0.1.6/skills/x07-ffi-c/SKILL.md",
+  "report_schema_url": null
+}

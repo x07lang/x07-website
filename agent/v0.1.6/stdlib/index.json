@@ -1,0 +1,525 @@
+{
+  "schema_version": "x07.website.stdlib-index@0.1.0",
+  "stdlib_version": "0.1.2",
+  "modules": [
+    {
+      "module_id": "std.bit",
+      "path": "std/bit.x07.json",
+      "exports": [
+        "std.bit.popcount_u32"
+      ]
+    },
+    {
+      "module_id": "std.bitset",
+      "path": "std/bitset.x07.json",
+      "exports": [
+        "std.bitset.intersection_count",
+        "std.bitset.new",
+        "std.bitset.set",
+        "std.bitset.test"
+      ]
+    },
+    {
+      "module_id": "std.btree_map",
+      "path": "std/btree_map.x07.json",
+      "exports": [
+        "std.btree_map.contains",
+        "std.btree_map.contains_u32_u32",
+        "std.btree_map.emit_kv_le",
+        "std.btree_map.emit_kv_u32le_u32le",
+        "std.btree_map.empty",
+        "std.btree_map.empty_u32_u32",
+        "std.btree_map.get_or",
+        "std.btree_map.get_u32_u32_or",
+        "std.btree_map.len",
+        "std.btree_map.len_u32_u32",
+        "std.btree_map.put",
+        "std.btree_map.put_u32_u32"
+      ]
+    },
+    {
+      "module_id": "std.btree_set",
+      "path": "std/btree_set.x07.json",
+      "exports": [
+        "std.btree_set.contains",
+        "std.btree_set.contains_u32",
+        "std.btree_set.emit_le",
+        "std.btree_set.emit_u32le",
+        "std.btree_set.empty",
+        "std.btree_set.empty_u32",
+        "std.btree_set.insert",
+        "std.btree_set.insert_u32",
+        "std.btree_set.len",
+        "std.btree_set.len_u32"
+      ]
+    },
+    {
+      "module_id": "std.bytes",
+      "path": "std/bytes.x07.json",
+      "exports": [
+        "std.bytes.alloc",
+        "std.bytes.cmp_range",
+        "std.bytes.concat",
+        "std.bytes.copy",
+        "std.bytes.count_u8",
+        "std.bytes.drop",
+        "std.bytes.ends_with",
+        "std.bytes.eq",
+        "std.bytes.find_u8",
+        "std.bytes.get_u8",
+        "std.bytes.len",
+        "std.bytes.max_u8",
+        "std.bytes.reverse",
+        "std.bytes.set_u8",
+        "std.bytes.slice",
+        "std.bytes.starts_with",
+        "std.bytes.sum_u8",
+        "std.bytes.take"
+      ]
+    },
+    {
+      "module_id": "std.codec",
+      "path": "std/codec.x07.json",
+      "exports": [
+        "std.codec.read_u32_le",
+        "std.codec.write_u32_le"
+      ]
+    },
+    {
+      "module_id": "std.csv",
+      "path": "std/csv.x07.json",
+      "exports": [
+        "std.csv.sum_second_col_i32_status_le",
+        "std.csv.sum_second_col_i32le_or_err"
+      ]
+    },
+    {
+      "module_id": "std.deque",
+      "path": "std/deque.x07.json",
+      "exports": [
+        "std.deque.emit_le",
+        "std.deque.front_or",
+        "std.deque.len",
+        "std.deque.pop_front",
+        "std.deque.push_back",
+        "std.deque.with_capacity"
+      ]
+    },
+    {
+      "module_id": "std.deque_u32",
+      "path": "std/deque_u32.x07.json",
+      "exports": [
+        "std.deque_u32.emit_u32le",
+        "std.deque_u32.front_or",
+        "std.deque_u32.len",
+        "std.deque_u32.pop_front",
+        "std.deque_u32.push_back",
+        "std.deque_u32.with_capacity"
+      ]
+    },
+    {
+      "module_id": "std.fmt",
+      "path": "std/fmt.x07.json",
+      "exports": [
+        "std.fmt.s32_to_dec",
+        "std.fmt.u32_to_dec"
+      ]
+    },
+    {
+      "module_id": "std.fs",
+      "path": "std/fs.x07.json",
+      "exports": [
+        "std.fs.list_dir",
+        "std.fs.list_dir_sorted",
+        "std.fs.open_read",
+        "std.fs.read",
+        "std.fs.read_async",
+        "std.fs.read_task"
+      ]
+    },
+    {
+      "module_id": "std.hash",
+      "path": "std/hash.x07.json",
+      "exports": [
+        "std.hash.fnv1a32_bytes",
+        "std.hash.fnv1a32_range",
+        "std.hash.fnv1a32_view",
+        "std.hash.mix32"
+      ]
+    },
+    {
+      "module_id": "std.hash_map",
+      "path": "std/hash_map.x07.json",
+      "exports": [
+        "std.hash_map.contains",
+        "std.hash_map.contains_u32",
+        "std.hash_map.emit_kv_le",
+        "std.hash_map.emit_kv_u32le_u32le",
+        "std.hash_map.get_or",
+        "std.hash_map.get_u32_or",
+        "std.hash_map.len",
+        "std.hash_map.len_u32",
+        "std.hash_map.new",
+        "std.hash_map.new_u32",
+        "std.hash_map.set",
+        "std.hash_map.set_u32",
+        "std.hash_map.with_capacity",
+        "std.hash_map.with_capacity_u32"
+      ]
+    },
+    {
+      "module_id": "std.hash_set",
+      "path": "std/hash_set.x07.json",
+      "exports": [
+        "std.hash_set.add",
+        "std.hash_set.add_u32",
+        "std.hash_set.contains",
+        "std.hash_set.contains_u32",
+        "std.hash_set.emit_le",
+        "std.hash_set.emit_u32le",
+        "std.hash_set.len",
+        "std.hash_set.len_u32",
+        "std.hash_set.new",
+        "std.hash_set.new_u32",
+        "std.hash_set.view_contains",
+        "std.hash_set.view_insert",
+        "std.hash_set.view_len",
+        "std.hash_set.view_new"
+      ]
+    },
+    {
+      "module_id": "std.heap",
+      "path": "std/heap.x07.json",
+      "exports": [
+        "std.heap.emit_le",
+        "std.heap.len",
+        "std.heap.min_or",
+        "std.heap.pop_min",
+        "std.heap.push",
+        "std.heap.with_capacity"
+      ]
+    },
+    {
+      "module_id": "std.heap_u32",
+      "path": "std/heap_u32.x07.json",
+      "exports": [
+        "std.heap_u32.emit_u32le",
+        "std.heap_u32.len",
+        "std.heap_u32.min_or",
+        "std.heap_u32.pop_min",
+        "std.heap_u32.push",
+        "std.heap_u32.with_capacity"
+      ]
+    },
+    {
+      "module_id": "std.io",
+      "path": "std/io.x07.json",
+      "exports": [
+        "std.io.read",
+        "std.io.read_all"
+      ]
+    },
+    {
+      "module_id": "std.io.bufread",
+      "path": "std/io/bufread.x07.json",
+      "exports": [
+        "std.io.bufread.consume",
+        "std.io.bufread.fill",
+        "std.io.bufread.new"
+      ]
+    },
+    {
+      "module_id": "std.json",
+      "path": "std/json.x07.json",
+      "exports": [
+        "std.json.canonicalize_small",
+        "std.json.extract_path_canon_or_err"
+      ]
+    },
+    {
+      "module_id": "std.kv",
+      "path": "std/kv.x07.json",
+      "exports": [
+        "std.kv.get",
+        "std.kv.get_async",
+        "std.kv.get_stream",
+        "std.kv.get_task",
+        "std.kv.set"
+      ]
+    },
+    {
+      "module_id": "std.lru_cache",
+      "path": "std/lru_cache.x07.json",
+      "exports": [
+        "std.lru_cache.len",
+        "std.lru_cache.len_u32",
+        "std.lru_cache.new",
+        "std.lru_cache.new_u32",
+        "std.lru_cache.peek_opt",
+        "std.lru_cache.peek_or",
+        "std.lru_cache.peek_u32_opt",
+        "std.lru_cache.peek_u32_or",
+        "std.lru_cache.put",
+        "std.lru_cache.put_u32",
+        "std.lru_cache.touch",
+        "std.lru_cache.touch_u32"
+      ]
+    },
+    {
+      "module_id": "std.map",
+      "path": "std/map.x07.json",
+      "exports": [
+        "std.map.word_freq_sorted_ascii"
+      ]
+    },
+    {
+      "module_id": "std.option",
+      "path": "std/option.x07.json",
+      "exports": [
+        "std.option.is_some",
+        "std.option.none",
+        "std.option.payload",
+        "std.option.some_bytes",
+        "std.option.some_i32_le",
+        "std.option.unwrap_i32_le"
+      ]
+    },
+    {
+      "module_id": "std.parse",
+      "path": "std/parse.x07.json",
+      "exports": [
+        "std.parse.i32_status_le",
+        "std.parse.i32_status_le_at",
+        "std.parse.u32_dec",
+        "std.parse.u32_dec_at"
+      ]
+    },
+    {
+      "module_id": "std.path",
+      "path": "std/path.x07.json",
+      "exports": [
+        "std.path.basename",
+        "std.path.extname",
+        "std.path.join"
+      ]
+    },
+    {
+      "module_id": "std.prng",
+      "path": "std/prng.x07.json",
+      "exports": [
+        "std.prng.lcg_next_u32",
+        "std.prng.x07rand32_v1_stream"
+      ]
+    },
+    {
+      "module_id": "std.process",
+      "path": "std/process.x07.json",
+      "exports": [
+        "std.process.set_exit_code_v1"
+      ]
+    },
+    {
+      "module_id": "std.regex-lite",
+      "path": "std/regex-lite.x07.json",
+      "exports": [
+        "std.regex-lite.count_matches_u32le",
+        "std.regex-lite.find_literal",
+        "std.regex-lite.is_match_literal"
+      ]
+    },
+    {
+      "module_id": "std.result",
+      "path": "std/result.x07.json",
+      "exports": [
+        "std.result.chain_sum_csv_i32",
+        "std.result.err0",
+        "std.result.is_ok",
+        "std.result.ok_bytes",
+        "std.result.ok_i32_le",
+        "std.result.payload",
+        "std.result.unwrap_i32_le"
+      ]
+    },
+    {
+      "module_id": "std.rr",
+      "path": "std/rr.x07.json",
+      "exports": [
+        "std.rr.append_v1",
+        "std.rr.close_v1",
+        "std.rr.current_v1",
+        "std.rr.entry_err_v1",
+        "std.rr.entry_resp_v1",
+        "std.rr.next_v1",
+        "std.rr.open_v1",
+        "std.rr.stats_v1"
+      ]
+    },
+    {
+      "module_id": "std.set",
+      "path": "std/set.x07.json",
+      "exports": [
+        "std.set.unique_lines_sorted"
+      ]
+    },
+    {
+      "module_id": "std.slab",
+      "path": "std/slab.x07.json",
+      "exports": [
+        "std.slab.alloc",
+        "std.slab.alloc_u32",
+        "std.slab.cap",
+        "std.slab.cap_u32",
+        "std.slab.free",
+        "std.slab.free_head",
+        "std.slab.free_head_u32",
+        "std.slab.free_u32",
+        "std.slab.get_or",
+        "std.slab.get_u32",
+        "std.slab.len",
+        "std.slab.len_u32",
+        "std.slab.new",
+        "std.slab.new_u32",
+        "std.slab.set",
+        "std.slab.set_u32"
+      ]
+    },
+    {
+      "module_id": "std.slice",
+      "path": "std/slice.x07.json",
+      "exports": [
+        "std.slice.clamp",
+        "std.slice.cmp_bytes"
+      ]
+    },
+    {
+      "module_id": "std.small_map",
+      "path": "std/small_map.x07.json",
+      "exports": [
+        "std.small_map.empty",
+        "std.small_map.empty_bytes_u32",
+        "std.small_map.get_bytes_u32",
+        "std.small_map.get_bytes_u32_or",
+        "std.small_map.get_or",
+        "std.small_map.inc1",
+        "std.small_map.inc1_bytes_u32",
+        "std.small_map.len",
+        "std.small_map.len_bytes_u32",
+        "std.small_map.put",
+        "std.small_map.put_bytes_u32",
+        "std.small_map.remove",
+        "std.small_map.remove_bytes_u32"
+      ]
+    },
+    {
+      "module_id": "std.small_set",
+      "path": "std/small_set.x07.json",
+      "exports": [
+        "std.small_set.contains",
+        "std.small_set.contains_bytes",
+        "std.small_set.empty",
+        "std.small_set.empty_bytes",
+        "std.small_set.insert",
+        "std.small_set.insert_bytes",
+        "std.small_set.len",
+        "std.small_set.len_bytes"
+      ]
+    },
+    {
+      "module_id": "std.test",
+      "path": "std/test.x07.json",
+      "exports": [
+        "std.test.assert_bytes_eq",
+        "std.test.assert_i32_eq",
+        "std.test.assert_true",
+        "std.test.assert_view_eq",
+        "std.test.code_assert_bytes_eq",
+        "std.test.code_assert_i32_eq",
+        "std.test.code_assert_true",
+        "std.test.code_assert_view_eq",
+        "std.test.code_fail_generic",
+        "std.test.fail",
+        "std.test.pass",
+        "std.test.status_fail",
+        "std.test.status_from_result_i32",
+        "std.test.status_ok",
+        "std.test.status_skip",
+        "std.test.status_v1"
+      ]
+    },
+    {
+      "module_id": "std.text.ascii",
+      "path": "std/text/ascii.x07.json",
+      "exports": [
+        "std.text.ascii.first_line_view",
+        "std.text.ascii.is_alpha",
+        "std.text.ascii.is_space_tab",
+        "std.text.ascii.kth_line_view",
+        "std.text.ascii.last_line_view",
+        "std.text.ascii.normalize_lines",
+        "std.text.ascii.split_lines_view",
+        "std.text.ascii.split_u8",
+        "std.text.ascii.to_lower_u8",
+        "std.text.ascii.to_upper_u8",
+        "std.text.ascii.tokenize_words_lower"
+      ]
+    },
+    {
+      "module_id": "std.text.slices",
+      "path": "std/text/slices.x07.json",
+      "exports": [
+        "std.text.slices.builder_finish_v1",
+        "std.text.slices.builder_new_v1",
+        "std.text.slices.builder_push_v1",
+        "std.text.slices.cast_bytes_v1",
+        "std.text.slices.copy_at_v1",
+        "std.text.slices.count_v1",
+        "std.text.slices.len_v1",
+        "std.text.slices.start_v1",
+        "std.text.slices.validate_v1",
+        "std.text.slices.view_at_v1"
+      ]
+    },
+    {
+      "module_id": "std.text.utf8",
+      "path": "std/text/utf8.x07.json",
+      "exports": [
+        "std.text.utf8.count_codepoints_or_neg1",
+        "std.text.utf8.is_valid",
+        "std.text.utf8.validate_or_empty"
+      ]
+    },
+    {
+      "module_id": "std.u32",
+      "path": "std/u32.x07.json",
+      "exports": [
+        "std.u32.pow2_ceil",
+        "std.u32.push_le",
+        "std.u32.read_le_at",
+        "std.u32.read_le_at_vec_u8",
+        "std.u32.write_le_at",
+        "std.u32.write_le_at_vec_u8"
+      ]
+    },
+    {
+      "module_id": "std.vec",
+      "path": "std/vec.x07.json",
+      "exports": [
+        "std.vec.as_bytes",
+        "std.vec.extend_bytes",
+        "std.vec.get",
+        "std.vec.len",
+        "std.vec.push",
+        "std.vec.reserve_exact",
+        "std.vec.with_capacity"
+      ]
+    },
+    {
+      "module_id": "std.world.fs",
+      "path": "std/world/fs.x07.json",
+      "exports": [
+        "std.world.fs.read_file",
+        "std.world.fs.read_file_async"
+      ]
+    }
+  ]
+}

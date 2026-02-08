@@ -711,6 +711,16 @@ export const latestExamplesIndex = {
       "id": "15_text_slices_branded",
       "purpose": "text slices branded",
       "url": "/agent/latest/examples/15_text_slices_branded.x07.json"
+    },
+    {
+      "id": "16_generics_identity",
+      "purpose": "generics identity",
+      "url": "/agent/latest/examples/16_generics_identity.x07.json"
+    },
+    {
+      "id": "17_generics_containers",
+      "purpose": "generics containers",
+      "url": "/agent/latest/examples/17_generics_containers.x07.json"
     }
   ]
 } as const;
