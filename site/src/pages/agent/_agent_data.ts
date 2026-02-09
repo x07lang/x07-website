@@ -567,6 +567,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-trust.report.schema.json"
     },
     {
+      "id": "x07-tool-verify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-verify.report.schema.json"
+    },
+    {
       "id": "x07-tool.events.schema.json",
       "url": "/agent/latest/schemas/x07-tool.events.schema.json"
     },
@@ -583,8 +587,16 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-typecheck.diagdata@0.1.0.schema.json"
     },
     {
+      "id": "x07-verify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-verify.report.schema.json"
+    },
+    {
       "id": "x07-website.package-index.schema.json",
       "url": "/agent/latest/schemas/x07-website.package-index.schema.json"
+    },
+    {
+      "id": "x07.contract.repro@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.contract.repro@0.1.0.schema.json"
     },
     {
       "id": "x07.native-backends.schema.json",
@@ -607,6 +619,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07.pbt.repro@0.1.0.schema.json"
     },
     {
+      "id": "x07.verify.cex@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.verify.cex@0.1.0.schema.json"
+    },
+    {
       "id": "x07ast.schema.json",
       "url": "/agent/latest/schemas/x07ast.schema.json"
     },
@@ -621,6 +637,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07ast.v0.4.0.schema.json",
       "url": "/agent/latest/schemas/x07ast.v0.4.0.schema.json"
+    },
+    {
+      "id": "x07ast.v0.5.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.5.0.schema.json"
     },
     {
       "id": "x07c.report.schema.json",
