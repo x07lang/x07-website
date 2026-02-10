@@ -1,8 +1,0 @@
-{
-  "schema_version": "x07.website.agent.skill@v1",
-  "generated_from": "agent/v0.0.79/skills/x07-io-streams/SKILL.md",
-  "id": "x07-io-streams",
-  "summary": "Canonical streaming I/O patterns in X07 using std.io / std.io.bufread and world adapters.",
-  "docs_url": "/agent/v0.0.79/skills/x07-io-streams/SKILL.md",
-  "report_schema_url": null
-}

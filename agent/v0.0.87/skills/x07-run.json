@@ -1,8 +1,0 @@
-{
-  "schema_version": "x07.website.agent.skill@v1",
-  "generated_from": "agent/v0.0.87/skills/x07-run/SKILL.md",
-  "id": "x07-run",
-  "summary": "Canonical execution front door for X07 programs (run-os / run-os-sandboxed), producing runner reports.",
-  "docs_url": "/agent/v0.0.87/skills/x07-run/SKILL.md",
-  "report_schema_url": null
-}
