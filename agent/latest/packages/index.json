@@ -640,6 +640,13 @@
       "docs_url": "/agent/latest/packages/ext-db-migrate/0.1.1/index.json#docs"
     },
     {
+      "name": "ext-db-migrate",
+      "version": "0.1.2",
+      "url": "/agent/latest/packages/ext-db-migrate/0.1.2/index.json",
+      "description": "DB migrations + RR-backed DB fixture adapter (contracts-as-data under arch/db).",
+      "docs_url": "/agent/latest/packages/ext-db-migrate/0.1.2/index.json#docs"
+    },
+    {
       "name": "ext-db-mysql",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-db-mysql/0.1.0/index.json",
