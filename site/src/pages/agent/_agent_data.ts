@@ -2999,5 +2999,5 @@ export const latestPackagesIndex = {
 
 export const latestStdlibIndexMeta = {
   url: '/agent/latest/stdlib/index.json',
-  module_count: 45,
+  module_count: 47,
 } as const;
