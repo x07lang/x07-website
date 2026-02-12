@@ -459,6 +459,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-lint.report.schema.json"
     },
     {
+      "id": "x07-tool-mcp.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-mcp.report.schema.json"
+    },
+    {
       "id": "x07-tool-patch-apply.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-patch-apply.report.schema.json"
     },
@@ -2267,6 +2271,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-pb-rs/0.1.5/index.json#docs"
     },
     {
+      "name": "ext-rand",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-rand/0.1.0/index.json",
+      "description": "OS CSPRNG (secure random bytes) for OS worlds (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-rand/0.1.0/index.json#docs"
+    },
+    {
       "name": "ext-regex",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-regex/0.1.0/index.json",
@@ -2454,6 +2465,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-sockets-c/0.1.6/index.json",
       "description": "Sockets + TLS FFI backend for std.net (run-os only).",
       "docs_url": "/agent/latest/packages/ext-sockets-c/0.1.6/index.json#docs"
+    },
+    {
+      "name": "ext-stdio",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-stdio/0.1.0/index.json",
+      "description": "OS stdio API (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-stdio/0.1.0/index.json#docs"
     },
     {
       "name": "ext-streams",

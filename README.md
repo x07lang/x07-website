@@ -23,5 +23,6 @@ This repo should contain the website build system and deployment configuration, 
 ## Related repositories
 
 - https://github.com/x07lang/x07 (toolchain + canonical docs source)
+- https://github.com/x07lang/x07-mcp (MCP kit tooling + templates)
 - https://github.com/x07lang/x07-registry (registry API)
 - https://github.com/x07lang/x07-registry-web (x07.io UI)
