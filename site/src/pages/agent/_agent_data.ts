@@ -267,6 +267,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-doc.report.schema.json"
     },
     {
+      "id": "x07-guest.failure.schema.json",
+      "url": "/agent/latest/schemas/x07-guest.failure.schema.json"
+    },
+    {
+      "id": "x07-guest.request.schema.json",
+      "url": "/agent/latest/schemas/x07-guest.request.schema.json"
+    },
+    {
       "id": "x07-host-runner.report.schema.json",
       "url": "/agent/latest/schemas/x07-host-runner.report.schema.json"
     },
@@ -593,6 +601,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-verify.report.schema.json",
       "url": "/agent/latest/schemas/x07-verify.report.schema.json"
+    },
+    {
+      "id": "x07-vm.bundle.manifest.schema.json",
+      "url": "/agent/latest/schemas/x07-vm.bundle.manifest.schema.json"
     },
     {
       "id": "x07-website.package-index.schema.json",
