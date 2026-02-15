@@ -1,0 +1,59 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-pb-rs",
+  "version": "0.1.0",
+  "description": "",
+  "docs": "",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.pb.data_model",
+      "path": "ext/pb/data_model.x07.json",
+      "exports": [
+        "ext.pb.data_model.decode_descriptor_set_v2",
+        "ext.pb.data_model.decode_schema_v2",
+        "ext.pb.data_model.decode_v1"
+      ]
+    },
+    {
+      "module_id": "ext.pb.tests",
+      "path": "ext/pb/tests.x07.json",
+      "exports": [
+        "ext.pb.tests.test_schema_descriptor_set_basic",
+        "ext.pb.tests.test_wire_decode_err_output_limit",
+        "ext.pb.tests.test_wire_decode_err_truncated",
+        "ext.pb.tests.test_wire_decode_ok",
+        "ext.pb.tests.test_wire_encode_err_malformed_doc",
+        "ext.pb.tests.test_wire_encode_err_output_limit",
+        "ext.pb.tests.test_wire_encode_roundtrip"
+      ]
+    },
+    {
+      "module_id": "ext.pb.wire",
+      "path": "ext/pb/wire.x07.json",
+      "exports": [
+        "ext.pb.wire.decode_v1",
+        "ext.pb.wire.descriptor_set_to_schema_v1",
+        "ext.pb.wire.encode_v1",
+        "ext.pb.wire.err_code",
+        "ext.pb.wire.is_err",
+        "ext.pb.wire.varint_u32_encode_v1",
+        "ext.pb.wire.varint_u32_status_v1",
+        "ext.pb.wire.varint_u64_status_v1"
+      ]
+    }
+  ]
+}

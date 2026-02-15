@@ -1,0 +1,47 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-stdio",
+  "version": "0.1.0",
+  "description": "OS stdio API (run-os only).",
+  "docs": "OS stdio API (run-os only).\n\nModules:\n- std.os.stdio\n- std.os.stdio.spec\n\nUsage:\n- Add dependency: x07 pkg add ext-stdio@0.1.0\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "std.os.stdio",
+      "path": "std/os/stdio.x07.json",
+      "exports": [
+        "std.os.stdio.flush_stderr_v1",
+        "std.os.stdio.flush_stdout_v1",
+        "std.os.stdio.read_line_v1",
+        "std.os.stdio.write_stderr_v1",
+        "std.os.stdio.write_stdout_v1"
+      ]
+    },
+    {
+      "module_id": "std.os.stdio.spec",
+      "path": "std/os/stdio/spec.x07.json",
+      "exports": [
+        "std.os.stdio.spec.caps_default_v1",
+        "std.os.stdio.spec.caps_flags_v1",
+        "std.os.stdio.spec.caps_max_read_bytes_v1",
+        "std.os.stdio.spec.caps_max_write_bytes_v1",
+        "std.os.stdio.spec.caps_pack_v1",
+        "std.os.stdio.spec.caps_version_v1",
+        "std.os.stdio.spec.err_bad_caps_v1",
+        "std.os.stdio.spec.err_disabled_v1",
+        "std.os.stdio.spec.err_eof_v1",
+        "std.os.stdio.spec.err_io_v1",
+        "std.os.stdio.spec.err_policy_deny_v1",
+        "std.os.stdio.spec.err_too_large_v1"
+      ]
+    }
+  ]
+}

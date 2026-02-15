@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.1.21/skills/x07-concurrency/SKILL.md",
+  "id": "x07-concurrency",
+  "summary": "Canonical concurrency patterns in X07 (defasync + task.* + chan.bytes.*), including sandbox constraints.",
+  "docs_url": "/agent/v0.1.21/skills/x07-concurrency/SKILL.md",
+  "report_schema_url": null
+}
