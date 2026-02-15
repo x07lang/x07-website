@@ -339,6 +339,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-arch.report.schema.json"
     },
     {
+      "id": "x07-tool-assets-embed-dir.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-assets-embed-dir.report.schema.json"
+    },
+    {
+      "id": "x07-tool-assets.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-assets.report.schema.json"
+    },
+    {
       "id": "x07-tool-ast-apply-patch.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-apply-patch.report.schema.json"
     },
@@ -1084,6 +1092,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-cli/0.1.11/index.json",
       "description": "Command-line argument parsing, help, and shell completion.",
       "docs_url": "/agent/latest/packages/ext-cli/0.1.11/index.json#docs"
+    },
+    {
+      "name": "ext-cli",
+      "version": "0.1.12",
+      "url": "/agent/latest/packages/ext-cli/0.1.12/index.json",
+      "description": "Command-line argument parsing, help, and shell completion.",
+      "docs_url": "/agent/latest/packages/ext-cli/0.1.12/index.json#docs"
     },
     {
       "name": "ext-cli-ux",
@@ -1875,6 +1890,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-json-rs/0.1.4/index.json",
       "description": "JSON canonicalization, JSON Pointer, and ext.data_model parsing.",
       "docs_url": "/agent/latest/packages/ext-json-rs/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-jsonschema-rs",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-jsonschema-rs/0.1.0/index.json",
+      "description": "JSON Schema validation (Draft 2020-12 default; supports $schema overrides).",
+      "docs_url": "/agent/latest/packages/ext-jsonschema-rs/0.1.0/index.json#docs"
     },
     {
       "name": "ext-log",

@@ -255,6 +255,14 @@
       "url": "/agent/latest/schemas/x07-tool-arch.report.schema.json"
     },
     {
+      "id": "x07-tool-assets-embed-dir.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-assets-embed-dir.report.schema.json"
+    },
+    {
+      "id": "x07-tool-assets.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-assets.report.schema.json"
+    },
+    {
       "id": "x07-tool-ast-apply-patch.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-apply-patch.report.schema.json"
     },
