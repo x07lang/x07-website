@@ -1,0 +1,10 @@
+{
+  "schema_version": "x07.website.agent.catalog_index@v1",
+  "generated_from": "agent/v0.1.23/catalog/*.json",
+  "items": [
+    {
+      "id": "capabilities",
+      "url": "/agent/v0.1.23/catalog/capabilities.json"
+    }
+  ]
+}
