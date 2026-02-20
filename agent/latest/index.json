@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.agent-index@0.1.0",
-  "toolchain_version": "0.1.25",
-  "docs_bundle_sha256": "c4c7db8bc3d7cd0afb6724133ccad9f3fc551720a4d50bd078e2b841996afb24",
+  "toolchain_version": "0.1.26",
+  "docs_bundle_sha256": "8646e5ef31d9fe2ff091602987c2be6f68d0d47552e93d6a6714f5c82fc0aace",
   "schemas_dir": "schemas/",
   "skills_dir": "skills/",
   "stdlib_index_url": "stdlib/index.json",

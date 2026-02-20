@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
-  "toolchain_version": "0.1.25",
-  "docs_bundle_sha256": "c4c7db8bc3d7cd0afb6724133ccad9f3fc551720a4d50bd078e2b841996afb24",
+  "toolchain_version": "0.1.26",
+  "docs_bundle_sha256": "8646e5ef31d9fe2ff091602987c2be6f68d0d47552e93d6a6714f5c82fc0aace",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -10,7 +10,7 @@
     },
     {
       "path": "_bundle_meta.json",
-      "sha256": "14996131aedb16606b8cf2c4912e1617c06c1c9bef9e7ea04669ce205b993f92",
+      "sha256": "5d424e2e44e0f2c4e6b634ed570cc82c6a961d26fccd59b523ae0f9b2721e624",
       "size": 116
     },
     {
@@ -3355,12 +3355,12 @@
     },
     {
       "path": "getting-started/install.md",
-      "sha256": "4f37d880d1c46b35a38d41a14284037da5ba5f34ffb4537b753dcc64bd64c7a3",
+      "sha256": "6838c18b48135e6da1ab10e33df79577366b82a8b8d3e96e6c89e83bef7fa1c2",
       "size": 4742
     },
     {
       "path": "getting-started/installer.md",
-      "sha256": "f1d10363fa14604bffa2f8095027338a9f42dd857909a14c01e8429f2a50515c",
+      "sha256": "80949b07dbc397ebb0114fe091b753752d29b1a1302228437b5eb0b8de7c5712",
       "size": 2534
     },
     {
@@ -3964,6 +3964,11 @@
       "size": 2367
     },
     {
+      "path": "spec/schemas/x07-mem.provenance-graph.schema.json",
+      "sha256": "03c29f0823b9b38d16ab34bd38678a74e0bb4a2bd76f558205c9aa826690c4b5",
+      "size": 3504
+    },
+    {
       "path": "spec/schemas/x07-mono.map.schema.json",
       "sha256": "99a6a2951d5af144372fd8d05388dd4e38d6fd5ab005b274e4c4cd89fc2762c1",
       "size": 2841
@@ -4470,8 +4475,8 @@
     },
     {
       "path": "spec/spec-index.json",
-      "sha256": "7438b9a2dfe2b7367b9b89622b160afc8b9e90933ac6ce6c8ed97dd81f7e378b",
-      "size": 51451
+      "sha256": "2ec418cac8abcf8dfbfb4db8fd7b925b41982fbd0960d4ca4574e24fca175d76",
+      "size": 51749
     },
     {
       "path": "spec/spec-index.md",
@@ -4550,13 +4555,13 @@
     },
     {
       "path": "toolchain/diagnostic-codes.md",
-      "sha256": "7b78d98fc3fbc13ba69267f001d3a8aa4edff4c18ffcd3947e2556d57dcf178e",
-      "size": 108742
+      "sha256": "46a1cdb55ee19684ebab34ff1691103643bcdbb0e18802ecf3f18b2d260b8d6c",
+      "size": 109414
     },
     {
       "path": "toolchain/diagnostics-repair.md",
-      "sha256": "5a2362286d5dc1e94b00ae1c657ca9ce2c7a3887153fc8554ab422c4285510b5",
-      "size": 2356
+      "sha256": "9c3076f5674d122000752720d9960ee0fa2e2f447d491db818ae85ca5851f675",
+      "size": 2756
     },
     {
       "path": "toolchain/embedding-in-c.md",
@@ -4677,7 +4682,7 @@
     },
     {
       "path": "catalog/index.json",
-      "sha256": "4edd7833cfdd26e9c897a6c3a9c07f60fe9cbf8965d225da3e167d5a5e7b982a",
+      "sha256": "21464410017e1bd12d6ce4c69981b9c34c48c988039fd17bc5d79aec4c346e04",
       "size": 227
     },
     {
@@ -5867,17 +5872,17 @@
     },
     {
       "path": "examples/catalog.json",
-      "sha256": "d19aa34c0ed80eefcc152b188dddecb89d8622f583a32d2ab0628ae3db83752d",
+      "sha256": "431827622348b9b86959d3d7b3185f2c09e199c628045c85fbe828c56fdc69fc",
       "size": 72941
     },
     {
       "path": "examples/index.json",
-      "sha256": "4713aaa74d3e9246c524032f208c4222218646f4295c7b90a4a2c59e42845da2",
+      "sha256": "2b23707493e1d741e775d8ed93ccbc8123fa2e7efc514f8310b1c191c6665009",
       "size": 2563
     },
     {
       "path": "index.json",
-      "sha256": "94c7ac9500cf9c9ade98aa0872446d2fc044b0bbd46e98d7133a216ba3419f97",
+      "sha256": "70ebc706d51dfde49c55a2991bd53eefc9801a03e83fed8b5bbc78b68d4bd34f",
       "size": 661
     },
     {
@@ -7497,13 +7502,13 @@
     },
     {
       "path": "packages/index.json",
-      "sha256": "b6a0f0062ffcf09d62bc8b07cbd71eeb60850ae55cb4535787d011b01e65c0bc",
+      "sha256": "b4ef1353f8cfb1156dc5c9d26192c3895be4f37706e72990c6c1378829c475b0",
       "size": 92625
     },
     {
       "path": "schemas/index.json",
-      "sha256": "facc8b36f9219517fe6bc0d8b398fee2167c73fa29d2456fd1ddb1e121928b70",
-      "size": 20699
+      "sha256": "470b62d8dab3fbd181ba69f284c4ad2d9accfa62fb1f132a18fb53e7971b60d9",
+      "size": 20839
     },
     {
       "path": "schemas/run-os-policy.schema.json",
@@ -7759,6 +7764,11 @@
       "path": "schemas/x07-lock.schema.json",
       "sha256": "a591a42245ee012de06850727092bf97ccd1efada0eaf2665a0f3d4988d79a5f",
       "size": 2367
+    },
+    {
+      "path": "schemas/x07-mem.provenance-graph.schema.json",
+      "sha256": "03c29f0823b9b38d16ab34bd38678a74e0bb4a2bd76f558205c9aa826690c4b5",
+      "size": 3504
     },
     {
       "path": "schemas/x07-mono.map.schema.json",
@@ -8277,7 +8287,7 @@
     },
     {
       "path": "skills/index.json",
-      "sha256": "2a8b47468560d4475885a13f0e05d6644215abbc395f397d5b49a5500fe3be9b",
+      "sha256": "45c246e820db7ab3e2cd661993fea5c9855a22d1c07a0a71b732cbf74f59f6f1",
       "size": 3500
     },
     {
@@ -8367,7 +8377,7 @@
     },
     {
       "path": "skills/x07-agent-playbook.json",
-      "sha256": "338319364db2f6075c58f8dbe995630ef3f6d9002f232ca7dff5eaa5d361017b",
+      "sha256": "124e8dd98d749e4115fa3a5efc79a1e9806cc3e9c8d7df0fe03f04d246fb7157",
       "size": 426
     },
     {
@@ -8387,7 +8397,7 @@
     },
     {
       "path": "skills/x07-bundle.json",
-      "sha256": "c666f5cd7420c11d174077c3bee275448487903b9b6d84d15f10e6d8b9b646d2",
+      "sha256": "3ed7905a2bdf6e1748605ab80b63c04ff7597e59b00e978d6a5bc72315ef2385",
       "size": 319
     },
     {
@@ -8397,7 +8407,7 @@
     },
     {
       "path": "skills/x07-concurrency.json",
-      "sha256": "3adc21e88a44e8d29a9e90189d0fc4d93c68e4021fa2c3b5dc8ceccec4784c82",
+      "sha256": "2ac0f7e62b4386eb575d4420dd2a45ce18f2b500b6e8e74f043b9344d07429a7",
       "size": 363
     },
     {
@@ -8407,7 +8417,7 @@
     },
     {
       "path": "skills/x07-ffi-c.json",
-      "sha256": "208870d2ccb4c9a4c962e894cecf73612d9bfafb0db4978cb785fec98ce1c8e5",
+      "sha256": "b49781ef5fc16adb9c9ec3166a6c07d38a5779159c7bc597de710da8a10785b8",
       "size": 329
     },
     {
@@ -8417,7 +8427,7 @@
     },
     {
       "path": "skills/x07-format.json",
-      "sha256": "e00fb62584ca134453d60012066dbe22a102344df7aaa83e8041f048a17be727",
+      "sha256": "39f45605958df60e87f398fa3b85c434eadac138fcdbd6e16740d65b41f68837",
       "size": 395
     },
     {
@@ -8427,7 +8437,7 @@
     },
     {
       "path": "skills/x07-io-streams.json",
-      "sha256": "b95ed6b82b5632577f7f7696f82f0b7a2ac5a9194a4a5fb655f1f0a369a35a23",
+      "sha256": "b0449e8dbeae1ab9b65e4a073e3fa52f9154bf7a54921569b25d039f254ea508",
       "size": 345
     },
     {
@@ -8437,7 +8447,7 @@
     },
     {
       "path": "skills/x07-language-guide.json",
-      "sha256": "d67f1ce26cdba7e72b7bb69ea05466e6686323f8bc56ba19fbf4eab4f70797af",
+      "sha256": "997cedd2a8709fcd59b92e331a04d11d3564f08101f92b190cb15876ccc94460",
       "size": 364
     },
     {
@@ -8452,7 +8462,7 @@
     },
     {
       "path": "skills/x07-lint-repair.json",
-      "sha256": "af87954c67332acc7f2b2044ee7c0d644371cb6a140271069970886097283697",
+      "sha256": "e15ce19e26def51d7f2a1451d0386310d36ed7a159cd161c7d947b1daf92a558",
       "size": 411
     },
     {
@@ -8462,7 +8472,7 @@
     },
     {
       "path": "skills/x07-os-run.json",
-      "sha256": "a8fc49249cf61ccde3d5c42dd23992628e13cf900e8f6756a362cf328482d7b6",
+      "sha256": "e08f1d182dc09871590752ef3319a4197d935806911764f0e55fc461ef6c9674",
       "size": 431
     },
     {
@@ -8477,7 +8487,7 @@
     },
     {
       "path": "skills/x07-package.json",
-      "sha256": "df35448c2d27d99820f5cfff5246dccafc3fc960b98a229b2a772f23f29c0e57",
+      "sha256": "7a4f1eb0728e91e2efcac25b20a234ab3660cc6ccfa7b538f1a85552421a9938",
       "size": 365
     },
     {
@@ -8487,7 +8497,7 @@
     },
     {
       "path": "skills/x07-run.json",
-      "sha256": "bbef6306607c6b6d954d19fed4138073d028b3850def4f3986e5c2be80e320a5",
+      "sha256": "34b59c10e73faa20eca720f4165c6ab571094f3f78840837f9b4483d5bac548f",
       "size": 337
     },
     {
@@ -8497,7 +8507,7 @@
     },
     {
       "path": "skills/x07-test.json",
-      "sha256": "3870c9041376f0a80d08ac5da2d035f48dd27e7508eb8c222e8d5a8a3bac1a8b",
+      "sha256": "6deabdb27900a8f5002d22e01b0185521f20365d193ae53a7fb259deec254071",
       "size": 376
     },
     {
