@@ -1,0 +1,21 @@
+{
+  "schema_version": "x07.lock@0.2.0",
+  "dependencies": [
+    {
+      "name": "ext-text",
+      "version": "0.1.2",
+      "path": ".x07/deps/ext-text/0.1.2",
+      "package_manifest_sha256": "35817e98987848cf0711268f4172bfa49c205109c93bd17d18fb5f149bedae77",
+      "module_root": "modules",
+      "modules_sha256": {
+        "std.text": "85f7c0c671f85106086fb14e581c472ce8361a77a34ca854d42ceb0a2f824c52",
+        "std.text.find": "0c84cefa81876012b56bb11c511ce5f72ae9734236e47b846043cf9a937b0026",
+        "std.text.join": "c84d4a822cf32a6f9e148c32f3fe583667fc17e8bf91450d82c39b8a09b61011",
+        "std.text.lines": "777bf1b599d3628e0834e22cd6925bcd9008547a65b6e69b912c2943cf831a7c",
+        "std.text.split": "dfd60f66759f0a0876c9d3cb1feaeeebb6b5282a139c3aa071ef231548664dbf",
+        "std.text.tests": "9ab717edbb0fdecb852901822dc8cc746b61e05a7155420f08e1d02abff4bdc1",
+        "std.text.ws": "7895ace61733e993fd025fe96d98432b734342a679f8cf925f024ba9d1f978f3"
+      }
+    }
+  ]
+}

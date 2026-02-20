@@ -427,6 +427,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-bundle.report.schema.json"
     },
     {
+      "id": "x07-tool-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-check.report.schema.json"
+    },
+    {
       "id": "x07-tool-cli-spec-check.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-cli-spec-check.report.schema.json"
     },
