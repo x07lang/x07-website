@@ -91,6 +91,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/run-os-policy.schema.json"
     },
     {
+      "id": "x07-agent.context.schema.json",
+      "url": "/agent/latest/schemas/x07-agent.context.schema.json"
+    },
+    {
       "id": "x07-arch.archive.index.schema.json",
       "url": "/agent/latest/schemas/x07-arch.archive.index.schema.json"
     },
@@ -331,6 +335,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-spec.index.schema.json"
     },
     {
+      "id": "x07-tool-agent-context.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-agent-context.report.schema.json"
+    },
+    {
+      "id": "x07-tool-agent.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-agent.report.schema.json"
+    },
+    {
       "id": "x07-tool-arch-check.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-arch-check.report.schema.json"
     },
@@ -369,6 +381,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-tool-ast-schema.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-schema.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-slice.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-slice.report.schema.json"
     },
     {
       "id": "x07-tool-ast-validate.report.schema.json",

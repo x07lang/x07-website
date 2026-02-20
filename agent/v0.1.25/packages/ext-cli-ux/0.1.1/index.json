@@ -1,0 +1,66 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-cli-ux",
+  "version": "0.1.1",
+  "description": "CLI UX primitives: deterministic progress, tables, and JSONL output (pinned via arch/cli).",
+  "docs": "CLI UX primitives: deterministic progress, tables, and JSONL output (pinned via arch/cli).\n\nModules:\n- std.cli.profile\n- std.cli.progress\n- std.cli.table\n- std.cli.jsonl\n- std.cli.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-cli-ux@0.1.1\n- Load profile from arch: std.cli.profile.from_arch_v1\n- Render progress: std.cli.progress.render_v1\n- Render tables: std.cli.table.render_v1\n- Emit JSONL: std.cli.jsonl.encode_v1\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "mixed",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-data-model@0.1.8",
+      "ext-json-rs@0.1.4"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.cli.jsonl",
+      "path": "std/cli/jsonl.x07.json",
+      "exports": [
+        "std.cli.jsonl.encode_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.profile",
+      "path": "std/cli/profile.x07.json",
+      "exports": [
+        "std.cli.profile.from_arch_v1",
+        "std.cli.profile.max_line_bytes_v1",
+        "std.cli.profile.mode_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.progress",
+      "path": "std/cli/progress.x07.json",
+      "exports": [
+        "std.cli.progress.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.table",
+      "path": "std/cli/table.x07.json",
+      "exports": [
+        "std.cli.table.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.tests",
+      "path": "std/cli/tests.x07.json",
+      "exports": [
+        "std.cli.tests.test_jsonl_v1",
+        "std.cli.tests.test_profile_from_arch_v1",
+        "std.cli.tests.test_progress_v1",
+        "std.cli.tests.test_table_v1"
+      ]
+    }
+  ]
+}
