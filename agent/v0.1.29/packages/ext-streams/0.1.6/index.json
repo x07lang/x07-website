@@ -1,0 +1,63 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-streams",
+  "version": "0.1.6",
+  "description": "Create io readers from bytes, collections, and fs.",
+  "docs": "Create io readers from bytes, collections, and fs.\n\nModules:\n- ext.streams\n- ext.streams.fs\n- ext.streams.tests\n- ext.streams.fs.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-streams@0.1.6\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "mixed",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "ext.streams",
+      "path": "ext/streams.x07.json",
+      "exports": [
+        "ext.streams.open_read_bytes",
+        "ext.streams.open_read_deque_u32le",
+        "ext.streams.open_read_hash_map_kv_u32le_u32le",
+        "ext.streams.open_read_hash_set_u32le",
+        "ext.streams.open_read_heap_u32le",
+        "ext.streams.open_read_vec_u8",
+        "ext.streams.open_read_view"
+      ]
+    },
+    {
+      "module_id": "ext.streams.fs",
+      "path": "ext/streams/fs.x07.json",
+      "exports": [
+        "ext.streams.fs.open_read"
+      ]
+    },
+    {
+      "module_id": "ext.streams.fs.tests",
+      "path": "ext/streams/fs/tests.x07.json",
+      "exports": [
+        "ext.streams.fs.tests.test_open_read_fs_hello"
+      ]
+    },
+    {
+      "module_id": "ext.streams.tests",
+      "path": "ext/streams/tests.x07.json",
+      "exports": [
+        "ext.streams.tests.test_deque_u32le_matches_emit",
+        "ext.streams.tests.test_hash_map_kv_u32le_u32le_matches_emit",
+        "ext.streams.tests.test_hash_set_u32le_matches_emit",
+        "ext.streams.tests.test_heap_u32le_matches_emit",
+        "ext.streams.tests.test_open_read_bytes_roundtrip",
+        "ext.streams.tests.test_open_read_vec_u8_roundtrip",
+        "ext.streams.tests.test_open_read_view_roundtrip"
+      ]
+    }
+  ]
+}
