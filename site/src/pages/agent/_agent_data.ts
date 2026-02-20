@@ -291,10 +291,6 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-lock.schema.json"
     },
     {
-      "id": "x07-mem.provenance-graph.schema.json",
-      "url": "/agent/latest/schemas/x07-mem.provenance-graph.schema.json"
-    },
-    {
       "id": "x07-mono.map.schema.json",
       "url": "/agent/latest/schemas/x07-mono.map.schema.json"
     },
