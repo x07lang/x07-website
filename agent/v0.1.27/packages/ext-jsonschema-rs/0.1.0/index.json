@@ -1,0 +1,45 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-jsonschema-rs",
+  "version": "0.1.0",
+  "description": "JSON Schema validation (Draft 2020-12 default; supports $schema overrides).",
+  "docs": "JSON Schema validation.\n\nModules:\n- ext.jsonschema\n- ext.jsonschema.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-jsonschema-rs@0.1.0\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "ext.jsonschema",
+      "path": "ext/jsonschema.x07.json",
+      "exports": [
+        "ext.jsonschema.compile_v1",
+        "ext.jsonschema.err_code_v1",
+        "ext.jsonschema.err_msg_v1",
+        "ext.jsonschema.errors_json_v1",
+        "ext.jsonschema.is_err_v1",
+        "ext.jsonschema.validate_v1"
+      ]
+    },
+    {
+      "module_id": "ext.jsonschema.tests",
+      "path": "ext/jsonschema/tests.x07.json",
+      "exports": [
+        "ext.jsonschema.tests.test_default_dialect_2020_12",
+        "ext.jsonschema.tests.test_error_ordering_by_pointer",
+        "ext.jsonschema.tests.test_schema_override_draft07",
+        "ext.jsonschema.tests.test_unsupported_dialect_is_error"
+      ]
+    }
+  ]
+}

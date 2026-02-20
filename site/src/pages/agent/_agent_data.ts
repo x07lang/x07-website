@@ -259,6 +259,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-db.migrate.plan.schema.json"
     },
     {
+      "id": "x07-deps.capability-policy.schema.json",
+      "url": "/agent/latest/schemas/x07-deps.capability-policy.schema.json"
+    },
+    {
       "id": "x07-diag.catalog.schema.json",
       "url": "/agent/latest/schemas/x07-diag.catalog.schema.json"
     },
