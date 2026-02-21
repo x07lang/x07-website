@@ -295,6 +295,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-lock.schema.json"
     },
     {
+      "id": "x07-lock.v0.2.0.schema.json",
+      "url": "/agent/latest/schemas/x07-lock.v0.2.0.schema.json"
+    },
+    {
+      "id": "x07-lock.v0.3.0.schema.json",
+      "url": "/agent/latest/schemas/x07-lock.v0.3.0.schema.json"
+    },
+    {
       "id": "x07-mem.provenance-graph.schema.json",
       "url": "/agent/latest/schemas/x07-mem.provenance-graph.schema.json"
     },
@@ -319,12 +327,24 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-package.schema.json"
     },
     {
+      "id": "x07-pkg.advisory.schema.json",
+      "url": "/agent/latest/schemas/x07-pkg.advisory.schema.json"
+    },
+    {
       "id": "x07-policy-init.report.schema.json",
       "url": "/agent/latest/schemas/x07-policy-init.report.schema.json"
     },
     {
       "id": "x07-project.schema.json",
       "url": "/agent/latest/schemas/x07-project.schema.json"
+    },
+    {
+      "id": "x07-project.v0.2.0.schema.json",
+      "url": "/agent/latest/schemas/x07-project.v0.2.0.schema.json"
+    },
+    {
+      "id": "x07-project.v0.3.0.schema.json",
+      "url": "/agent/latest/schemas/x07-project.v0.3.0.schema.json"
     },
     {
       "id": "x07-review.diff.schema.json",
