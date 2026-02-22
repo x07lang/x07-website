@@ -25,6 +25,11 @@ cd "${SITE_DIR}"
 npm ci
 
 log "site: npm run build"
+if [[ -z "${NODE_OPTIONS:-}" ]]; then
+  export NODE_OPTIONS="--max-old-space-size=6144"
+else
+  export NODE_OPTIONS="${NODE_OPTIONS} --max-old-space-size=6144"
+fi
 npm run build
 
 [[ -d "${SITE_DIR}/build" ]] || die "missing build output: ${SITE_DIR}/build"
