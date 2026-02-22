@@ -311,6 +311,18 @@
       "url": "/agent/latest/schemas/x07-tool-ast-canon.report.schema.json"
     },
     {
+      "id": "x07-tool-ast-edit-apply-quickfix.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-edit-apply-quickfix.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-edit-insert-stmts.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-edit-insert-stmts.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-edit.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-edit.report.schema.json"
+    },
+    {
       "id": "x07-tool-ast-get.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-get.report.schema.json"
     },
