@@ -52,10 +52,10 @@
         "x07up": "v0.1.34"
       },
       "notes": "Stable release.",
-      "published_at": "2026-02-22T20:43:58Z"
+      "published_at": "2026-02-22T20:42:54Z"
     }
   },
-  "updated_at": "2026-02-22T20:43:58Z",
+  "updated_at": "2026-02-22T20:42:54Z",
   "x07up": {
     "v0.1.34": {
       "assets": {
@@ -84,7 +84,7 @@
           "url": "https://github.com/x07lang/x07/releases/download/v0.1.34/x07up-v0.1.34-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
-      "published_at": "2026-02-22T20:43:58Z"
+      "published_at": "2026-02-22T20:42:54Z"
     }
   }
 }
