@@ -1,0 +1,91 @@
+{
+  "schema_version": "x07.website.agent.examples_index@v1",
+  "generated_from": "agent/v0.1.35/examples/*.x07.json",
+  "items": [
+    {
+      "id": "01_echo",
+      "purpose": "echo",
+      "url": "/agent/v0.1.35/examples/01_echo.x07.json"
+    },
+    {
+      "id": "02_length",
+      "purpose": "length",
+      "url": "/agent/v0.1.35/examples/02_length.x07.json"
+    },
+    {
+      "id": "03_reverse",
+      "purpose": "reverse",
+      "url": "/agent/v0.1.35/examples/03_reverse.x07.json"
+    },
+    {
+      "id": "04_sum_bytes",
+      "purpose": "sum bytes",
+      "url": "/agent/v0.1.35/examples/04_sum_bytes.x07.json"
+    },
+    {
+      "id": "05_max_byte",
+      "purpose": "max byte",
+      "url": "/agent/v0.1.35/examples/05_max_byte.x07.json"
+    },
+    {
+      "id": "06_count_first",
+      "purpose": "count first",
+      "url": "/agent/v0.1.35/examples/06_count_first.x07.json"
+    },
+    {
+      "id": "07_first_line_len",
+      "purpose": "first line len",
+      "url": "/agent/v0.1.35/examples/07_first_line_len.x07.json"
+    },
+    {
+      "id": "08_is_palindrome",
+      "purpose": "is palindrome",
+      "url": "/agent/v0.1.35/examples/08_is_palindrome.x07.json"
+    },
+    {
+      "id": "09_word_count",
+      "purpose": "word count",
+      "url": "/agent/v0.1.35/examples/09_word_count.x07.json"
+    },
+    {
+      "id": "10_rle_encode",
+      "purpose": "rle encode",
+      "url": "/agent/v0.1.35/examples/10_rle_encode.x07.json"
+    },
+    {
+      "id": "11_data_analyzer",
+      "purpose": "data analyzer",
+      "url": "/agent/v0.1.35/examples/11_data_analyzer.x07.json"
+    },
+    {
+      "id": "12_async_mapreduce",
+      "purpose": "async mapreduce",
+      "url": "/agent/v0.1.35/examples/12_async_mapreduce.x07.json"
+    },
+    {
+      "id": "13_stream_pipe_split_lines",
+      "purpose": "stream pipe split lines",
+      "url": "/agent/v0.1.35/examples/13_stream_pipe_split_lines.x07.json"
+    },
+    {
+      "id": "14_task_scope_slots",
+      "purpose": "task scope slots",
+      "url": "/agent/v0.1.35/examples/14_task_scope_slots.x07.json"
+    },
+    {
+      "id": "15_text_slices_branded",
+      "purpose": "text slices branded",
+      "url": "/agent/v0.1.35/examples/15_text_slices_branded.x07.json"
+    },
+    {
+      "id": "16_generics_identity",
+      "purpose": "generics identity",
+      "url": "/agent/v0.1.35/examples/16_generics_identity.x07.json"
+    },
+    {
+      "id": "17_generics_containers",
+      "purpose": "generics containers",
+      "url": "/agent/v0.1.35/examples/17_generics_containers.x07.json"
+    }
+  ]
+}

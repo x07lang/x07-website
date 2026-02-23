@@ -909,6 +909,20 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-auth-jwt/0.1.1/index.json#docs"
     },
     {
+      "name": "ext-auth-jwt",
+      "version": "0.1.2",
+      "url": "/agent/latest/packages/ext-auth-jwt/0.1.2/index.json",
+      "description": "JWT helpers pinned under arch/crypto plus JOSE JWS compact verification (RS256/ES256/EdDSA).",
+      "docs_url": "/agent/latest/packages/ext-auth-jwt/0.1.2/index.json#docs"
+    },
+    {
+      "name": "ext-auth-jwt",
+      "version": "0.1.3",
+      "url": "/agent/latest/packages/ext-auth-jwt/0.1.3/index.json",
+      "description": "JWT helpers pinned under arch/crypto plus JOSE JWS compact verification (RS256/ES256/EdDSA).",
+      "docs_url": "/agent/latest/packages/ext-auth-jwt/0.1.3/index.json#docs"
+    },
+    {
       "name": "ext-base64-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-base64-rs/0.1.0/index.json",
@@ -2218,6 +2232,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-net/0.1.8/index.json#docs"
     },
     {
+      "name": "ext-net",
+      "version": "0.1.9",
+      "url": "/agent/latest/packages/ext-net/0.1.9/index.json",
+      "description": "Networking APIs (DNS, TCP/UDP, TLS, HTTP) (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-net/0.1.9/index.json#docs"
+    },
+    {
       "name": "ext-net-protos-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json",
@@ -2300,6 +2321,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-openssl-c/0.1.6/index.json",
       "description": "OpenSSL bindings: hashes, RNG, and Ed25519 (run-os only).",
       "docs_url": "/agent/latest/packages/ext-openssl-c/0.1.6/index.json#docs"
+    },
+    {
+      "name": "ext-openssl-c",
+      "version": "0.1.7",
+      "url": "/agent/latest/packages/ext-openssl-c/0.1.7/index.json",
+      "description": "OpenSSL bindings: hashes, RNG, Ed25519, RSA verify, and ECDSA P-256 verify (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-openssl-c/0.1.7/index.json#docs"
     },
     {
       "name": "ext-path-glob-rs",
