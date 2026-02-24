@@ -1,0 +1,89 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-auth-jwt",
+  "version": "0.1.4",
+  "description": "JWT helpers pinned under arch/crypto plus JOSE JWS compact sign/verify and JWK thumbprints (RS256/ES256/Ed25519/EdDSA).",
+  "docs": "Ed25519 + JWT helpers pinned by arch/crypto contracts, plus JOSE JWS compact sign/verify and JWK thumbprints.\n\nModules:\n- std.crypto.ed25519\n- std.auth.jwt\n- std.auth.jwt.tests\n- std.auth.jose_jws_v1\n- std.auth.jose_jws_v1.tests\n- std.auth.pkce\n- std.auth.pkce.tests\n\nWorlds:\n- run-os / run-os-sandboxed only\n\nUsage:\n- Add dependency: x07 pkg add ext-auth-jwt@0.1.4\n- Use std.auth.jwt.sign_from_arch_v1 / verify_from_arch_v1 with profiles under arch/crypto.\n- Use std.auth.jose_jws_v1.jws_compact_sign_v1 / jws_compact_verify_v1 for JWS compact sign/verify with JWK inputs.\n- Use std.auth.jose_jws_v1.jwk_thumbprint_sha256_b64u_v1 for RFC7638 JWK thumbprints.\n- Use std.auth.pkce.pkce_s256_challenge_v1 for PKCE S256 code_challenge generation.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-base64-rs@0.1.4",
+      "ext-crypto-rs@0.1.4",
+      "ext-data-model@0.1.8",
+      "ext-json-rs@0.1.4",
+      "ext-openssl-c@0.1.8"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.auth.jose_jws_v1",
+      "path": "std/auth/jose_jws_v1.x07.json",
+      "exports": [
+        "std.auth.jose_jws_v1.jwk_public_from_private_v1",
+        "std.auth.jose_jws_v1.jwk_thumbprint_sha256_b64u_v1",
+        "std.auth.jose_jws_v1.jws_compact_sign_v1",
+        "std.auth.jose_jws_v1.jws_compact_verify_v1"
+      ]
+    },
+    {
+      "module_id": "std.auth.jose_jws_v1.tests",
+      "path": "std/auth/jose_jws_v1/tests.x07.json",
+      "exports": [
+        "std.auth.jose_jws_v1.tests.test_alg_rejected_v1",
+        "std.auth.jose_jws_v1.tests.test_es256_ok_v1",
+        "std.auth.jose_jws_v1.tests.test_jwk_public_from_private_ok_v1",
+        "std.auth.jose_jws_v1.tests.test_jwk_thumbprint_ok_v1",
+        "std.auth.jose_jws_v1.tests.test_jws_sign_ed25519_ok_v1",
+        "std.auth.jose_jws_v1.tests.test_jws_sign_rs256_ok_v1",
+        "std.auth.jose_jws_v1.tests.test_rs256_ok_v1"
+      ]
+    },
+    {
+      "module_id": "std.auth.jwt",
+      "path": "std/auth/jwt.x07.json",
+      "exports": [
+        "std.auth.jwt._b64url_decode_nopad_v1",
+        "std.auth.jwt._b64url_encode_nopad_v1",
+        "std.auth.jwt.sign_from_arch_v1",
+        "std.auth.jwt.verify_from_arch_v1"
+      ]
+    },
+    {
+      "module_id": "std.auth.jwt.tests",
+      "path": "std/auth/jwt/tests.x07.json",
+      "exports": [
+        "std.auth.jwt.tests.test_ed25519_rfc8032_vectors_v1",
+        "std.auth.jwt.tests.test_jwt_profile_roundtrip_v1"
+      ]
+    },
+    {
+      "module_id": "std.auth.pkce",
+      "path": "std/auth/pkce.x07.json",
+      "exports": [
+        "std.auth.pkce.pkce_s256_challenge_v1"
+      ]
+    },
+    {
+      "module_id": "std.auth.pkce.tests",
+      "path": "std/auth/pkce/tests.x07.json",
+      "exports": [
+        "std.auth.pkce.tests.test_pkce_rfc7636_vector_v1"
+      ]
+    },
+    {
+      "module_id": "std.crypto.ed25519",
+      "path": "std/crypto/ed25519.x07.json",
+      "exports": [
+        "std.crypto.ed25519.sign_seed_v1",
+        "std.crypto.ed25519.verify_seed_v1"
+      ]
+    }
+  ]
+}
