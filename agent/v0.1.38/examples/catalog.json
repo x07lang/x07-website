@@ -1,0 +1,1546 @@
+{
+  "schema_version": "x07.website.agent.examples_catalog_index@v1",
+  "generated_from": "docs/v0.1.38/examples/**/*.x07.json",
+  "items": [
+    {
+      "id": "01_echo",
+      "purpose": "echo",
+      "scope": "top_level",
+      "path": "01_echo.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/01_echo.x07.json"
+    },
+    {
+      "id": "02_length",
+      "purpose": "length",
+      "scope": "top_level",
+      "path": "02_length.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/02_length.x07.json"
+    },
+    {
+      "id": "03_reverse",
+      "purpose": "reverse",
+      "scope": "top_level",
+      "path": "03_reverse.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/03_reverse.x07.json"
+    },
+    {
+      "id": "04_sum_bytes",
+      "purpose": "sum bytes",
+      "scope": "top_level",
+      "path": "04_sum_bytes.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/04_sum_bytes.x07.json"
+    },
+    {
+      "id": "05_max_byte",
+      "purpose": "max byte",
+      "scope": "top_level",
+      "path": "05_max_byte.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/05_max_byte.x07.json"
+    },
+    {
+      "id": "06_count_first",
+      "purpose": "count first",
+      "scope": "top_level",
+      "path": "06_count_first.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/06_count_first.x07.json"
+    },
+    {
+      "id": "07_first_line_len",
+      "purpose": "first line len",
+      "scope": "top_level",
+      "path": "07_first_line_len.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/07_first_line_len.x07.json"
+    },
+    {
+      "id": "08_is_palindrome",
+      "purpose": "is palindrome",
+      "scope": "top_level",
+      "path": "08_is_palindrome.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/08_is_palindrome.x07.json"
+    },
+    {
+      "id": "09_word_count",
+      "purpose": "word count",
+      "scope": "top_level",
+      "path": "09_word_count.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/09_word_count.x07.json"
+    },
+    {
+      "id": "10_rle_encode",
+      "purpose": "rle encode",
+      "scope": "top_level",
+      "path": "10_rle_encode.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/10_rle_encode.x07.json"
+    },
+    {
+      "id": "11_data_analyzer",
+      "purpose": "data analyzer",
+      "scope": "top_level",
+      "path": "11_data_analyzer.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/11_data_analyzer.x07.json"
+    },
+    {
+      "id": "12_async_mapreduce",
+      "purpose": "async mapreduce",
+      "scope": "top_level",
+      "path": "12_async_mapreduce.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/12_async_mapreduce.x07.json"
+    },
+    {
+      "id": "13_stream_pipe_split_lines",
+      "purpose": "stream pipe split lines",
+      "scope": "top_level",
+      "path": "13_stream_pipe_split_lines.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/13_stream_pipe_split_lines.x07.json"
+    },
+    {
+      "id": "14_task_scope_slots",
+      "purpose": "task scope slots",
+      "scope": "top_level",
+      "path": "14_task_scope_slots.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/14_task_scope_slots.x07.json"
+    },
+    {
+      "id": "15_text_slices_branded",
+      "purpose": "text slices branded",
+      "scope": "top_level",
+      "path": "15_text_slices_branded.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/15_text_slices_branded.x07.json"
+    },
+    {
+      "id": "16_generics_identity",
+      "purpose": "generics identity",
+      "scope": "top_level",
+      "path": "16_generics_identity.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/16_generics_identity.x07.json"
+    },
+    {
+      "id": "17_generics_containers",
+      "purpose": "generics containers",
+      "scope": "top_level",
+      "path": "17_generics_containers.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/17_generics_containers.x07.json"
+    },
+    {
+      "id": "agent-gate/checksum-fast/smoke/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/checksum-fast/smoke/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/checksum-fast/smoke/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/checksum-fast/smoke/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/checksum-fast/smoke/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/checksum-fast/smoke/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-ext-cli/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/cli-ext-cli/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/cli-ext-cli/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-ext-cli/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/cli-ext-cli/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/cli-ext-cli/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-ext-cli/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "agent-gate/cli-ext-cli/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/cli-ext-cli/tests/smoke.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-newline/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/cli-newline/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/cli-newline/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-newline/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/cli-newline/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/cli-newline/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/cli-newline/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "agent-gate/cli-newline/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/cli-newline/tests/smoke.x07.json"
+    },
+    {
+      "id": "agent-gate/compress-zstd/roundtrip/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/compress-zstd/roundtrip/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/compress-zstd/roundtrip/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/compress-zstd/roundtrip/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/compress-zstd/roundtrip/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/compress-zstd/roundtrip/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/data-cbor/roundtrip/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/data-cbor/roundtrip/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/data-cbor/roundtrip/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/data-cbor/roundtrip/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/data-cbor/roundtrip/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/data-cbor/roundtrip/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/data-msgpack/roundtrip/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/data-msgpack/roundtrip/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/data-msgpack/roundtrip/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/data-msgpack/roundtrip/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/data-msgpack/roundtrip/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/data-msgpack/roundtrip/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/diff-patch/apply/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/diff-patch/apply/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/diff-patch/apply/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/diff-patch/apply/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/diff-patch/apply/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/diff-patch/apply/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/fs-globwalk/list-files/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/fs-globwalk/list-files/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/http-client-get/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/http-client-get/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/http-client-get/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/http-client-get/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/http-client-get/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/http-client-get/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/math-bigint/factorial-100/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/math-bigint/factorial-100/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/math-bigint/factorial-100/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/math-bigint/factorial-100/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/math-bigint/factorial-100/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/math-bigint/factorial-100/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/math-decimal/money-format/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/math-decimal/money-format/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/math-decimal/money-format/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/math-decimal/money-format/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/math-decimal/money-format/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/math-decimal/money-format/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/protos-framing-loopback/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/protos-framing-loopback/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/protos-framing-loopback/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/protos-framing-loopback/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/protos-framing-loopback/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/protos-framing-loopback/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/protos-framing-loopback/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "agent-gate/protos-framing-loopback/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/protos-framing-loopback/tests/smoke.x07.json"
+    },
+    {
+      "id": "agent-gate/text-core/text-utils/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/text-core/text-utils/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/text-core/text-utils/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/text-core/text-utils/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/text-core/text-utils/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/text-core/text-utils/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/text-unicode/normalize-casefold/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/text-unicode/normalize-casefold/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/text-unicode/normalize-casefold/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/text-unicode/normalize-casefold/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/text-unicode/normalize-casefold/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/text-unicode/normalize-casefold/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/web-crawler-local/src/app.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/agent-gate/web-crawler-local/src/main.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/auth/jwt",
+      "purpose": "jwt",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/auth/jwt.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/auth/jwt.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/auth/jwt/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/auth/jwt/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/auth/jwt/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/crypto/ed25519",
+      "purpose": "ed25519",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/crypto/ed25519.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-auth-jwt/0.1.1/modules/std/crypto/ed25519.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-base64-rs/0.1.4/modules/ext/base64",
+      "purpose": "base64",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-base64-rs/0.1.4/modules/ext/base64.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-base64-rs/0.1.4/modules/ext/base64.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-base64-rs/0.1.4/modules/ext/base64/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-base64-rs/0.1.4/modules/ext/base64/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-base64-rs/0.1.4/modules/ext/base64/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv",
+      "purpose": "csv",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-csv-rs/0.1.5/modules/ext/csv/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/csv",
+      "purpose": "csv",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/csv.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/csv.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/csv/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/csv/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/csv/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/ini",
+      "purpose": "ini",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/ini.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/ini.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/ini/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/ini/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/ini/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/json",
+      "purpose": "json",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/json.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/json.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/json/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/json/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/json/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/toml",
+      "purpose": "toml",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/toml.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/toml.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/toml/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/toml/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/toml/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/xml",
+      "purpose": "xml",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/xml.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/xml.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/xml/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/xml/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/xml/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/yaml",
+      "purpose": "yaml",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/yaml.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/yaml.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/yaml/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/yaml/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-data-model/0.1.8/modules/ext/data_model/yaml/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-hex-rs/0.1.4/modules/ext/hex",
+      "purpose": "hex",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-hex-rs/0.1.4/modules/ext/hex.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-hex-rs/0.1.4/modules/ext/hex.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-hex-rs/0.1.4/modules/ext/hex/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-hex-rs/0.1.4/modules/ext/hex/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-hex-rs/0.1.4/modules/ext/hex/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini",
+      "purpose": "ini",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-ini-rs/0.1.4/modules/ext/ini/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/canon",
+      "purpose": "canon",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/canon.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/canon.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/pointer",
+      "purpose": "pointer",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/pointer.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/pointer.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-json-rs/0.1.4/modules/ext/json/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math",
+      "purpose": "math",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/f64",
+      "purpose": "f64",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/f64.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/f64.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/f64/spec",
+      "purpose": "spec",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/f64/spec.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/f64/spec.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/i32",
+      "purpose": "i32",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/i32.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/i32.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/codec",
+      "purpose": "codec",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/codec.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/codec.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/dns",
+      "purpose": "dns",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/dns.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/dns.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/err",
+      "purpose": "err",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/err.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/err.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/client",
+      "purpose": "client",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/client.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/client.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/server",
+      "purpose": "server",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/server.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/server.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/spec",
+      "purpose": "spec",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/spec.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/spec.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/io",
+      "purpose": "io",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/io.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/io.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tcp",
+      "purpose": "tcp",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tcp.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tcp.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tls",
+      "purpose": "tls",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tls.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tls.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/udp",
+      "purpose": "udp",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/udp.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/udp.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/export",
+      "purpose": "export",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/export.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/export.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/metrics",
+      "purpose": "metrics",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/metrics.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/metrics.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/openmetrics",
+      "purpose": "openmetrics",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/openmetrics.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/openmetrics.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/otlp",
+      "purpose": "otlp",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/otlp.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/otlp.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/_ffi.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/_ffi.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/ed25519",
+      "purpose": "ed25519",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/ed25519.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/ed25519.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/hash",
+      "purpose": "hash",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/hash.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/hash.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/rand",
+      "purpose": "rand",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/rand.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-openssl-c/0.1.6/modules/ext/openssl/rand.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/wire",
+      "purpose": "wire",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/wire.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-pb-rs/0.1.5/modules/ext/pb/wire.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net",
+      "purpose": "net",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml",
+      "purpose": "toml",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64",
+      "purpose": "u64",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode",
+      "purpose": "unicode",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/casefold",
+      "purpose": "casefold",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/casefold.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/casefold.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/normalize",
+      "purpose": "normalize",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/normalize.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/normalize.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/segment",
+      "purpose": "segment",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/segment.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/segment.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types",
+      "purpose": "http types",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse",
+      "purpose": "httparse",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode",
+      "purpose": "encode",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse",
+      "purpose": "parse",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/core.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/core.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/errors",
+      "purpose": "errors",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/errors.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/errors.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/middleware",
+      "purpose": "middleware",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/middleware.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/middleware.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/openapi",
+      "purpose": "openapi",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/openapi.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/openapi.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/router",
+      "purpose": "router",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/router.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/router.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-web-kit/0.1.1/modules/std/web/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml",
+      "purpose": "xml",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-xml-rs/0.1.4/modules/ext/xml/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml",
+      "purpose": "yaml",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml/data_model",
+      "purpose": "data model",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml/data_model.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml/data_model.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-yaml-rs/0.1.4/modules/ext/yaml/tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/src/app.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/src/app/gateway/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/src/app/gateway/core.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/src/app/gateway/core.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/src/app/gateway/os_main",
+      "purpose": "os main",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/src/app/gateway/os_main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/src/app/gateway/os_main.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/src/app/gateway/upstream/rr",
+      "purpose": "rr",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/src/app/gateway/upstream/rr.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/src/app/gateway/upstream/rr.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/src/main.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/tests/gateway_tests",
+      "purpose": "gateway tests",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/tests/gateway_tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/tests/gateway_tests.x07.json"
+    },
+    {
+      "id": "apps/x07-api-gateway/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "apps/x07-api-gateway/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07-api-gateway/tests/smoke.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "apps/x07crawl/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/src/app.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/src/app/crawl/plan",
+      "purpose": "plan",
+      "scope": "nested",
+      "path": "apps/x07crawl/src/app/crawl/plan.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/src/app/crawl/plan.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/src/app/extract",
+      "purpose": "extract",
+      "scope": "nested",
+      "path": "apps/x07crawl/src/app/extract.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/src/app/extract.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/src/app/fetch/os",
+      "purpose": "os",
+      "scope": "nested",
+      "path": "apps/x07crawl/src/app/fetch/os.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/src/app/fetch/os.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/src/app/fetch/rr",
+      "purpose": "rr",
+      "scope": "nested",
+      "path": "apps/x07crawl/src/app/fetch/rr.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/src/app/fetch/rr.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/src/app/util",
+      "purpose": "util",
+      "scope": "nested",
+      "path": "apps/x07crawl/src/app/util.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/src/app/util.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "apps/x07crawl/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/src/main.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "apps/x07crawl/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/tests/smoke.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/tests/test_pure",
+      "purpose": "test pure",
+      "scope": "nested",
+      "path": "apps/x07crawl/tests/test_pure.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/tests/test_pure.x07.json"
+    },
+    {
+      "id": "apps/x07crawl/tests/test_rr",
+      "purpose": "test rr",
+      "scope": "nested",
+      "path": "apps/x07crawl/tests/test_rr.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07crawl/tests/test_rr.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "apps/x07dbguard/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/src/app.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/src/app/apply",
+      "purpose": "apply",
+      "scope": "nested",
+      "path": "apps/x07dbguard/src/app/apply.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/src/app/apply.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/src/app/fingerprint",
+      "purpose": "fingerprint",
+      "scope": "nested",
+      "path": "apps/x07dbguard/src/app/fingerprint.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/src/app/fingerprint.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/src/app/plan",
+      "purpose": "plan",
+      "scope": "nested",
+      "path": "apps/x07dbguard/src/app/plan.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/src/app/plan.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/src/app/util",
+      "purpose": "util",
+      "scope": "nested",
+      "path": "apps/x07dbguard/src/app/util.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/src/app/util.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/src/app/verify",
+      "purpose": "verify",
+      "scope": "nested",
+      "path": "apps/x07dbguard/src/app/verify.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/src/app/verify.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "apps/x07dbguard/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/src/main.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/tests/pbt_fingerprint",
+      "purpose": "pbt fingerprint",
+      "scope": "nested",
+      "path": "apps/x07dbguard/tests/pbt_fingerprint.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/tests/pbt_fingerprint.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/tests/rr_verify",
+      "purpose": "rr verify",
+      "scope": "nested",
+      "path": "apps/x07dbguard/tests/rr_verify.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/tests/rr_verify.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "apps/x07dbguard/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/tests/smoke.x07.json"
+    },
+    {
+      "id": "apps/x07dbguard/tests/unit",
+      "purpose": "unit",
+      "scope": "nested",
+      "path": "apps/x07dbguard/tests/unit.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/apps/x07dbguard/tests/unit.x07.json"
+    },
+    {
+      "id": "os-read-file/read_file_by_stdin",
+      "purpose": "read file by stdin",
+      "scope": "nested",
+      "path": "os-read-file/read_file_by_stdin.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/os-read-file/read_file_by_stdin.x07.json"
+    },
+    {
+      "id": "project-multi-module/pkgs/appkit/0.1.0/modules/appkit/vec",
+      "purpose": "vec",
+      "scope": "nested",
+      "path": "project-multi-module/pkgs/appkit/0.1.0/modules/appkit/vec.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/project-multi-module/pkgs/appkit/0.1.0/modules/appkit/vec.x07.json"
+    },
+    {
+      "id": "project-multi-module/src/app/rle",
+      "purpose": "rle",
+      "scope": "nested",
+      "path": "project-multi-module/src/app/rle.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/project-multi-module/src/app/rle.x07.json"
+    },
+    {
+      "id": "project-multi-module/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "project-multi-module/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/project-multi-module/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-artifact-integrity-pipeline/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-artifact-integrity-pipeline/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-artifact-integrity-pipeline/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-artifact-integrity-pipeline/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-artifact-integrity-pipeline/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-artifact-integrity-pipeline/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-artifact-integrity-pipeline/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-artifact-integrity-pipeline/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-artifact-integrity-pipeline/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-core-conformance/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-core-conformance/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-core-conformance/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-core-conformance/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-core-conformance/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-core-conformance/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-core-conformance/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-core-conformance/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-core-conformance/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-data-interop-lab/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-data-interop-lab/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-data-interop-lab/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-data-interop-lab/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-data-interop-lab/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-data-interop-lab/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-data-interop-lab/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-data-interop-lab/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-data-interop-lab/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-db-fs-indexer/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-db-fs-indexer/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-db-fs-indexer/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-db-fs-indexer/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-db-fs-indexer/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-db-fs-indexer/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-db-fs-indexer/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-db-fs-indexer/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-db-fs-indexer/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-messaging-rr-lab/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-messaging-rr-lab/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-messaging-rr-lab/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-messaging-rr-lab/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-messaging-rr-lab/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-messaging-rr-lab/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-messaging-rr-lab/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-messaging-rr-lab/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-messaging-rr-lab/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/src/server",
+      "purpose": "server",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/src/server.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/src/server.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-rr-pipes-smoke/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-rr-pipes-smoke/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-rr-pipes-smoke/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sandbox-web-stack/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sandbox-web-stack/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sandbox-web-stack/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sandbox-web-stack/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sandbox-web-stack/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sandbox-web-stack/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sandbox-web-stack/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sandbox-web-stack/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sandbox-web-stack/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1",
+      "purpose": "event line v1",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/event_line/modules/types_pipes_lab/schema/event_line_v1/tests.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1",
+      "purpose": "frame payload v1",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/gen/frame_payload/modules/types_pipes_lab/schema/frame_payload_v1/tests.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/src/brand_registry",
+      "purpose": "brand registry",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/src/brand_registry.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/src/brand_registry.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/src/main.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-schema-types-pipes-lab/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "readiness-checks/x07-schema-types-pipes-lab/tests/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-schema-types-pipes-lab/tests/smoke.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1",
+      "purpose": "lifecycle v1",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/gen/sm/lifecycle_v1/tests.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/src/actions",
+      "purpose": "actions",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/actions.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/actions.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/app.x07.json"
+    },
+    {
+      "id": "readiness-checks/x07-sm-arch-contracts-smoke/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json"
+    },
+    {
+      "id": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo",
+      "purpose": "acme hello demo",
+      "scope": "nested",
+      "path": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo.x07.json"
+    },
+    {
+      "id": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo/tests.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/app.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/app.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/app.step2_fs_write",
+      "purpose": "app.step2 fs write",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/app.step2_fs_write.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/app.step2_fs_write.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/app.step3_http_fetch",
+      "purpose": "app.step3 http fetch",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/app.step3_http_fetch.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/app.step3_http_fetch.x07.json"
+    },
+    {
+      "id": "tutorials/sandbox_policy_walkthrough/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "tutorials/sandbox_policy_walkthrough/src/main.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/sandbox_policy_walkthrough/src/main.x07.json"
+    },
+    {
+      "id": "tutorials/testing_by_example/modules/demo",
+      "purpose": "demo",
+      "scope": "nested",
+      "path": "tutorials/testing_by_example/modules/demo.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/testing_by_example/modules/demo.x07.json"
+    },
+    {
+      "id": "tutorials/testing_by_example/modules/demo/tests_fs",
+      "purpose": "tests fs",
+      "scope": "nested",
+      "path": "tutorials/testing_by_example/modules/demo/tests_fs.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/testing_by_example/modules/demo/tests_fs.x07.json"
+    },
+    {
+      "id": "tutorials/testing_by_example/modules/demo/tests_pure",
+      "purpose": "tests pure",
+      "scope": "nested",
+      "path": "tutorials/testing_by_example/modules/demo/tests_pure.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/testing_by_example/modules/demo/tests_pure.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/x07import_c_smoke_pkg/modules/ext/smoke.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "tutorials/x07import_c_smoke_pkg/modules/ext/smoke/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/x07import_c_smoke_pkg/modules/ext/smoke/tests.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_rust_hex_pkg/modules/ext/hex",
+      "purpose": "hex",
+      "scope": "nested",
+      "path": "tutorials/x07import_rust_hex_pkg/modules/ext/hex.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/x07import_rust_hex_pkg/modules/ext/hex.x07.json"
+    },
+    {
+      "id": "tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests.x07.json",
+      "url": "/agent/v0.1.38/examples/catalog-files/tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests.x07.json"
+    }
+  ]
+}
