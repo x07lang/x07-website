@@ -1823,6 +1823,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-fs/0.1.4/index.json#docs"
     },
     {
+      "name": "ext-fs",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-fs/0.1.5/index.json",
+      "description": "OS filesystem API (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-fs/0.1.5/index.json#docs"
+    },
+    {
       "name": "ext-glob-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-glob-rs/0.1.0/index.json",

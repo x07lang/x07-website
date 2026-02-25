@@ -1,0 +1,21 @@
+[
+  {
+    "op": "add",
+    "path": "/decls/0/names/-",
+    "value": "app.hello_task"
+  },
+  {
+    "op": "add",
+    "path": "/decls/-",
+    "value": {
+      "kind": "defasync",
+      "name": "app.hello_task",
+      "params": [],
+      "result": "bytes",
+      "body": [
+        "bytes.lit",
+        "hello_from_task"
+      ]
+    }
+  }
+]
