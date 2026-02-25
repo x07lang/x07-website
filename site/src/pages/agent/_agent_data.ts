@@ -651,6 +651,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-verify.report.schema.json"
     },
     {
+      "id": "x07-tool-wasm.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-wasm.report.schema.json"
+    },
+    {
       "id": "x07-tool.events.schema.json",
       "url": "/agent/latest/schemas/x07-tool.events.schema.json"
     },

@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.1.38",
-  "docs_bundle_sha256": "7e015534c9a7c8805c3a72ecbd2a2582805f343aba64356a2451476137b57b34",
+  "docs_bundle_sha256": "ff250d52efa18f532e63f2508e5a45c0fbe872c40b783767fa97bfdf4ca5c18c",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -4414,6 +4414,11 @@
       "size": 4184
     },
     {
+      "path": "spec/schemas/x07-tool-wasm.report.schema.json",
+      "sha256": "f4ea8d0401efe1c20d5372311bfdcf8c16b97e0d5a7f3255b6c4e0fb365f8b9e",
+      "size": 4176
+    },
+    {
       "path": "spec/schemas/x07-tool.events.schema.json",
       "sha256": "84cad3c2fc1a3ea28cc5c17970fe2b719adb8a471e5033bc0b09cec315eb2b68",
       "size": 587
@@ -4525,8 +4530,8 @@
     },
     {
       "path": "spec/spec-index.json",
-      "sha256": "dab91ce72ffcaf37550888716ef523a52aeff58a4da6aa7d31e852d5981058b8",
-      "size": 54596
+      "sha256": "6fc82954cc76368ef25662be316ee8423f10752739c0cb688a4105707c68bcdf",
+      "size": 54874
     },
     {
       "path": "spec/spec-index.md",
@@ -5942,7 +5947,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "ea65dcadbbed7ed409baf1b95c05212c1b3e5b5ef50f0d91f4c9236ea64344c5",
+      "sha256": "e46e636f9f54187e2bd61b1b3f3ea868b89206884686ecd5236bb529308835e2",
       "size": 661
     },
     {
@@ -7597,8 +7602,8 @@
     },
     {
       "path": "schemas/index.json",
-      "sha256": "ecb9757146721e7e9bceeadeacd5ed7c38e2af48376eb7a1b694138e8036c3f5",
-      "size": 22217
+      "sha256": "79022f5ce70df2f50b33590661a96c65c0c2cf93ce54f49e1693b32380fa8a62",
+      "size": 22349
     },
     {
       "path": "schemas/run-os-policy.schema.json",
@@ -8304,6 +8309,11 @@
       "path": "schemas/x07-tool-verify.report.schema.json",
       "sha256": "e4742ca499373b76efd962ab1d72041a0de1595c1870d4d2580bc385586aae87",
       "size": 4184
+    },
+    {
+      "path": "schemas/x07-tool-wasm.report.schema.json",
+      "sha256": "f4ea8d0401efe1c20d5372311bfdcf8c16b97e0d5a7f3255b6c4e0fb365f8b9e",
+      "size": 4176
     },
     {
       "path": "schemas/x07-tool.events.schema.json",
