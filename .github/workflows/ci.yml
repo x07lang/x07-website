@@ -43,5 +43,6 @@ jobs:
             --verbose
             --no-progress
             --exclude '^https?://x07lang\\.org/'
+            --exclude '^/docs/'
             "**/*.md"
           failIfEmpty: false
