@@ -1,0 +1,48 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-semver-rs",
+  "version": "0.1.2",
+  "description": "Semantic version parsing and comparison.",
+  "docs": "Semantic version parsing and comparison.\n\nModules:\n- ext.semver\n- ext.semver.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-semver-rs@0.1.2\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.semver",
+      "path": "ext/semver.x07.json",
+      "exports": [
+        "ext.semver.semver_build",
+        "ext.semver.semver_cmp_str",
+        "ext.semver.semver_err_code",
+        "ext.semver.semver_is_err",
+        "ext.semver.semver_major",
+        "ext.semver.semver_minor",
+        "ext.semver.semver_parse",
+        "ext.semver.semver_patch",
+        "ext.semver.semver_prerelease"
+      ]
+    },
+    {
+      "module_id": "ext.semver.tests",
+      "path": "ext/semver/tests.x07.json",
+      "exports": [
+        "ext.semver.tests.test_cmp_prerelease_ordering",
+        "ext.semver.tests.test_parse_fields",
+        "ext.semver.tests.test_parse_invalid_leading_zero",
+        "ext.semver.tests.test_parse_invalid_prerelease"
+      ]
+    }
+  ]
+}

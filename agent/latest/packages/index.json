@@ -1529,6 +1529,13 @@
       "docs_url": "/agent/latest/packages/ext-path-glob-rs/0.1.2/index.json#docs"
     },
     {
+      "name": "ext-path-glob-rs",
+      "version": "0.1.3",
+      "url": "/agent/latest/packages/ext-path-glob-rs/0.1.3/index.json",
+      "description": "OS-world glob + walk helpers under std.os.fs.* (deterministic ordering).",
+      "docs_url": "/agent/latest/packages/ext-path-glob-rs/0.1.3/index.json#docs"
+    },
+    {
       "name": "ext-pb-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-pb-rs/0.1.0/index.json",
@@ -2164,6 +2171,13 @@
       "url": "/agent/latest/packages/ext-walkdir-rs/0.1.2/index.json",
       "description": "Directory traversal helpers for OS worlds (wrap std.os.fs.walk_glob_sorted_text_v1).",
       "docs_url": "/agent/latest/packages/ext-walkdir-rs/0.1.2/index.json#docs"
+    },
+    {
+      "name": "ext-walkdir-rs",
+      "version": "0.1.3",
+      "url": "/agent/latest/packages/ext-walkdir-rs/0.1.3/index.json",
+      "description": "Directory traversal helpers for OS worlds (wrap std.os.fs.walk_glob_sorted_text_v1).",
+      "docs_url": "/agent/latest/packages/ext-walkdir-rs/0.1.3/index.json#docs"
     },
     {
       "name": "ext-web-crawl",
