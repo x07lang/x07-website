@@ -1,0 +1,81 @@
+---
+name: x07-run
+description: Canonical execution front door for X07 programs (run-os / run-os-sandboxed), producing runner reports.
+metadata:
+  short-description: Run programs (canonical)
+  version: 0.1.0
+  kind: docs
+---
+
+# x07-run
+
+Use this skill for normal program execution via `x07 run`.
+
+`x07 run` runs the canonical auto-repair loop by default (format → lint → quickfix, repeatable). Control it with:
+
+- `--repair=off`
+- `--repair=memory`
+- `--repair=write` (default)
+- `--repair-max-iters N` (default: 3)
+
+## Canonical commands
+
+- Run the current project (auto-discovers `x07.json`):
+  - `x07 run`
+
+- Run a specific project profile:
+  - `x07 run --profile os`
+  - `x07 run --profile sandbox`
+
+- Check platform prerequisites for OS worlds (C compiler + common native deps):
+  - `x07 doctor`
+
+- Generate a base sandbox policy:
+  - `x07 policy init --template cli`
+  - `x07 policy init --template http-client`
+  - `x07 policy init --template web-service`
+  - `x07 policy init --template fs-tool`
+  - `x07 policy init --template sqlite-app`
+  - `x07 policy init --template postgres-client`
+  - `x07 policy init --template worker`
+  - `x07 policy init --template worker-parallel`
+
+  Policies are starting points: review and extend them for your app (roots, env keys, subprocess allowlists, limits).
+  For net-enabled templates, keep `net.allow_hosts: []` in the base policy and use `--allow-host` / `--deny-host` to materialize derived policies for specific destinations.
+
+- Run policy-enforced OS world (requires a policy file):
+  - `x07 run --profile sandbox`
+
+- Materialize a derived policy with explicit network destinations (deny-by-default):
+  - `x07 run --profile sandbox --policy .x07/policies/base/http-client.sandbox.base.policy.json --allow-host example.com:443`
+  - `x07 run --profile sandbox --policy .x07/policies/base/http-client.sandbox.base.policy.json --allow-host example.com:80,443 --deny-host example.com:80`
+
+## Inputs
+
+Default is empty input bytes. Provide input via:
+
+- file: `x07 run --input input.bin`
+- stdin: `cat input.bin | x07 run --stdin`
+- base64: `x07 run --input-b64 <BASE64>`
+
+For CLI-style programs that expect `argv_v1`, pass process args after `--` and `x07 run` will encode them into input bytes:
+
+- `x07 run -- tool --help`
+- `x07 run --profile sandbox -- tool --url https://example.com --depth 2 --out out/results.txt`
+
+## Output contract
+
+- Default output is a runner report JSON object on stdout (parse based on `schema_version`).
+
+Optional wrapper (debuggable resolution envelope):
+
+- `x07 run --report wrapped`
+- Wrapper schema: `x07.run.report@0.1.0` (field `report` contains the raw runner report object).
+  - When repair is enabled, the wrapper includes a `repair` summary object.
+
+## Distribution (native executable)
+
+To produce a normal CLI executable (standard `argc/argv`, raw stdout) that runs without the X07 toolchain installed at runtime, use:
+
+- `x07 bundle --profile os --out dist/app`
+- `x07 bundle --profile sandbox --out dist/app` (policy enforced)

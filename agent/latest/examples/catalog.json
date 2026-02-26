@@ -234,6 +234,90 @@
       "url": "/agent/latest/examples/catalog-files/agent-gate/diff-patch/apply/src/main.x07.json"
     },
     {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/chain",
+      "purpose": "chain",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/chain.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/chain.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/context",
+      "purpose": "context",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/context.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/context.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/fmt",
+      "purpose": "fmt",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/fmt.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/fmt.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-error/0.1.4/modules/ext/error/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-fs/0.1.5/modules/std/os/fs",
+      "purpose": "fs",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-fs/0.1.5/modules/std/os/fs.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-fs/0.1.5/modules/std/os/fs.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-fs/0.1.5/modules/std/os/fs/spec",
+      "purpose": "spec",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-fs/0.1.5/modules/std/os/fs/spec.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-fs/0.1.5/modules/std/os/fs/spec.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-glob-rs/0.1.3/modules/ext/glob",
+      "purpose": "glob",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-glob-rs/0.1.3/modules/ext/glob.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-glob-rs/0.1.3/modules/ext/glob.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-glob-rs/0.1.3/modules/ext/glob/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-glob-rs/0.1.3/modules/ext/glob/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-glob-rs/0.1.3/modules/ext/glob/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/glob",
+      "purpose": "glob",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/glob.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/glob.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/globwalk/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/globwalk/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/globwalk/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/ignore",
+      "purpose": "ignore",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/ignore.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/ignore.x07.json"
+    },
+    {
+      "id": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/walk",
+      "purpose": "walk",
+      "scope": "nested",
+      "path": "agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/walk.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/fs-globwalk/list-files/.x07/deps/ext-path-glob-rs/0.1.3/modules/std/os/fs/walk.x07.json"
+    },
+    {
       "id": "agent-gate/fs-globwalk/list-files/src/app",
       "purpose": "app",
       "scope": "nested",
@@ -337,6 +421,195 @@
       "scope": "nested",
       "path": "agent-gate/text-unicode/normalize-casefold/src/main.x07.json",
       "url": "/agent/latest/examples/catalog-files/agent-gate/text-unicode/normalize-casefold/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-fs/0.1.5/modules/std/os/fs",
+      "purpose": "fs",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-fs/0.1.5/modules/std/os/fs.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-fs/0.1.5/modules/std/os/fs.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-fs/0.1.5/modules/std/os/fs/spec",
+      "purpose": "spec",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-fs/0.1.5/modules/std/os/fs/spec.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-fs/0.1.5/modules/std/os/fs/spec.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-html-lite-rs/0.1.2/modules/ext/html",
+      "purpose": "html",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-html-lite-rs/0.1.2/modules/ext/html.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-html-lite-rs/0.1.2/modules/ext/html.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-html-lite-rs/0.1.2/modules/ext/html/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-html-lite-rs/0.1.2/modules/ext/html/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-html-lite-rs/0.1.2/modules/ext/html/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/codec",
+      "purpose": "codec",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/codec.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/codec.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/dns",
+      "purpose": "dns",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/dns.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/dns.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/err",
+      "purpose": "err",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/err.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/err.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/client",
+      "purpose": "client",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/client.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/client.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/form_urlencoded",
+      "purpose": "form urlencoded",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/form_urlencoded.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/form_urlencoded.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/form_urlencoded/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/form_urlencoded/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/form_urlencoded/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/server",
+      "purpose": "server",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/server.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/server.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/spec",
+      "purpose": "spec",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/spec.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/http/spec.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/io",
+      "purpose": "io",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/io.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/io.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/tcp",
+      "purpose": "tcp",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/tcp.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/tcp.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/tls",
+      "purpose": "tls",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/tls.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/tls.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/udp",
+      "purpose": "udp",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/udp.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-net/0.1.9/modules/std/net/udp.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net",
+      "purpose": "net",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types",
+      "purpose": "http types",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse",
+      "purpose": "httparse",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode",
+      "purpose": "encode",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse",
+      "purpose": "parse",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json"
+    },
+    {
+      "id": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json"
     },
     {
       "id": "agent-gate/web-crawler-local/src/app",
