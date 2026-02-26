@@ -18,5 +18,5 @@ The `/agent` surface is **machine-first**: agents should consume JSON endpoints,
 
 ## Human docs
 
-- [Agent workflow](/docs/getting-started/agent-workflow/)
-- [Diagnostics & repair](/docs/toolchain/diagnostics-repair/)
+- [Agent workflow](../getting-started/agent-workflow.md)
+- [Diagnostics & repair](../toolchain/diagnostics-repair.md)
