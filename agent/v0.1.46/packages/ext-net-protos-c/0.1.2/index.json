@@ -1,0 +1,62 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-net-protos-c",
+  "version": "0.1.2",
+  "description": "HTTP/2 + WebSocket + gRPC helpers, pinned by arch/net contracts.",
+  "docs": "HTTP/2 + WebSocket + gRPC helpers pinned by arch/net contracts.\n\nModules:\n- std.net.http2\n- std.net.ws\n- std.net.grpc\n- std.net.protos.tests\n\nWorlds:\n- run-os / run-os-sandboxed only\n\nUsage:\n- Add dependency: x07 pkg add ext-net-protos-c@0.1.2\n- Use *_from_arch_v1 helpers with config under arch/net.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-byteorder-rs@0.1.4",
+      "ext-data-model@0.1.9",
+      "ext-json-rs@0.1.5"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.net.grpc",
+      "path": "std/net/grpc.x07.json",
+      "exports": [
+        "std.net.grpc.msg_compressed_flag_v1",
+        "std.net.grpc.msg_len_v1",
+        "std.net.grpc.msg_prefix_v1",
+        "std.net.grpc.msg_unprefix_v1",
+        "std.net.grpc.unary_from_arch_v1"
+      ]
+    },
+    {
+      "module_id": "std.net.http2",
+      "path": "std/net/http2.x07.json",
+      "exports": [
+        "std.net.http2.client_from_arch_v1"
+      ]
+    },
+    {
+      "module_id": "std.net.protos.tests",
+      "path": "std/net/protos/tests.x07.json",
+      "exports": [
+        "std.net.protos.tests.test_grpc_msg_prefix_v1",
+        "std.net.protos.tests.test_ws_frame_roundtrip_v1"
+      ]
+    },
+    {
+      "module_id": "std.net.ws",
+      "path": "std/net/ws.x07.json",
+      "exports": [
+        "std.net.ws.client_from_arch_v1",
+        "std.net.ws.frame_fin_v1",
+        "std.net.ws.frame_is_valid_v1",
+        "std.net.ws.frame_opcode_v1",
+        "std.net.ws.frame_payload_v1",
+        "std.net.ws.frame_v1"
+      ]
+    }
+  ]
+}
