@@ -1,90 +1,90 @@
 {
   "channels": {
     "stable": {
-      "toolchain": "v0.1.47",
-      "x07up": "v0.1.47"
+      "toolchain": "v0.1.48",
+      "x07up": "v0.1.48"
     }
   },
   "schema_version": "x07.install.channels@0.1.0",
   "toolchains": {
-    "v0.1.47": {
+    "v0.1.48": {
       "assets": {
         "aarch64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "f9b02d63232a9036fc722d5e133ef736597e4bf30abfff476dab5764a6a81dcb",
-          "size_bytes": 108466288,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07-v0.1.47-aarch64-apple-darwin.tar.gz"
+          "sha256": "236eea192916add0f94232377e392b937aecc6b67cae3aaa68bd759bdf83050b",
+          "size_bytes": 108456943,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07-v0.1.48-aarch64-apple-darwin.tar.gz"
         },
         "aarch64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "5a2e4c9265c33f86ad64ea932c71b97e80c5255f701781541b2ef178724ad35a",
-          "size_bytes": 114327841,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07-v0.1.47-aarch64-unknown-linux-gnu.tar.gz"
+          "sha256": "e170d745e8ac341d21bdee3343c38e8be4915b620a9557870fd5863f09779407",
+          "size_bytes": 114329487,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07-v0.1.48-aarch64-unknown-linux-gnu.tar.gz"
         },
         "x86_64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "6f56739e74ad85fb73dfc5ac15bd7093fb0f4f815904485bd37f340d38d1bc5d",
-          "size_bytes": 111181496,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07-v0.1.47-x86_64-apple-darwin.tar.gz"
+          "sha256": "a0808f976cb7642689a1b8807feaeeaaf4d13b7710b5d6f645ebf0364dfc951e",
+          "size_bytes": 111181018,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07-v0.1.48-x86_64-apple-darwin.tar.gz"
         },
         "x86_64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "f5066bb3c4310cc49e98cdfec8a6ce494d16c7c24e44e0aebeb08f1f830ae41b",
-          "size_bytes": 116959991,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07-v0.1.47-x86_64-unknown-linux-gnu.tar.gz"
+          "sha256": "8e7912b6160001cd2bbbf204031a5f433c54f66d4293b81b89c1e88f43e09bc9",
+          "size_bytes": 116964523,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07-v0.1.48-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
       "components": {
         "docs": {
           "format": "tar.gz",
-          "sha256": "6b8cd177a6d2a8c5bfbb5589f34dde8c96436181d538bd717e054c120be214e7",
+          "sha256": "fcfe3b4b092e4cdf3c583187fb20fdc89792ebf11fc2b87d4b96407ed8c62750",
           "size_bytes": 579386,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07-docs-v0.1.47.tar.gz"
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07-docs-v0.1.48.tar.gz"
         },
         "skills": {
           "format": "tar.gz",
-          "sha256": "2e3548a18da421c1beeec5682c12db508441ddee02081a1efa9144a2c1bda23b",
+          "sha256": "fd43728622f4d04ab4a52fb6628ca6d2d5aca9dd92cfcefd8b485d3f939606db",
           "size_bytes": 20827,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07-skills-v0.1.47.tar.gz"
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07-skills-v0.1.48.tar.gz"
         }
       },
       "min_required": {
-        "x07up": "v0.1.47"
+        "x07up": "v0.1.48"
       },
       "notes": "Stable release.",
-      "published_at": "2026-03-02T11:40:46Z"
+      "published_at": "2026-03-02T15:19:11Z"
     }
   },
-  "updated_at": "2026-03-02T11:40:46Z",
+  "updated_at": "2026-03-02T15:19:11Z",
   "x07up": {
-    "v0.1.47": {
+    "v0.1.48": {
       "assets": {
         "aarch64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "f213b89ca559e432723d988877a17823d1b0c6a5e3bb43bb2494352f8a01d830",
-          "size_bytes": 1875557,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07up-v0.1.47-aarch64-apple-darwin.tar.gz"
+          "sha256": "d37bec6e522df4768ad7453db90d491a3bc91a41f23b5565637aef4abf5f0370",
+          "size_bytes": 1875386,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07up-v0.1.48-aarch64-apple-darwin.tar.gz"
         },
         "aarch64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "0630500c3ad9ea35858476e68319d3daf3b5fe8b608625b60901b4d9fa9f073f",
-          "size_bytes": 2073723,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07up-v0.1.47-aarch64-unknown-linux-gnu.tar.gz"
+          "sha256": "4a2e00c0336f68eb41181439d9e4d7916061b91f8fd458faae6212c8a1ce3889",
+          "size_bytes": 2072667,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07up-v0.1.48-aarch64-unknown-linux-gnu.tar.gz"
         },
         "x86_64-apple-darwin": {
           "format": "tar.gz",
-          "sha256": "3ece2dccb529c294e79150f5e93c449e3a0be3920e41c7b6024a7b011164bfcc",
-          "size_bytes": 2012894,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07up-v0.1.47-x86_64-apple-darwin.tar.gz"
+          "sha256": "78dafef48bad82ce22addf7cbe496870c468666d5319168cee487b99b6ea9a64",
+          "size_bytes": 2013095,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07up-v0.1.48-x86_64-apple-darwin.tar.gz"
         },
         "x86_64-unknown-linux-gnu": {
           "format": "tar.gz",
-          "sha256": "63baa32443e030f6d37ea5bdc6f2c06d993b1d60ee176140290d32e9d9c1f91b",
-          "size_bytes": 2120853,
-          "url": "https://github.com/x07lang/x07/releases/download/v0.1.47/x07up-v0.1.47-x86_64-unknown-linux-gnu.tar.gz"
+          "sha256": "7bc32e7c19c50a647f16313bd7a0b1d331d66efbcf41050b152b31796f895f88",
+          "size_bytes": 2120784,
+          "url": "https://github.com/x07lang/x07/releases/download/v0.1.48/x07up-v0.1.48-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
-      "published_at": "2026-03-02T11:40:46Z"
+      "published_at": "2026-03-02T15:19:11Z"
     }
   }
 }
