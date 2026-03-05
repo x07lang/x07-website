@@ -1095,6 +1095,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-cbor-rs/0.1.7/index.json#docs"
     },
     {
+      "name": "ext-cbor-rs",
+      "version": "0.1.8",
+      "url": "/agent/latest/packages/ext-cbor-rs/0.1.8/index.json",
+      "description": "CBOR encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-cbor-rs/0.1.8/index.json#docs"
+    },
+    {
       "name": "ext-checksum-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-checksum-rs/0.1.0/index.json",
@@ -1214,6 +1221,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-cli/0.1.13/index.json#docs"
     },
     {
+      "name": "ext-cli",
+      "version": "0.1.14",
+      "url": "/agent/latest/packages/ext-cli/0.1.14/index.json",
+      "description": "Command-line argument parsing, help, and shell completion.",
+      "docs_url": "/agent/latest/packages/ext-cli/0.1.14/index.json#docs"
+    },
+    {
       "name": "ext-cli-ux",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-cli-ux/0.1.0/index.json",
@@ -1310,6 +1324,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-crypto-rs/0.1.4/index.json",
       "description": "SHA-256/SHA-512, HMAC-SHA256, and HKDF-SHA256 utilities.",
       "docs_url": "/agent/latest/packages/ext-crypto-rs/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-crypto-rs",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-crypto-rs/0.1.5/index.json",
+      "description": "SHA-256/SHA-512, HMAC-SHA256, and HKDF-SHA256 utilities.",
+      "docs_url": "/agent/latest/packages/ext-crypto-rs/0.1.5/index.json#docs"
     },
     {
       "name": "ext-csv-rs",
@@ -1471,6 +1492,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-data-model/0.1.9/index.json",
       "description": "Typed data model with JSON/TOML/YAML/XML/INI/CSV codecs.",
       "docs_url": "/agent/latest/packages/ext-data-model/0.1.9/index.json#docs"
+    },
+    {
+      "name": "ext-data-model",
+      "version": "0.1.10",
+      "url": "/agent/latest/packages/ext-data-model/0.1.10/index.json",
+      "description": "Typed data model with JSON/TOML/YAML/XML/INI/CSV codecs.",
+      "docs_url": "/agent/latest/packages/ext-data-model/0.1.10/index.json#docs"
     },
     {
       "name": "ext-db-core",
@@ -2054,6 +2082,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-json-rs/0.1.5/index.json#docs"
     },
     {
+      "name": "ext-json-rs",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-json-rs/0.1.6/index.json",
+      "description": "JSON canonicalization, JSON Pointer, and ext.data_model parsing.",
+      "docs_url": "/agent/latest/packages/ext-json-rs/0.1.6/index.json#docs"
+    },
+    {
       "name": "ext-jsonschema-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-jsonschema-rs/0.1.0/index.json",
@@ -2283,6 +2318,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-msgpack-rs/0.1.7/index.json",
       "description": "MessagePack encode/decode with ext.data_model integration.",
       "docs_url": "/agent/latest/packages/ext-msgpack-rs/0.1.7/index.json#docs"
+    },
+    {
+      "name": "ext-msgpack-rs",
+      "version": "0.1.8",
+      "url": "/agent/latest/packages/ext-msgpack-rs/0.1.8/index.json",
+      "description": "MessagePack encode/decode with ext.data_model integration.",
+      "docs_url": "/agent/latest/packages/ext-msgpack-rs/0.1.8/index.json#docs"
     },
     {
       "name": "ext-net",
@@ -2892,6 +2934,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-time-rs/0.1.5/index.json",
       "description": "Time utilities: durations, RFC 3339, and time zones (run-os only).",
       "docs_url": "/agent/latest/packages/ext-time-rs/0.1.5/index.json#docs"
+    },
+    {
+      "name": "ext-time-rs",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-time-rs/0.1.6/index.json",
+      "description": "Time utilities: durations, RFC 3339, and time zones (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-time-rs/0.1.6/index.json#docs"
     },
     {
       "name": "ext-toml-rs",
