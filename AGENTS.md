@@ -1,0 +1,19 @@
+# Repository Guide
+
+## Build and check
+
+- `python3 scripts/check_site.py --check`
+- `bash scripts/ci/check_all.sh`
+
+## Docs and installer sync workflow
+
+- `x07` is the canonical source for released docs and installer assets. Do not hand-edit synced docs unless the website layer itself is changing.
+- Preferred sync entry point for toolchain releases:
+  - `python3 ../x07/scripts/open_pr_website_update.py --tag vX.Y.Z ...`
+- Keep these published surfaces aligned with the released `x07` bundle:
+  - `docs/`
+  - `agent/`
+  - `site/static/install.sh`
+  - `site/static/install/channels.json`
+  - `site/static/install/channels/*.json`
+- After sync, run the site checks before pushing.
