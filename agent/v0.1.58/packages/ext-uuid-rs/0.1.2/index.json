@@ -1,0 +1,45 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-uuid-rs",
+  "version": "0.1.2",
+  "description": "UUID parsing and formatting.",
+  "docs": "UUID parsing and formatting.\n\nModules:\n- ext.uuid\n- ext.uuid.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-uuid-rs@0.1.2\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.uuid",
+      "path": "ext/uuid.x07.json",
+      "exports": [
+        "ext.uuid.uuid_err_code",
+        "ext.uuid.uuid_format",
+        "ext.uuid.uuid_get_bytes",
+        "ext.uuid.uuid_get_string",
+        "ext.uuid.uuid_is_err",
+        "ext.uuid.uuid_parse"
+      ]
+    },
+    {
+      "module_id": "ext.uuid.tests",
+      "path": "ext/uuid/tests.x07.json",
+      "exports": [
+        "ext.uuid.tests.test_parse_format_roundtrip",
+        "ext.uuid.tests.test_parse_invalid_hex",
+        "ext.uuid.tests.test_parse_invalid_hyphen",
+        "ext.uuid.tests.test_parse_invalid_len"
+      ]
+    }
+  ]
+}
