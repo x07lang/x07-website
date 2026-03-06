@@ -42,7 +42,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude '^https?://x07lang\\.org/'
+            --exclude ^https?://x07lang\\.org/
             --exclude-path docs/_overlays/site/agent-portal-contract.md
             "**/*.md"
           failIfEmpty: false
