@@ -1,0 +1,50 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-aho-corasick-rs",
+  "version": "0.1.0",
+  "description": "",
+  "docs": "",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "x07import"
+  },
+  "modules": [
+    {
+      "module_id": "ext.aho_corasick",
+      "path": "ext/aho_corasick.x07.json",
+      "exports": [
+        "ext.aho_corasick.code_compile_empty_needle",
+        "ext.aho_corasick.code_compile_invalid_needles",
+        "ext.aho_corasick.code_exec_invalid_compiled",
+        "ext.aho_corasick.compile",
+        "ext.aho_corasick.err_code",
+        "ext.aho_corasick.find",
+        "ext.aho_corasick.is_err",
+        "ext.aho_corasick.is_match",
+        "ext.aho_corasick.match_end",
+        "ext.aho_corasick.match_len",
+        "ext.aho_corasick.match_pat_id",
+        "ext.aho_corasick.match_start"
+      ]
+    },
+    {
+      "module_id": "ext.aho_corasick.tests",
+      "path": "ext/aho_corasick/tests.x07.json",
+      "exports": [
+        "ext.aho_corasick.tests.test_compile_empty_needle_err",
+        "ext.aho_corasick.tests.test_compile_find_standard",
+        "ext.aho_corasick.tests.test_exec_invalid_compiled_err"
+      ]
+    }
+  ]
+}

@@ -683,6 +683,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-website.package-index.schema.json"
     },
     {
+      "id": "x07.component.release@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.component.release@0.1.0.schema.json"
+    },
+    {
       "id": "x07.contract.repro@0.1.0.schema.json",
       "url": "/agent/latest/schemas/x07.contract.repro@0.1.0.schema.json"
     },
@@ -705,6 +709,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07.pbt.repro@0.1.0.schema.json",
       "url": "/agent/latest/schemas/x07.pbt.repro@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.release.bundle@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.release.bundle@0.1.0.schema.json"
     },
     {
       "id": "x07.verify.cex@0.1.0.schema.json",
