@@ -38,10 +38,10 @@
         "x07up": "v0.1.65"
       },
       "notes": "Stable release.",
-      "published_at": "2026-03-07T09:37:53Z"
+      "published_at": "2026-03-07T10:11:43Z"
     }
   },
-  "updated_at": "2026-03-07T09:37:53Z",
+  "updated_at": "2026-03-07T10:11:43Z",
   "x07up": {
     "v0.1.65": {
       "assets": {
@@ -70,7 +70,7 @@
           "url": "https://github.com/x07lang/x07/releases/download/v0.1.65/x07up-v0.1.65-x86_64-unknown-linux-gnu.tar.gz"
         }
       },
-      "published_at": "2026-03-07T09:37:53Z"
+      "published_at": "2026-03-07T10:11:43Z"
     }
   }
 }

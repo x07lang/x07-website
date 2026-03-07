@@ -7,7 +7,7 @@
   "published_at_utc": "2026-03-07T05:59:01Z",
   "schema_version": "x07.release.bundle@0.1.0",
   "x07_core": {
-    "release_manifest_sha256": "sha256:ab54b54ee398209881b1e6a96ed3d5a0ed0bd87d79f425bb83159cc8f1276652",
+    "release_manifest_sha256": "sha256:f1bdd738349732dd8a5122c88cf28c4f65d0de51bafa694059d39707302defe4",
     "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.1.65/x07-0.1.65-release.json",
     "tag": "v0.1.65",
     "version": "0.1.65"
