@@ -1,0 +1,58 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-db-sqlite",
+  "version": "0.1.7",
+  "description": "SQLite driver for std.db (run-os only).",
+  "docs": "SQLite driver for std.db (run-os only).\n\nModules:\n- std.db.sqlite\n- std.db.sqlite.spec\n- std.db.sqlite.pool\n\nUsage:\n- Add dependency: x07 pkg add ext-db-sqlite@0.1.7\n- Import the modules listed above.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "requires_packages": [
+      "ext-db-core@0.1.7"
+    ],
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "std.db.sqlite",
+      "path": "std/db/sqlite.x07.json",
+      "exports": [
+        "std.db.sqlite.caps_default_v1",
+        "std.db.sqlite.close_v1",
+        "std.db.sqlite.exec_v1",
+        "std.db.sqlite.open_path_v1",
+        "std.db.sqlite.open_v1",
+        "std.db.sqlite.query_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.sqlite.pool",
+      "path": "std/db/sqlite/pool.x07.json",
+      "exports": [
+        "std.db.sqlite.pool.close_v1",
+        "std.db.sqlite.pool.exec0_async_v1",
+        "std.db.sqlite.pool.new_path_v1",
+        "std.db.sqlite.pool.query0_async_v1"
+      ]
+    },
+    {
+      "module_id": "std.db.sqlite.spec",
+      "path": "std/db/sqlite/spec.x07.json",
+      "exports": [
+        "std.db.sqlite.spec.caps_default_v1",
+        "std.db.sqlite.spec.caps_pack_v1",
+        "std.db.sqlite.spec.close_req_v1",
+        "std.db.sqlite.spec.exec_req_v1",
+        "std.db.sqlite.spec.flags_none_v1",
+        "std.db.sqlite.spec.open_flag_create_v1",
+        "std.db.sqlite.spec.open_flag_readonly_v1",
+        "std.db.sqlite.spec.open_req_path_v1",
+        "std.db.sqlite.spec.query_req_v1"
+      ]
+    }
+  ]
+}
