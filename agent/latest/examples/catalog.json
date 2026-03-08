@@ -1541,6 +1541,104 @@
       "scope": "nested",
       "path": "tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests.x07.json",
       "url": "/agent/latest/examples/catalog-files/tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_atlas/backend/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_atlas/backend/src/app.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_atlas/backend/src/app.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_atlas/backend/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_atlas/backend/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_atlas/backend/src/main.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_atlas/backend/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_atlas/backend/tests/smoke.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_atlas/backend/tests/smoke.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_atlas/frontend/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_atlas/frontend/src/app.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_atlas/frontend/src/app.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_atlas/frontend/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_atlas/frontend/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_atlas/frontend/src/main.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_atlas/frontend/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_atlas/frontend/tests/smoke.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_atlas/frontend/tests/smoke.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_field_notes/frontend/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_field_notes/frontend/src/app.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/app.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_field_notes/frontend/src/helpers",
+      "purpose": "helpers",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_field_notes/frontend/src/helpers.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/helpers.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_field_notes/frontend/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_field_notes/frontend/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/main.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_field_notes/frontend/src/ui",
+      "purpose": "ui",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_field_notes/frontend/src/ui.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/ui.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_field_notes/frontend/tests/smoke",
+      "purpose": "smoke",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_field_notes/frontend/tests/smoke.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_field_notes/frontend/tests/smoke.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_studio/frontend/src/app",
+      "purpose": "app",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_studio/frontend/src/app.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_studio/frontend/src/app.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_studio/frontend/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_studio/frontend/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_studio/frontend/src/main.x07.json"
+    },
+    {
+      "id": "wasm_showcases/x07_studio/frontend/tests/studio_tests",
+      "purpose": "studio tests",
+      "scope": "nested",
+      "path": "wasm_showcases/x07_studio/frontend/tests/studio_tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/wasm_showcases/x07_studio/frontend/tests/studio_tests.x07.json"
     }
   ]
 }

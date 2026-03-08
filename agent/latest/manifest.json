@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.1.66",
-  "docs_bundle_sha256": "4f33745cb101c4159c70b9e09b156d5a48c3066c902ba8c224f37018ee0f52af",
+  "docs_bundle_sha256": "2998f659c2a3a1e93926edc47b2d6cff9859c7eadc53470d2adee5e19441258c",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -3309,6 +3309,446 @@
       "size": 63
     },
     {
+      "path": "examples/wasm_showcases/index.md",
+      "sha256": "b59d8b57cecc4ce6067c77a018fe0e5dbb283edc90508f72afe5d5e76b49099f",
+      "size": 847
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/PROMPT.md",
+      "sha256": "debe4fc767fcf61e9aa80ba7ebf2bd3823140a3f25f290db8e62798c0c11f22f",
+      "size": 2371
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/README.md",
+      "sha256": "4a1a6dc3ad0f90b72a5b902f41ccb29819ade9e6a595eb4f8b00a0b5a8832b81",
+      "size": 2694
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/index.x07app.json",
+      "sha256": "a71850450b34208468ddaa85d629226405725a5bc2569ead00ccaf8a4f079373",
+      "size": 357
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/ops/caps_dev.json",
+      "sha256": "b074df3737215ad24ef72332a0442cf6f4614b75b3b72eac58a9ffe618ca11d8",
+      "size": 411
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/ops/caps_release.json",
+      "sha256": "80f4864f49934cf145b724d8e6bfa453fd2863f6a5b75dd69708652cb58a36ca",
+      "size": 415
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/ops/index.x07ops.json",
+      "sha256": "9592005db368747d6a5d4b09f4f1658f1a6585dc984087e132f82dfe4a6c2299",
+      "size": 296
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/ops/ops_dev.json",
+      "sha256": "3712a773b6c944bbd418f41e9e55dab0fef301c262693c842a5534939c8b6496",
+      "size": 526
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/ops/ops_release.json",
+      "sha256": "bbc9fd4916cc646cb766835854ba9ea9aa876a4761541d8eb61176d41cb033c9",
+      "size": 938
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/profiles/atlas_budget.json",
+      "sha256": "92de856ac28db8c30fbe0666c0938b58b1dda4546b782756a4a056af52a2e8ba",
+      "size": 902
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/profiles/atlas_dev.json",
+      "sha256": "73c63996657b47c376a559d4f377a5a67deaa2e6232792b4f8557afdbedc1e70",
+      "size": 901
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/app/profiles/atlas_release.json",
+      "sha256": "26ad2762dc7f2b1d07862a83901f64694e68cdae37d8488bfdbd1e4a9d747049",
+      "size": 908
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/slo/slo_min.json",
+      "sha256": "41233af4d4e495b46776413612d402551be0a9022c25e7f34a20afbebee0c824",
+      "size": 631
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/index.x07wasm.json",
+      "sha256": "6b0794f03a535b2c6c8381f2c86159f722a3c199a601b5e61801f94e3dae81ff",
+      "size": 964
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_debug.json",
+      "sha256": "c45e6695fb757d99ea8478f3c6895b75820ff8907ccd3f77d0c8932711c211c3",
+      "size": 1073
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_release.json",
+      "sha256": "18eaf4d40004d79e12a6a2f143194ef7f241772c8da8b61f127fe15d59e0c09c",
+      "size": 1136
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_release_cached.json",
+      "sha256": "6cf8dd43e6e9003286c9949055e64f9ed5e4c9dd14e8074aacbe8b78275b71a6",
+      "size": 1207
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_release_pooling.json",
+      "sha256": "7343d0c0814c70488bef6cdb425c1af0db98848e63041dd6992396e75dce7d57",
+      "size": 1182
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_web_ui_debug.json",
+      "sha256": "01a9a83d890d00f85c5938974049b008b1c0ff98ffa08c2f42cf4ab7a954344e",
+      "size": 1075
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_web_ui_release.json",
+      "sha256": "bfe52f69a8527be7a0718a678047e7ada6332c8cbb491bb9b19828011f7ac8ab",
+      "size": 1140
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_web_ui_release_cached.json",
+      "sha256": "b666e862ef86f3db373acfa73e8d64d7f2d271476e6ecd611d97e4ea247f4766",
+      "size": 1211
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/wasm/profiles/wasm_web_ui_release_pooling.json",
+      "sha256": "e7eea6bb6ff642d1d431ae69f101f188e7d067cd6d20c4daab999434c22f2c85",
+      "size": 1186
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/web_ui/index.x07webui.json",
+      "sha256": "9eb84896eb54f5f3d4a12ecd7399d411cafb05ab995147437b2417f3f35d58e4",
+      "size": 335
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/web_ui/profiles/web_ui_debug.json",
+      "sha256": "76257479cb2b53fb7dcf573b522c0bfd02bd1e08743c58454c1e066b4b771c21",
+      "size": 385
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/arch/web_ui/profiles/web_ui_release.json",
+      "sha256": "e9fe02ebd494fb0c79ed4f4341d414f83270f98205820fbd6084b8b273bb405d",
+      "size": 390
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/backend/src/app.x07.json",
+      "sha256": "f44cfb7f16f0f6cb5fae6336c4360b824142d264ee424318a108666d8dad2c32",
+      "size": 17244
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/backend/src/main.x07.json",
+      "sha256": "5a2c140fcb5808e5779b2997fe662f8719d29cd1ea90c6bcfb1cf79a54680677",
+      "size": 131
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/backend/tests/smoke.x07.json",
+      "sha256": "e97c5b9b4698e1c8a95fa3b888b6fa8b26ae0f2eccff77361b1ba814d3ebc4d2",
+      "size": 243
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/backend/tests/tests.json",
+      "sha256": "676a708ea950bef67f0d11172772da77f57858f57508575f16cf2588bab1d57d",
+      "size": 184
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/backend/x07.json",
+      "sha256": "7ada2c79b0c4cc240790569f82a5eb93b15370f31470e0b0e31591778214b9a9",
+      "size": 178
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/backend/x07.lock.json",
+      "sha256": "3381e3077b949a91303e2553042cb35ed7bd76fcbc613b9ae039f1bc93b4da24",
+      "size": 63
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/frontend/src/app.x07.json",
+      "sha256": "b46e0067a19323835a4cbbb4d9c89af79ba5fa4fbe668a811f47d9a32f68a863",
+      "size": 19987
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/frontend/src/main.x07.json",
+      "sha256": "ea3afe6b9b0d401e127d20b827500fb588f79630fc8f2762c00afc0cc7c7ede8",
+      "size": 133
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/frontend/tests/smoke.x07.json",
+      "sha256": "e97c5b9b4698e1c8a95fa3b888b6fa8b26ae0f2eccff77361b1ba814d3ebc4d2",
+      "size": 243
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/frontend/tests/tests.json",
+      "sha256": "676a708ea950bef67f0d11172772da77f57858f57508575f16cf2588bab1d57d",
+      "size": 184
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/frontend/x07.json",
+      "sha256": "24a7679e09895deea06839a1c78d277f6f31a033c1ae533354ff5b9f8b3fd835",
+      "size": 301
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/frontend/x07.lock.json",
+      "sha256": "51b309e59f3a86d361eed858d560b24268c2a2cc7f4ac7cf539b8b29a8918bb7",
+      "size": 1453
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/README.md",
+      "sha256": "de93edeca32e5006c59cfdafdc27c61021a748c0f177f36450586a4e67dde369",
+      "size": 669
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/fixtures/metrics/atlas_canary_ok.json",
+      "sha256": "a7a1879aefbdbdd3b8cdafc99d62524e0c8b42520d2d0f5497068135149ff4d9",
+      "size": 484
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/regress/.gitkeep",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size": 1
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/regress/atlas_incident.final.ui.json",
+      "sha256": "f151cbd315cbd2dfa0d1565880e811df66b058bee2c3d186070f6ff6024233de",
+      "size": 11373
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/regress/atlas_incident.trace.json",
+      "sha256": "8b5f9bda466e9a0b247814bdad97de17df99ef99788bdb5a164aaf7d124d9109",
+      "size": 16609
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/traces/happy_path.trace.json",
+      "sha256": "ff038eddbe2c106d6f49874630d41c49878e51ecb8c5869f637f970007d74b8c",
+      "size": 84660
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/traces/incident_seed.trace.json",
+      "sha256": "fc599b372a72aa7e271bd5ff1e39f426e92bb1fc04e0ebde05f6461723a74890",
+      "size": 16384
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/traces/perf_budget.trace.json",
+      "sha256": "ce4476993b35822ea6a91fd625ccc950f6f5a1c6bab014bd24a272438272654b",
+      "size": 16646
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/tests/traces/validation_error.trace.json",
+      "sha256": "e9afa84d232679df1fe6335053f20b366f29e312b1a36d1861b7065173ac54b0",
+      "size": 69803
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/PROMPT.md",
+      "sha256": "19608594a54950eed5a235a63b189fdcf042881d9939365e1da2a15028c26691",
+      "size": 1603
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/README.md",
+      "sha256": "eea0b69fe417a908c362f5f93acda086a301fc4acc2241ca2fb33d135a8933b6",
+      "size": 2598
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/device/index.x07device.json",
+      "sha256": "224f0bd7efd28be05ed06236aef8e256ad8f57d44cf10fbbc857530d1b7ebe14",
+      "size": 454
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/device/profiles/device_android_dev.json",
+      "sha256": "c551ee1cbe7b7ce300f5e3f4f5619872d37ec418513265bdddc1112cfafb1ccd",
+      "size": 1048
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/device/profiles/device_desktop_dev.json",
+      "sha256": "d9d4fd35153395918e97e30e3a9f3f7c2800140354ef18ffbf1b9d7460030b8b",
+      "size": 1064
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/device/profiles/device_ios_dev.json",
+      "sha256": "7cc40259a5b53ef42b5f9d8aaee0d2d54e32e68afd12ccec417cbbfb9389b560",
+      "size": 1000
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/wasm/index.x07wasm.json",
+      "sha256": "6e833ea77675e9b04427e4928142b0c272e4c50f456217bb8af403c4eaec603c",
+      "size": 243
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/wasm/profiles/wasm_web_ui_debug.json",
+      "sha256": "a00811c6b110044bc6effb67acce8fad8f8217802f60da5fbcfc9fe1a8387988",
+      "size": 1066
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/web_ui/index.x07webui.json",
+      "sha256": "500b020971eb64f452905af3962c84f3b0deef7f15dc2e85d7322735fbe7822a",
+      "size": 232
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/arch/web_ui/profiles/web_ui_debug.json",
+      "sha256": "93c8260af93f78086ed66653ac7c92fc9675c49f8527b26ee58c6b6146020c28",
+      "size": 384
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/docs/MOBILE_BUILD.md",
+      "sha256": "912fc501f9d3ede62785635f700486768acff5671526bd97ad0d8dbd9a0c8198",
+      "size": 3568
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/src/app.x07.json",
+      "sha256": "b956c1f807c3beeb6e2e23534ebd72382bc79da26879332e11c530cc9414f43e",
+      "size": 88173
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/src/helpers.x07.json",
+      "sha256": "40ff8780c8379c5a7999a2b63d95e77f11ac1981bf5f31a2399afb17254a7dfd",
+      "size": 6527
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/src/main.x07.json",
+      "sha256": "ea3afe6b9b0d401e127d20b827500fb588f79630fc8f2762c00afc0cc7c7ede8",
+      "size": 133
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/src/ui.x07.json",
+      "sha256": "9478e57f9559f16d52720b59fdece6cd8b5e24bed344ee573d97ac08a9235b79",
+      "size": 4067
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/tests/smoke.x07.json",
+      "sha256": "e97c5b9b4698e1c8a95fa3b888b6fa8b26ae0f2eccff77361b1ba814d3ebc4d2",
+      "size": 243
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/tests/tests.json",
+      "sha256": "676a708ea950bef67f0d11172772da77f57858f57508575f16cf2588bab1d57d",
+      "size": 184
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/x07.json",
+      "sha256": "89689a8142fb8837152036feca15ed531f59da1182bc4a2c0970464f2c846f97",
+      "size": 301
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/frontend/x07.lock.json",
+      "sha256": "51b309e59f3a86d361eed858d560b24268c2a2cc7f4ac7cf539b8b29a8918bb7",
+      "size": 1453
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/tests/README.md",
+      "sha256": "9045a9c63ea71b76b38667e04ed794b6ce0bfe91e6b0880fbb5277085e5eff25",
+      "size": 570
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/tests/web_ui/notes_edit.trace.json",
+      "sha256": "ba01d2c57c67e81f76331f89941c8ba0f13e6dd2b3da239dae438511ba544a8b",
+      "size": 468766
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/tests/web_ui/storage_reload.trace.json",
+      "sha256": "f9213a75a6a6cae813f6a9727ad7f4b7f55a8ac6f2c4b0ad1b3383eb0ff1f2a4",
+      "size": 101289
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/tests/web_ui/sync_error.trace.json",
+      "sha256": "fc01649bf37f9068462f8fd7cb5945f3ee95020fd1671dabf1166a634a26c3d1",
+      "size": 208399
+    },
+    {
+      "path": "examples/wasm_showcases/x07_field_notes/tests/web_ui/sync_success.trace.json",
+      "sha256": "b5aa9630a81cdf8cdc3d2676c3795640cd34ddb416eaf1cbf7560802fc926630",
+      "size": 208352
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/PROMPT.md",
+      "sha256": "d06f7f2177da5c7b08ca57d62ce5fd0e18685a51541123f659cb5ea5a4894724",
+      "size": 1640
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/README.md",
+      "sha256": "542d53e75ff0280ef551c4dcd8b37f69693c047a30eea0ef66ba14b78e763f2d",
+      "size": 2056
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/device/index.x07device.json",
+      "sha256": "3141d430a110b646f74d6d500451c37d9db2e5b0b88bfd74b7f22259c5e7269e",
+      "size": 326
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/device/profiles/device_dev.json",
+      "sha256": "becd24f88bf00da4182c645fbee9861f9979b85f0736aae19eec4f3612004a41",
+      "size": 811
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/device/profiles/device_release.json",
+      "sha256": "6fd8f72aea5cfdd95ba8a6fe8f32a843436defecbbf8e5773f9245dc17f85a0a",
+      "size": 834
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/wasm/index.x07wasm.json",
+      "sha256": "230cadd7e83563e490ada0716da1bfc5ed55aa47d423e1e04496f3a182686681",
+      "size": 353
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/wasm/profiles/wasm_web_ui_debug.json",
+      "sha256": "a00811c6b110044bc6effb67acce8fad8f8217802f60da5fbcfc9fe1a8387988",
+      "size": 1066
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/wasm/profiles/wasm_web_ui_release.json",
+      "sha256": "3b89e111bc04bb5e219ac5a8998ba10c0699d59c8f29e176b37405d8fe57a69c",
+      "size": 1130
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/web_ui/index.x07webui.json",
+      "sha256": "6ea1f3c505638a297a5b8e540c368fe23f5068b356b53a5cf29e9b7d908f21cc",
+      "size": 334
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/web_ui/profiles/web_ui_debug.json",
+      "sha256": "93c8260af93f78086ed66653ac7c92fc9675c49f8527b26ee58c6b6146020c28",
+      "size": 384
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/arch/web_ui/profiles/web_ui_release.json",
+      "sha256": "4f894d5ed3e7f4f11405c237d628d1e13f428883ada6479330fa3c0d50a6b334",
+      "size": 389
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/frontend/src/app.x07.json",
+      "sha256": "300f6a52dc1c496c208124d6cc46f80cfdcfb9df46b6567a53aabf481c727c10",
+      "size": 145428
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/frontend/src/main.x07.json",
+      "sha256": "ea3afe6b9b0d401e127d20b827500fb588f79630fc8f2762c00afc0cc7c7ede8",
+      "size": 133
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/frontend/tests/studio_tests.x07.json",
+      "sha256": "52db6e5a80b08949ba2ba56d106729a9fb51e79daa248168cca28f1f7db399ae",
+      "size": 22740
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/frontend/tests/tests.json",
+      "sha256": "54c9d9989d9cd475f78dfd96010ce9a3cbc24449648d8ba4c222e2380ee7c1ae",
+      "size": 1072
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/frontend/x07.json",
+      "sha256": "89689a8142fb8837152036feca15ed531f59da1182bc4a2c0970464f2c846f97",
+      "size": 301
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/frontend/x07.lock.json",
+      "sha256": "51b309e59f3a86d361eed858d560b24268c2a2cc7f4ac7cf539b8b29a8918bb7",
+      "size": 1453
+    },
+    {
+      "path": "examples/wasm_showcases/x07_studio/tests/README.md",
+      "sha256": "b42801c49d46f37066b46eef1e972015f6546de9b33d02cca5201c3f06cc0683",
+      "size": 445
+    },
+    {
       "path": "faq.md",
       "sha256": "e5660ac77d1759e957c6b6744066a88d110bad11966de530e4788da6a33f42f7",
       "size": 3766
@@ -4700,8 +5140,8 @@
     },
     {
       "path": "toolchain/wasm.md",
-      "sha256": "9b4bd080b5173e3aff479c0683507327079dc58aaa0ba569a59ecfc1401c0dfd",
-      "size": 17417
+      "sha256": "57ca022c90409b3f3b08a3a7830a2eb03fa56046f4dfdced599000eaa05f14bc",
+      "size": 18196
     },
     {
       "path": "versioning-policy.md",
@@ -5951,9 +6391,79 @@
       "size": 1006
     },
     {
+      "path": "examples/catalog-files/wasm_showcases/x07_atlas/backend/src/app.x07.json",
+      "sha256": "f44cfb7f16f0f6cb5fae6336c4360b824142d264ee424318a108666d8dad2c32",
+      "size": 17244
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_atlas/backend/src/main.x07.json",
+      "sha256": "5a2c140fcb5808e5779b2997fe662f8719d29cd1ea90c6bcfb1cf79a54680677",
+      "size": 131
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_atlas/backend/tests/smoke.x07.json",
+      "sha256": "e97c5b9b4698e1c8a95fa3b888b6fa8b26ae0f2eccff77361b1ba814d3ebc4d2",
+      "size": 243
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_atlas/frontend/src/app.x07.json",
+      "sha256": "b46e0067a19323835a4cbbb4d9c89af79ba5fa4fbe668a811f47d9a32f68a863",
+      "size": 19987
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_atlas/frontend/src/main.x07.json",
+      "sha256": "ea3afe6b9b0d401e127d20b827500fb588f79630fc8f2762c00afc0cc7c7ede8",
+      "size": 133
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_atlas/frontend/tests/smoke.x07.json",
+      "sha256": "e97c5b9b4698e1c8a95fa3b888b6fa8b26ae0f2eccff77361b1ba814d3ebc4d2",
+      "size": 243
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/app.x07.json",
+      "sha256": "b956c1f807c3beeb6e2e23534ebd72382bc79da26879332e11c530cc9414f43e",
+      "size": 88173
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/helpers.x07.json",
+      "sha256": "40ff8780c8379c5a7999a2b63d95e77f11ac1981bf5f31a2399afb17254a7dfd",
+      "size": 6527
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/main.x07.json",
+      "sha256": "ea3afe6b9b0d401e127d20b827500fb588f79630fc8f2762c00afc0cc7c7ede8",
+      "size": 133
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_field_notes/frontend/src/ui.x07.json",
+      "sha256": "9478e57f9559f16d52720b59fdece6cd8b5e24bed344ee573d97ac08a9235b79",
+      "size": 4067
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_field_notes/frontend/tests/smoke.x07.json",
+      "sha256": "e97c5b9b4698e1c8a95fa3b888b6fa8b26ae0f2eccff77361b1ba814d3ebc4d2",
+      "size": 243
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_studio/frontend/src/app.x07.json",
+      "sha256": "300f6a52dc1c496c208124d6cc46f80cfdcfb9df46b6567a53aabf481c727c10",
+      "size": 145428
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_studio/frontend/src/main.x07.json",
+      "sha256": "ea3afe6b9b0d401e127d20b827500fb588f79630fc8f2762c00afc0cc7c7ede8",
+      "size": 133
+    },
+    {
+      "path": "examples/catalog-files/wasm_showcases/x07_studio/frontend/tests/studio_tests.x07.json",
+      "sha256": "52db6e5a80b08949ba2ba56d106729a9fb51e79daa248168cca28f1f7db399ae",
+      "size": 22740
+    },
+    {
       "path": "examples/catalog.json",
-      "sha256": "97776c29d8764e0b4e96692ced0ea4ad24be1702cbb64ba03b68e828671174ac",
-      "size": 72941
+      "sha256": "16c0202cb017e654742c502bb7b2317f397ff24416eb23f3d8ca90a981daf7e0",
+      "size": 77217
     },
     {
       "path": "examples/index.json",
@@ -5962,7 +6472,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "d44025e5246f8a949f71f035bc0b809d13e6f0a962a87fadf0cea120c2b04cd2",
+      "sha256": "8c23d954f3b03d6e5fcc5ffa64549131b693fbd28efa7606431f4f4b355640a7",
       "size": 661
     },
     {
