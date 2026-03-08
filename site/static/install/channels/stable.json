@@ -7,7 +7,7 @@
   "published_at_utc": "2026-03-08T16:28:00Z",
   "schema_version": "x07.release.bundle@0.1.0",
   "x07_core": {
-    "release_manifest_sha256": "sha256:9146eddb06d16715fb121eb607d87c49518b98974e48f3cbca59c9dc8177bdec",
+    "release_manifest_sha256": "sha256:78ff8015356e9fc05b1412eba1cb2d419815facd151be748d1b1bd7f8610d8d3",
     "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.1.68/x07-0.1.68-release.json",
     "tag": "v0.1.68",
     "version": "0.1.68"
