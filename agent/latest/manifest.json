@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.1.69",
-  "docs_bundle_sha256": "2468394e23d4653b8866796fa0b121ba6c82eeead86b5ddc368cc65f8f469554",
+  "docs_bundle_sha256": "8126e38a9eef69f644db97b71a591aff3b9787bef4d260d8bf6947d2ed97ada3",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -3494,31 +3494,6 @@
       "size": 1453
     },
     {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/app/atlas_dev/backend/component.build.report.json",
-      "sha256": "45e52559916994eebfacd26be9f86f04a3034fec258dca310a0c71fef5fc7e2b",
-      "size": 1047
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/app/atlas_dev/frontend/web-ui.build.report.json",
-      "sha256": "c8244644c7af378c95b278ff3ef3e7ba3099f475c5c226129c415367df1adb06",
-      "size": 4119
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/program.c",
-      "sha256": "f655a4b170cdbb3593332a809aa2e20fac61f6bcc2e587177d9ee66f5de4d497",
-      "size": 544264
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/wasm.build.report.json",
-      "sha256": "11c73835d2c0c3b388a52bc276ab5773294ef84caf4db3fd00426fa96fc97809",
-      "size": 4476
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/x07.h",
-      "sha256": "efd8be4c27cd0eb3b9a2ced1dc70beba24371b1bbd3a3b322b0db32161683ab2",
-      "size": 701
-    },
-    {
       "path": "examples/wasm_showcases/x07_atlas/tests/README.md",
       "sha256": "de93edeca32e5006c59cfdafdc27c61021a748c0f177f36450586a4e67dde369",
       "size": 669
@@ -6497,7 +6472,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "f7f7063d3684926db5e5d88d12a7042420addee2508d1c236a7043c0187913d3",
+      "sha256": "4ef0f48a39df97f33fcc3f011bce5cab32dba515920c19ee2b7ec1474ba6bf4b",
       "size": 661
     },
     {

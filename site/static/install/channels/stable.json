@@ -7,7 +7,7 @@
   "published_at_utc": "2026-03-09T03:45:31Z",
   "schema_version": "x07.release.bundle@0.1.0",
   "x07_core": {
-    "release_manifest_sha256": "sha256:a62b9813f066d1c6c0c993032dd239757c7622c8e152dc7971eab4829a6eeef7",
+    "release_manifest_sha256": "sha256:84756a80a829abf1f76dda45f796e9ee8e2021483dda820e73586cfa1c0e724f",
     "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.1.69/x07-0.1.69-release.json",
     "tag": "v0.1.69",
     "version": "0.1.69"
