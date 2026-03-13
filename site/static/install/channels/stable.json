@@ -1,33 +1,33 @@
 {
   "channel": "stable",
-  "min_x07up_version": "0.1.73",
+  "min_x07up_version": "0.1.74",
   "packages": {
-    "std_web_ui": "0.2.5"
+    "std_web_ui": "0.2.6"
   },
-  "published_at_utc": "2026-03-12T18:57:21Z",
+  "published_at_utc": "2026-03-13T14:38:13Z",
   "schema_version": "x07.release.bundle@0.1.0",
   "x07_core": {
-    "release_manifest_sha256": "sha256:26ddfdf014dc2b6e7ed7b9c059d386b51e133c8d1bfb07fe2e0fa6b413db8282",
-    "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.1.73/x07-0.1.73-release.json",
-    "tag": "v0.1.73",
-    "version": "0.1.73"
+    "release_manifest_sha256": "sha256:d82c48f088591addf5fb958a073c0f76e71282713f8efd2a56a96df24d311f97",
+    "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.1.74/x07-0.1.74-release.json",
+    "tag": "v0.1.74",
+    "version": "0.1.74"
   },
   "x07_device_host": {
-    "release_manifest_sha256": "sha256:c49586b02cb92ccf47b99d115943f5be20d5e281d17c6f631cd1c83ac1abf912",
-    "release_manifest_url": "https://github.com/x07lang/x07-device-host/releases/download/v0.2.4/x07-device-host-0.2.4-release.json",
-    "tag": "v0.2.4",
-    "version": "0.2.4"
-  },
-  "x07_wasm": {
-    "release_manifest_sha256": "sha256:326da72753b69a5379dabe41640de2a37a84568a7487665dee507a6a358c889a",
-    "release_manifest_url": "https://github.com/x07lang/x07-wasm-backend/releases/download/v0.2.7/x07-wasm-0.2.7-release.json",
-    "tag": "v0.2.7",
-    "version": "0.2.7"
-  },
-  "x07_web_ui_host": {
-    "release_manifest_sha256": "sha256:5ce19cabf3cc9782985515cd927e59d6dac2c65e8753975483cf2f6ebd45bda8",
-    "release_manifest_url": "https://github.com/x07lang/x07-web-ui/releases/download/v0.2.5/x07-web-ui-host-0.2.5-release.json",
+    "release_manifest_sha256": "sha256:5a5eb0170fba42457ba18209adde5a9d6dff4d359443054b6ada3ad17ee3ba09",
+    "release_manifest_url": "https://github.com/x07lang/x07-device-host/releases/download/v0.2.5/x07-device-host-0.2.5-release.json",
     "tag": "v0.2.5",
     "version": "0.2.5"
+  },
+  "x07_wasm": {
+    "release_manifest_sha256": "sha256:e6d6255309bb7620e5a4933a346eeca7ff7c39a3e8cc9f1ed2bbda554585ac2c",
+    "release_manifest_url": "https://github.com/x07lang/x07-wasm-backend/releases/download/v0.2.8/x07-wasm-0.2.8-release.json",
+    "tag": "v0.2.8",
+    "version": "0.2.8"
+  },
+  "x07_web_ui_host": {
+    "release_manifest_sha256": "sha256:e9844460f5e814946b9d683a5d03ab1ebf0949f8343634480fe5b5c11ec2b7f8",
+    "release_manifest_url": "https://github.com/x07lang/x07-web-ui/releases/download/v0.2.6/x07-web-ui-host-0.2.6-release.json",
+    "tag": "v0.2.6",
+    "version": "0.2.6"
   }
 }
