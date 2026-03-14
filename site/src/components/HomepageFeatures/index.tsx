@@ -10,32 +10,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Built for AI agents',
+    title: 'Memory-safe defaults, not guesswork',
     description: (
       <>
-        Most languages optimize for human ergonomics. X07 optimizes for
-        autonomous agents—one canonical API per capability, one encoding per
-        format, zero ambiguity. Agents write correct code on the first try.
+        X07 keeps everyday code on checked abstractions, explicit capabilities,
+        and canonical contracts. That removes a large class of “works until it
+        doesn’t” systems-language surprises.
       </>
     ),
   },
   {
-    title: 'Tests you can trust',
+    title: 'Fast and concurrent without turning opaque',
     description: (
       <>
-        Sandboxed execution provides policy-enforced I/O and resource budgets.
-        Agents get reliable feedback loops without guessing what the program is
-        allowed to do.
+        Native code generation, structured concurrency, and budgeted execution
+        give you performance and parallel work without sacrificing reviewability
+        or reproducibility.
       </>
     ),
   },
   {
-    title: 'Self-healing code',
+    title: 'Agent-grade tooling from edit to release',
     description: (
       <>
-        Structured error IDs and machine-applicable fixes let agents
-        automatically repair broken code. Diagnostics aren&apos;t just
-        readable—they&apos;re actionable.
+        The toolchain, MCP kit, WASM stack, package registry, and lifecycle
+        platform all speak in structured reports and pinned contracts, so the
+        same language story holds from local repair loops to production rollout.
       </>
     ),
   },

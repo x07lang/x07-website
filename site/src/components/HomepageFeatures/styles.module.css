@@ -1,8 +1,9 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 0 4rem;
   width: 100%;
+  background: linear-gradient(180deg, #fffaf2 0%, #f2efe8 100%);
 }
 
 .featureSvg {
