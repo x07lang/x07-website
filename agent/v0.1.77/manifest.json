@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.1.77",
-  "docs_bundle_sha256": "6899f3ac94e63c641004c44208ca688f316e2bac82534641bc6bd5502e8092dd",
+  "docs_bundle_sha256": "aa80417c861fd5958756497b1b277608cf2a195c1b003fc6592f7730b06a70e9",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -3494,6 +3494,31 @@
       "size": 1453
     },
     {
+      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/app/atlas_dev/backend/component.build.report.json",
+      "sha256": "45e52559916994eebfacd26be9f86f04a3034fec258dca310a0c71fef5fc7e2b",
+      "size": 1047
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/app/atlas_dev/frontend/web-ui.build.report.json",
+      "sha256": "c8244644c7af378c95b278ff3ef3e7ba3099f475c5c226129c415367df1adb06",
+      "size": 4119
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/program.c",
+      "sha256": "f655a4b170cdbb3593332a809aa2e20fac61f6bcc2e587177d9ee66f5de4d497",
+      "size": 544264
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/wasm.build.report.json",
+      "sha256": "11c73835d2c0c3b388a52bc276ab5773294ef84caf4db3fd00426fa96fc97809",
+      "size": 4476
+    },
+    {
+      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/x07.h",
+      "sha256": "efd8be4c27cd0eb3b9a2ced1dc70beba24371b1bbd3a3b322b0db32161683ab2",
+      "size": 701
+    },
+    {
       "path": "examples/wasm_showcases/x07_atlas/tests/README.md",
       "sha256": "de93edeca32e5006c59cfdafdc27c61021a748c0f177f36450586a4e67dde369",
       "size": 669
@@ -3850,8 +3875,8 @@
     },
     {
       "path": "index.md",
-      "sha256": "57dfa68ed46944aa875d2ef08080529791f89e98d56c9d6d5838a67539ccdf8c",
-      "size": 3915
+      "sha256": "b4fd7d10ac108efe577d1e6076a2ea600c982345a7eb2a4ca4b769bd56b02e8f",
+      "size": 5832
     },
     {
       "path": "language/budget-scopes.md",
@@ -3990,8 +4015,8 @@
     },
     {
       "path": "project/repositories.md",
-      "sha256": "c9c37e22c6f282b92d7dc8f9208837e4d9fa9c91fecb0f9d74b45cdf76b8a528",
-      "size": 1187
+      "sha256": "4a7057b29cdf7b1a316a9ac2ab20ae2ce03f1fc1a057eaefbe8efad44ee77795",
+      "size": 1803
     },
     {
       "path": "recipes/agent-patterns.md",
@@ -6472,7 +6497,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "22942875ae1fe9caed413c8077a82e505dd3c4d10e181b2519a960772f015922",
+      "sha256": "502e9ee13b47ea07d2faf9863b655eee1e1bfcb2ea09ff70df2996cb3d6c3549",
       "size": 661
     },
     {
