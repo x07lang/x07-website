@@ -1,0 +1,276 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>x07 trust report</title><style>body{font-family:system-ui,Segoe UI,Helvetica,Arial,sans-serif;margin:24px;line-height:1.45}code,pre{background:#f6f8fa;padding:2px 4px;border-radius:4px}pre{padding:12px;overflow:auto}details{margin:12px 0}table{border-collapse:collapse}td,th{padding:6px 8px;border:1px solid #ddd}h2{margin-top:28px}</style></head><body><h1>x07 trust report</h1><p><b>world:</b> <code>run-os-sandboxed</code> <b>runner:</b> <code>os</code></p><h2>Budget Caps</h2><pre>{
+  &quot;policy_limits&quot;: {
+    &quot;cpu_ms&quot;: 5000,
+    &quot;fds&quot;: 16,
+    &quot;mem_bytes&quot;: 33554432,
+    &quot;procs&quot;: 8,
+    &quot;wall_ms&quot;: 6000
+  },
+  &quot;run_profile&quot;: {
+    &quot;cpu_time_limit_seconds&quot;: null,
+    &quot;max_memory_bytes&quot;: 67108864,
+    &quot;max_output_bytes&quot;: null,
+    &quot;solve_fuel&quot;: 50000000
+  }
+}
+</pre><h2>Capabilities</h2><pre>{
+  &quot;declared&quot;: {
+    &quot;arch_world_assignments&quot;: [
+      {
+        &quot;node_id&quot;: &quot;capsule_code&quot;,
+        &quot;world&quot;: &quot;run-os-sandboxed&quot;
+      },
+      {
+        &quot;node_id&quot;: &quot;tests&quot;,
+        &quot;world&quot;: &quot;run-os-sandboxed&quot;
+      }
+    ],
+    &quot;policy&quot;: {
+      &quot;env&quot;: {
+        &quot;allow_keys&quot;: [],
+        &quot;deny_keys&quot;: [],
+        &quot;enabled&quot;: false
+      },
+      &quot;fs&quot;: {
+        &quot;enabled&quot;: false,
+        &quot;read_roots&quot;: [],
+        &quot;write_roots&quot;: []
+      },
+      &quot;language&quot;: {
+        &quot;allow_ffi&quot;: false,
+        &quot;allow_unsafe&quot;: false
+      },
+      &quot;net&quot;: {
+        &quot;allow_dns&quot;: false,
+        &quot;allow_hosts&quot;: [],
+        &quot;allow_tcp&quot;: false,
+        &quot;allow_udp&quot;: false,
+        &quot;enabled&quot;: false
+      },
+      &quot;process&quot;: {
+        &quot;allow_exec&quot;: false,
+        &quot;allow_exec_prefixes&quot;: [],
+        &quot;allow_execs&quot;: [],
+        &quot;allow_exit&quot;: false,
+        &quot;allow_spawn&quot;: false,
+        &quot;enabled&quot;: false
+      },
+      &quot;time&quot;: {
+        &quot;allow_local_tzid&quot;: false,
+        &quot;allow_monotonic&quot;: false,
+        &quot;allow_sleep&quot;: false,
+        &quot;allow_wall_clock&quot;: false,
+        &quot;enabled&quot;: false,
+        &quot;max_sleep_ms&quot;: 0
+      }
+    }
+  },
+  &quot;observed&quot;: null,
+  &quot;used&quot;: {
+    &quot;details&quot;: {
+      &quot;begin&quot;: 1,
+      &quot;bytes.lit&quot;: 1,
+      &quot;bytes.view&quot;: 3,
+      &quot;capsule.main&quot;: 2,
+      &quot;let&quot;: 2,
+      &quot;std.test.assert_view_eq&quot;: 1,
+      &quot;std.test.code_assert_view_eq&quot;: 1,
+      &quot;std.test.pass&quot;: 1,
+      &quot;try&quot;: 1,
+      &quot;view.to_bytes&quot;: 1
+    },
+    &quot;namespaces&quot;: []
+  },
+  &quot;world&quot;: &quot;run-os-sandboxed&quot;
+}
+</pre><h2>Nondeterminism Flags</h2><pre>{
+  &quot;flags&quot;: [
+    {
+      &quot;details&quot;: {},
+      &quot;kind&quot;: &quot;world_non_deterministic&quot;,
+      &quot;severity&quot;: &quot;high&quot;,
+      &quot;summary&quot;: &quot;world run-os-sandboxed can observe host OS state&quot;
+    }
+  ]
+}
+</pre><h2>SBOM</h2><p><b>generated:</b> <code>/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/target/cert-new/trust.report.sbom.cdx.json</code></p><pre>{
+  &quot;components&quot;: [
+    {
+      &quot;kind&quot;: &quot;toolchain&quot;,
+      &quot;license&quot;: null,
+      &quot;name&quot;: &quot;x07&quot;,
+      &quot;purl&quot;: null,
+      &quot;source&quot;: null,
+      &quot;version&quot;: &quot;0.1.78&quot;
+    }
+  ],
+  &quot;cyclonedx&quot;: {
+    &quot;spec_version&quot;: &quot;1.5&quot;
+  },
+  &quot;format&quot;: &quot;cyclonedx&quot;,
+  &quot;generated&quot;: true,
+  &quot;path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/target/cert-new/trust.report.sbom.cdx.json&quot;,
+  &quot;spdx&quot;: null
+}
+</pre><details><summary>Raw JSON</summary><pre>{
+  &quot;budgets&quot;: {
+    &quot;arch_profiles&quot;: [],
+    &quot;caps&quot;: {
+      &quot;policy_limits&quot;: {
+        &quot;cpu_ms&quot;: 5000,
+        &quot;fds&quot;: 16,
+        &quot;mem_bytes&quot;: 33554432,
+        &quot;procs&quot;: 8,
+        &quot;wall_ms&quot;: 6000
+      },
+      &quot;run_profile&quot;: {
+        &quot;cpu_time_limit_seconds&quot;: null,
+        &quot;max_memory_bytes&quot;: 67108864,
+        &quot;max_output_bytes&quot;: null,
+        &quot;solve_fuel&quot;: 50000000
+      }
+    },
+    &quot;observed&quot;: null,
+    &quot;scopes&quot;: []
+  },
+  &quot;capabilities&quot;: {
+    &quot;declared&quot;: {
+      &quot;arch_world_assignments&quot;: [
+        {
+          &quot;node_id&quot;: &quot;capsule_code&quot;,
+          &quot;world&quot;: &quot;run-os-sandboxed&quot;
+        },
+        {
+          &quot;node_id&quot;: &quot;tests&quot;,
+          &quot;world&quot;: &quot;run-os-sandboxed&quot;
+        }
+      ],
+      &quot;policy&quot;: {
+        &quot;env&quot;: {
+          &quot;allow_keys&quot;: [],
+          &quot;deny_keys&quot;: [],
+          &quot;enabled&quot;: false
+        },
+        &quot;fs&quot;: {
+          &quot;enabled&quot;: false,
+          &quot;read_roots&quot;: [],
+          &quot;write_roots&quot;: []
+        },
+        &quot;language&quot;: {
+          &quot;allow_ffi&quot;: false,
+          &quot;allow_unsafe&quot;: false
+        },
+        &quot;net&quot;: {
+          &quot;allow_dns&quot;: false,
+          &quot;allow_hosts&quot;: [],
+          &quot;allow_tcp&quot;: false,
+          &quot;allow_udp&quot;: false,
+          &quot;enabled&quot;: false
+        },
+        &quot;process&quot;: {
+          &quot;allow_exec&quot;: false,
+          &quot;allow_exec_prefixes&quot;: [],
+          &quot;allow_execs&quot;: [],
+          &quot;allow_exit&quot;: false,
+          &quot;allow_spawn&quot;: false,
+          &quot;enabled&quot;: false
+        },
+        &quot;time&quot;: {
+          &quot;allow_local_tzid&quot;: false,
+          &quot;allow_monotonic&quot;: false,
+          &quot;allow_sleep&quot;: false,
+          &quot;allow_wall_clock&quot;: false,
+          &quot;enabled&quot;: false,
+          &quot;max_sleep_ms&quot;: 0
+        }
+      }
+    },
+    &quot;observed&quot;: null,
+    &quot;used&quot;: {
+      &quot;details&quot;: {
+        &quot;begin&quot;: 1,
+        &quot;bytes.lit&quot;: 1,
+        &quot;bytes.view&quot;: 3,
+        &quot;capsule.main&quot;: 2,
+        &quot;let&quot;: 2,
+        &quot;std.test.assert_view_eq&quot;: 1,
+        &quot;std.test.code_assert_view_eq&quot;: 1,
+        &quot;std.test.pass&quot;: 1,
+        &quot;try&quot;: 1,
+        &quot;view.to_bytes&quot;: 1
+      },
+      &quot;namespaces&quot;: []
+    },
+    &quot;world&quot;: &quot;run-os-sandboxed&quot;
+  },
+  &quot;invocation&quot;: {
+    &quot;argv&quot;: [
+      &quot;/Users/webik/projects/x07lang/x07/target/debug/x07&quot;,
+      &quot;--out&quot;,
+      &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/target/cert-new/trust.report.json&quot;,
+      &quot;trust&quot;,
+      &quot;report&quot;,
+      &quot;--project&quot;,
+      &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/x07.json&quot;,
+      &quot;--html-out&quot;,
+      &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/target/cert-new/trust.report.html&quot;
+    ],
+    &quot;cwd&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1&quot;,
+    &quot;profile&quot;: null,
+    &quot;project_path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/x07.json&quot;,
+    &quot;started_at_unix_ms&quot;: 1773550115697
+  },
+  &quot;nondeterminism&quot;: {
+    &quot;flags&quot;: [
+      {
+        &quot;details&quot;: {},
+        &quot;kind&quot;: &quot;world_non_deterministic&quot;,
+        &quot;severity&quot;: &quot;high&quot;,
+        &quot;summary&quot;: &quot;world run-os-sandboxed can observe host OS state&quot;
+      }
+    ]
+  },
+  &quot;project&quot;: {
+    &quot;arch_manifest_path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/arch/manifest.x07arch.json&quot;,
+    &quot;arch_root&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/arch&quot;,
+    &quot;lockfile_path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/x07.lock.json&quot;,
+    &quot;manifest_path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/x07.json&quot;,
+    &quot;module_roots&quot;: [
+      &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/src&quot;,
+      &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/tests&quot;
+    ],
+    &quot;policy_base_path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/policy/run-os.json&quot;,
+    &quot;policy_effective_path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/policy/run-os.json&quot;,
+    &quot;profile&quot;: null,
+    &quot;root&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1&quot;,
+    &quot;runner&quot;: &quot;os&quot;,
+    &quot;stdlib_lock_path&quot;: null,
+    &quot;world&quot;: &quot;run-os-sandboxed&quot;
+  },
+  &quot;sbom&quot;: {
+    &quot;components&quot;: [
+      {
+        &quot;kind&quot;: &quot;toolchain&quot;,
+        &quot;license&quot;: null,
+        &quot;name&quot;: &quot;x07&quot;,
+        &quot;purl&quot;: null,
+        &quot;source&quot;: null,
+        &quot;version&quot;: &quot;0.1.78&quot;
+      }
+    ],
+    &quot;cyclonedx&quot;: {
+      &quot;spec_version&quot;: &quot;1.5&quot;
+    },
+    &quot;format&quot;: &quot;cyclonedx&quot;,
+    &quot;generated&quot;: true,
+    &quot;path&quot;: &quot;/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/target/cert-new/trust.report.sbom.cdx.json&quot;,
+    &quot;spdx&quot;: null
+  },
+  &quot;schema_version&quot;: &quot;x07.trust.report@0.1.0&quot;,
+  &quot;tool&quot;: {
+    &quot;name&quot;: &quot;x07&quot;,
+    &quot;version&quot;: &quot;0.1.78&quot;
+  }
+}
+</pre></details></body></html>

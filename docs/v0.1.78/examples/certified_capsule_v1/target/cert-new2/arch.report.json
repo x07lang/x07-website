@@ -1,0 +1,58 @@
+{
+  "boundaries_report": {
+    "boundaries": [
+      {
+        "id": "capsule.main",
+        "node_id": "capsule_code",
+        "status": "ok",
+        "symbol": "capsule.main"
+      }
+    ],
+    "diagnostics": [],
+    "index_path": "arch/boundaries/index.x07boundary.json",
+    "ok": true,
+    "schema_version": "x07.arch.boundaries.report@0.1.0",
+    "summary": {
+      "boundaries_total": 1,
+      "missing_boundaries": 0,
+      "missing_pbt": 0,
+      "missing_smoke": 0,
+      "missing_verify": 0,
+      "public_exports_scanned": 1
+    }
+  },
+  "diags": [
+    {
+      "code": "W_ARCH_CONTRACTS_LOCK_MISSING",
+      "loc": {
+        "kind": "text",
+        "span": {
+          "end": {
+            "col": 1,
+            "line": 1
+          },
+          "file": "arch/contracts.lock.json",
+          "start": {
+            "col": 1,
+            "line": 1
+          }
+        }
+      },
+      "message": "contracts lock is missing (arch/contracts.lock.json)",
+      "severity": "warning",
+      "stage": "lint"
+    }
+  ],
+  "manifest": {
+    "jcs_sha256_hex": "f3f99a6d331fe32bd6b6719daab00acc6b4de03241ee4cbe1ee870d9eae5acd7",
+    "path": "arch/manifest.x07arch.json"
+  },
+  "schema_version": "x07.arch.report@0.1.0",
+  "stats": {
+    "module_edges": 2,
+    "modules": 3,
+    "node_edges": 2,
+    "nodes": 2
+  },
+  "suggested_patches": []
+}

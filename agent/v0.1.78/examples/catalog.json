@@ -1179,6 +1179,27 @@
       "url": "/agent/v0.1.78/examples/catalog-files/apps/x07dbguard/tests/unit.x07.json"
     },
     {
+      "id": "certified_capsule_v1/src/capsule",
+      "purpose": "capsule",
+      "scope": "nested",
+      "path": "certified_capsule_v1/src/capsule.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_capsule_v1/src/capsule.x07.json"
+    },
+    {
+      "id": "certified_capsule_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "certified_capsule_v1/src/main.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_capsule_v1/src/main.x07.json"
+    },
+    {
+      "id": "certified_capsule_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "certified_capsule_v1/tests/core.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_capsule_v1/tests/core.x07.json"
+    },
+    {
       "id": "os-read-file/read_file_by_stdin",
       "purpose": "read file by stdin",
       "scope": "nested",
@@ -1450,6 +1471,34 @@
       "scope": "nested",
       "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json",
       "url": "/agent/v0.1.78/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json"
+    },
+    {
+      "id": "trusted_sandbox_program_v1/src/capsule",
+      "purpose": "capsule",
+      "scope": "nested",
+      "path": "trusted_sandbox_program_v1/src/capsule.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_sandbox_program_v1/src/capsule.x07.json"
+    },
+    {
+      "id": "trusted_sandbox_program_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "trusted_sandbox_program_v1/src/example.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_sandbox_program_v1/src/example.x07.json"
+    },
+    {
+      "id": "trusted_sandbox_program_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "trusted_sandbox_program_v1/src/main.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_sandbox_program_v1/src/main.x07.json"
+    },
+    {
+      "id": "trusted_sandbox_program_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "trusted_sandbox_program_v1/tests/core.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_sandbox_program_v1/tests/core.x07.json"
     },
     {
       "id": "tutorials/package_publish_acme_hello_demo/modules/ext/acme_hello_demo",

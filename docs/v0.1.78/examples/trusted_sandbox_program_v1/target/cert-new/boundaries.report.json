@@ -1,0 +1,28 @@
+{
+  "boundaries": [
+    {
+      "id": "capsule.main",
+      "node_id": "capsule_code",
+      "status": "ok",
+      "symbol": "capsule.main"
+    },
+    {
+      "id": "example.main",
+      "node_id": "program_core",
+      "status": "ok",
+      "symbol": "example.main"
+    }
+  ],
+  "diagnostics": [],
+  "index_path": "arch/boundaries/index.x07boundary.json",
+  "ok": true,
+  "schema_version": "x07.arch.boundaries.report@0.1.0",
+  "summary": {
+    "boundaries_total": 2,
+    "missing_boundaries": 0,
+    "missing_pbt": 0,
+    "missing_smoke": 0,
+    "missing_verify": 0,
+    "public_exports_scanned": 0
+  }
+}

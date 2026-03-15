@@ -1,0 +1,55 @@
+{
+  "entry": "example.main",
+  "functions": [
+    {
+      "kind": "builtin",
+      "status": "trusted_primitive",
+      "symbol": "bytes.view"
+    },
+    {
+      "details": "reachable closure terminates at certified capsule node \"capsule_code\"",
+      "kind": "defn",
+      "source_path": "/Users/webik/projects/x07lang/x07/docs/examples/trusted_sandbox_program_v1/src/capsule.x07.json",
+      "status": "capsule_boundary",
+      "symbol": "capsule.main"
+    },
+    {
+      "kind": "defasync",
+      "source_path": "/Users/webik/projects/x07lang/x07/docs/examples/trusted_sandbox_program_v1/src/example.x07.json",
+      "status": "proven_async",
+      "symbol": "example.main"
+    },
+    {
+      "kind": "builtin",
+      "status": "trusted_primitive",
+      "symbol": "task.yield"
+    },
+    {
+      "kind": "builtin",
+      "status": "trusted_primitive",
+      "symbol": "view.len"
+    },
+    {
+      "details": "task.spawn, task.cancel, and task.join use the deterministic scheduler runtime; task.scope_v1 exit drains or cancels remaining children before scope disposal; canceled bytes tasks join as bytes.empty and canceled result_bytes tasks join as err=2",
+      "kind": "builtin",
+      "status": "trusted_scheduler_model",
+      "symbol": "x07.verify.scheduler_model.deterministic_task_scope_v1"
+    }
+  ],
+  "schema_version": "x07.verify.coverage@0.2.0",
+  "summary": {
+    "async_model": "deterministic_task_scope_v1",
+    "capsule_boundaries": 1,
+    "proven_async": 1,
+    "proven_defn": 0,
+    "reachable_async": 1,
+    "reachable_defn": 1,
+    "trusted_primitives": 3,
+    "trusted_scheduler_models": 1,
+    "uncovered_defn": 0,
+    "unsupported_defn": 0
+  },
+  "worlds": [
+    "run-os-sandboxed"
+  ]
+}

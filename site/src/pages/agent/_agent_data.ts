@@ -779,6 +779,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07.verify.cex@0.1.0.schema.json"
     },
     {
+      "id": "x07.verify.cex@0.2.0.schema.json",
+      "url": "/agent/latest/schemas/x07.verify.cex@0.2.0.schema.json"
+    },
+    {
       "id": "x07ast.schema.json",
       "url": "/agent/latest/schemas/x07ast.schema.json"
     },

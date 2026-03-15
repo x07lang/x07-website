@@ -1,0 +1,27 @@
+{
+  "entry": "capsule.main",
+  "functions": [
+    {
+      "details": "reachable closure terminates at certified capsule node \"capsule_code\"",
+      "kind": "defn",
+      "source_path": "/Users/webik/projects/x07lang/x07/docs/examples/certified_capsule_v1/src/capsule.x07.json",
+      "status": "capsule_boundary",
+      "symbol": "capsule.main"
+    }
+  ],
+  "schema_version": "x07.verify.coverage@0.2.0",
+  "summary": {
+    "capsule_boundaries": 1,
+    "proven_async": 0,
+    "proven_defn": 0,
+    "reachable_async": 0,
+    "reachable_defn": 1,
+    "trusted_primitives": 0,
+    "trusted_scheduler_models": 0,
+    "uncovered_defn": 0,
+    "unsupported_defn": 0
+  },
+  "worlds": [
+    "run-os-sandboxed"
+  ]
+}

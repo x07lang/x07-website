@@ -1,0 +1,36 @@
+{
+  "artifacts": {
+    "binary_sha256": "b95922635a47da4211b820c51a3c50bd5b4c1e00bb4e94095f9035c48e0953b9",
+    "combined_c_sha256": "ecd87148c5000ef8e756186c1bc8817875994d6905de1893d8fe68860d5ae385",
+    "freestanding_c_sha256": "4ef8020972c6b1f23ff49d7f17fc3de16fea8a7bc73dac319b6fd5a6c19bd92f",
+    "wrapper_c_sha256": "21d5c366d73a1f2906fd43aaadca101dbfbd8d2e304183b0f7909fae52fe5809"
+  },
+  "bundle_kind": "native",
+  "compiler": {
+    "exit_status": 0,
+    "lang_id": "x07-core@0.2.0",
+    "ok": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "inputs": {
+    "lockfile_path": "x07.lock.json",
+    "lockfile_sha256": "3381e3077b949a91303e2553042cb35ed7bd76fcbc613b9ae039f1bc93b4da24",
+    "module_roots": [
+      "src",
+      "tests",
+      "/Users/webik/projects/x07lang/x07/stdlib/os/0.2.0/modules"
+    ],
+    "program_sha256": "877c28610f7038cbf38808e7ade0714795442004b6147e54f8d898614f41068d",
+    "project_path": "x07.json",
+    "target_kind": "project",
+    "target_path": "x07.json"
+  },
+  "output_path": "target/cert/example.bundle",
+  "rebuild": {
+    "binary_sha256": "b95922635a47da4211b820c51a3c50bd5b4c1e00bb4e94095f9035c48e0953b9",
+    "deterministic_match": true
+  },
+  "schema_version": "x07.compile.attest@0.1.0",
+  "world": "run-os-sandboxed"
+}
