@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://x07.io/spec/x07-trust.certificate.schema.json",
+  "title": "x07.trust.certificate@0.2.0",
+  "description": "Source-free trust certificate emitted by `x07 trust certify`.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "verdict",
+    "profile",
+    "entry",
+    "out_dir",
+    "claims",
+    "tcb",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": { "const": "x07.trust.certificate@0.2.0" },
+    "verdict": {
+      "type": "string",
+      "enum": ["accepted", "rejected"]
+    },
+    "profile": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "entry": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "out_dir": { "type": "string", "minLength": 1, "maxLength": 4096 },
+    "claims": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1, "maxLength": 256 },
+      "default": []
+    },
+    "async_proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reachable", "covered", "model"],
+      "properties": {
+        "reachable": { "type": "integer", "minimum": 0 },
+        "covered": { "type": "integer", "minimum": 0 },
+        "model": {
+          "type": ["string", "null"],
+          "maxLength": 256
+        }
+      }
+    },
+    "capsules": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "ids", "attestations"],
+      "properties": {
+        "count": { "type": "integer", "minimum": 0 },
+        "ids": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 128 },
+          "default": []
+        },
+        "attestations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence_ref" },
+          "default": []
+        }
+      }
+    },
+    "runtime": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["backend", "network_mode", "weaker_isolation", "attestation"],
+          "properties": {
+            "backend": {
+              "type": "string",
+              "enum": ["vm", "os", "none"]
+            },
+            "network_mode": {
+              "type": "string",
+              "enum": ["none", "allowlist", "disabled"]
+            },
+            "weaker_isolation": { "type": "boolean" },
+            "attestation": {
+              "anyOf": [
+                { "$ref": "#/$defs/evidence_ref" },
+                { "type": "null" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "effect_logs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidence_ref" },
+      "default": []
+    },
+    "tcb": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x07_version",
+        "host_compiler",
+        "trusted_primitive_manifest_digest"
+      ],
+      "properties": {
+        "x07_version": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "host_compiler": { "type": "string", "minLength": 1, "maxLength": 512 },
+        "trusted_primitive_manifest_digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boundaries_report",
+        "coverage_report",
+        "prove_reports",
+        "tests_report",
+        "trust_report",
+        "compile_attestation"
+      ],
+      "properties": {
+        "boundaries_report": { "$ref": "#/$defs/evidence_ref" },
+        "coverage_report": { "$ref": "#/$defs/evidence_ref" },
+        "schema_derive_reports": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence_ref" },
+          "default": []
+        },
+        "prove_reports": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence_ref" },
+          "default": []
+        },
+        "tests_report": { "$ref": "#/$defs/evidence_ref" },
+        "trust_report": { "$ref": "#/$defs/evidence_ref" },
+        "compile_attestation": { "$ref": "#/$defs/evidence_ref" },
+        "runtime_attestation": {
+          "anyOf": [
+            { "$ref": "#/$defs/evidence_ref" },
+            { "type": "null" }
+          ]
+        },
+        "capsule_attestations": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence_ref" },
+          "default": []
+        },
+        "effect_logs": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/evidence_ref" },
+          "default": []
+        },
+        "review_diff": {
+          "anyOf": [
+            { "$ref": "#/$defs/evidence_ref" },
+            { "type": "null" }
+          ]
+        },
+        "bundle_path": {
+          "anyOf": [
+            { "type": "string", "minLength": 1, "maxLength": 4096 },
+            { "type": "null" }
+          ]
+        }
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": { "$ref": "https://x07.io/spec/x07diag.schema.json#/$defs/diagnostic" },
+      "default": []
+    }
+  },
+  "$defs": {
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256_hex"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1, "maxLength": 4096 },
+        "sha256_hex": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  }
+}

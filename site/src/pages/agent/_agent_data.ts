@@ -103,6 +103,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-arch.archive.profile.schema.json"
     },
     {
+      "id": "x07-arch.boundaries.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.boundaries.index.schema.json"
+    },
+    {
+      "id": "x07-arch.boundaries.report.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.boundaries.report.schema.json"
+    },
+    {
       "id": "x07-arch.budgets.index.schema.json",
       "url": "/agent/latest/schemas/x07-arch.budgets.index.schema.json"
     },
@@ -255,6 +263,22 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-capabilities.schema.json"
     },
     {
+      "id": "x07-capsule.attest.schema.json",
+      "url": "/agent/latest/schemas/x07-capsule.attest.schema.json"
+    },
+    {
+      "id": "x07-capsule.contract.schema.json",
+      "url": "/agent/latest/schemas/x07-capsule.contract.schema.json"
+    },
+    {
+      "id": "x07-capsule.index.schema.json",
+      "url": "/agent/latest/schemas/x07-capsule.index.schema.json"
+    },
+    {
+      "id": "x07-compile.attest.schema.json",
+      "url": "/agent/latest/schemas/x07-compile.attest.schema.json"
+    },
+    {
       "id": "x07-db.migrate.plan.schema.json",
       "url": "/agent/latest/schemas/x07-db.migrate.plan.schema.json"
     },
@@ -273,6 +297,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-doc.report.schema.json",
       "url": "/agent/latest/schemas/x07-doc.report.schema.json"
+    },
+    {
+      "id": "x07-effect.log.schema.json",
+      "url": "/agent/latest/schemas/x07-effect.log.schema.json"
     },
     {
       "id": "x07-guest.failure.schema.json",
@@ -353,6 +381,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-run.report.schema.json",
       "url": "/agent/latest/schemas/x07-run.report.schema.json"
+    },
+    {
+      "id": "x07-runtime.attest.schema.json",
+      "url": "/agent/latest/schemas/x07-runtime.attest.schema.json"
     },
     {
       "id": "x07-sm.spec.schema.json",
@@ -639,6 +671,18 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-test.report.schema.json"
     },
     {
+      "id": "x07-tool-trust-certify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust-certify.report.schema.json"
+    },
+    {
+      "id": "x07-tool-trust-profile-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust-profile-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-trust-profile.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust-profile.report.schema.json"
+    },
+    {
       "id": "x07-tool-trust-report.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-trust-report.report.schema.json"
     },
@@ -663,12 +707,28 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool.report.schema.json"
     },
     {
+      "id": "x07-trust.certificate.schema.json",
+      "url": "/agent/latest/schemas/x07-trust.certificate.schema.json"
+    },
+    {
+      "id": "x07-trust.profile.schema.json",
+      "url": "/agent/latest/schemas/x07-trust.profile.schema.json"
+    },
+    {
       "id": "x07-trust.report.schema.json",
       "url": "/agent/latest/schemas/x07-trust.report.schema.json"
     },
     {
       "id": "x07-typecheck.diagdata@0.1.0.schema.json",
       "url": "/agent/latest/schemas/x07-typecheck.diagdata@0.1.0.schema.json"
+    },
+    {
+      "id": "x07-verify.coverage.schema.json",
+      "url": "/agent/latest/schemas/x07-verify.coverage.schema.json"
+    },
+    {
+      "id": "x07-verify.primitives.schema.json",
+      "url": "/agent/latest/schemas/x07-verify.primitives.schema.json"
     },
     {
       "id": "x07-verify.report.schema.json",
@@ -737,6 +797,14 @@ export const latestSchemasIndex = {
     {
       "id": "x07ast.v0.5.0.schema.json",
       "url": "/agent/latest/schemas/x07ast.v0.5.0.schema.json"
+    },
+    {
+      "id": "x07ast.v0.6.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.6.0.schema.json"
+    },
+    {
+      "id": "x07ast.v0.7.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.7.0.schema.json"
     },
     {
       "id": "x07c.report.schema.json",

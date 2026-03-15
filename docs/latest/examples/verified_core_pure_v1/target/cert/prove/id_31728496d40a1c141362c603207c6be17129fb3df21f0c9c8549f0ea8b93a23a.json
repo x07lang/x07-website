@@ -1,0 +1,22 @@
+{
+  "artifacts": {
+    "c_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/verify.c",
+    "driver_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/driver.x07.json",
+    "smt2_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/verify.smt2",
+    "z3_out_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/z3.out.txt"
+  },
+  "bounds": {
+    "input_len_bytes": 4,
+    "max_bytes_len": 16,
+    "unwind": 8
+  },
+  "diagnostics_count": 0,
+  "entry": "example.main",
+  "exit_code": 0,
+  "mode": "prove",
+  "ok": true,
+  "result": {
+    "kind": "proven"
+  },
+  "schema_version": "x07.verify.report@0.2.0"
+}

@@ -1543,6 +1543,34 @@
       "url": "/agent/latest/examples/catalog-files/tutorials/x07import_rust_hex_pkg/modules/ext/hex/tests.x07.json"
     },
     {
+      "id": "verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/driver",
+      "purpose": "driver",
+      "scope": "nested",
+      "path": "verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/driver.x07.json",
+      "url": "/agent/latest/examples/catalog-files/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/driver.x07.json"
+    },
+    {
+      "id": "verified_core_pure_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "verified_core_pure_v1/src/example.x07.json",
+      "url": "/agent/latest/examples/catalog-files/verified_core_pure_v1/src/example.x07.json"
+    },
+    {
+      "id": "verified_core_pure_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "verified_core_pure_v1/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/verified_core_pure_v1/src/main.x07.json"
+    },
+    {
+      "id": "verified_core_pure_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "verified_core_pure_v1/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/verified_core_pure_v1/tests/core.x07.json"
+    },
+    {
       "id": "wasm_showcases/x07_atlas/backend/src/app",
       "purpose": "app",
       "scope": "nested",

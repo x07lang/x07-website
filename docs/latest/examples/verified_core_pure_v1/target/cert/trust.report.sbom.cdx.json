@@ -1,0 +1,24 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "x07:1bc85a854b6625a5c49a450eaf627aa4194a5eb48950402588969eb6fb659c8a",
+      "name": "x07",
+      "type": "application",
+      "version": "0.1.78"
+    }
+  ],
+  "metadata": {
+    "tools": {
+      "components": [
+        {
+          "name": "x07",
+          "type": "application",
+          "version": "0.1.78"
+        }
+      ]
+    }
+  },
+  "specVersion": "1.5",
+  "version": 1
+}

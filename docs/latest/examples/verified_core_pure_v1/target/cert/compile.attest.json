@@ -1,0 +1,35 @@
+{
+  "artifacts": {
+    "binary_sha256": "a8108b66c23156a71f5370d29066330c37a61e781aa6e07dd5db0d44269a6912",
+    "combined_c_sha256": "a83b73bddd40035b7676be0371452ae25738f62fb8bc7dfadfed6c14689282af",
+    "freestanding_c_sha256": "cf0ee82d2a6bcc581b391fdf16f6e0286b48d4d04a8f79b62dedbea24c354a56",
+    "wrapper_c_sha256": "eef8443163a2ec03d17927c425df69ceb52089953bd7573bfbdcdbf44f040b09"
+  },
+  "bundle_kind": "native",
+  "compiler": {
+    "exit_status": 0,
+    "lang_id": "x07-core@0.2.0",
+    "ok": true,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "inputs": {
+    "lockfile_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/x07.lock.json",
+    "lockfile_sha256": "3381e3077b949a91303e2553042cb35ed7bd76fcbc613b9ae039f1bc93b4da24",
+    "module_roots": [
+      "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/src",
+      "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/tests"
+    ],
+    "program_sha256": "b3a9108da858afe22ce9c77f77756d9d8558fa8dc28db40a8e382d3e3135c6db",
+    "project_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/x07.json",
+    "target_kind": "project",
+    "target_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/x07.json"
+  },
+  "output_path": "/Users/webik/projects/x07lang/x07/docs/examples/verified_core_pure_v1/target/cert/bundle/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a",
+  "rebuild": {
+    "binary_sha256": "a8108b66c23156a71f5370d29066330c37a61e781aa6e07dd5db0d44269a6912",
+    "deterministic_match": true
+  },
+  "schema_version": "x07.compile.attest@0.1.0",
+  "world": "solve-pure"
+}
