@@ -1,5 +1,0 @@
-{
-  "artifact": "compile_attestation",
-  "message": "bundle step did not emit compile attestation",
-  "ok": false
-}

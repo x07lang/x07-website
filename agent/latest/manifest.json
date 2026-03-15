@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.1.78",
-  "docs_bundle_sha256": "f0cc4de67196a5e1e0edf58696247156cfd62c4d6577a1fb7dbae194b16094b7",
+  "docs_bundle_sha256": "9fbb4f991e969c15c80256f3ac1175e53c946346250da748bf327c8da15fe575",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -1794,116 +1794,6 @@
       "size": 138
     },
     {
-      "path": "examples/certified_capsule_v1/target/cert-new/arch.report.json",
-      "sha256": "5a9133562ba7d65b8cec12f9e42487547948a23c5278a9d0543619644e696c29",
-      "size": 1344
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/boundaries.report.json",
-      "sha256": "ce9cb56b582fc069a7c08650871b41f359dbdb49db9331560dccb7c7431e0b55",
-      "size": 480
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/certificate.json",
-      "sha256": "46ba1c1c71f379593a8d6ec50485d0f1a274ab145e80aad179776c40721c56ff",
-      "size": 4084
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/compile.attest.json",
-      "sha256": "e6a1e04193f85d3abd8beaff750ec582a048add43c22a403f32d280c286bf166",
-      "size": 116
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/summary.html",
-      "sha256": "de22edf2fea9304a31f74dfcce07adddd476216d74bdc7eaa02fa098521c2d16",
-      "size": 3702
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/tests.report.json",
-      "sha256": "4b793998819cba6aa01831e197b0b97f8f39ed677f24a657f0baea3dd8c9c8fb",
-      "size": 1348
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/trust.report.html",
-      "sha256": "b4d9f408455d1ab67277ecc95fc43c7aea3f6c23e352246696cb7ab6d92a2b42",
-      "size": 10365
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/trust.report.json",
-      "sha256": "23fe01d65cd2bb68430e4ca75e6d5429f627268f020acacf9b4fc78b12f50456",
-      "size": 4667
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/trust.report.sbom.cdx.json",
-      "sha256": "e0c40b0557ea3c70736cb283e16c104fa7bbb12e73c3453a99986bb7f77de2d0",
-      "size": 451
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/verify.coverage.json",
-      "sha256": "a87f30646c88925e7f1e98fccdffe0f053678f3b2566871908f516f78c098955",
-      "size": 710
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new/verify.coverage.report.json",
-      "sha256": "f665256bc766f0bf2a375a250bb3d4e4c219400b8d38e17a015bd90c7b66e91f",
-      "size": 1069
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/arch.report.json",
-      "sha256": "5a9133562ba7d65b8cec12f9e42487547948a23c5278a9d0543619644e696c29",
-      "size": 1344
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/boundaries.report.json",
-      "sha256": "ce9cb56b582fc069a7c08650871b41f359dbdb49db9331560dccb7c7431e0b55",
-      "size": 480
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/certificate.json",
-      "sha256": "0eec1d488f4d85d1966b84cea617e9ee057f87d451d608844c6c7607ea205cfe",
-      "size": 4492
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/compile.attest.json",
-      "sha256": "e6a1e04193f85d3abd8beaff750ec582a048add43c22a403f32d280c286bf166",
-      "size": 116
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/summary.html",
-      "sha256": "b1b9303dce83f630366502853c1c66a03a101c3ebee0596f0a063ae87e9f72c9",
-      "size": 4010
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/tests.report.json",
-      "sha256": "3eccf2b0782a4ddfc796f40396ca905598a97ae4074f1de9d8d6bf02133fb4ec",
-      "size": 1351
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/trust.report.html",
-      "sha256": "19cf952f68f437f9b2054526ed23e1c2696c4b35bbfe5a5899098bbfe2a5e098",
-      "size": 10370
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/trust.report.json",
-      "sha256": "ed3290421e44253bc83224ed2f6b330e259d14f0ec80f8ff4746434140068057",
-      "size": 4670
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/trust.report.sbom.cdx.json",
-      "sha256": "e0c40b0557ea3c70736cb283e16c104fa7bbb12e73c3453a99986bb7f77de2d0",
-      "size": 451
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/verify.coverage.json",
-      "sha256": "a87f30646c88925e7f1e98fccdffe0f053678f3b2566871908f516f78c098955",
-      "size": 710
-    },
-    {
-      "path": "examples/certified_capsule_v1/target/cert-new2/verify.coverage.report.json",
-      "sha256": "f665256bc766f0bf2a375a250bb3d4e4c219400b8d38e17a015bd90c7b66e91f",
-      "size": 1069
-    },
-    {
       "path": "examples/certified_capsule_v1/tests/core.x07.json",
       "sha256": "fcebeb4f2d696ed0bb8ae8559b9ece5cbc6b3fa345029c7fd5b0790fb21d9334",
       "size": 495
@@ -3369,176 +3259,6 @@
       "size": 148
     },
     {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/arch.report.json",
-      "sha256": "966796fc47fd138e7849479e26bbd2146cfca1b90adf5edc3c0f8e15906b3c98",
-      "size": 1483
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/boundaries.report.json",
-      "sha256": "95d5d28dae75ef803bfe409f43067a05646e63c40d000000d77e439fdb3f9f98",
-      "size": 607
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/certificate.json",
-      "sha256": "7cedbcc430150374b501a17c12cd397d6a6c272258eb07b477878ff606a68c9d",
-      "size": 4545
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/compile.attest.json",
-      "sha256": "e6a1e04193f85d3abd8beaff750ec582a048add43c22a403f32d280c286bf166",
-      "size": 116
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/summary.html",
-      "sha256": "cab373302b7e1b390407e4f35fadb4bc81b3ff229c758b0d5d0aa8c4ac65c11c",
-      "size": 3998
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/tests.report.json",
-      "sha256": "0a9da7e15e2a7587517daf8919f735d8c18fbdf1834cbf949a3e68e2f47c9896",
-      "size": 1633
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/trust.report.html",
-      "sha256": "c5e9e9d1797e2c93e6c2b97828feb1dab730f70dc784013de4de78218812e29a",
-      "size": 11215
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/trust.report.json",
-      "sha256": "b2ca43084b3e12f89e0071b7a9aa7db4fb92c6935668a04fa955373fe027be5c",
-      "size": 5032
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/trust.report.sbom.cdx.json",
-      "sha256": "e0c40b0557ea3c70736cb283e16c104fa7bbb12e73c3453a99986bb7f77de2d0",
-      "size": 451
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/verify.coverage.json",
-      "sha256": "b4b1ca1087835d97493e3b7ffe027146f9fa8d6f0703f8a2994e22835922219a",
-      "size": 1718
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new/verify.coverage.report.json",
-      "sha256": "7c612fd58f6a59ab589fecfaa3cb5fe45b48463bc3599197263ccd75ae4df9a6",
-      "size": 2133
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/arch.report.json",
-      "sha256": "966796fc47fd138e7849479e26bbd2146cfca1b90adf5edc3c0f8e15906b3c98",
-      "size": 1483
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/boundaries.report.json",
-      "sha256": "95d5d28dae75ef803bfe409f43067a05646e63c40d000000d77e439fdb3f9f98",
-      "size": 607
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/certificate.json",
-      "sha256": "2e0efd7ad3f5d693cdd9b46b5a770485bbf15d8b7d3b165509f2ef79b0f3bd89",
-      "size": 4965
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/compile.attest.json",
-      "sha256": "e6a1e04193f85d3abd8beaff750ec582a048add43c22a403f32d280c286bf166",
-      "size": 116
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/summary.html",
-      "sha256": "f5f51decf33959c1b398d1ac644d11ae9bb06599b5611ec323afd06cfcf200bf",
-      "size": 4312
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/tests.report.json",
-      "sha256": "22d9af7ea3471b336dfb456043e6dd7a1e710eefb49c34ee8b80f49533856181",
-      "size": 1636
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/trust.report.html",
-      "sha256": "a514e1aa4cb28e4347884817d9076370a09725f252b72c4fb5caedbcb51d0a21",
-      "size": 11220
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/trust.report.json",
-      "sha256": "027ebf236dffd2f8411234283477d6ffdc6a1cdd5fabf256063d9af0847b0eaf",
-      "size": 5035
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/trust.report.sbom.cdx.json",
-      "sha256": "e0c40b0557ea3c70736cb283e16c104fa7bbb12e73c3453a99986bb7f77de2d0",
-      "size": 451
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/verify.coverage.json",
-      "sha256": "b4b1ca1087835d97493e3b7ffe027146f9fa8d6f0703f8a2994e22835922219a",
-      "size": 1718
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert-new2/verify.coverage.report.json",
-      "sha256": "7c612fd58f6a59ab589fecfaa3cb5fe45b48463bc3599197263ccd75ae4df9a6",
-      "size": 2133
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/arch.report.json",
-      "sha256": "ba263ed793c295106b9a6c3d63ad07c18e99eca02ddd94c686e1891c0781878f",
-      "size": 11371
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/boundaries.report.json",
-      "sha256": "b348b745e65dac26d298cfc4ad5dec3980947f0ad36344ef99b2c6d4b3a0ca81",
-      "size": 2994
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/certificate.json",
-      "sha256": "610ea189321bfd9f6a266ba0823c5397734791204ffbe48947bb773bf7ac8661",
-      "size": 5387
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/compile.attest.json",
-      "sha256": "c1a3ba10b4072fbb08bcc2929a0ef62e462ed56ed42894ed635a33c15df33624",
-      "size": 1411
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/example.bundle",
-      "sha256": "b95922635a47da4211b820c51a3c50bd5b4c1e00bb4e94095f9035c48e0953b9",
-      "size": 69664
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/summary.html",
-      "sha256": "22a4a2cb75fb219ffe2ec3fe3f6edf10c676cc3a0704bda80dbc5ee983d3a2a6",
-      "size": 4606
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/tests.report.json",
-      "sha256": "3fe7a1ec6db32c7038ccc6a263bb0a2d8ec2d299f94816617405a2eaa701fe0a",
-      "size": 836
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/trust.report.html",
-      "sha256": "b03cf9ea9d8f11eb77a4d54960322bea4ed7f53a59889cea3d9267cd96c95df4",
-      "size": 11195
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/trust.report.json",
-      "sha256": "b217ea7d58fee913875b3e33d9b1fab46121c59749f8ea2ac40bb7fb720860ce",
-      "size": 5020
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/trust.report.sbom.cdx.json",
-      "sha256": "e0c40b0557ea3c70736cb283e16c104fa7bbb12e73c3453a99986bb7f77de2d0",
-      "size": 451
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/verify.coverage.json",
-      "sha256": "b4b1ca1087835d97493e3b7ffe027146f9fa8d6f0703f8a2994e22835922219a",
-      "size": 1718
-    },
-    {
-      "path": "examples/trusted_sandbox_program_v1/target/cert/verify.coverage.report.json",
-      "sha256": "7c612fd58f6a59ab589fecfaa3cb5fe45b48463bc3599197263ccd75ae4df9a6",
-      "size": 2133
-    },
-    {
       "path": "examples/trusted_sandbox_program_v1/tests/core.x07.json",
       "sha256": "6f936db11f99513bfb16ad121b5001bdcaef1d54b5248d7aaef75a2cfba640bc",
       "size": 853
@@ -3779,26 +3499,6 @@
       "size": 1921
     },
     {
-      "path": "examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/driver.x07.json",
-      "sha256": "31b0197db1f28378548016e9bbe04a593b36d614d2ac110279052d54961139e5",
-      "size": 562
-    },
-    {
-      "path": "examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/verify.c",
-      "sha256": "ce8627c3bdbb0903ea8d917040328e87be269edb563e4257e2dba758cca496f0",
-      "size": 187345
-    },
-    {
-      "path": "examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/verify.smt2",
-      "sha256": "1d90871685c8121331fb75e4d40ba6969dc296a38092ce14afa3f05adbc31556",
-      "size": 191599
-    },
-    {
-      "path": "examples/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/z3.out.txt",
-      "sha256": "5c17dfcc2a8f1f30d9e96df6a9825a5030ade046d560332c19de74d93d591a18",
-      "size": 6
-    },
-    {
       "path": "examples/verified_core_pure_v1/README.md",
       "sha256": "1d621153ab71684634b42d119f24eef10700ecf98c32ac9986933cfa2c60abfb",
       "size": 865
@@ -3829,69 +3529,9 @@
       "size": 171
     },
     {
-      "path": "examples/verified_core_pure_v1/target/cert/arch.report.json",
-      "sha256": "658f8f5a3d461972c51bb157fc48701a3990a8004b61bb8797fc4689885efad3",
-      "size": 1347
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/boundaries.report.json",
-      "sha256": "8ef02ae6bfcff60b1ed522763f306751471faefbe102807804f57bac308b984b",
-      "size": 483
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/bundle/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a",
-      "sha256": "a8108b66c23156a71f5370d29066330c37a61e781aa6e07dd5db0d44269a6912",
-      "size": 35024
-    },
-    {
       "path": "examples/verified_core_pure_v1/target/cert/certificate.json",
       "sha256": "ecda45e997430b3445a6481b9457912ff458b759338307a4d60c71b8542b91b5",
       "size": 2508
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/compile.attest.json",
-      "sha256": "3a6acc077982c32ede846f1eba62567e0d34a7af31f19359a4e520aa89f318a0",
-      "size": 1818
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a.json",
-      "sha256": "997c190a6144ea5db13f5a0e1ea1ef12ae812981112bf106830ddb0279115580",
-      "size": 1094
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/summary.html",
-      "sha256": "4f0ae5c411d46e88e3445ea55fbd60c6557f6866133c9511d97bae89ac0de1a3",
-      "size": 2788
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/tests.report.json",
-      "sha256": "5c707b9863e8cbc3d45d61bc67cefcef3b25119f124e23d3683563f615f57931",
-      "size": 4302
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/trust.report.html",
-      "sha256": "6f4bdbd97431f3cb860a6c442d3c4bdde71ebd9b749df34f8f7d857410efe063",
-      "size": 7486
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/trust.report.json",
-      "sha256": "30ea8bcadc4d54bcd49d72498cc6a251804629c8bc700bfa0322bc802477df22",
-      "size": 3448
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/trust.report.sbom.cdx.json",
-      "sha256": "e0c40b0557ea3c70736cb283e16c104fa7bbb12e73c3453a99986bb7f77de2d0",
-      "size": 451
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/verify.coverage.json",
-      "sha256": "61a9707fc845d4ab788356b873061c41a5add313b0f0867b545c3a869982b59b",
-      "size": 490
-    },
-    {
-      "path": "examples/verified_core_pure_v1/target/cert/verify.coverage.report.json",
-      "sha256": "94ba97ee9d9effc6d4b038d8cb54957cdfa983ab6e32bb0f38af8097e1bceeea",
-      "size": 839
     },
     {
       "path": "examples/verified_core_pure_v1/tests/core.x07.json",
@@ -4097,31 +3737,6 @@
       "path": "examples/wasm_showcases/x07_atlas/frontend/x07.lock.json",
       "sha256": "51b309e59f3a86d361eed858d560b24268c2a2cc7f4ac7cf539b8b29a8918bb7",
       "size": 1453
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/app/atlas_dev/backend/component.build.report.json",
-      "sha256": "45e52559916994eebfacd26be9f86f04a3034fec258dca310a0c71fef5fc7e2b",
-      "size": 1047
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/app/atlas_dev/frontend/web-ui.build.report.json",
-      "sha256": "c8244644c7af378c95b278ff3ef3e7ba3099f475c5c226129c415367df1adb06",
-      "size": 4119
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/program.c",
-      "sha256": "f655a4b170cdbb3593332a809aa2e20fac61f6bcc2e587177d9ee66f5de4d497",
-      "size": 544264
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/wasm.build.report.json",
-      "sha256": "11c73835d2c0c3b388a52bc276ab5773294ef84caf4db3fd00426fa96fc97809",
-      "size": 4476
-    },
-    {
-      "path": "examples/wasm_showcases/x07_atlas/target/x07-wasm/web_ui/frontend/wasm_web_ui_debug/x07.h",
-      "sha256": "efd8be4c27cd0eb3b9a2ced1dc70beba24371b1bbd3a3b322b0db32161683ab2",
-      "size": 701
     },
     {
       "path": "examples/wasm_showcases/x07_atlas/tests/README.md",
@@ -7151,11 +6766,6 @@
       "size": 1006
     },
     {
-      "path": "examples/catalog-files/verified_core_pure_v1/.x07/artifacts/verify/prove/id_31728496d40a1c141362c603207c6be17129fb3df21f0c9c8549f0ea8b93a23a/driver.x07.json",
-      "sha256": "31b0197db1f28378548016e9bbe04a593b36d614d2ac110279052d54961139e5",
-      "size": 562
-    },
-    {
       "path": "examples/catalog-files/verified_core_pure_v1/src/example.x07.json",
       "sha256": "99531717baaf16ea1c7b8f7768c69dda3894925642500088f1e3a9f0bde13b1a",
       "size": 339
@@ -7242,8 +6852,8 @@
     },
     {
       "path": "examples/catalog.json",
-      "sha256": "69220def024583e658ced6d0d9b2f271eb8bbf5e38953031c825b0ee0f8f1a83",
-      "size": 80467
+      "sha256": "219ce9c6fe7a0559f55da9ef24a1d216a60775c780b37eadffc94bb1cf89d563",
+      "size": 79924
     },
     {
       "path": "examples/index.json",
@@ -7252,7 +6862,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "9fb56449055b4d66195e778bc7c6afbb2dac6553b39a7c2104993c5756857ba5",
+      "sha256": "6e4d1cc21bb9dc46e191949340fcd3c707849c1c4a57156f9327ea824b5720c7",
       "size": 661
     },
     {
