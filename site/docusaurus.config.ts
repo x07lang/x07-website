@@ -29,6 +29,7 @@ const config: Config = {
   onBrokenLinks: 'throw',
 
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'throw',
     },
@@ -59,13 +60,21 @@ const config: Config = {
             },
           },
         },
-        blog: false,
+        blog: {
+          showReadingTime: true,
+          blogTitle: 'X07 Blog',
+          blogDescription: 'Posts about agent-first programming and the X07 ecosystem.',
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
   ],
+
+  themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
     [
@@ -108,6 +117,11 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
+        {
+          to: '/blog',
+          position: 'left',
+          label: 'Blog',
+        },
         {type: 'docsVersionDropdown', position: 'left'},
         {
           label: 'Agent',
@@ -141,6 +155,7 @@ const config: Config = {
           items: [
             {label: 'Start here', to: '/docs/getting-started/agent-quickstart'},
             {label: 'Getting started', to: '/docs/getting-started/install'},
+            {label: 'Blog', to: '/blog'},
             {label: 'Download builds', href: 'https://github.com/x07lang/x07/releases'},
             {label: 'Official builds', to: '/docs/official-builds'},
             {label: 'Language', to: '/docs/language/overview'},

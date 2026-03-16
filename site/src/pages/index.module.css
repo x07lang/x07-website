@@ -111,7 +111,7 @@
 }
 
 .heroFact span {
-  color: rgba(246, 244, 239, 0.82);
+  color: rgba(246, 244, 239, 0.92);
   font-size: 0.94rem;
   line-height: 1.5;
 }
@@ -120,6 +120,7 @@
   padding: 4rem 0 1rem;
   background:
     linear-gradient(180deg, #f7f4eb 0%, #fffaf2 100%);
+  color: #111827;
 }
 
 .sectionIntro {
@@ -130,6 +131,7 @@
 
 .sectionIntro h2 {
   margin-bottom: 0.75rem;
+  color: #111827;
   font-size: clamp(1.9rem, 3vw, 2.8rem);
   letter-spacing: -0.03em;
 }
