@@ -383,6 +383,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-project.v0.3.0.schema.json"
     },
     {
+      "id": "x07-project.v0.4.0.schema.json",
+      "url": "/agent/latest/schemas/x07-project.v0.4.0.schema.json"
+    },
+    {
       "id": "x07-review.diff.schema.json",
       "url": "/agent/latest/schemas/x07-review.diff.schema.json"
     },
@@ -635,6 +639,14 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-policy.report.schema.json"
     },
     {
+      "id": "x07-tool-prove-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-prove-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-prove.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-prove.report.schema.json"
+    },
+    {
       "id": "x07-tool-review-diff.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-review-diff.report.schema.json"
     },
@@ -753,6 +765,18 @@ export const latestSchemasIndex = {
     {
       "id": "x07-verify.primitives.schema.json",
       "url": "/agent/latest/schemas/x07-verify.primitives.schema.json"
+    },
+    {
+      "id": "x07-verify.proof-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-verify.proof-check.report.schema.json"
+    },
+    {
+      "id": "x07-verify.proof-object.schema.json",
+      "url": "/agent/latest/schemas/x07-verify.proof-object.schema.json"
+    },
+    {
+      "id": "x07-verify.proof-summary.schema.json",
+      "url": "/agent/latest/schemas/x07-verify.proof-summary.schema.json"
     },
     {
       "id": "x07-verify.report.schema.json",
