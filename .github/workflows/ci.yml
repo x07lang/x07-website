@@ -42,6 +42,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
+            --base-url https://x07lang.org/
             --exclude ^https?://x07lang\\.org/
             --exclude-path docs/_overlays/site/agent-portal-contract.md
             "**/*.md"
