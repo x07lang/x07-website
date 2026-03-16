@@ -1200,6 +1200,188 @@
       "url": "/agent/v0.1.78/examples/catalog-files/certified_capsule_v1/tests/core.x07.json"
     },
     {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/codec",
+      "purpose": "codec",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/codec.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/codec.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/dns",
+      "purpose": "dns",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/dns.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/dns.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/err",
+      "purpose": "err",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/err.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/err.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/client",
+      "purpose": "client",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/client.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/client.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded",
+      "purpose": "form urlencoded",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded/tests.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded/tests.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/server",
+      "purpose": "server",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/server.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/server.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/spec",
+      "purpose": "spec",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/spec.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/spec.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/io",
+      "purpose": "io",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/io.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/io.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tcp",
+      "purpose": "tcp",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tcp.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tcp.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tls",
+      "purpose": "tls",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tls.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tls.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/udp",
+      "purpose": "udp",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/udp.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-net/0.1.10/modules/std/net/udp.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net",
+      "purpose": "net",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types",
+      "purpose": "http types",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse",
+      "purpose": "httparse",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode",
+      "purpose": "encode",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse",
+      "purpose": "parse",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/src/capsule",
+      "purpose": "capsule",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/src/capsule.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/src/capsule.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/src/main.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/src/main.x07.json"
+    },
+    {
+      "id": "certified_network_capsule_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "certified_network_capsule_v1/tests/core.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/certified_network_capsule_v1/tests/core.x07.json"
+    },
+    {
       "id": "os-read-file/read_file_by_stdin",
       "purpose": "read file by stdin",
       "scope": "nested",
@@ -1471,6 +1653,195 @@
       "scope": "nested",
       "path": "readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json",
       "url": "/agent/v0.1.78/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/http.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/codec",
+      "purpose": "codec",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/codec.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/codec.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/dns",
+      "purpose": "dns",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/dns.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/dns.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/err",
+      "purpose": "err",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/err.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/err.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http",
+      "purpose": "http",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/client",
+      "purpose": "client",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/client.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/client.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded",
+      "purpose": "form urlencoded",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded/tests.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/form_urlencoded/tests.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/server",
+      "purpose": "server",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/server.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/server.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/spec",
+      "purpose": "spec",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/spec.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/http/spec.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/io",
+      "purpose": "io",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/io.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/io.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tcp",
+      "purpose": "tcp",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tcp.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tcp.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tls",
+      "purpose": "tls",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tls.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/tls.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/udp",
+      "purpose": "udp",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/udp.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-net/0.1.10/modules/std/net/udp.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi",
+      "purpose": "ffi",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/_ffi.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net",
+      "purpose": "net",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-sockets-c/0.1.6/modules/ext/sockets/net.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types",
+      "purpose": "http types",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/http_types.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse",
+      "purpose": "httparse",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/httparse/tests.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode",
+      "purpose": "encode",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/encode.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse",
+      "purpose": "parse",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/parse.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/.x07/deps/ext-url-rs/0.1.4/modules/ext/url/tests.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/src/capsule",
+      "purpose": "capsule",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/src/capsule.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/src/capsule.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/src/example.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/src/example.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/src/main.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/src/main.x07.json"
+    },
+    {
+      "id": "trusted_network_service_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "trusted_network_service_v1/tests/core.x07.json",
+      "url": "/agent/v0.1.78/examples/catalog-files/trusted_network_service_v1/tests/core.x07.json"
     },
     {
       "id": "trusted_sandbox_program_v1/src/capsule",

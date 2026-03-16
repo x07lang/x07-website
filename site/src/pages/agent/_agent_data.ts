@@ -283,6 +283,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-db.migrate.plan.schema.json"
     },
     {
+      "id": "x07-dep.closure.attest.schema.json",
+      "url": "/agent/latest/schemas/x07-dep.closure.attest.schema.json"
+    },
+    {
       "id": "x07-deps.capability-policy.schema.json",
       "url": "/agent/latest/schemas/x07-deps.capability-policy.schema.json"
     },
@@ -353,6 +357,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-package.schema.json",
       "url": "/agent/latest/schemas/x07-package.schema.json"
+    },
+    {
+      "id": "x07-peer.policy.schema.json",
+      "url": "/agent/latest/schemas/x07-peer.policy.schema.json"
     },
     {
       "id": "x07-pkg.advisory.schema.json",
@@ -583,6 +591,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-pkg-add.report.schema.json"
     },
     {
+      "id": "x07-tool-pkg-attest-closure.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-attest-closure.report.schema.json"
+    },
+    {
       "id": "x07-tool-pkg-lock.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-lock.report.schema.json"
     },
@@ -671,6 +683,18 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-test.report.schema.json"
     },
     {
+      "id": "x07-tool-trust-capsule-attest.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust-capsule-attest.report.schema.json"
+    },
+    {
+      "id": "x07-tool-trust-capsule-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust-capsule-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-trust-capsule.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-trust-capsule.report.schema.json"
+    },
+    {
       "id": "x07-tool-trust-certify.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-trust-certify.report.schema.json"
     },
@@ -733,6 +757,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-verify.report.schema.json",
       "url": "/agent/latest/schemas/x07-verify.report.schema.json"
+    },
+    {
+      "id": "x07-verify.summary.schema.json",
+      "url": "/agent/latest/schemas/x07-verify.summary.schema.json"
     },
     {
       "id": "x07-vm.bundle.manifest.schema.json",
@@ -809,6 +837,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07ast.v0.7.0.schema.json",
       "url": "/agent/latest/schemas/x07ast.v0.7.0.schema.json"
+    },
+    {
+      "id": "x07ast.v0.8.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.8.0.schema.json"
     },
     {
       "id": "x07c.report.schema.json",
@@ -2540,6 +2572,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-net/0.1.9/index.json#docs"
     },
     {
+      "name": "ext-net",
+      "version": "0.1.10",
+      "url": "/agent/latest/packages/ext-net/0.1.10/index.json",
+      "description": "Networking APIs (DNS, TCP/UDP, TLS, HTTP) (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-net/0.1.10/index.json#docs"
+    },
+    {
       "name": "ext-net-protos-c",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-net-protos-c/0.1.0/index.json",
@@ -2601,6 +2640,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-obs/0.1.4/index.json",
       "description": "Metrics snapshot + OpenMetrics + OTLP encoding/export (contracts-as-data under arch/obs).",
       "docs_url": "/agent/latest/packages/ext-obs/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-obs",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-obs/0.1.5/index.json",
+      "description": "Metrics snapshot + OpenMetrics + OTLP encoding/export (contracts-as-data under arch/obs).",
+      "docs_url": "/agent/latest/packages/ext-obs/0.1.5/index.json#docs"
     },
     {
       "name": "ext-openssl-c",
@@ -3385,6 +3431,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-web-crawl/0.1.4/index.json",
       "description": "Robots (RFC 9309) + Sitemaps + deterministic crawl scheduling (pinned via arch/crawl).",
       "docs_url": "/agent/latest/packages/ext-web-crawl/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-web-crawl",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-web-crawl/0.1.5/index.json",
+      "description": "Robots (RFC 9309) + Sitemaps + deterministic crawl scheduling (pinned via arch/crawl).",
+      "docs_url": "/agent/latest/packages/ext-web-crawl/0.1.5/index.json#docs"
     },
     {
       "name": "ext-web-kit",

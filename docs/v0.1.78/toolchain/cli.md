@@ -15,8 +15,12 @@ X07 ships multiple small CLIs with JSON-first contracts so both humans and agent
   - Creates a certifiable `solve-pure` project with `arch/manifest.x07arch.json`, `arch/boundaries/index.x07boundary.json`, `arch/trust/profiles/verified_core_pure_v1.json`, `.github/workflows/certify.yml`, and a smoke + PBT harness wired for `x07 trust certify`.
 - `x07 init --template trusted-sandbox-program`
   - Creates a certifiable `run-os-sandboxed` async project with a certified capsule boundary, capsule attestations, sandbox smoke tests, and a self-hosted VM certification workflow wired for `x07 trust certify`.
+- `x07 init --template trusted-network-service`
+  - Creates a certifiable `run-os-sandboxed` network service project under `trusted_program_sandboxed_net_v1`, with pinned peer-policy files, attested network capsule metadata, a loopback TCP smoke harness, and a self-hosted VM certification workflow.
 - `x07 init --template certified-capsule`
   - Creates a minimal certified-capsule project with capsule contract/effect-log/attestation surfaces plus a self-hosted VM certification workflow.
+- `x07 init --template certified-network-capsule`
+  - Creates a standalone network capsule project under `trusted_program_sandboxed_net_v1`, with peer-policy evidence, effect-log attestations, a loopback TCP smoke harness, and a self-hosted VM certification workflow.
 
 ### MCP kit tooling
 
@@ -177,8 +181,8 @@ See: [Architecture check](arch-check.md).
 - `x07 review diff --from <path> --to <path> --html-out <path>`
 - `x07 review diff --from <path> --to <path> --html-out <path> --json-out <path>`
   - Produces an intent-level semantic diff for x07AST/project/arch/policy changes.
-  - Supports CI gates via `--fail-on world-capability|budget-increase|allow-unsafe|allow-ffi|proof-coverage-decrease|async-proof-coverage-decrease|boundary-relaxation|trusted-subset-expansion|capsule-contract-relaxation|capsule-set-change|sandbox-policy-widen|runtime-attestation-regression|weaker-isolation-enabled`.
-  - JSON schema: `spec/x07-review.diff.schema.json` (`schema_version: "x07.review.diff@0.3.0"`).
+  - Supports CI gates via `--fail-on world-capability|budget-increase|allow-unsafe|allow-ffi|proof-coverage-decrease|recursion-proof-coverage-decrease|async-proof-coverage-decrease|summary-downgrade|boundary-relaxation|trusted-subset-expansion|capsule-contract-relaxation|capsule-set-change|sandbox-policy-widen|runtime-attestation-regression|weaker-isolation-enabled|network-allowlist-widen|peer-policy-relaxation|capsule-network-surface-widen|package-set-change|lockfile-hash-change|advisory-allowance-enabled`.
+  - JSON schema: `spec/x07-review.diff.schema.json` (`schema_version: "x07.review.diff@0.4.0"`).
 
 See: [Review & trust artifacts](review-trust.md).
 
@@ -194,13 +198,13 @@ See: [Review & trust artifacts](review-trust.md).
   - JSON schema: `spec/x07-trust.report.schema.json` (`schema_version: "x07.trust.report@0.1.0"`).
 - `x07 trust profile check --profile arch/trust/profiles/verified_core_pure_v1.json --project x07.json --entry <sym>`
   - Validates a certification profile against the current project posture.
-  - Built-in profile line: `verified_core_pure_v1`, `trusted_program_sandboxed_local_v1`, and `certified_capsule_v1` (`x07.trust.profile@0.2.0`).
+  - Built-in profile line: `verified_core_pure_v1`, `trusted_program_sandboxed_local_v1`, `trusted_program_sandboxed_net_v1`, and `certified_capsule_v1` (`x07.trust.profile@0.3.0`).
 - `x07 trust capsule check --index arch/capsules/index.x07capsule.json --project x07.json`
   - Validates a capsule index plus referenced contracts/attestations.
 - `x07 trust capsule attest --contract <path> --module <path>... --lockfile x07.lock.json --conformance-report <path> --out <path>`
-  - Emits a deterministic `x07.capsule.attest@0.1.0` artifact for a certified capsule.
+  - Emits a deterministic `x07.capsule.attest@0.2.0` artifact for a certified capsule.
 - `x07 trust certify --project x07.json --profile arch/trust/profiles/verified_core_pure_v1.json --entry <sym> --out-dir target/cert`
-  - Emits a certificate bundle with boundary coverage, schema-derive drift reports, verify coverage, prove reports, trust report, tests report, compile attestation evidence, and any observed capsule/runtime evidence references (`x07.trust.certificate@0.2.0`).
+  - Emits a certificate bundle with boundary coverage, schema-derive drift reports, verify coverage, prove reports, trust report, tests report, compile attestation evidence, dependency-closure evidence, and any observed capsule/runtime/peer-policy evidence references (`x07.trust.certificate@0.3.0`).
 
 See: [Review & trust artifacts](review-trust.md).
 
@@ -277,19 +281,25 @@ See: [Property-based testing](pbt.md).
   - `--project <path>` (or one/more `--module-root <dir>`)
   - `--unwind <n>` (CBMC loop unwinding bound)
   - `--max-bytes-len <n>` (bound for `bytes` / `bytes_view` params)
+  - `--summary <path>` (import reviewed `verify.summary.json` artifacts)
 
 Notes:
 
-- `x07 verify` supports the certifiable subset of reachable `defn` and `defasync` targets; recursion is still unsupported, and `for` loops must have literal bounds.
-- v0.1 supports params: `i32`, `u32`, `bytes`, `bytes_view` (use a wrapper if you need other types).
+- `x07 verify` supports the certifiable subset of reachable `defn` and `defasync` targets. Pure self-recursive `defn` targets are supported when they declare `decreases[]`; mutual recursion, recursive `defasync`, and `for` loops with non-literal bounds remain unsupported.
+- Direct `--prove` inputs currently support `i32`, `u32`, raw `bytes`, raw `bytes_view`, `option_i32`, `option_bytes`, `option_bytes_view`, `result_i32`, `result_bytes`, and `result_bytes_view`.
+- Direct prove inputs accept unbranded `bytes` / `bytes_view`, first-order `option_*` / `result_*`, and branded `bytes_view` carriers whose brand resolves through reachable `meta.brands_v1.validate`.
+- That means schema-derived record and tagged-union documents can be proved directly as `bytes_view@brand` inputs, with the generated verify driver running the validator before it constructs the branded view seen by the proof target.
+- Direct `vec_u8` params, owned branded `bytes`, and nested result carriers are rejected explicitly.
 - `x07 verify` requires at least one contract clause (`requires` / `ensures` / `invariant`) on the target function.
 - `--prove` is the certifiable mode for accepted trust certificates; unsupported targets return `result.kind = "unsupported"`.
-- `--coverage` emits a reachable-closure coverage artifact under `coverage` using `spec/x07-verify.coverage.schema.json`, including `proven_async`, `trusted_scheduler_model`, and `capsule_boundary` statuses when they apply.
+- `--prove` reports include `proof_summary` for the solver engine, recursion kind, `decreases` usage, unwind-bounded recursion, and the reachable dependency symbol set.
+- `--coverage` emits a reachable-closure coverage artifact under `coverage` using `spec/x07-verify.coverage.schema.json`, including recursive proof counters plus per-function `proof_summary`, alongside `proven_async`, `trusted_scheduler_model`, and `capsule_boundary` statuses when they apply.
+- `--coverage` and `--prove` emit reusable `verify.summary.json` artifacts (`x07.verify.summary@0.1.0`); pass them back with `--summary <path>` when a reviewed reachable dependency sits outside the currently loaded module roots.
 - Async `--prove` failures emit `x07.verify.cex@0.2.0`, including `await_invariant`, `scope_invariant`, and `cancellation_ensures` counterexamples when those checks fail.
 - Artifacts are written under `.x07/artifacts/verify/<mode>/<entry>/` (driver module, emitted C, CBMC output, counterexample/SMT artifacts when present).
 - Async proof coverage is lowered through the trusted scheduler model catalog at `catalog/verify_scheduler_model.json`.
 
-Report schema: `spec/x07-verify.report.schema.json` (`schema_version: "x07.verify.report@0.3.0"`).
+Report schema: `spec/x07-verify.report.schema.json` (`schema_version: "x07.verify.report@0.4.0"`).
 
 ### Agent correctness benchmarks (`x07bench` JSON)
 
@@ -349,6 +359,7 @@ See: [State machines](state-machines.md).
 - `x07 pkg versions <name>`
 - `x07 pkg versions <name> --refresh`
 - `x07 pkg lock --project x07.json`
+- `x07 pkg attest-closure --project x07.json --out <path>`
 - `x07 pkg provides <module-id>`
 - `x07 pkg pack --package <dir> --out <path>`
 - `x07 pkg login --index <registry_url>`
@@ -359,6 +370,7 @@ Notes:
 - `x07 pkg add <name>@<version>` edits `x07.json` only (no network) unless you pass `--sync`.
 - `x07 pkg add <name>` consults the index to resolve a version (network unless you use a file-based index).
 - `x07 pkg lock` uses the official registry index by default when fetching is required; override with `--index` or use `--offline`.
+- `x07 pkg attest-closure` emits `x07.dep.closure.attest@0.1.0` and exits with code `20` when the closure is materialized but yanked/advisory policy fails.
 - Use `x07 pkg lock --project x07.json --check` in CI to fail if `x07.lock.json` is out of date.
 - When the index can be consulted, `x07 pkg lock --check` also fails on yanked dependencies and active advisories unless you explicitly allow them (`--allow-yanked` / `--allow-advisories`).
 - Sparse index reads (including `x07 pkg versions`) may be cached; use `x07 pkg versions --refresh <name>` after publishing to force a cache-busting fetch (HTTP/HTTPS indexes only).
@@ -397,7 +409,7 @@ See: [Embedding in C](embedding-in-c.md).
   - Bundles a VM-backed sandbox bundle by default (requires a base policy via profile or `--policy`).
   - To emit a legacy policy-only bundle (weaker isolation), add: `--sandbox-backend os --i-accept-weaker-isolation`.
 
-Bundle report schema: `spec/x07-bundle.report.schema.json` (`schema_version: "x07.bundle.report@0.3.0"`).
+Bundle report schema: `spec/x07-bundle.report.schema.json` (`schema_version: "x07.bundle.report@0.4.0"`).
 
 ### Running programs (canonical)
 
@@ -413,7 +425,7 @@ Use `x07 run` as the canonical entry point for execution. Prefer intent-driven p
 - `x07 run --repair=memory`
 - `x07 run --repair=write` (default)
 
-For `run-os-sandboxed`, `x07 run --attest-runtime <path>` writes `x07.runtime.attest@0.1.0` and records the reference in the runner and wrapped reports.
+For `run-os-sandboxed`, `x07 run --attest-runtime <path>` writes `x07.runtime.attest@0.2.0` and records the reference in the runner and wrapped reports.
 
 For the complete guide (targets, worlds, input, policies, reports), see [Running programs](running-programs.md).
 

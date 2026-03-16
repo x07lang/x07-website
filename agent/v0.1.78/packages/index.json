@@ -1613,6 +1613,13 @@
       "docs_url": "/agent/v0.1.78/packages/ext-net/0.1.9/index.json#docs"
     },
     {
+      "name": "ext-net",
+      "version": "0.1.10",
+      "url": "/agent/v0.1.78/packages/ext-net/0.1.10/index.json",
+      "description": "Networking APIs (DNS, TCP/UDP, TLS, HTTP) (run-os only).",
+      "docs_url": "/agent/v0.1.78/packages/ext-net/0.1.10/index.json#docs"
+    },
+    {
       "name": "ext-net-protos-c",
       "version": "0.1.0",
       "url": "/agent/v0.1.78/packages/ext-net-protos-c/0.1.0/index.json",
