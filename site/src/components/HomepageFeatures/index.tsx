@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Memory-safe defaults, not guesswork',
+    title: 'Agents can\'t hallucinate APIs that don\'t exist',
     description: (
       <>
-        X07 keeps everyday code on checked abstractions, explicit capabilities,
-        and canonical contracts. That removes a large class of “works until it
-        doesn’t” systems-language surprises.
+        One canonical API per capability means there is exactly one right
+        answer. No ambiguous choices, no wrong guesses, no import roulette.
       </>
     ),
   },
   {
-    title: 'Fast and concurrent without turning opaque',
+    title: 'Errors tell agents exactly what to fix',
     description: (
       <>
-        Native code generation, structured concurrency, and budgeted execution
-        give you performance and parallel work without sacrificing reviewability
-        or reproducibility.
+        Every error carries a structured ID, a machine-readable explanation,
+        and a suggested fix. Agents don't guess at repairs — they read and apply.
       </>
     ),
   },
   {
-    title: 'Agent-grade tooling from edit to release',
+    title: 'From edit to production, one toolchain',
     description: (
       <>
-        The toolchain, MCP kit, WASM stack, package registry, and lifecycle
-        platform all speak in structured reports and pinned contracts, so the
-        same language story holds from local repair loops to production rollout.
+        Formatter, linter, test runner, MCP bridge, WASM compiler, package
+        registry, and deploy platform — all speaking the same typed contracts.
       </>
     ),
   },

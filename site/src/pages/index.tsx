@@ -6,44 +6,101 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import styles from './index.module.css';
 
+const comparisonExamples = [
+  {
+    title: 'Reversing bytes should be boring',
+    intro:
+      'Python exposes several valid-looking ways to read stdin and manipulate bytes. X07 exposes one canonical bytes helper.',
+    leftLabel: 'Python',
+    leftMeta: 'Several plausible wrong turns',
+    leftCode: `# Wrong turn 1 — text instead of bytes
+import sys
+data = sys.stdin.read()
+
+# Wrong turn 2 — .reverse() does not exist on str
+result = data.reverse()
+# → AttributeError: 'str' has no attribute 'reverse'
+
+# Wrong turn 3 — reversed(data) is an iterator
+data = sys.stdin.buffer.read()
+sys.stdout.buffer.write(reversed(data))
+# → TypeError: a bytes-like object is required, not 'reversed'`,
+    rightLabel: 'X07',
+    rightMeta: 'One canonical bytes operation',
+    rightCode: `{
+  "schema_version": "x07.x07ast@0.4.0", // Canonical x07AST schema.
+  "kind": "entry",
+  "module_id": "main",
+  "imports": ["std.bytes"],             // Import the bytes module.
+  "decls": [],
+  "solve": ["std.bytes.reverse", "input"] // Call the one reverse helper.
+}`,
+    footnote:
+      'The X07 side is the shipped 03_reverse example. The point is not that Python cannot reverse bytes, but that X07 leaves the agent with far less API guesswork.',
+  },
+  {
+    title: 'When the first attempt is wrong, the repair surface matters',
+    intro:
+      'Python gives the agent a human traceback. X07 gives it stable JSON diagnostics and deterministic repair commands.',
+    leftLabel: 'Python',
+    leftMeta: 'Human traceback',
+    leftCode: `Traceback (most recent call last):
+  File "reverse.py", line 6, in <module>
+    sys.stdout.buffer.write(reversed(data))
+TypeError: a bytes-like object is required, not 'reversed'`,
+    rightLabel: 'X07',
+    rightMeta: 'Machine-readable repair loop',
+    rightCode: `x07 lint --input src/main.x07.json
+# -> emits x07diag JSON with:
+#    stable code
+#    x07AST pointer
+#    optional quickfix as JSON Patch
+
+x07 fix --input src/main.x07.json --write
+# -> applies the quickfix deterministically`,
+    footnote:
+      'The X07 docs define diagnostics as machine-readable, error codes as stable, and quickfixes as deterministic JSON Patch operations.',
+  },
+] as const;
+
 const ecosystemCards = [
   {
     eyebrow: 'MCP kit',
-    title: 'Build MCP servers and use the official X07 MCP bridge',
+    title: 'Give your agent structured access to every X07 tool',
     body:
-      'Use x07-mcp to scaffold MCP servers in X07, or connect an agent runtime to the official x07lang-mcp server for structured editing, package, WASM, device, and lifecycle actions.',
+      'Scaffold MCP servers in X07, or connect any agent runtime to the official x07lang-mcp bridge for editing, packaging, and deployment — all through typed, versioned contracts.',
     href: '/docs/toolchain/mcp-kit',
     cta: 'Open MCP docs',
   },
   {
     eyebrow: 'WASM',
-    title: 'Ship browser UI, services, and device bundles from the same language',
+    title: 'Ship to browser, server, and device from one codebase',
     body:
-      'The WASM toolchain covers pure modules, browser-hosted reducers, full-stack app bundles, and packaged desktop/mobile apps with one consistent build and test story.',
+      'Compile to WebAssembly for browser UIs, backend services, or packaged desktop and mobile apps — with one build system and one test story.',
     href: '/docs/toolchain/wasm',
     cta: 'Open WASM docs',
   },
   {
     eyebrow: 'Platform',
-    title: 'Run a lifecycle loop with packs, deploy plans, incidents, and regressions',
+    title: 'Automate the full lifecycle: deploy, monitor, repair',
     body:
-      'X07 Platform gives agents and operators one operational model for rollout control, incident capture, regression generation, and device release supervision.',
+      'One operational model for rollout control, incident tracking, regression testing, and device release supervision — built for agents and operators alike.',
     href: '/docs/agent/platform',
     cta: 'Open platform docs',
   },
   {
     eyebrow: 'Registry',
-    title: 'Publish packages and consume the official ecosystem through x07.io',
+    title: 'Install and publish packages through x07.io',
     body:
-      'Use the registry to install pinned packages, publish your own, and keep machine-readable schemas and package metadata aligned with the public toolchain story.',
+      'Pinned dependencies, machine-readable metadata, and versioned schemas — all aligned with the toolchain so agents never guess at compatibility.',
     href: 'https://x07.io',
     cta: 'Open x07.io',
   },
   {
     eyebrow: 'Docs',
-    title: 'Learn from one source of truth for humans and coding agents',
+    title: 'One source of truth for humans and agents',
     body:
-      'x07lang.org serves the released docs bundle from the core repo and the agent portal exposes versioned schemas, skills, stdlib indexes, and examples.',
+      'Every release ships docs for developers and a machine-first agent portal with versioned schemas, skills, stdlib indexes, and runnable examples.',
     href: '/docs/',
     cta: 'Browse docs',
   },
@@ -54,7 +111,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <div className={styles.heroKicker}>100% agent coding language</div>
+        <div className={styles.heroKicker}>The agent-first language</div>
         <img
           src="/img/logo-full-light.png"
           alt={siteConfig.title}
@@ -66,15 +123,16 @@ function HomepageHeader() {
           className={clsx(styles.heroLogo, styles.heroLogoDark)}
         />
         <h1 className={styles.heroTitle}>
-          Software that stays clear enough for humans and strict enough for
-          coding agents
+          AI agents guess when the language leaves room for guesswork.
+          {' '}
+          <span className={styles.heroHighlight}>
+            x07 is designed so they don't have to.
+          </span>
         </h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
         <p className={styles.heroLead}>
-          X07 is an agent-first programming language with memory-safe defaults,
-          structured concurrency, fast native execution, deterministic repair
-          loops, and an official ecosystem for MCP, WASM, packages, and
-          lifecycle operations.
+          One canonical API per capability. Zero ambiguity. Agents get it right
+          on the first try — with sandboxed execution, structured error IDs, and
+          machine-applicable fixes.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -82,32 +140,78 @@ function HomepageHeader() {
             to="/docs/getting-started/agent-quickstart">
             Start here
           </Link>
-          <Link className="button button--outline button--lg" to="/docs/toolchain/mcp-kit">
+          <Link
+            className="button button--outline button--lg"
+            to="/docs/toolchain/mcp-kit">
             MCP kit
           </Link>
-          <Link className="button button--outline button--lg" to="/docs/toolchain/wasm">
+          <Link
+            className="button button--outline button--lg"
+            to="/docs/toolchain/wasm">
             WASM
           </Link>
-          <Link className="button button--outline button--lg" to="/agent">
+          <Link
+            className="button button--outline button--lg"
+            to="/agent">
             Agent portal
           </Link>
         </div>
-        <div className={styles.heroFacts}>
-          <div className={styles.heroFact}>
-            <strong>Memory-safe defaults</strong>
-            <span>Checked values, explicit capabilities, no fragile patching.</span>
-          </div>
-          <div className={styles.heroFact}>
-            <strong>Structured concurrency</strong>
-            <span>One clear async model built for reliable agent edits.</span>
-          </div>
-          <div className={styles.heroFact}>
-            <strong>Production surfaces</strong>
-            <span>MCP, WASM, device, registry, and lifecycle tooling all line up.</span>
-          </div>
-        </div>
       </div>
     </header>
+  );
+}
+
+function ComparisonSection() {
+  return (
+    <section className={styles.comparisonSection}>
+      <div className="container">
+        <div className={styles.sectionIntro}>
+          <p className={styles.sectionEyebrow}>Why it matters</p>
+          <h2>Less guesswork in the language. Less guesswork in the repair loop.</h2>
+          <p>
+            The first example is about API ambiguity. The second is about what
+            happens when the first attempt is wrong.
+          </p>
+        </div>
+        {comparisonExamples.map((example) => (
+          <div key={example.title} className={styles.comparisonExample}>
+            <div className={styles.comparisonExampleHeader}>
+              <h3 className={styles.comparisonExampleTitle}>{example.title}</h3>
+              <p className={styles.comparisonExampleIntro}>{example.intro}</p>
+            </div>
+            <div className={styles.comparisonGrid}>
+              <div
+                className={clsx(
+                  styles.comparisonPanel,
+                  styles.comparisonFail,
+                )}>
+                <div className={styles.comparisonLabel}>
+                  <span className={styles.labelBadgeFail}>{example.leftLabel}</span>
+                  <span className={styles.comparisonIter}>{example.leftMeta}</span>
+                </div>
+                <pre className={styles.comparisonCode}>
+                  <code>{example.leftCode}</code>
+                </pre>
+              </div>
+              <div
+                className={clsx(
+                  styles.comparisonPanel,
+                  styles.comparisonPass,
+                )}>
+                <div className={styles.comparisonLabel}>
+                  <span className={styles.labelBadgePass}>{example.rightLabel}</span>
+                  <span className={styles.comparisonIter}>{example.rightMeta}</span>
+                </div>
+                <pre className={styles.comparisonCode}>
+                  <code>{example.rightCode}</code>
+                </pre>
+              </div>
+            </div>
+            <p className={styles.comparisonFootnote}>{example.footnote}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -115,9 +219,10 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="x07lang.org"
-      description="X07 is an agent-first systems language with sandboxed execution and canonical contracts.">
+      description="AI agents guess when languages leave room for guesswork. X07 is designed with canonical APIs, structured errors, and machine-applicable fixes so agents do not have to.">
       <HomepageHeader />
       <main>
+        <ComparisonSection />
         <section className={styles.ecosystemSection}>
           <div className="container">
             <div className={styles.sectionIntro}>
@@ -125,7 +230,7 @@ export default function Home(): ReactNode {
               <h2>One language, one story across the stack</h2>
               <p>
                 Start with the core toolchain, then move into the official
-                surfaces that matter for real software delivery.
+                surfaces that ship real software.
               </p>
             </div>
             <div className={styles.cardGrid}>

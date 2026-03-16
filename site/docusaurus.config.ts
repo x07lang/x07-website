@@ -7,7 +7,7 @@ import {createRedirects} from './redirects.generated';
 
 const config: Config = {
   title: 'X07',
-  tagline: 'Agent-first systems language',
+  tagline: 'The agent-first language',
   favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
