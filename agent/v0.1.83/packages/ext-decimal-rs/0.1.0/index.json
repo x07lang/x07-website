@@ -1,0 +1,76 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-decimal-rs",
+  "version": "0.1.0",
+  "description": "Fixed-point decimal utilities (codec_v1, parse, format, basic ops).",
+  "docs": "Fixed-point decimal utilities (codec_v1, parse, format, basic ops).\n\nModules:\n- std.math.decimal\n- std.math.decimal.codec_v1\n- std.math.decimal.parse\n- std.math.decimal.fmt\n- std.math.decimal.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-decimal-rs@0.1.0 --sync\n- Import the modules listed above.\n\nNotes:\n- Determinism: pure\n- Representation: (sign, scale, magnitude)\n- Encoding: std.math.decimal.codec_v1 (stable)\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "pure",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-kv",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-error@0.1.2",
+      "ext-bigint-rs@0.1.0"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "std.math.decimal",
+      "path": "std/math/decimal.x07.json",
+      "exports": [
+        "std.math.decimal.add_v1",
+        "std.math.decimal.from_i32_v1",
+        "std.math.decimal.is_zero_v1",
+        "std.math.decimal.mul_v1"
+      ]
+    },
+    {
+      "module_id": "std.math.decimal.codec_v1",
+      "path": "std/math/decimal/codec_v1.x07.json",
+      "exports": [
+        "std.math.decimal.codec_v1.canon_v1",
+        "std.math.decimal.codec_v1.is_valid_v1",
+        "std.math.decimal.codec_v1.mag_view_v1",
+        "std.math.decimal.codec_v1.scale_v1",
+        "std.math.decimal.codec_v1.sign_v1"
+      ]
+    },
+    {
+      "module_id": "std.math.decimal.fmt",
+      "path": "std/math/decimal/fmt.x07.json",
+      "exports": [
+        "std.math.decimal.fmt.err_code",
+        "std.math.decimal.fmt.format_dec_v1",
+        "std.math.decimal.fmt.get_bytes",
+        "std.math.decimal.fmt.is_err"
+      ]
+    },
+    {
+      "module_id": "std.math.decimal.parse",
+      "path": "std/math/decimal/parse.x07.json",
+      "exports": [
+        "std.math.decimal.parse.err_code",
+        "std.math.decimal.parse.get_bytes",
+        "std.math.decimal.parse.is_err",
+        "std.math.decimal.parse.parse_dec_v1"
+      ]
+    },
+    {
+      "module_id": "std.math.decimal.tests",
+      "path": "std/math/decimal/tests.x07.json",
+      "exports": [
+        "std.math.decimal.tests.test_add_and_mul",
+        "std.math.decimal.tests.test_parse_and_format"
+      ]
+    }
+  ]
+}
