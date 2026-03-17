@@ -13,11 +13,6 @@
       "published_at_utc": null
     },
     {
-      "toolchain_version": "0.1.81",
-      "docs_bundle_sha256": "4978fe4881c5c6563504a23e4ef27c76b71c7b75ec78087c8dc5d638598d2e79",
-      "published_at_utc": null
-    },
-    {
       "toolchain_version": "0.1.79",
       "docs_bundle_sha256": "eb33b18e6719004ff72c4fd3e0698d59eb01edaeaa30541073e7b77c4bd9ffbe",
       "published_at_utc": "2026-03-16T03:31:00Z"
