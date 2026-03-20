@@ -91,6 +91,8 @@ Validate the repo structure:
 python3 scripts/check_site.py --check
 ```
 
+That check also rejects installer drift. If `site/static/install/channels.json` says stable points to one toolchain and `site/static/install/channels/stable.json` points to another, CI fails before publish.
+
 Run the site locally:
 
 ```sh

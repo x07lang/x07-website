@@ -103,6 +103,129 @@ def main(argv: list[str]) -> int:
         except Exception as e:
             raise ValueError(f"{path} invalid JSON: {e}")
 
+    def normalize_version(value: object) -> str | None:
+        if not isinstance(value, str) or not value:
+            return None
+        if value.startswith("v"):
+            value = value[1:]
+        parts = value.split(".")
+        if len(parts) != 3:
+            return None
+        try:
+            nums = [int(part) for part in parts]
+        except ValueError:
+            return None
+        if any(num < 0 for num in nums):
+            return None
+        return ".".join(str(num) for num in nums)
+
+    def check_install_manifests() -> int:
+        install_root = root / "site" / "static" / "install"
+        channels_path = install_root / "channels.json"
+        if not channels_path.is_file():
+            return err(f"missing {channels_path.relative_to(root)}")
+
+        try:
+            channels_doc = read_json(channels_path)
+        except ValueError as e:
+            return err(str(e))
+
+        if not isinstance(channels_doc, dict):
+            return err(f"{channels_path.relative_to(root)} must be a JSON object")
+        channels = channels_doc.get("channels")
+        toolchains = channels_doc.get("toolchains")
+        x07up_versions = channels_doc.get("x07up")
+        if not isinstance(channels, dict):
+            return err(f"{channels_path.relative_to(root)} channels must be an object")
+        if not isinstance(toolchains, dict):
+            return err(f"{channels_path.relative_to(root)} toolchains must be an object")
+        if not isinstance(x07up_versions, dict):
+            return err(f"{channels_path.relative_to(root)} x07up must be an object")
+
+        for channel_name, channel_entry in sorted(channels.items()):
+            if not isinstance(channel_name, str) or not channel_name:
+                return err(f"{channels_path.relative_to(root)} channel names must be non-empty strings")
+            if not isinstance(channel_entry, dict):
+                return err(
+                    f"{channels_path.relative_to(root)} channels.{channel_name} must be a JSON object"
+                )
+
+            toolchain_tag = channel_entry.get("toolchain")
+            x07up_tag = channel_entry.get("x07up")
+            if not isinstance(toolchain_tag, str) or not toolchain_tag:
+                return err(
+                    f"{channels_path.relative_to(root)} channels.{channel_name}.toolchain must be a non-empty string"
+                )
+            if not isinstance(x07up_tag, str) or not x07up_tag:
+                return err(
+                    f"{channels_path.relative_to(root)} channels.{channel_name}.x07up must be a non-empty string"
+                )
+            if toolchain_tag not in toolchains:
+                return err(
+                    f"{channels_path.relative_to(root)} channels.{channel_name}.toolchain {toolchain_tag!r} is missing from toolchains"
+                )
+            if x07up_tag not in x07up_versions:
+                return err(
+                    f"{channels_path.relative_to(root)} channels.{channel_name}.x07up {x07up_tag!r} is missing from x07up"
+                )
+
+            channel_path = install_root / "channels" / f"{channel_name}.json"
+            if not channel_path.is_file():
+                return err(f"missing {channel_path.relative_to(root)}")
+            try:
+                channel_doc = read_json(channel_path)
+            except ValueError as e:
+                return err(str(e))
+            if not isinstance(channel_doc, dict):
+                return err(f"{channel_path.relative_to(root)} must be a JSON object")
+            if channel_doc.get("channel") != channel_name:
+                return err(f"{channel_path.relative_to(root)} channel mismatch")
+
+            toolchain_version = normalize_version(toolchain_tag)
+            if toolchain_version is None:
+                return err(
+                    f"{channels_path.relative_to(root)} channels.{channel_name}.toolchain must be a semver tag"
+                )
+            x07up_version = normalize_version(x07up_tag)
+            if x07up_version is None:
+                return err(
+                    f"{channels_path.relative_to(root)} channels.{channel_name}.x07up must be a semver tag"
+                )
+
+            x07_core = channel_doc.get("x07_core")
+            if not isinstance(x07_core, dict):
+                return err(f"{channel_path.relative_to(root)} x07_core must be an object")
+            if x07_core.get("tag") != toolchain_tag:
+                return err(
+                    f"{channel_path.relative_to(root)} x07_core.tag must match channels.json ({toolchain_tag})"
+                )
+            if x07_core.get("version") != toolchain_version:
+                return err(
+                    f"{channel_path.relative_to(root)} x07_core.version must match channels.json ({toolchain_version})"
+                )
+            release_manifest_url = x07_core.get("release_manifest_url")
+            expected_release_name = f"x07-{toolchain_version}-release.json"
+            if not isinstance(release_manifest_url, str) or not release_manifest_url:
+                return err(f"{channel_path.relative_to(root)} x07_core.release_manifest_url must be a string")
+            if f"/download/{toolchain_tag}/" not in release_manifest_url:
+                return err(
+                    f"{channel_path.relative_to(root)} x07_core.release_manifest_url must use {toolchain_tag}"
+                )
+            if not release_manifest_url.endswith(f"/{expected_release_name}"):
+                return err(
+                    f"{channel_path.relative_to(root)} x07_core.release_manifest_url must end with /{expected_release_name}"
+                )
+
+            min_x07up_version = normalize_version(channel_doc.get("min_x07up_version"))
+            if min_x07up_version is None:
+                return err(f"{channel_path.relative_to(root)} min_x07up_version must be a semver string")
+            if min_x07up_version != x07up_version:
+                return err(
+                    f"{channel_path.relative_to(root)} min_x07up_version must match channels.json ({x07up_version})"
+                )
+
+        return 0
+
     def check_agent_dir(agent_dir: Path) -> int:
         index_path = agent_dir / "index.json"
         if not index_path.is_file():
@@ -661,6 +784,10 @@ def main(argv: list[str]) -> int:
         return err("versions/toolchain_versions.json latest_toolchain_version must be string|null")
     if not isinstance(versions.get("versions"), list):
         return err("versions/toolchain_versions.json versions must be an array")
+
+    rc = check_install_manifests()
+    if rc != 0:
+        return rc
 
     seen_versions: set[str] = set()
     for entry in versions["versions"]:

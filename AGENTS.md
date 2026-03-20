@@ -4,6 +4,7 @@
 
 - `python3 scripts/check_site.py --check`
 - `bash scripts/ci/check_all.sh`
+- `python3 scripts/check_site.py --check` also validates that `site/static/install/channels.json` and `site/static/install/channels/*.json` point at the same toolchain and minimum `x07up` version.
 
 ## Docs and installer sync workflow
 
