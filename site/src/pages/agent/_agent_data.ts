@@ -679,6 +679,30 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-schema.report.schema.json"
     },
     {
+      "id": "x07-tool-service-archetypes.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-service-archetypes.report.schema.json"
+    },
+    {
+      "id": "x07-tool-service-genpack-grammar.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-service-genpack-grammar.report.schema.json"
+    },
+    {
+      "id": "x07-tool-service-genpack-schema.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-service-genpack-schema.report.schema.json"
+    },
+    {
+      "id": "x07-tool-service-genpack.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-service-genpack.report.schema.json"
+    },
+    {
+      "id": "x07-tool-service-validate.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-service-validate.report.schema.json"
+    },
+    {
+      "id": "x07-tool-service.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-service.report.schema.json"
+    },
+    {
       "id": "x07-tool-sm-check.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-sm-check.report.schema.json"
     },
@@ -2629,6 +2653,20 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-net-protos-c/0.1.3/index.json",
       "description": "HTTP/2 + WebSocket + gRPC helpers, pinned by arch/net contracts.",
       "docs_url": "/agent/latest/packages/ext-net-protos-c/0.1.3/index.json#docs"
+    },
+    {
+      "name": "ext-obj-core",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-obj-core/0.1.0/index.json",
+      "description": "Object storage core: canonical object metadata, request/response envelopes, and logical driver interface.",
+      "docs_url": "/agent/latest/packages/ext-obj-core/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-obj-s3",
+      "version": "0.1.0",
+      "url": "/agent/latest/packages/ext-obj-s3/0.1.0/index.json",
+      "description": "S3-compatible object storage driver for std.obj (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-obj-s3/0.1.0/index.json#docs"
     },
     {
       "name": "ext-obs",

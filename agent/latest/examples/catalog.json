@@ -1655,6 +1655,111 @@
       "url": "/agent/latest/examples/catalog-files/readiness-checks/x07-sm-arch-contracts-smoke/src/main.x07.json"
     },
     {
+      "id": "service_api_cell_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "service_api_cell_v1/src/example.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_api_cell_v1/src/example.x07.json"
+    },
+    {
+      "id": "service_api_cell_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "service_api_cell_v1/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_api_cell_v1/src/main.x07.json"
+    },
+    {
+      "id": "service_api_cell_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "service_api_cell_v1/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_api_cell_v1/tests/core.x07.json"
+    },
+    {
+      "id": "service_event_consumer_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "service_event_consumer_v1/src/example.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_event_consumer_v1/src/example.x07.json"
+    },
+    {
+      "id": "service_event_consumer_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "service_event_consumer_v1/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_event_consumer_v1/src/main.x07.json"
+    },
+    {
+      "id": "service_event_consumer_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "service_event_consumer_v1/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_event_consumer_v1/tests/core.x07.json"
+    },
+    {
+      "id": "service_policy_service_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "service_policy_service_v1/src/example.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_policy_service_v1/src/example.x07.json"
+    },
+    {
+      "id": "service_policy_service_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "service_policy_service_v1/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_policy_service_v1/src/main.x07.json"
+    },
+    {
+      "id": "service_policy_service_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "service_policy_service_v1/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_policy_service_v1/tests/core.x07.json"
+    },
+    {
+      "id": "service_scheduled_job_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "service_scheduled_job_v1/src/example.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_scheduled_job_v1/src/example.x07.json"
+    },
+    {
+      "id": "service_scheduled_job_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "service_scheduled_job_v1/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_scheduled_job_v1/src/main.x07.json"
+    },
+    {
+      "id": "service_scheduled_job_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "service_scheduled_job_v1/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_scheduled_job_v1/tests/core.x07.json"
+    },
+    {
+      "id": "service_workflow_service_v1/src/example",
+      "purpose": "example",
+      "scope": "nested",
+      "path": "service_workflow_service_v1/src/example.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_workflow_service_v1/src/example.x07.json"
+    },
+    {
+      "id": "service_workflow_service_v1/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "service_workflow_service_v1/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_workflow_service_v1/src/main.x07.json"
+    },
+    {
+      "id": "service_workflow_service_v1/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "service_workflow_service_v1/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/service_workflow_service_v1/tests/core.x07.json"
+    },
+    {
       "id": "trusted_network_service_v1/.x07/deps/ext-curl-c/0.1.6/modules/ext/curl/_ffi",
       "purpose": "ffi",
       "scope": "nested",
