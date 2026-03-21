@@ -4,10 +4,10 @@
   "packages": {
     "std_web_ui": "0.2.6"
   },
-  "published_at_utc": "2026-03-21T02:51:00Z",
+  "published_at_utc": "2026-03-21T04:20:56Z",
   "schema_version": "x07.release.bundle@0.1.0",
   "x07_core": {
-    "release_manifest_sha256": "sha256:74f1ffa8150ed2061d9aea0a23472bf13f652c93a8b9414370766fa00cdd5c25",
+    "release_manifest_sha256": "sha256:67b6178c474d5566814efab9dce86015c29db344a4f0d47dde1b17215c6251f6",
     "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.1.94/x07-0.1.94-release.json",
     "tag": "v0.1.94",
     "version": "0.1.94"
