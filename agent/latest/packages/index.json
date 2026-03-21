@@ -1655,11 +1655,25 @@
       "docs_url": "/agent/latest/packages/ext-obj-core/0.1.0/index.json#docs"
     },
     {
+      "name": "ext-obj-core",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-obj-core/0.1.1/index.json",
+      "description": "Object storage core: canonical object metadata, request/response envelopes, and logical driver interface.",
+      "docs_url": "/agent/latest/packages/ext-obj-core/0.1.1/index.json#docs"
+    },
+    {
       "name": "ext-obj-s3",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-obj-s3/0.1.0/index.json",
       "description": "S3-compatible object storage driver for std.obj (run-os only).",
       "docs_url": "/agent/latest/packages/ext-obj-s3/0.1.0/index.json#docs"
+    },
+    {
+      "name": "ext-obj-s3",
+      "version": "0.1.1",
+      "url": "/agent/latest/packages/ext-obj-s3/0.1.1/index.json",
+      "description": "S3-compatible object storage driver for std.obj (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-obj-s3/0.1.1/index.json#docs"
     },
     {
       "name": "ext-obs",
