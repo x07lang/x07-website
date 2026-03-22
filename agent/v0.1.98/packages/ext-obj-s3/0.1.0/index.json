@@ -1,0 +1,39 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-obj-s3",
+  "version": "0.1.0",
+  "description": "S3-compatible object storage driver for std.obj (run-os only).",
+  "docs": "S3-compatible object storage driver for X07 services.\n\nModules:\n- std.obj.s3\n- std.obj.s3.spec\n\nUsage:\n- Add dependency: x07 pkg add ext-obj-s3@0.1.0\n- Prefer logical resource bindings like obj.documents rather than bucket names in code.\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "os-world-only",
+    "worlds_allowed": [
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-obj-core@0.1.0",
+      "ext-data-model@0.1.10"
+    ],
+    "import_mode": "handwritten"
+  },
+  "modules": [
+    {
+      "module_id": "std.obj.s3",
+      "path": "std/obj/s3.x07.json",
+      "exports": [
+        "std.obj.s3.delete_v1",
+        "std.obj.s3.get_v1",
+        "std.obj.s3.head_v1",
+        "std.obj.s3.put_v1"
+      ]
+    },
+    {
+      "module_id": "std.obj.s3.spec",
+      "path": "std/obj/s3/spec.x07.json",
+      "exports": [
+        "std.obj.s3.spec.flags_none_v1"
+      ]
+    }
+  ]
+}
