@@ -1,0 +1,94 @@
+# Repair loop (canonical agent workflow)
+
+X07 tooling is designed so agents can converge on a correct program by iterating over structured outputs (diagnostics, quickfixes, JSON Patch).
+
+## Automatic repair (recommended)
+
+`x07 run`, `x07 build`, and `x07 bundle` run the repair loop automatically by default.
+
+Control it with:
+
+- `--repair=write` (default): write repairs back to source files
+- `--repair=memory`: stage repaired copies under `.x07/repair/_staged/`
+- `--repair=off`: disable auto-repair
+- `--repair-max-iters N`: bound iterations (default: 3)
+
+Use the manual loop below when you need explicit control (or when you’re working with raw `*.x07.json` files outside a project wrapper).
+
+## The loop (single file)
+
+### 1) Format (canonicalize)
+
+```bash
+x07 fmt --input src/main.x07.json --write --json
+```
+
+### 2) Lint (collect diagnostics)
+
+```bash
+x07 lint --input src/main.x07.json --json
+```
+
+If you want the raw diagnostics report (instead of the tool wrapper), omit `--json`.
+
+### 3) Apply quickfixes (when available)
+
+```bash
+x07 fix --input src/main.x07.json --write --json
+```
+
+Notes:
+
+- `x07 fix` applies any `diagnostic.quickfix` entries that are `kind: "json_patch"` (RFC 6902) and then re-lints the result.
+- `--write` controls whether fixes are applied to disk; `--json` controls machine report output.
+- `x07 fix --suggest-generics` emits a suggested `x07.patchset@0.1.0` (no file edits) that rewrites near-identical type-suffixed functions (for example `_u32`, `_i32`) into a single generic base plus typed wrappers. Apply it with `x07 patch apply --in <patchset.json> --write`.
+
+### 4) Apply an explicit patch (when required)
+
+When `x07 fix` cannot resolve an issue (or you need a targeted semantic change), apply an explicit JSON Patch:
+
+```bash
+x07 ast apply-patch --in src/main.x07.json --patch patch.json --out src/main.x07.json --validate
+```
+
+### 5) Re-format and re-lint
+
+```bash
+x07 fmt --input src/main.x07.json --write --json
+x07 lint --input src/main.x07.json --json
+```
+
+Repeat until lint is green.
+
+## Validate at the project level
+
+After the single-file loop is clean, run the test harness:
+
+```bash
+x07 test --manifest tests/tests.json
+```
+
+If you changed dependencies, refresh the lockfile:
+
+```bash
+x07 pkg lock --project x07.json
+```
+
+## Context pack (portable agent input)
+
+To hand a failing state to an agent (or to reduce token usage), capture a tool report and produce a single context artifact:
+
+```bash
+x07 lint --input src/main.x07.json --json --report-out .x07/artifacts/reports/lint.json --quiet-json
+x07 agent context --diag .x07/artifacts/reports/lint.json --project x07.json --out .x07/artifacts/context/context.json
+```
+
+Notes:
+
+- `x07 agent context` accepts `--diag` as either raw `x07diag` (`x07.x07diag@0.1.0`) or a tool wrapper report (`x07.tool.*.report@0.1.0`).
+- The focused diagnostic must have `loc.kind="x07ast"` pointers (otherwise re-run producing x07AST pointers).
+
+## Output contracts (for agents)
+
+- Diagnostics schema: `spec/x07diag.schema.json`
+- Tool report schema (`--json`): `spec/x07-tool-<scope>.report.schema.json` (base: `spec/x07-tool.report.schema.json`)
