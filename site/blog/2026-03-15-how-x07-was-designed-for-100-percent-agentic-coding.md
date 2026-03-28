@@ -5,7 +5,7 @@ description: X07 narrows ambiguity on purpose so coding agents can work inside e
 tags: [x07, agentic coding, toolchain]
 ---
 
-> **Series navigation:** [Previous: Programming With Coding Agents Is Not Human Programming With Better Autocomplete](/blog/programming-with-coding-agents-is-not-human-programming) · Post 2 of 3
+> **Series navigation:** [Previous: Programming With Coding Agents Is Not Human Programming With Better Autocomplete](/blog/programming-with-coding-agents-is-not-human-programming) · Post 2 of 3 · [Next: How to Trust X07 Code Written by Coding Agents](/blog/how-to-trust-x07-code-written-by-coding-agents)
 
 Most languages are trying to make humans flexible.
 
@@ -202,4 +202,4 @@ The big idea is simple:
 
 That is why x07 matters even to users who never think about AI at all. The same design that makes agents more reliable also makes software easier to reason about, easier to replay, easier to review, and easier to operate.
 
-> **Series navigation:** [Previous: Programming With Coding Agents Is Not Human Programming With Better Autocomplete](/blog/programming-with-coding-agents-is-not-human-programming) · Post 2 of 3
+> **Series navigation:** [Previous: Programming With Coding Agents Is Not Human Programming With Better Autocomplete](/blog/programming-with-coding-agents-is-not-human-programming) · Post 2 of 3 · [Next: How to Trust X07 Code Written by Coding Agents](/blog/how-to-trust-x07-code-written-by-coding-agents)
