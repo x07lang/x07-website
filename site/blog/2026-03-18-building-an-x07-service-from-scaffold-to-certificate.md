@@ -21,9 +21,18 @@ For this walkthrough we will use `api-cell` — an HTTP service backed by Postgr
 
 ```bash
 # Scaffold a new project from the api-cell service archetype.
-x07 init --template api-cell --dir orders
+mkdir orders
 cd orders
+x07 init --template api-cell
 ```
+
+:::note
+As of `x07 0.1.102`, service archetype scaffolds (`api-cell`, `event-consumer`, etc) are not yet usable from the prebuilt `x07` binary alone. If `x07 init --template api-cell` fails, run it via a source checkout:
+
+```bash
+cargo run -q -p x07 --manifest-path /path/to/x07/Cargo.toml -- init --template api-cell
+```
+:::
 
 That single command produces a complete, buildable project:
 
@@ -33,6 +42,9 @@ orders/
   x07.lock.json                         # pinned dependency graph
   x07-toolchain.toml                    # toolchain channel + offline docs
   AGENT.md                              # self-recovery guide for agents
+  README.md                             # scaffold README
+  .agent/                               # offline docs + skills (symlinked)
+  .x07/                                 # resolved dependency checkout (from x07.lock.json)
   src/
     main.x07.json                       # program entry (wires to the domain)
     example.x07.json                    # starter domain module
@@ -44,6 +56,7 @@ orders/
     run-os.json                         # sandbox policy for run-os-sandboxed
   tests/
     tests.json                          # test manifest
+    core.x07.json                       # starter smoke test module
 ```
 
 The project already runs:
@@ -127,6 +140,10 @@ x07 service validate --manifest arch/service/index.x07service.json
 The most important code in an X07 service lives in the pure domain kernel. This is the part that can be formally verified, deterministically tested, and certified.
 
 :::note
+In practice, you typically certify the kernel as its own `solve-pure` project/package, and keep the service shell as a separate `run-os-sandboxed` service project that depends on it.
+:::
+
+:::note
 This example uses X07's canonical `x07AST` JSON format. The comments explain what each field means for readers who are new to the language.
 :::
 
@@ -195,6 +212,50 @@ x07 schema derive \
   --write
 ```
 
+The boundary index pins the reviewable surface explicitly:
+
+:::note
+The boundary index is required by strong trust profiles, and is validated by both `x07 arch check` and `x07 trust certify`.
+:::
+
+```jsonc
+// arch/boundaries/index.x07boundary.json
+{
+  "schema_version": "x07.arch.boundaries.index@0.1.0",
+  "boundaries": [
+    {
+      "id": "orders.core.compute_total_v1",
+      "symbol": "orders.core.compute_total_v1",
+      "node_id": "domain_core",
+      "kind": "public_function",
+      "from_zone": "verified_core",
+      "to_zone": "verified_core",
+      "worlds_allowed": ["solve-pure"],
+      "input": {
+        "params": [
+          { "name": "item_count", "ty": "i32" },
+          { "name": "unit_price", "ty": "i32" },
+          { "name": "discount_pct", "ty": "i32" }
+        ]
+      },
+      "output": { "ty": "i32" },
+      "smoke": {
+        "entry": "tests.core.smoke_compute_total",
+        "tests": ["smoke/compute_total"]
+      },
+      "pbt": {
+        "required": true,
+        "tests": ["pbt/total_non_negative"]
+      },
+      "verify": {
+        "required": true,
+        "mode": "prove"
+      }
+    }
+  ]
+}
+```
+
 And the architecture manifest declares which modules belong to which trust zones:
 
 ```jsonc
@@ -210,9 +271,16 @@ And the architecture manifest declares which modules belong to which trust zones
   "nodes": [
     {
       "id": "domain_core",                          // The pure domain kernel.
-      "match": { "path_globs": ["src/orders/core/**/*.x07.json"] },
+      "match": {
+        "module_prefixes": ["orders.core"],
+        "path_globs": ["src/orders/core/**/*.x07.json"]
+      },
       "world": "solve-pure",                        // Must run in the deterministic pure world.
       "trust_zone": "verified_core",                // Eligible for formal verification.
+      "visibility": {
+        "mode": "restricted",
+        "visible_to": ["service_shell", "tests"]
+      },
       "imports": {
         "deny_prefixes": ["std.os.", "ext."],       // No OS or external imports allowed.
         "allow_prefixes": ["orders.core", "std."]
@@ -220,15 +288,31 @@ And the architecture manifest declares which modules belong to which trust zones
     },
     {
       "id": "service_shell",                        // The effectful adapter layer.
-      "match": { "path_globs": ["src/orders/api/**/*.x07.json"] },
+      "match": {
+        "module_prefixes": ["orders.api"],
+        "path_globs": ["src/orders/api/**/*.x07.json"]
+      },
       "world": "run-os-sandboxed",                  // Runs with real OS access under sandbox policy.
-      "trust_zone": "untrusted"                     // Reviewed via capsule attestation, not proof.
+      "trust_zone": "untrusted",                    // Reviewed via capsule attestation, not proof.
+      "visibility": { "mode": "public", "visible_to": [] },
+      "imports": {
+        "deny_prefixes": [],
+        "allow_prefixes": ["orders.", "std.", "ext."]
+      }
     },
     {
       "id": "tests",
-      "match": { "path_globs": ["tests/**/*.x07.json"] },
+      "match": {
+        "module_prefixes": ["tests."],
+        "path_globs": ["tests/**/*.x07.json"]
+      },
       "world": "solve-pure",
-      "trust_zone": "test_only"
+      "trust_zone": "test_only",
+      "visibility": { "mode": "restricted", "visible_to": [] },
+      "imports": {
+        "deny_prefixes": [],
+        "allow_prefixes": ["orders.", "std.", "tests."]
+      }
     }
   ],
 
@@ -239,12 +323,31 @@ And the architecture manifest declares which modules belong to which trust zones
     { "kind": "deny_cycles_v1", "id": "no_cycles", "scope": "nodes" }
   ],
 
+  "contracts_v1": {
+    "boundaries": {
+      "index_path": "arch/boundaries/index.x07boundary.json",
+      "enforce": "error"
+    },
+    "canonical_json": { "mode": "jcs_rfc8785_v1" }
+  },
+
   "checks": {
     "deny_cycles": true,
     "deny_orphans": true,
     "enforce_visibility": true,
     "enforce_world_caps": true,
-    "allowlist_mode": { "enabled": true }
+    "brand_boundary_v1": { "enabled": true },
+    "allowlist_mode": {
+      "enabled": true,
+      "default_allow_external": false,
+      "default_allow_internal": false
+    }
+  },
+
+  "tool_budgets": {
+    "max_modules": 5000,
+    "max_edges": 50000,
+    "max_diags": 2000
   }
 }
 ```
@@ -343,11 +446,13 @@ If PBT finds a counterexample:
 
 ```bash
 # Replay the exact failing case for debugging.
-x07 test --pbt --pbt-repro target/x07test/pbt/total_non_negative/repro.json \
+x07 test --pbt --pbt-repro target/x07test/pbt/id_<sha256(test-id)>/repro.json \
   --manifest tests/tests.json
 
-# Apply the structured fix if one is available.
-x07 fix --from-pbt target/x07test/pbt/total_non_negative/repro.json --write
+# Convert the repro into a deterministic regression test and patch the manifest.
+x07 fix --from-pbt target/x07test/pbt/id_<sha256(test-id)>/repro.json \
+  --tests-manifest tests/tests.json \
+  --write
 ```
 
 ## Step 7: Formal verification
@@ -381,7 +486,26 @@ The distinction matters. Older verification tools often collapse these into one 
 
 Proof is one layer. Certification bundles *all* the evidence — proof, tests, architecture, boundaries, schemas, trust posture — into one reviewable package.
 
+:::note
+`verified_core_pure_v1` is a strong **`solve-pure`** trust profile. Strong profiles require:
+
+- `--entry` must match `x07.json.operational_entry_symbol`
+- `certification_entry_symbol` must be unset (surrogate entries are rejected)
+- the project must actually be certifiable in the profile’s allowed world(s)
+
+The `api-cell` scaffold is a `run-os-sandboxed` service project, so it is not directly compatible with `verified_core_pure_v1`.
+If you are certifying a networked `run-os-sandboxed` service, start from `x07 init --template trusted-network-service` and certify under `trusted_program_sandboxed_net_v1` instead.
+:::
+
 ```bash
+# Bring the built-in profile into your repo (so you can edit its entry allowlist).
+mkdir -p arch/trust/profiles
+cp .agent/docs/examples/verified_core_pure_v1/arch/trust/profiles/verified_core_pure_v1.json \
+  arch/trust/profiles/verified_core_pure_v1.json
+
+# Edit arch/trust/profiles/verified_core_pure_v1.json and allowlist your entry symbol:
+#   "entrypoints": ["orders.core.compute_total_v1"]
+
 # Validate the project against the trust profile first.
 x07 trust profile check \
   --profile arch/trust/profiles/verified_core_pure_v1.json \
