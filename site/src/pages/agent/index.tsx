@@ -264,7 +264,7 @@ export default function AgentPortal(): ReactNode {
                         <code>{v}</code>
                       </td>
                       <td>
-                        <Link to={`/docs/${v}/`}>{`/docs/${v}/`}</Link>
+                        <a href={`/docs/${v}/`} data-noBrokenLinkCheck>{`/docs/${v}/`}</a>
                       </td>
                       <td>
                         <a href={`/agent/v${v}/index.json`}>{`/agent/v${v}/index.json`}</a>

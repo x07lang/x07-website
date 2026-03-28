@@ -229,6 +229,6 @@ flowchart LR
     G --> C
 ```
 
-**Up next:** a practical walkthrough of building an X07 service with a coding agent, from scaffold to proof object to certificate bundle.
+**Up next:** [Building an X07 Service: From Scaffold to Certificate](/blog/building-an-x07-service-from-scaffold-to-certificate) — a practical walkthrough of scaffolding a service, adding contracts, and producing a certificate bundle.
 
 > **Series navigation:** [Previous: How X07 Was Designed for 100% Agentic Coding](/blog/how-x07-was-designed-for-agentic-coding) · Post 3 of 3

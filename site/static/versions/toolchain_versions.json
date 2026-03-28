@@ -11,66 +11,6 @@
       "toolchain_version": "0.1.101",
       "docs_bundle_sha256": "7c2bfaec0fdd77d28daa360bad4356748915cfee37869d0c2738b136e2c868eb",
       "published_at_utc": "2026-03-23T09:19:31Z"
-    },
-    {
-      "toolchain_version": "0.1.100",
-      "docs_bundle_sha256": "d7980ce3e785ecb7fd454fbe98d6b6cfddc01e7ff8af11f9be0800b1ef65d7aa",
-      "published_at_utc": "2026-03-22T17:10:46Z"
-    },
-    {
-      "toolchain_version": "0.1.98",
-      "docs_bundle_sha256": "75af3a9221a23fda3e90a4854e967d443e2497de0ffbd2d75eb9e937d774e9ee",
-      "published_at_utc": "2026-03-22T06:42:47Z"
-    },
-    {
-      "toolchain_version": "0.1.97",
-      "docs_bundle_sha256": "39d5d752c6271ece15b59bd6bfa81fd934268529845e90aa8da812ceb37db5b2",
-      "published_at_utc": "2026-03-22T04:18:07Z"
-    },
-    {
-      "toolchain_version": "0.1.96",
-      "docs_bundle_sha256": "392ea0986e2f0c7067bea5a348df6f1246c2b43a277977c9d38efbe9b506f1e2",
-      "published_at_utc": "2026-03-21T19:00:04Z"
-    },
-    {
-      "toolchain_version": "0.1.94",
-      "docs_bundle_sha256": "4fbfed4f488a721fc31e6ccfb09b883596ab59e9c439361272fd747cb2aae61e",
-      "published_at_utc": "2026-03-21T02:53:10Z"
-    },
-    {
-      "toolchain_version": "0.1.93",
-      "docs_bundle_sha256": "4ffe3ec7c29ef749968c178bf98b64c0629f1804ef0ec7f2ab086a91d63a8984",
-      "published_at_utc": "2026-03-20T06:10:28Z"
-    },
-    {
-      "toolchain_version": "0.1.91",
-      "docs_bundle_sha256": "8e9f77bbe9db057ae771b4392970069045567dcd3a57769256f237e2df151f6f",
-      "published_at_utc": "2026-03-18T05:37:06Z"
-    },
-    {
-      "toolchain_version": "0.1.89",
-      "docs_bundle_sha256": "150a077d2ae0f721b1344c486526a88b6cc5ca124eeae2b9895c6e15ee83b22b",
-      "published_at_utc": "2026-03-18T02:12:57Z"
-    },
-    {
-      "toolchain_version": "0.1.83",
-      "docs_bundle_sha256": "1ec3261a96e23fef38b5eed4a4a28bca32c51f5681f1a47dd6b44b563d66d15b",
-      "published_at_utc": null
-    },
-    {
-      "toolchain_version": "0.1.82",
-      "docs_bundle_sha256": "5d05867cd704902fbbf8feb8664146bbfe0591d7c243249dcb142f5c4719a266",
-      "published_at_utc": null
-    },
-    {
-      "toolchain_version": "0.1.79",
-      "docs_bundle_sha256": "eb33b18e6719004ff72c4fd3e0698d59eb01edaeaa30541073e7b77c4bd9ffbe",
-      "published_at_utc": "2026-03-16T03:31:00Z"
-    },
-    {
-      "toolchain_version": "0.1.78",
-      "docs_bundle_sha256": "752397a396f42f7976d171d9ffa91a4edbf069641f29d3e71c0e7b0e66de2db8",
-      "published_at_utc": null
     }
   ]
 }
