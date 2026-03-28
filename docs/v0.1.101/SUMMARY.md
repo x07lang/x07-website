@@ -140,6 +140,7 @@
 - [Messaging](guides/messaging.md)
 - [Networking](guides/networking.md)
 - [Databases](guides/databases.md)
+- [Service architecture v1](guides/x07-service-architecture-v1.md)
 
 ## Project
 - [About](about.md)
