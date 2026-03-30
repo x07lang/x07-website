@@ -1382,6 +1382,34 @@
       "url": "/agent/latest/examples/catalog-files/certified_network_capsule_v1/tests/core.x07.json"
     },
     {
+      "id": "extract-core/src/kernel",
+      "purpose": "kernel",
+      "scope": "nested",
+      "path": "extract-core/src/kernel.x07.json",
+      "url": "/agent/latest/examples/catalog-files/extract-core/src/kernel.x07.json"
+    },
+    {
+      "id": "extract-core/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "extract-core/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/extract-core/src/main.x07.json"
+    },
+    {
+      "id": "extract-core/src/shell",
+      "purpose": "shell",
+      "scope": "nested",
+      "path": "extract-core/src/shell.x07.json",
+      "url": "/agent/latest/examples/catalog-files/extract-core/src/shell.x07.json"
+    },
+    {
+      "id": "extract-core/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "extract-core/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/extract-core/tests/core.x07.json"
+    },
+    {
       "id": "os-read-file/read_file_by_stdin",
       "purpose": "read file by stdin",
       "scope": "nested",

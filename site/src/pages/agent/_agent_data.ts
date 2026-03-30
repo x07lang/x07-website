@@ -1682,6 +1682,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-data-model/0.1.10/index.json#docs"
     },
     {
+      "name": "ext-data-model",
+      "version": "0.1.11",
+      "url": "/agent/latest/packages/ext-data-model/0.1.11/index.json",
+      "description": "Typed data model with JSON/TOML/YAML/XML/INI/CSV codecs.",
+      "docs_url": "/agent/latest/packages/ext-data-model/0.1.11/index.json#docs"
+    },
+    {
       "name": "ext-db-core",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-db-core/0.1.0/index.json",
@@ -1764,6 +1771,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-db-core/0.1.11/index.json",
       "description": "Database interfaces, query specs, and pooling (run-os only).",
       "docs_url": "/agent/latest/packages/ext-db-core/0.1.11/index.json#docs"
+    },
+    {
+      "name": "ext-db-core",
+      "version": "0.1.12",
+      "url": "/agent/latest/packages/ext-db-core/0.1.12/index.json",
+      "description": "Database interfaces, query specs, and pooling (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-db-core/0.1.12/index.json#docs"
     },
     {
       "name": "ext-db-migrate",
@@ -2291,6 +2305,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-json-rs/0.1.6/index.json#docs"
     },
     {
+      "name": "ext-json-rs",
+      "version": "0.1.7",
+      "url": "/agent/latest/packages/ext-json-rs/0.1.7/index.json",
+      "description": "JSON canonicalization, JSON Pointer, and ext.data_model parsing.",
+      "docs_url": "/agent/latest/packages/ext-json-rs/0.1.7/index.json#docs"
+    },
+    {
       "name": "ext-jsonschema-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-jsonschema-rs/0.1.0/index.json",
@@ -2431,6 +2452,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-msg-amqp-c/0.1.3/index.json#docs"
     },
     {
+      "name": "ext-msg-amqp-c",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-msg-amqp-c/0.1.4/index.json",
+      "description": "AMQP 0-9-1 driver using rabbitmq-c; integrates with std.msg envelope and RR replay (pinned via arch/msg/amqp).",
+      "docs_url": "/agent/latest/packages/ext-msg-amqp-c/0.1.4/index.json#docs"
+    },
+    {
       "name": "ext-msg-core",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-msg-core/0.1.0/index.json",
@@ -2457,6 +2485,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-msg-core/0.1.3/index.json",
       "description": "Messaging core: canonical msg.envelope_v1 + msg.rr.entry_v1 + driver interface (pinned via arch/msg).",
       "docs_url": "/agent/latest/packages/ext-msg-core/0.1.3/index.json#docs"
+    },
+    {
+      "name": "ext-msg-core",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-msg-core/0.1.4/index.json",
+      "description": "Messaging core: canonical msg.envelope_v1 + msg.rr.entry_v1 + driver interface (pinned via arch/msg).",
+      "docs_url": "/agent/latest/packages/ext-msg-core/0.1.4/index.json#docs"
     },
     {
       "name": "ext-msg-kafka-c",
@@ -2681,6 +2716,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-obj-s3/0.1.1/index.json",
       "description": "S3-compatible object storage driver for std.obj (run-os only).",
       "docs_url": "/agent/latest/packages/ext-obj-s3/0.1.1/index.json#docs"
+    },
+    {
+      "name": "ext-obj-s3",
+      "version": "0.1.2",
+      "url": "/agent/latest/packages/ext-obj-s3/0.1.2/index.json",
+      "description": "S3-compatible object storage driver for std.obj (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-obj-s3/0.1.2/index.json#docs"
     },
     {
       "name": "ext-obs",
@@ -3409,6 +3451,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-url-rs/0.1.4/index.json",
       "description": "HTTP types/parsing and URL parsing/encoding.",
       "docs_url": "/agent/latest/packages/ext-url-rs/0.1.4/index.json#docs"
+    },
+    {
+      "name": "ext-url-rs",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-url-rs/0.1.5/index.json",
+      "description": "HTTP types/parsing and URL parsing/encoding.",
+      "docs_url": "/agent/latest/packages/ext-url-rs/0.1.5/index.json#docs"
     },
     {
       "name": "ext-uuid-rs",
