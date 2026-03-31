@@ -161,6 +161,41 @@ def _generate_sidebar_items(summary_path: Path) -> List[Dict[str, Any]]:
     return summary_nodes_to_sidebar_items(nodes)
 
 
+_SERVICE_ARCH_GUIDE_DOC_ID = "guides/x07-service-architecture-v1"
+_SERVICE_ARCH_GUIDE_REL_MD = Path("guides") / "x07-service-architecture-v1.md"
+_SERVICE_ARCH_GUIDE_LABEL = "Service architecture v1"
+
+
+def _maybe_inject_service_architecture_guide(*, docs_root: Path, sidebar_items: List[Dict[str, Any]]) -> None:
+    guide_md = docs_root / _SERVICE_ARCH_GUIDE_REL_MD
+    if not guide_md.is_file():
+        return
+
+    for item in sidebar_items:
+        if not isinstance(item, dict):
+            continue
+        if item.get("type") != "category":
+            continue
+        if item.get("label") != "Guides":
+            continue
+        items = item.get("items")
+        if not isinstance(items, list):
+            return
+        for existing in items:
+            if not isinstance(existing, dict):
+                continue
+            if existing.get("type") == "doc" and existing.get("id") == _SERVICE_ARCH_GUIDE_DOC_ID:
+                return
+        items.append(
+            {
+                "type": "doc",
+                "id": _SERVICE_ARCH_GUIDE_DOC_ID,
+                "label": _SERVICE_ARCH_GUIDE_LABEL,
+            }
+        )
+        return
+
+
 def _generate_sidebars_ts(items: List[Dict[str, Any]]) -> str:
     rendered_items = json.dumps(items, ensure_ascii=False, indent=2)
     return f"""\
@@ -335,6 +370,7 @@ def main(argv: List[str]) -> None:
         latest_items = _generate_sidebar_items(latest_summary)
     except SummaryParseError as e:
         raise SystemExit(f"SUMMARY parse error in {latest_summary}: {e}")
+    _maybe_inject_service_architecture_guide(docs_root=src_latest, sidebar_items=latest_items)
     _write_text_if_changed(site_sidebars_ts, _generate_sidebars_ts(latest_items), check=args.check)
 
     for v in toolchain_versions:
@@ -345,6 +381,7 @@ def main(argv: List[str]) -> None:
             ver_items = _generate_sidebar_items(src_ver_summary)
         except SummaryParseError as e:
             raise SystemExit(f"SUMMARY parse error in {src_ver_summary}: {e}")
+        _maybe_inject_service_architecture_guide(docs_root=docs_root / f"v{v}", sidebar_items=ver_items)
         out_json = site_versioned_sidebars / f"version-{v}-sidebars.json"
         _write_json_if_changed(out_json, {"docs": ver_items}, check=args.check)
 
