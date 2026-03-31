@@ -1,5 +1,9 @@
 # X07 Website
 
+## Agent Entrypoint
+
+Start here: https://x07lang.org/docs/getting-started/agent-quickstart
+
 This repo hosts the X07 public website and documentation site.
 
 Support: see `SUPPORT.md`.
