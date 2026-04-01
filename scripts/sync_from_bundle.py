@@ -558,7 +558,8 @@ def main(argv: list[str]) -> int:
             continue
         if entry.get("toolchain_version") == toolchain_version:
             entry["docs_bundle_sha256"] = docs_bundle_sha256
-            entry["published_at_utc"] = args.published_at_utc
+            if args.published_at_utc is not None:
+                entry["published_at_utc"] = args.published_at_utc
             updated = True
             break
     if not updated:
