@@ -1402,6 +1402,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-cli/0.1.14/index.json#docs"
     },
     {
+      "name": "ext-cli",
+      "version": "0.1.15",
+      "url": "/agent/latest/packages/ext-cli/0.1.15/index.json",
+      "description": "Command-line argument parsing, help, and shell completion.",
+      "docs_url": "/agent/latest/packages/ext-cli/0.1.15/index.json#docs"
+    },
+    {
       "name": "ext-cli-ux",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-cli-ux/0.1.0/index.json",
