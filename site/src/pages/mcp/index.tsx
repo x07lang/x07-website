@@ -61,6 +61,18 @@ export default function McpLanding(): JSX.Element {
             <li>
               Zero-install evaluation: <Link to="/mcp/codespaces">/mcp/codespaces</Link>
             </li>
+            <li>
+              Quality report structure: <Link to="/mcp/quality-report">/mcp/quality-report</Link>
+            </li>
+            <li>
+              Security guide structure: <Link to="/mcp/security">/mcp/security</Link>
+            </li>
+            <li>
+              Postgres demo structure: <Link to="/mcp/demo">/mcp/demo</Link>
+            </li>
+            <li>
+              Official tools positioning: <Link to="/mcp/official-tools">/mcp/official-tools</Link>
+            </li>
           </ul>
 
           <h2>Private alpha</h2>
@@ -80,4 +92,3 @@ export default function McpLanding(): JSX.Element {
     </Layout>
   );
 }
-

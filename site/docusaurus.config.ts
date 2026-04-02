@@ -122,6 +122,20 @@ const config: Config = {
           position: 'left',
           label: 'Blog',
         },
+        {
+          label: 'MCP',
+          position: 'left',
+          items: [
+            {label: 'Overview', to: '/mcp'},
+            {label: 'Install verifier', to: '/mcp/install'},
+            {label: 'GitHub Action', to: '/mcp/action'},
+            {label: 'Codespaces quickstart', to: '/mcp/codespaces'},
+            {label: 'Quality report', to: '/mcp/quality-report'},
+            {label: 'Security guide', to: '/mcp/security'},
+            {label: 'Postgres demo', to: '/mcp/demo'},
+            {label: 'Official tools', to: '/mcp/official-tools'},
+          ],
+        },
         {type: 'docsVersionDropdown', position: 'left'},
         {
           label: 'Agent',
