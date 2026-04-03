@@ -20,7 +20,7 @@ jobs:
       # - name: Start server
       #   run: ./scripts/start-server.sh
 
-      - name: Run MCP conformance
+      - name: Run Hardproof scan
         uses: ${MCP_ACTION_USES}
         with:
           url: http://127.0.0.1:3000/mcp
@@ -30,7 +30,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: x07-mcp-test-reports
+          name: hardproof-reports
           path: |
             out/doctor.json
             out/conformance/summary.json
@@ -42,12 +42,17 @@ jobs:
   return (
     <Layout
       title="GitHub Action"
-      description="Run official MCP conformance in CI using the x07-mcp-test GitHub Action.">
+      description="Run Hardproof scan in CI using the Hardproof GitHub Action.">
       <main className="container margin-vert--lg">
-        <h1>Run MCP conformance in CI</h1>
+        <h1>Run Hardproof in CI</h1>
         <p>
-          This Action downloads the <code>x07-mcp-test</code> release binary and runs{' '}
-          <code>conformance run</code> against your server.
+          This Action downloads the <code>hardproof</code> release binary and runs <code>scan</code>{' '}
+          against your server.
+        </p>
+        <p>
+          During the beta transition, the Action is publicly branded as <b>Hardproof Scan</b> but is
+          still served from the existing <code>x07lang/x07-mcp-test</code> repository path for
+          compatibility.
         </p>
 
         <h2>Workflow snippet</h2>
@@ -58,7 +63,7 @@ jobs:
         <h2>Outputs</h2>
         <ul>
           <li>
-            <code>ok</code>: true if conformance passed (exit 0)
+            <code>ok</code>: true if scan passed (exit 0)
           </li>
           <li>
             <code>json_report</code>: <code>out/conformance/summary.json</code>

@@ -9,18 +9,18 @@ import {
 export default function McpLanding(): JSX.Element {
   return (
     <Layout
-      title="MCP quality"
-      description="Ship MCP servers you can verify: official conformance plus replay, trust, and release-grade validation.">
+      title="Hardproof"
+      description="Ship MCP servers you can verify: deterministic verification for conformance, replay, trust, and release-grade evidence.">
       <header className="hero hero--primary">
         <div className="container">
           <h1>Ship MCP servers you can verify</h1>
           <p>
-            Official MCP gives you the protocol baseline. x07 adds replay,
-            trust, and release-grade verification.
+            Hardproof gives you deterministic verification for MCP servers: conformance, replay,
+            trust, and release-grade evidence in one repeatable workflow.
           </p>
           <div className="buttons">
             <Link className="button button--secondary button--lg" to="/mcp/install">
-              Install the verifier
+              Install Hardproof
             </Link>
             <Link className="button button--outline button--lg" to="/mcp/demo">
               Run the Postgres demo
@@ -74,9 +74,9 @@ export default function McpLanding(): JSX.Element {
 
           <h2>Public beta status</h2>
           <p>
-            This is a public-beta verifier with a tight scope: official conformance plus
-            replay/trust/bundle evidence. If you hit install friction or confusing output,
-            please file an issue so we can fix it quickly.
+            This is a public-beta verifier with a tight scope: conformance plus replay/trust/bundle
+            evidence. If you hit install friction or confusing output, please file an issue so we
+            can fix it quickly.
           </p>
           <p>
             <a href={MCP_FEEDBACK_URL}>{MCP_FEEDBACK_URL}</a>

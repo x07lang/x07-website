@@ -3,12 +3,12 @@ import Layout from '@theme/Layout';
 import {MCP_CODESPACES_URL} from './_config';
 
 export default function McpCodespaces(): JSX.Element {
-  const installVerifier = './scripts/dev/install_x07_mcp_test.sh';
+  const installVerifier = './scripts/dev/install_hardproof.sh';
   const runExample = `cd examples/private-alpha-http-hello
 x07 bundle --project x07.json --profile os --out out/mcp-router
 x07 bundle --project x07.json --profile sandbox --sandbox-backend os --i-accept-weaker-isolation --program src/worker_main.x07.json --out out/mcp-worker
 ./out/mcp-router`;
-  const conformance = `x07-mcp-test conformance run \\
+  const conformance = `hardproof scan \\
   --url "http://127.0.0.1:8314/mcp" \\
   --out out/conformance \\
   --machine json`;
@@ -16,7 +16,7 @@ x07 bundle --project x07.json --profile sandbox --sandbox-backend os --i-accept-
   return (
     <Layout
       title="Codespaces"
-      description="Zero-install evaluation path: open a Codespace, run a minimal X07 MCP server, and verify it locally with x07-mcp-test.">
+      description="Zero-install evaluation path: open a Codespace, run a minimal X07 MCP server, and verify it locally with Hardproof.">
       <main className="container margin-vert--lg">
         <h1>Try MCP verification with zero install (Codespaces)</h1>
         <p>
@@ -46,7 +46,8 @@ x07 bundle --project x07.json --profile sandbox --sandbox-backend os --i-accept-
         </pre>
         <p>
           Artifacts are written under <code>out/conformance/</code>:{' '}
-          <code>summary.json</code>, <code>summary.junit.xml</code>, <code>summary.html</code>.
+          <code>summary.json</code>, <code>summary.junit.xml</code>, <code>summary.html</code>,{' '}
+          <code>summary.sarif.json</code>.
         </p>
       </main>
     </Layout>

@@ -3,15 +3,15 @@ import Layout from '@theme/Layout';
 
 export default function McpSecurityGuide(): JSX.Element {
   const checklist = `# 1) Protocol compliance (baseline)
-x07-mcp-test conformance run --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json
+hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json
 
 # 2) Deterministic repro (release gate)
-x07-mcp-test replay record --url "http://127.0.0.1:3000/mcp" --scenario smoke/basic --out out/replay.session.json --machine json
-x07-mcp-test replay verify --session out/replay.session.json --url "http://127.0.0.1:3000/mcp" --out out/replay-verify --machine json
+hardproof replay record --url "http://127.0.0.1:3000/mcp" --scenario smoke/basic --out out/replay.session.json --machine json
+hardproof replay verify --session out/replay.session.json --url "http://127.0.0.1:3000/mcp" --out out/replay-verify --machine json
 
 # 3) Supply-chain checks (publishing/consuming)
-x07-mcp-test trust verify --server-json out/server.json --out out/trust.summary.json --machine json
-x07-mcp-test bundle verify --server-json out/server.json --mcpb out/server.mcpb --out out/bundle.verify.json --machine json`;
+hardproof trust verify --server-json out/server.json --out out/trust.summary.json --machine json
+hardproof bundle verify --server-json out/server.json --mcpb out/server.mcpb --out out/bundle.verify.json --machine json`;
 
   return (
     <Layout
@@ -68,7 +68,7 @@ x07-mcp-test bundle verify --server-json out/server.json --mcpb out/server.mcpb 
           <ul>
             <li>Use the official Inspector for interactive debugging and protocol exploration.</li>
             <li>Use the official Registry for discovery and publishing flows.</li>
-            <li>Use <code>x07-mcp-test</code> for repeatable verification and CI artifacts.</li>
+            <li>Use <code>hardproof</code> for repeatable verification and CI artifacts.</li>
           </ul>
 
           <h2>Release checklist (example)</h2>

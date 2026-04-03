@@ -20,7 +20,7 @@ cd x07-mcp/demos/postgres-public-beta
   return (
     <Layout
       title="MCP demo"
-      description="Structure for the public hero demo: Postgres MCP server + x07-mcp-test verification artifacts.">
+      description="Structure for the public hero demo: Postgres MCP server + Hardproof verification artifacts.">
       <main>
         <div className="container margin-vert--lg">
           <h1>Postgres demo</h1>

@@ -10,19 +10,27 @@ import {
 
 export default function McpInstall(): JSX.Element {
   const installCmd = `curl -fsSL "${MCP_INSTALL_SH_URL}" | bash -s -- --tag "${MCP_VERIFIER_TAG}"`;
-  const doctorCmd = 'x07-mcp-test doctor --machine json';
+  const doctorCmd = 'hardproof doctor --machine json';
   const conformanceCmd =
-    'x07-mcp-test conformance run --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
+    'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
 
   return (
     <Layout
       title="Install"
-      description="Install the x07-mcp-test verifier binary (beta preview).">
+      description="Install the Hardproof verifier binary (beta preview).">
       <main className="container margin-vert--lg">
-        <h1>Install x07-mcp-test (beta preview)</h1>
+        <h1>Install Hardproof (beta preview)</h1>
         <p>
           Prebuilt binaries for Linux and macOS. On Windows, run inside WSL2 and use the Linux
           artifact.
+        </p>
+        <p>
+          Hardproof is a standalone verifier for MCP servers. You do not need to adopt x07 to use
+          it. <b>Built with x07.</b>
+        </p>
+        <p>
+          Already using the private alpha under <code>x07-mcp-test</code>? Legacy commands remain
+          available during the beta transition for compatibility.
         </p>
         <p>
           Current public builds are tagged <code>{MCP_VERIFIER_TAG}</code> while we converge on a
@@ -68,7 +76,8 @@ export default function McpInstall(): JSX.Element {
 
         <p>
           Artifacts are written under <code>out/conformance/</code>:{' '}
-          <code>summary.json</code>, <code>summary.junit.xml</code>, <code>summary.html</code>.
+          <code>summary.json</code>, <code>summary.junit.xml</code>, <code>summary.html</code>,{' '}
+          <code>summary.sarif.json</code>.
         </p>
 
         <h2>Next</h2>

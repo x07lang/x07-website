@@ -123,6 +123,11 @@ const config: Config = {
           label: 'Blog',
         },
         {
+          to: '/hardproof',
+          position: 'left',
+          label: 'Hardproof',
+        },
+        {
           label: 'MCP',
           position: 'left',
           items: [

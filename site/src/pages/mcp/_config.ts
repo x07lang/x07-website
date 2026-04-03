@@ -1,5 +1,5 @@
 export const MCP_VERIFIER_REPO = 'x07lang/x07-mcp-test';
-export const MCP_VERIFIER_TAG = 'v0.1.0-alpha.4';
+export const MCP_VERIFIER_TAG = 'v0.1.0-alpha.5';
 
 export const MCP_FEEDBACK_URL = `https://github.com/${MCP_VERIFIER_REPO}/issues/new/choose`;
 
@@ -18,7 +18,7 @@ export const MCP_CHECKSUMS_URL = mcpReleaseUrl('checksums.txt');
 export type McpAssetPlatform = 'linux-x64' | 'darwin-arm64' | 'darwin-x64';
 
 export function mcpAssetName(platform: McpAssetPlatform): string {
-  return `x07-mcp-test-${MCP_VERIFIER_TAG}-${platform}.tar.gz`;
+  return `hardproof-${MCP_VERIFIER_TAG}-${platform}.tar.gz`;
 }
 
 export function mcpAssetUrl(platform: McpAssetPlatform): string {

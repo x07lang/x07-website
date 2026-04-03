@@ -2,14 +2,14 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 export default function McpQualityReport(): JSX.Element {
-  const corpusCmd = `x07-mcp-test corpus run \\
+  const corpusCmd = `hardproof corpus run \\
   --manifest corpus/manifests/quality-report-001.json \\
   --out out/corpus/quality-report-001`;
 
   const indexShape = `{
   "schema_version": "x07.mcp.corpus.summary@0.1.0",
   "generated_at": "2026-01-01T00:00:00Z",
-  "tool": "x07-mcp-test",
+  "tool": "hardproof",
   "tool_version": "v0.1.0-…",
   "target": { "kind": "file", "transport": "file", "ref": "…", "meta": {} },
   "ok": true,
@@ -33,14 +33,14 @@ export default function McpQualityReport(): JSX.Element {
   return (
     <Layout
       title="State of MCP server quality"
-      description="Structure for the reproducible quality report pipeline: x07-mcp-test corpus inputs → machine artifacts → publishable report surfaces.">
+      description="Structure for the reproducible quality report pipeline: Hardproof corpus inputs → machine artifacts → publishable report surfaces.">
       <main>
         <div className="container margin-vert--lg">
           <h1>State of MCP server quality #1 (draft)</h1>
 
           <p>
             This report is designed to be reproducible: a checked-in corpus manifest defines the
-            targets and assumptions, and <code>x07-mcp-test</code> emits machine-readable evidence
+            targets and assumptions, and <code>hardproof</code> emits machine-readable evidence
             (JSON + JUnit + HTML + SARIF) per target plus an aggregate <code>index.json</code>.
           </p>
 
@@ -67,7 +67,7 @@ export default function McpQualityReport(): JSX.Element {
               Corpus manifest JSON (targets, sources, assumptions, exclusions).
             </li>
             <li>
-              Per-target verifier outputs produced by <code>x07-mcp-test</code>.
+              Per-target verifier outputs produced by <code>hardproof</code>.
             </li>
           </ul>
 
