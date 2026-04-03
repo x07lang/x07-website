@@ -3,84 +3,60 @@ import Layout from '@theme/Layout';
 
 import {
   MCP_CODESPACES_URL,
-  MCP_FEEDBACK_URL,
 } from './_config';
 
 export default function McpLanding(): JSX.Element {
   return (
     <Layout
-      title="Hardproof"
-      description="Ship MCP servers you can verify: deterministic verification for conformance, replay, trust, and release-grade evidence.">
+      title="x07-mcp"
+      description="Build MCP servers in x07: templates, reference servers, and a Codespaces quickstart.">
       <header className="hero hero--primary">
         <div className="container">
-          <h1>Ship MCP servers you can verify</h1>
+          <h1>Build MCP servers in x07</h1>
           <p>
-            Hardproof gives you deterministic verification for MCP servers: conformance, replay,
-            trust, and release-grade evidence in one repeatable workflow.
+            x07-mcp is the x07-native Model Context Protocol toolkit: templates, reference servers,
+            and a Codespaces path that gets you to a working server quickly.
           </p>
           <div className="buttons">
-            <Link className="button button--secondary button--lg" to="/mcp/install">
-              Install Hardproof
+            <Link className="button button--secondary button--lg" to="/mcp/codespaces">
+              Open Codespaces
+            </Link>
+            <Link className="button button--outline button--lg" to="/hardproof">
+              Verify with Hardproof
             </Link>
             <Link className="button button--outline button--lg" to="/mcp/demo">
-              Run the Postgres demo
-            </Link>
-            <Link className="button button--outline button--lg" to="/mcp/quality-report">
-              See the quality report
+              Postgres demo
             </Link>
           </div>
         </div>
       </header>
       <main>
         <div className="container margin-vert--lg">
-          <h2>What it does</h2>
+          <h2>Two paths</h2>
           <ul>
             <li>
-              <b>Conformance</b>: run the official MCP suite and emit JSON/JUnit/HTML.
+              <b>Verify any MCP server</b>: use <Link to="/hardproof">Hardproof</Link> to run
+              deterministic verification and emit CI-grade artifacts.
             </li>
             <li>
-              <b>Replay</b>: record and replay a small HTTP session cassette.
-            </li>
-            <li>
-              <b>Trust</b>: validate required trust metadata in registry <code>server.json</code>.
-            </li>
-            <li>
-              <b>Bundle</b>: validate that a <code>server.json</code> and <code>.mcpb</code>{' '}
-              bundle are consistent.
+              <b>Build an MCP server in x07</b>: use x07-mcp to scaffold, run, bundle, and publish
+              x07-native servers with a consistent architecture.
             </li>
           </ul>
 
           <h2>Next steps</h2>
           <ul>
             <li>
-              Install the verifier: <Link to="/mcp/install">/mcp/install</Link>
+              Start with the Codespaces quickstart: <Link to="/mcp/codespaces">/mcp/codespaces</Link>
             </li>
             <li>
-              Run in CI: <Link to="/mcp/action">/mcp/action</Link>
+              Follow the Postgres demo: <Link to="/mcp/demo">/mcp/demo</Link>
             </li>
             <li>
-              Official tools positioning: <Link to="/mcp/official-tools">/mcp/official-tools</Link>
-            </li>
-            <li>
-              Security + verification guide: <Link to="/mcp/security">/mcp/security</Link>
-            </li>
-            <li>
-              Reproducible quality report: <Link to="/mcp/quality-report">/mcp/quality-report</Link>
-            </li>
-            <li>
-              Zero-install evaluation: <Link to="/mcp/codespaces">/mcp/codespaces</Link>
+              Verify with Hardproof: <Link to="/hardproof/install">/hardproof/install</Link>
             </li>
           </ul>
 
-          <h2>Public beta status</h2>
-          <p>
-            This is a public-beta verifier with a tight scope: conformance plus replay/trust/bundle
-            evidence. If you hit install friction or confusing output, please file an issue so we
-            can fix it quickly.
-          </p>
-          <p>
-            <a href={MCP_FEEDBACK_URL}>{MCP_FEEDBACK_URL}</a>
-          </p>
           <p>
             Codespaces quickstart URL: <a href={MCP_CODESPACES_URL}>{MCP_CODESPACES_URL}</a>
           </p>
