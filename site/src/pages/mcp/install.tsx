@@ -2,27 +2,31 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import {
-  MCP_ALPHA_CHECKSUMS_URL,
-  MCP_ALPHA_INSTALL_SH_URL,
-  MCP_ALPHA_VERIFIER_TAG,
-  mcpAlphaAssetUrl,
+  MCP_CHECKSUMS_URL,
+  MCP_INSTALL_SH_URL,
+  MCP_VERIFIER_TAG,
+  mcpAssetUrl,
 } from './_config';
 
 export default function McpInstall(): JSX.Element {
-  const installCmd = `curl -fsSL "${MCP_ALPHA_INSTALL_SH_URL}" | bash -s -- --tag "${MCP_ALPHA_VERIFIER_TAG}"`;
+  const installCmd = `curl -fsSL "${MCP_INSTALL_SH_URL}" | bash -s -- --tag "${MCP_VERIFIER_TAG}"`;
   const doctorCmd = 'x07-mcp-test doctor --machine json';
   const conformanceCmd =
     'x07-mcp-test conformance run --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
 
   return (
     <Layout
-      title="Install (alpha)"
-      description="Install the x07-mcp-test private alpha verifier binary.">
+      title="Install"
+      description="Install the x07-mcp-test verifier binary (beta preview).">
       <main className="container margin-vert--lg">
-        <h1>Install x07-mcp-test (private alpha)</h1>
+        <h1>Install x07-mcp-test (beta preview)</h1>
         <p>
-          Prebuilt binaries for Linux and macOS. On Windows, run inside WSL2 and
-          use the Linux artifact.
+          Prebuilt binaries for Linux and macOS. On Windows, run inside WSL2 and use the Linux
+          artifact.
+        </p>
+        <p>
+          Current public builds are tagged <code>{MCP_VERIFIER_TAG}</code> while we converge on a
+          stable public-beta interface.
         </p>
 
         <h2>Install script</h2>
@@ -31,23 +35,23 @@ export default function McpInstall(): JSX.Element {
         </pre>
         <p>
           The installer downloads the correct archive for your OS/arch, verifies it via{' '}
-          <a href={MCP_ALPHA_CHECKSUMS_URL}>checksums.txt</a>, and installs into{' '}
+          <a href={MCP_CHECKSUMS_URL}>checksums.txt</a>, and installs into{' '}
           <code>~/.local/bin</code>.
         </p>
 
         <h2>Manual download</h2>
         <ul>
           <li>
-            Linux x64: <a href={mcpAlphaAssetUrl('linux-x64')}>{mcpAlphaAssetUrl('linux-x64')}</a>
+            Linux x64: <a href={mcpAssetUrl('linux-x64')}>{mcpAssetUrl('linux-x64')}</a>
           </li>
           <li>
-            macOS arm64: <a href={mcpAlphaAssetUrl('darwin-arm64')}>{mcpAlphaAssetUrl('darwin-arm64')}</a>
+            macOS arm64: <a href={mcpAssetUrl('darwin-arm64')}>{mcpAssetUrl('darwin-arm64')}</a>
           </li>
           <li>
-            macOS x64: <a href={mcpAlphaAssetUrl('darwin-x64')}>{mcpAlphaAssetUrl('darwin-x64')}</a>
+            macOS x64: <a href={mcpAssetUrl('darwin-x64')}>{mcpAssetUrl('darwin-x64')}</a>
           </li>
           <li>
-            Checksums: <a href={MCP_ALPHA_CHECKSUMS_URL}>{MCP_ALPHA_CHECKSUMS_URL}</a>
+            Checksums: <a href={MCP_CHECKSUMS_URL}>{MCP_CHECKSUMS_URL}</a>
           </li>
         </ul>
 
@@ -80,4 +84,3 @@ export default function McpInstall(): JSX.Element {
     </Layout>
   );
 }
-

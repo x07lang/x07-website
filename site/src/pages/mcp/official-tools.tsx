@@ -8,14 +8,15 @@ export default function McpOfficialTools(): JSX.Element {
       description="Structure for the “official tools + x07-mcp-test” positioning page: complement official Inspector/Registry with repeatable verification artifacts.">
       <main>
         <div className="container margin-vert--lg">
-          <h1>Official MCP tools + x07-mcp-test (structure)</h1>
+          <h1>Official MCP tools + x07-mcp-test</h1>
 
           <p>
-            This page freezes the structure and tone rules: x07 complements the official MCP
-            ecosystem rather than replacing it.
+            The official MCP ecosystem gives you the protocol baseline and interactive tooling.
+            <code>x07-mcp-test</code> complements that stack with CI-grade verification and
+            reviewable artifacts.
           </p>
 
-          <h2>Inspector vs verifier (outline)</h2>
+          <h2>Inspector vs verifier</h2>
           <ul>
             <li>Inspector: interactive debugging and protocol exploration</li>
             <li>
@@ -23,19 +24,20 @@ export default function McpOfficialTools(): JSX.Element {
             </li>
           </ul>
 
-          <h2>Registry (outline)</h2>
+          <h2>Registry and publishing</h2>
           <ul>
-            <li>Registry for discovery/publishing metadata flows</li>
+            <li>Registry for discovery and publishing metadata flows</li>
             <li>
-              <code>x07-mcp-test</code> trust/bundle checks for release-grade validation
+              <code>x07-mcp-test</code> trust/bundle checks for release-grade validation of{' '}
+              <code>server.json</code> and <code>.mcpb</code>
             </li>
           </ul>
 
           <h2>How the pieces fit together</h2>
           <ul>
-            <li>Debug with Inspector</li>
+            <li>Build/debug with official SDKs + Inspector</li>
             <li>Verify in CI with <code>x07-mcp-test</code></li>
-            <li>Publish via Registry workflows</li>
+            <li>Publish/discover via Registry workflows</li>
           </ul>
 
           <p>

@@ -1,7 +1,7 @@
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
-import {MCP_ALPHA_ACTION_USES} from './_config';
+import {MCP_ACTION_USES} from './_config';
 
 export default function McpAction(): JSX.Element {
   const yaml = `name: mcp-quality
@@ -21,7 +21,7 @@ jobs:
       #   run: ./scripts/start-server.sh
 
       - name: Run MCP conformance
-        uses: ${MCP_ALPHA_ACTION_USES}
+        uses: ${MCP_ACTION_USES}
         with:
           url: http://127.0.0.1:3000/mcp
           full-suite: "false"
@@ -36,16 +36,17 @@ jobs:
             out/conformance/summary.json
             out/conformance/summary.junit.xml
             out/conformance/summary.html
+            out/conformance/summary.sarif.json
             out/conformance/summary.stdout.json`;
 
   return (
     <Layout
-      title="GitHub Action (alpha)"
-      description="Run official MCP conformance in CI using the x07-mcp-test alpha GitHub Action.">
+      title="GitHub Action"
+      description="Run official MCP conformance in CI using the x07-mcp-test GitHub Action.">
       <main className="container margin-vert--lg">
-        <h1>Run MCP conformance in CI (alpha)</h1>
+        <h1>Run MCP conformance in CI</h1>
         <p>
-          This Action downloads the <code>x07-mcp-test</code> alpha release binary and runs{' '}
+          This Action downloads the <code>x07-mcp-test</code> release binary and runs{' '}
           <code>conformance run</code> against your server.
         </p>
 
@@ -68,6 +69,9 @@ jobs:
           <li>
             <code>html_report</code>: <code>out/conformance/summary.html</code>
           </li>
+          <li>
+            <code>sarif_report</code>: <code>out/conformance/summary.sarif.json</code>
+          </li>
         </ul>
 
         <h2>Next</h2>
@@ -83,4 +87,3 @@ jobs:
     </Layout>
   );
 }
-

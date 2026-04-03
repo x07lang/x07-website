@@ -2,17 +2,28 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 export default function McpSecurityGuide(): JSX.Element {
+  const checklist = `# 1) Protocol compliance (baseline)
+x07-mcp-test conformance run --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json
+
+# 2) Deterministic repro (release gate)
+x07-mcp-test replay record --url "http://127.0.0.1:3000/mcp" --scenario smoke/basic --out out/replay.session.json --machine json
+x07-mcp-test replay verify --session out/replay.session.json --url "http://127.0.0.1:3000/mcp" --out out/replay-verify --machine json
+
+# 3) Supply-chain checks (publishing/consuming)
+x07-mcp-test trust verify --server-json out/server.json --out out/trust.summary.json --machine json
+x07-mcp-test bundle verify --server-json out/server.json --mcpb out/server.mcpb --out out/bundle.verify.json --machine json`;
+
   return (
     <Layout
       title="MCP security and verification"
       description="Structure for the MCP Security Best Practices guide: how to combine official MCP guidance with repeatable verification artifacts.">
       <main>
         <div className="container margin-vert--lg">
-          <h1>MCP security and verification (structure)</h1>
+          <h1>MCP security and verification (draft)</h1>
 
           <p>
-            This page freezes the structure for the public MCP security/verification guide. The
-            content will be drafted and iterated based on real verifier outputs.
+            Official MCP tools cover how to build and debug servers. This guide focuses on how to
+            turn that work into repeatable verification evidence you can run on every release.
           </p>
 
           <h2>Audience</h2>
@@ -21,29 +32,49 @@ export default function McpSecurityGuide(): JSX.Element {
             <li>Platform/security teams that need machine-reviewable evidence</li>
           </ul>
 
-          <h2>Threat model outline</h2>
+          <h2>Threat model (practical)</h2>
           <ul>
-            <li>Protocol compliance and undefined behavior</li>
-            <li>Supply-chain risk (bundles, metadata drift, anti-rollback)</li>
-            <li>Replayable evidence vs flaky integration tests</li>
+            <li>
+              Protocol drift: servers that “mostly work” but fail in edge cases (bad errors,
+              transport quirks, missing methods).
+            </li>
+            <li>
+              Supply chain: mismatched metadata (<code>server.json</code>) versus what you actually
+              ship (<code>.mcpb</code>).
+            </li>
+            <li>
+              Non-reproducible bugs: failures that can’t be replayed deterministically in CI or
+              code review.
+            </li>
           </ul>
 
-          <h2>Practices (outline)</h2>
+          <h2>Practices</h2>
           <ul>
-            <li>Run official conformance in CI (baseline)</li>
-            <li>Record/replay a minimal cassette for release gates</li>
-            <li>Verify trust metadata before publishing/consuming a server</li>
-            <li>Validate bundle consistency (<code>server.json</code> ↔ <code>.mcpb</code>)</li>
+            <li>
+              <b>Conformance</b>: run the official suite in CI for every change.
+            </li>
+            <li>
+              <b>Replay</b>: record a minimal cassette for release gates and regression review.
+            </li>
+            <li>
+              <b>Trust</b>: verify registry metadata before publishing or consuming a server.
+            </li>
+            <li>
+              <b>Bundle</b>: verify <code>server.json</code> ↔ <code>.mcpb</code> integrity.
+            </li>
           </ul>
 
           <h2>How this complements official MCP tools</h2>
           <ul>
-            <li>Use Inspector for interactive debugging and protocol exploration.</li>
-            <li>Use the official Registry for discovery/publishing metadata flows.</li>
-            <li>
-              Use <code>x07-mcp-test</code> for repeatable verification and artifacts.
-            </li>
+            <li>Use the official Inspector for interactive debugging and protocol exploration.</li>
+            <li>Use the official Registry for discovery and publishing flows.</li>
+            <li>Use <code>x07-mcp-test</code> for repeatable verification and CI artifacts.</li>
           </ul>
+
+          <h2>Release checklist (example)</h2>
+          <pre>
+            <code>{checklist}</code>
+          </pre>
 
           <p>
             Related pages:{' '}

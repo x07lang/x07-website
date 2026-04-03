@@ -2,8 +2,8 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import {
-  MCP_ALPHA_CODESPACES_URL,
-  MCP_ALPHA_FEEDBACK_URL,
+  MCP_CODESPACES_URL,
+  MCP_FEEDBACK_URL,
 } from './_config';
 
 export default function McpLanding(): JSX.Element {
@@ -20,14 +20,14 @@ export default function McpLanding(): JSX.Element {
           </p>
           <div className="buttons">
             <Link className="button button--secondary button--lg" to="/mcp/install">
-              Install the alpha verifier
+              Install the verifier
             </Link>
-            <Link className="button button--outline button--lg" to="/mcp/codespaces">
-              Try the x07 MCP quickstart in Codespaces
+            <Link className="button button--outline button--lg" to="/mcp/demo">
+              Run the Postgres demo
             </Link>
-            <a className="button button--outline button--lg" href={MCP_ALPHA_FEEDBACK_URL}>
-              Request private alpha access / send feedback
-            </a>
+            <Link className="button button--outline button--lg" to="/mcp/quality-report">
+              See the quality report
+            </Link>
           </div>
         </div>
       </header>
@@ -59,33 +59,30 @@ export default function McpLanding(): JSX.Element {
               Run in CI: <Link to="/mcp/action">/mcp/action</Link>
             </li>
             <li>
-              Zero-install evaluation: <Link to="/mcp/codespaces">/mcp/codespaces</Link>
-            </li>
-            <li>
-              Quality report structure: <Link to="/mcp/quality-report">/mcp/quality-report</Link>
-            </li>
-            <li>
-              Security guide structure: <Link to="/mcp/security">/mcp/security</Link>
-            </li>
-            <li>
-              Postgres demo structure: <Link to="/mcp/demo">/mcp/demo</Link>
-            </li>
-            <li>
               Official tools positioning: <Link to="/mcp/official-tools">/mcp/official-tools</Link>
+            </li>
+            <li>
+              Security + verification guide: <Link to="/mcp/security">/mcp/security</Link>
+            </li>
+            <li>
+              Reproducible quality report: <Link to="/mcp/quality-report">/mcp/quality-report</Link>
+            </li>
+            <li>
+              Zero-install evaluation: <Link to="/mcp/codespaces">/mcp/codespaces</Link>
             </li>
           </ul>
 
-          <h2>Private alpha</h2>
+          <h2>Public beta status</h2>
           <p>
-            This is a private alpha. If you hit install friction or confusing output, please
-            file feedback so we can fix it before the public wedge launch.
+            This is a public-beta verifier with a tight scope: official conformance plus
+            replay/trust/bundle evidence. If you hit install friction or confusing output,
+            please file an issue so we can fix it quickly.
           </p>
           <p>
-            <a href={MCP_ALPHA_FEEDBACK_URL}>{MCP_ALPHA_FEEDBACK_URL}</a>
+            <a href={MCP_FEEDBACK_URL}>{MCP_FEEDBACK_URL}</a>
           </p>
           <p>
-            Codespaces quickstart URL:{' '}
-            <a href={MCP_ALPHA_CODESPACES_URL}>{MCP_ALPHA_CODESPACES_URL}</a>
+            Codespaces quickstart URL: <a href={MCP_CODESPACES_URL}>{MCP_CODESPACES_URL}</a>
           </p>
         </div>
       </main>
