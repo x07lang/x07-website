@@ -1,5 +1,5 @@
 export const HARDPROOF_REPO = 'x07lang/hardproof';
-export const HARDPROOF_TAG = 'v0.1.0-alpha.6';
+export const HARDPROOF_TAG = 'v0.1.0-alpha.8';
 
 export const HARDPROOF_FEEDBACK_URL = `https://github.com/${HARDPROOF_REPO}/issues/new/choose`;
 
@@ -22,4 +22,3 @@ export function hardproofAssetName(platform: HardproofAssetPlatform): string {
 export function hardproofAssetUrl(platform: HardproofAssetPlatform): string {
   return hardproofReleaseUrl(hardproofAssetName(platform));
 }
-

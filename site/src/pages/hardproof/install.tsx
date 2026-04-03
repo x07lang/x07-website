@@ -29,10 +29,6 @@ export default function HardproofInstall(): JSX.Element {
           it. <b>Built with x07.</b>
         </p>
         <p>
-          Already using the private alpha under <code>x07-mcp-test</code>? Legacy commands remain
-          available during the beta transition for compatibility.
-        </p>
-        <p>
           Current public builds are tagged <code>{HARDPROOF_TAG}</code> while we converge on a
           stable public-beta interface.
         </p>

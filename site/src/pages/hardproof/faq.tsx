@@ -4,16 +4,15 @@ import Layout from '@theme/Layout';
 import {HARDPROOF_ACTION_USES, HARDPROOF_FEEDBACK_URL} from './_config';
 
 export default function HardproofFaq(): JSX.Element {
-  const legacyCmd = 'x07-mcp-test conformance run --url "http://127.0.0.1:3000/mcp"';
-  const newCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
-  const legacyAction = 'x07lang/hardproof/action@v0.1.0-alpha.6';
+  const scanCmd =
+    'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
 
   return (
     <Layout
       title="Hardproof FAQ"
-      description="Compatibility, migration, and positioning for the Hardproof public beta.">
+      description="FAQ and positioning for the Hardproof public beta.">
       <main className="container margin-vert--lg">
-        <h1>FAQ / migration</h1>
+        <h1>FAQ</h1>
 
         <h2>Do I need x07 to use Hardproof?</h2>
         <p>
@@ -33,31 +32,18 @@ export default function HardproofFaq(): JSX.Element {
           and emits machine-readable evidence you can use locally and in CI.
         </p>
 
-        <h2>Migration from x07-mcp-test (beta)</h2>
-        <p>
-          Hardproof is the new public name for the private-alpha verifier previously released as{' '}
-          <code>x07-mcp-test</code>. Legacy commands remain available during the beta transition.
-        </p>
-        <p>Legacy command example:</p>
+        <h2>What’s the fastest way to use Hardproof?</h2>
         <pre>
-          <code>{legacyCmd}</code>
-        </pre>
-        <p>Preferred command:</p>
-        <pre>
-          <code>{newCmd}</code>
+          <code>{scanCmd}</code>
         </pre>
 
-        <h2>Migration for the GitHub Action (beta)</h2>
+        <h2>GitHub Action</h2>
         <p>
           The Action is publicly branded as <b>Hardproof Scan (beta)</b>. Preferred usage is:
         </p>
         <pre>
           <code>uses: {HARDPROOF_ACTION_USES}</code>
         </pre>
-        <p>
-          If you previously used <code>{legacyAction}</code>, it remains available during the
-          transition.
-        </p>
 
         <h2>Where do I report issues?</h2>
         <p>
@@ -67,4 +53,3 @@ export default function HardproofFaq(): JSX.Element {
     </Layout>
   );
 }
-
