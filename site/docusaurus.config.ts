@@ -127,6 +127,7 @@ const config: Config = {
           position: 'left',
           items: [
             {label: 'Overview', to: '/hardproof'},
+            {label: 'Launch', to: '/hardproof/launch'},
             {label: 'Install', to: '/hardproof/install'},
             {label: 'CI', to: '/hardproof/ci'},
             {label: 'FAQ', to: '/hardproof/faq'},

@@ -1,7 +1,7 @@
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
-import {HARDPROOF_ACTION_USES} from './_config';
+import {HARDPROOF_ACTION_USES, HARDPROOF_TAG} from './_config';
 
 export default function HardproofCi(): JSX.Element {
   const yaml = `name: hardproof
@@ -20,13 +20,15 @@ jobs:
       # - name: Start server
       #   run: ./scripts/start-server.sh
 
-      - name: Run Hardproof scan
+      - name: Run Hardproof CI
         id: hardproof
         uses: ${HARDPROOF_ACTION_USES}
         with:
           url: http://127.0.0.1:3000/mcp
+          version: ${HARDPROOF_TAG}
           full-suite: "false"
           sarif: "true"
+          threshold: "80"
 
       - name: Upload reports
         if: always()
@@ -49,12 +51,11 @@ jobs:
         <h1>Use Hardproof in CI</h1>
         <p>
           The GitHub Action downloads a <code>hardproof</code> release binary and runs{' '}
-          <code>hardproof scan</code> (HTTP or stdio) against your server.
+          <code>hardproof ci</code> (HTTP or stdio) against your server.
         </p>
         <p>
-          The public Action is called <b>Hardproof Scan (beta)</b>. Preferred usage is{' '}
-          <code>x07lang/hardproof/hardproof-scan@…</code>; the legacy{' '}
-          <code>x07lang/hardproof/action@…</code> path remains available during the transition.
+          <code>hardproof ci</code> runs <code>scan</code> and fails the job when verification fails
+          or the score falls below <code>threshold</code>.
         </p>
 
         <h2>Workflow snippet</h2>
@@ -94,4 +95,3 @@ jobs:
     </Layout>
   );
 }
-

@@ -22,6 +22,9 @@ export default function HardproofLanding(): JSX.Element {
             <Link className="button button--outline button--lg" to="/hardproof/ci">
               Use Hardproof in CI
             </Link>
+            <Link className="button button--outline button--lg" to="/hardproof/launch">
+              Launch page
+            </Link>
             <Link className="button button--outline button--lg" to="/hardproof/faq">
               FAQ / migration
             </Link>
