@@ -161,6 +161,26 @@ def _generate_sidebar_items(summary_path: Path) -> List[Dict[str, Any]]:
     return summary_nodes_to_sidebar_items(nodes)
 
 
+_SUMMARY_LINK_RE = re.compile(r"\[[^\]]+\]\((?P<target>[^)]+)\)")
+
+
+def _validate_summary_links_exist(*, summary_path: Path, docs_root: Path) -> None:
+    text = _read_text(summary_path)
+    missing: List[str] = []
+    for m in _SUMMARY_LINK_RE.finditer(text):
+        target = m.group("target").strip()
+        if not target or "://" in target:
+            continue
+        rel = target.split("#", 1)[0].strip()
+        if not rel:
+            continue
+        if not (docs_root / rel).is_file():
+            missing.append(rel)
+    if missing:
+        rendered = "\n".join(f"  - {rel}" for rel in sorted(set(missing)))
+        raise SystemExit(f"SUMMARY references missing docs under {docs_root}:\n{summary_path}\n{rendered}")
+
+
 _SERVICE_ARCH_GUIDE_DOC_ID = "guides/x07-service-architecture-v1"
 _SERVICE_ARCH_GUIDE_REL_MD = Path("guides") / "x07-service-architecture-v1.md"
 _SERVICE_ARCH_GUIDE_LABEL = "Service architecture v1"
@@ -366,6 +386,7 @@ def main(argv: List[str]) -> None:
     latest_summary = src_latest / "SUMMARY.md"
     if not latest_summary.is_file():
         raise SystemExit(f"missing SUMMARY.md in docs/latest: {latest_summary}")
+    _validate_summary_links_exist(summary_path=latest_summary, docs_root=src_latest)
     try:
         latest_items = _generate_sidebar_items(latest_summary)
     except SummaryParseError as e:
@@ -377,6 +398,7 @@ def main(argv: List[str]) -> None:
         src_ver_summary = docs_root / f"v{v}" / "SUMMARY.md"
         if not src_ver_summary.is_file():
             raise SystemExit(f"missing SUMMARY.md in docs/v{v}: {src_ver_summary}")
+        _validate_summary_links_exist(summary_path=src_ver_summary, docs_root=docs_root / f"v{v}")
         try:
             ver_items = _generate_sidebar_items(src_ver_summary)
         except SummaryParseError as e:

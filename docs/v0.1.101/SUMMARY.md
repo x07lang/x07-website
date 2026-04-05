@@ -40,10 +40,6 @@
 ## Toolchain
 - [CLI](toolchain/cli.md)
 - [MCP kit](toolchain/mcp-kit.md)
-- [MCP quality](toolchain/mcp-quality.md)
-- [MCP quality: install](toolchain/mcp-quality-install.md)
-- [MCP quality: GitHub Actions](toolchain/mcp-quality-action.md)
-- [MCP quality: Codespaces](toolchain/mcp-codespaces.md)
 - [WASM toolchain](toolchain/wasm.md)
 - [Benchmarks](toolchain/benchmarks.md)
 - [Compiler limits](toolchain/compiler-limits.md)
@@ -139,9 +135,6 @@
 ## Guides
 - [CLI apps](guides/cli-apps.md)
 - [Data interoperability](guides/data-interop.md)
-- [Kernel/shell in production](guides/kernel-shell-production.md)
-- [Performance tuning](guides/performance-tuning.md)
-- [Extract core migration](guides/extract-core.md)
 - [Web services](guides/web-apps.md)
 - [Service architecture v1](guides/x07-service-architecture-v1.md)
 - [Provider-agnostic services](guides/provider-agnostic-services.md)
@@ -155,7 +148,6 @@
 ## Project
 - [About](about.md)
 - [Repositories](project/repositories.md)
-- [Website docs sync](project/website-docs-sync.md)
 - [Package policy](project/package-policy.md)
 - [Governance](governance.md)
 - [Contributing](contributing.md)
