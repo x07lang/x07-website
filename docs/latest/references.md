@@ -8,7 +8,7 @@ This page collects external references cited in the human docs.
 
 ## Ports & adapters (hexagonal architecture)
 
-- [Alistair Cockburn: Hexagonal Architecture](https://web.archive.org/web/https://alistair.cockburn.us/hexagonal-architecture)
+- [Alistair Cockburn: Hexagonal Architecture](https://alistair.cockburn.us/hexagonal-architecture)
 
 ## Ownership/borrowing mental model
 

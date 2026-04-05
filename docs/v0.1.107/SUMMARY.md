@@ -40,7 +40,11 @@
 ## Toolchain
 - [CLI](toolchain/cli.md)
 - [MCP kit](toolchain/mcp-kit.md)
-- [WASM (Phases 0–10)](toolchain/wasm.md)
+- [MCP quality](toolchain/mcp-quality.md)
+- [MCP quality: install](toolchain/mcp-quality-install.md)
+- [MCP quality: GitHub Actions](toolchain/mcp-quality-action.md)
+- [MCP quality: Codespaces](toolchain/mcp-codespaces.md)
+- [WASM toolchain](toolchain/wasm.md)
 - [Benchmarks](toolchain/benchmarks.md)
 - [Compiler limits](toolchain/compiler-limits.md)
 - [Optimizer](toolchain/optimizer.md)
@@ -151,6 +155,7 @@
 ## Project
 - [About](about.md)
 - [Repositories](project/repositories.md)
+- [Website docs sync](project/website-docs-sync.md)
 - [Package policy](project/package-policy.md)
 - [Governance](governance.md)
 - [Contributing](contributing.md)

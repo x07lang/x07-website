@@ -7,11 +7,11 @@ At a minimum, a CI run usually does:
 1) install `hardproof`
 2) run `hardproof doctor` to validate prerequisites
 3) start your MCP server (HTTP)
-4) run conformance and upload artifacts (`summary.json`, `summary.junit.xml`, `summary.html`)
+4) run `hardproof ci` and upload the scan report artifacts (`scan.json`, `scan.events.jsonl`)
 
 ## Minimal workflow sketch
 
-This is intentionally a sketch (private alpha). Wire the install and server start steps to match your repo.
+This is intentionally a sketch (public beta). Wire the install and server start steps to match your repo.
 
 ```yaml
 name: mcp-quality
@@ -25,14 +25,16 @@ jobs:
         run: |
           echo "Start your MCP server here"
       - name: Hardproof Scan (beta)
-        uses: x07lang/hardproof/hardproof-scan@v0.1.0-alpha.6
+        uses: x07lang/hardproof/hardproof-scan@latest-beta
         with:
           url: http://127.0.0.1:3000/mcp
+          version: latest-beta
+          threshold: "80"
           full-suite: "false"
           sarif: "true"
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: conformance
-          path: out/conformance/
+          path: out/scan/
 ```
