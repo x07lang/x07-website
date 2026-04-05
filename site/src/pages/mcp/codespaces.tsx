@@ -8,10 +8,10 @@ export default function McpCodespaces(): JSX.Element {
 x07 bundle --project x07.json --profile os --out out/mcp-router
 x07 bundle --project x07.json --profile sandbox --sandbox-backend os --i-accept-weaker-isolation --program src/worker_main.x07.json --out out/mcp-worker
 ./out/mcp-router`;
-  const conformance = `hardproof scan \\
+  const scan = `hardproof scan \\
   --url "http://127.0.0.1:8314/mcp" \\
-  --out out/conformance \\
-  --machine json`;
+  --out out/scan \\
+  --format json`;
 
   return (
     <Layout
@@ -40,14 +40,13 @@ x07 bundle --project x07.json --profile sandbox --sandbox-backend os --i-accept-
         </pre>
         <p>The MCP endpoint is <code>http://127.0.0.1:8314/mcp</code>.</p>
 
-        <h2>4) Run conformance</h2>
+        <h2>4) Run a scan</h2>
         <pre>
-          <code>{conformance}</code>
+          <code>{scan}</code>
         </pre>
         <p>
-          Artifacts are written under <code>out/conformance/</code>:{' '}
-          <code>summary.json</code>, <code>summary.junit.xml</code>, <code>summary.html</code>,{' '}
-          <code>summary.sarif.json</code>.
+          Artifacts are written under <code>out/scan/</code>: <code>scan.json</code> and{' '}
+          <code>scan.events.jsonl</code>.
         </p>
       </main>
     </Layout>

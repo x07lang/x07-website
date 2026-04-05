@@ -37,11 +37,7 @@ jobs:
           name: hardproof-reports
           path: |
             out/doctor.json
-            out/conformance/summary.json
-            out/conformance/summary.junit.xml
-            out/conformance/summary.html
-            out/conformance/summary.sarif.json
-            out/conformance/summary.stdout.json`;
+            out/scan/**`;
 
   return (
     <Layout
@@ -69,16 +65,10 @@ jobs:
             <code>scan_ok</code>: true if scan passed (exit 0)
           </li>
           <li>
-            <code>report_json</code>: <code>out/conformance/summary.json</code>
+            <code>report_json</code>: <code>out/scan/scan.json</code>
           </li>
           <li>
-            <code>report_junit</code>: <code>out/conformance/summary.junit.xml</code>
-          </li>
-          <li>
-            <code>report_html</code>: <code>out/conformance/summary.html</code>
-          </li>
-          <li>
-            <code>report_sarif</code>: <code>out/conformance/summary.sarif.json</code> (when enabled)
+            <code>report_sarif</code>: <code>out/scan/scan.sarif.json</code> (when enabled)
           </li>
         </ul>
 

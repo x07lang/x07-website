@@ -26,8 +26,9 @@ cd x07-mcp/demos/postgres-public-beta
           <h1>Postgres demo</h1>
 
           <p>
-            This is the end-to-end “hero” demo path: run a real MCP server, then capture conformance
-            + replay + trust + bundle evidence you can keep in CI or attach to a review.
+            This is the end-to-end “hero” demo path: run a real MCP server, then capture a
+            deterministic Hardproof scan report (five dimensions + usage metrics) plus replay/trust
+            evidence you can keep in CI or attach to a review.
           </p>
 
           <h2>What you run</h2>
@@ -41,7 +42,8 @@ cd x07-mcp/demos/postgres-public-beta
           <h2>What you verify</h2>
           <ul>
             <li>
-              <b>Conformance</b>: official MCP suite with JSON/JUnit/HTML/SARIF outputs
+              <b>Scan</b>: one report with five dimensions (conformance, reliability, performance,
+              security, trust) plus token/context usage metrics
             </li>
             <li>
               <b>Replay</b>: record and replay a minimal deterministic cassette
@@ -60,9 +62,10 @@ cd x07-mcp/demos/postgres-public-beta
           </pre>
 
           <p>
-            The demo produces artifacts under <code>demos/postgres-public-beta/out/</code>, including
-            <code>conformance/summary.json</code>, <code>replay.session.json</code>,{' '}
-            <code>trust.summary.json</code>, and <code>bundle.verify.json</code>.
+            The demo produces artifacts under <code>demos/postgres-public-beta/out/</code>, including{' '}
+            <code>scan/scan.json</code>, <code>scan/scan.events.jsonl</code>,{' '}
+            <code>replay.session.json</code>, <code>trust.summary.json</code>, and{' '}
+            <code>bundle.verify.json</code>.
           </p>
 
           <p>

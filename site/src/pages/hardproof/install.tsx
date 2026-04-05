@@ -11,8 +11,7 @@ import {
 export default function HardproofInstall(): JSX.Element {
   const installCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
   const doctorCmd = 'hardproof doctor --machine json';
-  const scanCmd =
-    'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
+  const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
 
   return (
     <Layout
@@ -74,9 +73,8 @@ export default function HardproofInstall(): JSX.Element {
         </pre>
 
         <p>
-          Artifacts are written under <code>out/conformance/</code>:{' '}
-          <code>summary.json</code>, <code>summary.junit.xml</code>, <code>summary.html</code>,{' '}
-          <code>summary.sarif.json</code>.
+          Artifacts are written under <code>out/scan/</code>: <code>scan.json</code> and{' '}
+          <code>scan.events.jsonl</code>.
         </p>
 
         <h2>Next</h2>

@@ -10,9 +10,10 @@ import {
 
 export default function HardproofLaunch(): JSX.Element {
   const installCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
-  const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
-  const ciCmd = 'hardproof ci --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json --threshold 80';
-  const exampleSummaryUrl = `https://github.com/${HARDPROOF_REPO}/blob/${HARDPROOF_TAG}/docs/examples/hardproof-scan/summary.json`;
+  const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
+  const ciCmd =
+    'hardproof ci --url "http://127.0.0.1:3000/mcp" --out out/scan --machine json --threshold 80';
+  const exampleSummaryUrl = `https://github.com/${HARDPROOF_REPO}/blob/${HARDPROOF_TAG}/docs/examples/hardproof-scan/scan.json`;
 
   return (
     <Layout
@@ -25,8 +26,7 @@ export default function HardproofLaunch(): JSX.Element {
           <b>Hardproof is deterministic verification for MCP servers.</b>
         </p>
         <p>
-          Conformance, replay, trust, and release-grade evidence in one repeatable workflow.{' '}
-          <b>Built with x07.</b>
+          A single scan report with five dimensions plus token/context usage metrics. <b>Built with x07.</b>
         </p>
 
         <div className="alert alert--info" role="alert">
@@ -64,7 +64,7 @@ export default function HardproofLaunch(): JSX.Element {
 
         <h2>Sample report</h2>
         <p>
-          Canonical sample summary JSON:{' '}
+          Canonical sample scan report JSON:{' '}
           <a href={exampleSummaryUrl}>{exampleSummaryUrl}</a>
         </p>
 
@@ -76,4 +76,3 @@ export default function HardproofLaunch(): JSX.Element {
     </Layout>
   );
 }
-

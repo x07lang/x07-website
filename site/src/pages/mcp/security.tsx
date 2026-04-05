@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 
 export default function McpSecurityGuide(): JSX.Element {
   const checklist = `# 1) Protocol compliance (baseline)
-hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json
+hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan --format json
 
 # 2) Deterministic repro (release gate)
 hardproof replay record --url "http://127.0.0.1:3000/mcp" --scenario smoke/basic --out out/replay.session.json --machine json

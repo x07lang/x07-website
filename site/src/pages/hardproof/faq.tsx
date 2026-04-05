@@ -5,7 +5,7 @@ import {HARDPROOF_ACTION_USES, HARDPROOF_FEEDBACK_URL} from './_config';
 
 export default function HardproofFaq(): JSX.Element {
   const scanCmd =
-    'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/conformance --machine json';
+    'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
 
   return (
     <Layout
