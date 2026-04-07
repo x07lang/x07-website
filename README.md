@@ -1,87 +1,58 @@
-# X07 Website
+# x07-website
 
-## Agent Entrypoint
+This repo powers [x07lang.org](https://x07lang.org): the public homepage, docs site, agent portal, versioned docs, and installer/update surfaces for the X07 ecosystem.
 
-Start here: https://x07lang.org/docs/getting-started/agent-quickstart
+**Start here:** [x07lang.org](https://x07lang.org) · [Support](SUPPORT.md) · [x07 core repo](https://github.com/x07lang/x07)
 
-This repo hosts the X07 public website and documentation site.
+## What This Repo Is
 
-Support: see `SUPPORT.md`.
+`x07-website` is the publishing layer for the X07 ecosystem. It contains:
 
-Community:
+- the public site shell and landing pages
+- rendered and versioned documentation
+- machine-readable agent indexes and skill packs
+- install channel files and static download surfaces
 
-- Discord: https://discord.gg/59xuEuPN47
-- Email: support@x07lang.org
+The important boundary is simple: canonical toolchain docs are authored in [`x07lang/x07`](https://github.com/x07lang/x07), not here. This repo publishes and presents released content; it should not become a second source of truth for the language docs.
 
-**Single canonical source of docs content:** `x07lang/x07/docs/`.
-
-This repo contains the website layer for the X07 ecosystem: the public homepage, the rendered docs site, the agent portal, and the deployment-ready static site output path. It consumes released docs content from `x07lang/x07` instead of inventing a second documentation source of truth.
-
-## Vision
-
-The vision for `x07-website` is straightforward:
-
-- one clear public entry point for people learning X07
-- one canonical docs experience for both end users and coding agents
-- one place that explains the whole ecosystem in simple language, then links people to the right repo or product surface
-
-This repo is where the "whole" of X07 becomes visible. The core toolchain, MCP kit, WASM stack, platform story, registry, and docs all meet here in one public-facing experience.
-
-## How It Fits The X07 Ecosystem
-
-`x07-website` is the presentation layer for the rest of the system:
-
-- [`x07`](https://github.com/x07lang/x07) is the source of truth for released docs and installer assets
-- [`x07-mcp`](https://github.com/x07lang/x07-mcp) provides the MCP kit and official MCP server content that the site should explain
-- [`x07-wasm-backend`](https://github.com/x07lang/x07-wasm-backend) and [`x07-web-ui`](https://github.com/x07lang/x07-web-ui) provide the WASM and app-building story surfaced on the site
-- [`x07-platform`](https://github.com/x07lang/x07-platform) provides the lifecycle platform story surfaced on the site
-- [`x07-registry`](https://github.com/x07lang/x07-registry) and [`x07-registry-web`](https://github.com/x07lang/x07-registry-web) back the package ecosystem at [`x07.io`](https://x07.io)
-
-The important boundary is that this repo presents and publishes those stories, but does not become the authorship source for toolchain docs.
-
-## Practical Usage
+## When To Use This Repo
 
 Use this repo when you need to:
 
-- update the public homepage and navigation for the X07 ecosystem
-- publish synced docs from a released X07 docs bundle
-- regenerate the Docusaurus inputs from synced docs content
-- verify that public site structure, agent endpoints, and versioned docs stay consistent
+- update the public homepage, navigation, or ecosystem landing pages
+- sync released docs from `x07`
+- regenerate Docusaurus inputs and agent indexes
+- validate install channels and public site structure before publish
 
-## Install And Use It Standalone
+If the content is really a toolchain doc, schema explanation, or CLI guide, it should usually start in `x07/docs/`.
 
-If you only want to work on the website layer:
+## How Content Flows
 
-1. clone this repo and the sibling `x07` repo
-2. sync docs from a released or locally built X07 docs bundle
-3. generate Docusaurus inputs
-4. run the site checks and build the site
-
-For website-only work, the main things you need are Python 3 and Node.js.
-
-## Repo layout
-
-- `docs/`: website-rendered human docs (synced + versioned)
-- `agent/`: machine-first docs (synced + versioned; JSON files are served as-is)
-- `site/`: static site source (Docusaurus)
-- `versions/toolchain_versions.json`: maps toolchain versions to synced bundles (and marks `latest`)
-
-## Use It As Part Of The X07 Ecosystem
-
-The normal ecosystem workflow is:
+The normal release flow is:
 
 1. update docs and installer assets in [`x07`](https://github.com/x07lang/x07)
-2. build a docs bundle from the core repo
-3. sync that bundle into this repo with the provided scripts
-4. verify the generated website inputs and publish the updated site
+2. build a docs bundle from that repo
+3. sync the bundle into this repo
+4. generate Docusaurus inputs and agent indexes
+5. run the site checks and publish
 
-That keeps the public site aligned with the released toolchain instead of letting docs drift across repos.
+That keeps `x07lang.org` aligned with released toolchain content instead of letting docs drift across repos.
 
-## Common Commands
+## Quick Start
 
-Sync from a docs bundle:
+### Work on website-only pages
 
-```sh
+If you are editing the homepage, navigation, or other site-layer code:
+
+```bash
+cd site
+npm ci
+npm run start
+```
+
+### Sync docs from a toolchain bundle
+
+```bash
 python3 scripts/sync_from_bundle.py \
   --toolchain-version X.Y.Z \
   --bundle /path/to/x07-docs-bundle.tar.gz \
@@ -89,25 +60,35 @@ python3 scripts/sync_from_bundle.py \
 python3 scripts/site/gen_docusaurus_inputs.py --repo-root .
 ```
 
-Validate the repo structure:
+### Validate the repo
 
-```sh
+```bash
 python3 scripts/check_site.py --check
+bash scripts/ci/check_all.sh
 ```
 
-That check also rejects installer drift. If `site/static/install/channels.json` says stable points to one toolchain and `site/static/install/channels/stable.json` points to another, CI fails before publish.
+`check_site.py` also rejects installer drift, including mismatches between `site/static/install/channels.json` and the channel-specific files under `site/static/install/channels/`.
 
-Run the site locally:
+## Repository Layout
 
-```sh
-cd site
-npm ci
-npm run start
-```
+- `site/`: Docusaurus app, landing pages, and frontend assets
+- `docs/`: rendered and versioned human docs
+- `agent/`: rendered and versioned machine-first docs and skill indexes
+- `versions/toolchain_versions.json`: published toolchain-to-doc-bundle map
+- `site/static/install/`: installer script and channel metadata served by the site
+- `scripts/`: sync, generation, validation, and publish helpers
 
-## Related repositories
+## How It Fits The X07 Ecosystem
 
-- https://github.com/x07lang/x07 (toolchain + canonical docs source)
-- https://github.com/x07lang/x07-mcp (MCP kit tooling + templates)
-- https://github.com/x07lang/x07-registry (registry API)
-- https://github.com/x07lang/x07-registry-web (x07.io UI)
+- [`x07`](https://github.com/x07lang/x07) is the source of truth for released docs and installer assets
+- [`x07-mcp`](https://github.com/x07lang/x07-mcp) provides the MCP kit and official MCP server content surfaced on the site
+- [`x07-wasm-backend`](https://github.com/x07lang/x07-wasm-backend), [`x07-web-ui`](https://github.com/x07lang/x07-web-ui), and [`x07-device-host`](https://github.com/x07lang/x07-device-host) provide the browser and device application story
+- [`x07-platform`](https://github.com/x07lang/x07-platform) provides the workload and lifecycle platform story
+- [`x07-registry`](https://github.com/x07lang/x07-registry) and [`x07-registry-web`](https://github.com/x07lang/x07-registry-web) back the package ecosystem at [x07.io](https://x07.io)
+
+## Related Repos
+
+- https://github.com/x07lang/x07
+- https://github.com/x07lang/x07-mcp
+- https://github.com/x07lang/x07-registry
+- https://github.com/x07lang/x07-registry-web
