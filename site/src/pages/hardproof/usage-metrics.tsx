@@ -54,10 +54,18 @@ export default function HardproofUsageMetrics(): ReactNode {
           </li>
         </ul>
 
+        <h2>Estimator metadata</h2>
+        <p>
+          The usage overlay records <code>estimator_family</code>, <code>estimator_version</code>,
+          and confidence next to the token estimates. These values are deterministic estimates for
+          comparison and gating, not billing-grade truth.
+        </p>
+
         <h2>Why two token estimates exist</h2>
         <p>
-          The report keeps both <code>cl100k</code> and <code>o200k</code> tool-catalog estimates so
-          consumers can compare context pressure across the model families that are commonly in use.
+          The report keeps both <code>cl100k</code> and <code>o200k</code> tool-catalog estimates
+          so consumers can compare context pressure across the model families that are commonly in
+          use.
         </p>
 
         <h2>How to keep usage healthy</h2>

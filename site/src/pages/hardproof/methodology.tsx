@@ -40,27 +40,32 @@ export default function HardproofMethodology(): ReactNode {
           </li>
         </ul>
 
-        <h2>Score truth and publishability</h2>
+        <h2>Score truth and score mode</h2>
         <p>
           Hardproof does not treat every numeric signal as equally publishable. The report makes
           score truth explicit:
         </p>
         <ul>
           <li>
-            <code>publishable</code>: <code>overall_score</code> is present and backed by enough
-            weighted dimensions.
+            <code>score_mode=full</code>: <code>overall_score</code> is present and backed by
+            enough weighted dimensions.
           </li>
           <li>
-            <code>partial</code>: <code>partial_score</code> is present, but <code>overall_score</code>{' '}
-            stays <code>null</code> because at least one gate is still missing or unknown.
+            <code>score_mode=partial</code>: <code>overall_score</code> stays <code>null</code>{' '}
+            because at least one gate is still missing or unknown. <code>partial_score</code>{' '}
+            remains machine-readable as a comparison aid, and rich output withholds the primary
+            score.
           </li>
           <li>
             <code>insufficient</code>: there is not enough evidence to defend a numeric score yet.
           </li>
         </ul>
         <p>
-          Trust is the most common reason a scan remains partial. If you want full-score gating in
-          CI, pass trust artifacts and enable <code>--require-trust-for-full-score</code>.
+          Trust is the most common reason a scan remains partial. <code>hardproof ci</code> now
+          fails on partial scores by default. If you want full-score gating in CI, pass trust
+          artifacts; use <code>--allow-partial-score</code> only when a partial result is
+          intentional, and <code>--require-trust-for-full-score</code> when you want the strictest
+          trust-aware gate.
         </p>
 
         <h2>Usage metrics are an overlay</h2>

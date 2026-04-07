@@ -16,7 +16,7 @@ export default function HardproofReportFormat(): ReactNode {
   "score_mode": "partial",
   "score_truth_status": "partial",
   "overall_score": null,
-  "partial_score": 89,
+  "partial_score": 94,
   "dimension_coverage": {
     "conformance": true,
     "security": true,
@@ -28,7 +28,7 @@ export default function HardproofReportFormat(): ReactNode {
   "partial_reasons": ["TRUST-UNKNOWN"],
   "gating_reasons": ["TRUST-UNKNOWN"],
   "dimensions": [ /* conformance, reliability, performance, security, trust */ ],
-  "usage_metrics": { /* token/context estimates */ },
+  "usage_metrics": { /* token/context estimates + estimator_family/version/confidence */ },
   "findings": [ /* codes + evidence + suggested_fix */ ],
   "artifacts": [ /* referenced files (JSON/JUnit/HTML/SARIF, etc) */ ],
   "report_digest": "…",
@@ -69,9 +69,9 @@ export default function HardproofReportFormat(): ReactNode {
             an overlay focused on token/context footprint.
           </li>
           <li>
-            <code>score_truth_status</code> tells you whether the score is publishable, partial, or
-            insufficient. Partial scans keep <code>overall_score</code> at <code>null</code> and
-            move the numeric signal to <code>partial_score</code>.
+            <code>score_mode</code> is the dominant public truth field. Partial scans keep{' '}
+            <code>overall_score</code> at <code>null</code>; <code>partial_score</code> remains a
+            machine-readable comparison aid rather than the primary public score.
           </li>
           <li>
             <code>findings[]</code> is the stable place to look for actionable problems (codes, evidence, fixes).
