@@ -7,7 +7,7 @@ import {createRedirects} from './redirects.generated';
 
 const config: Config = {
   title: 'X07',
-  tagline: 'The agent-first language',
+  tagline: 'The language and toolchain for dependable agent-built software',
   favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -108,7 +108,7 @@ const config: Config = {
       },
       items: [
         {
-          to: '/docs/getting-started/agent-quickstart',
+          to: '/docs/',
           position: 'left',
           label: 'Start here',
         },
@@ -127,13 +127,12 @@ const config: Config = {
           position: 'left',
           items: [
             {label: 'Overview', to: '/hardproof'},
-            {label: 'Launch', to: '/hardproof/launch'},
             {label: 'Install', to: '/hardproof/install'},
             {label: 'CI', to: '/hardproof/ci'},
+            {label: 'Methodology', to: '/hardproof/methodology'},
+            {label: 'Report format', to: '/hardproof/report-format'},
+            {label: 'Usage metrics', to: '/hardproof/usage-metrics'},
             {label: 'FAQ', to: '/hardproof/faq'},
-            {label: 'Quality report', to: '/mcp/quality-report'},
-            {label: 'Security guide', to: '/mcp/security'},
-            {label: 'Official tools', to: '/mcp/official-tools'},
           ],
         },
         {
@@ -141,8 +140,10 @@ const config: Config = {
           position: 'left',
           items: [
             {label: 'Overview', to: '/mcp'},
+            {label: 'MCP kit docs', to: '/docs/toolchain/mcp-kit'},
             {label: 'Codespaces quickstart', to: '/mcp/codespaces'},
             {label: 'Postgres demo', to: '/mcp/demo'},
+            {label: 'Official tools', to: '/mcp/official-tools'},
           ],
         },
         {type: 'docsVersionDropdown', position: 'left'},
@@ -176,7 +177,7 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {label: 'Start here', to: '/docs/getting-started/agent-quickstart'},
+            {label: 'Start here', to: '/docs/'},
             {label: 'Getting started', to: '/docs/getting-started/install'},
             {label: 'Blog', to: '/blog'},
             {label: 'Download builds', href: 'https://github.com/x07lang/x07/releases'},

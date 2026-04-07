@@ -1,8 +1,10 @@
+import type {ReactNode} from 'react';
+import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import {MCP_CODESPACES_URL} from './_config';
 
-export default function McpCodespaces(): JSX.Element {
+export default function McpCodespaces(): ReactNode {
   const installVerifier = './scripts/dev/install_hardproof.sh';
   const runExample = `cd examples/private-alpha-http-hello
 x07 bundle --project x07.json --profile os --out out/mcp-router
@@ -20,8 +22,9 @@ x07 bundle --project x07.json --profile sandbox --sandbox-backend os --i-accept-
       <main className="container margin-vert--lg">
         <h1>Try MCP verification with zero install (Codespaces)</h1>
         <p>
-          Codespaces is the fastest way to evaluate the verifier without installing the x07 toolchain
-          locally.
+          Codespaces is the fastest way to evaluate the X07 MCP lane without installing the
+          toolchain locally: build a small server, run it, and verify it with Hardproof in one
+          disposable workspace.
         </p>
 
         <h2>1) Open a Codespace</h2>
@@ -48,6 +51,19 @@ x07 bundle --project x07.json --profile sandbox --sandbox-backend os --i-accept-
           Artifacts are written under <code>out/scan/</code>: <code>scan.json</code> and{' '}
           <code>scan.events.jsonl</code>.
         </p>
+
+        <h2>Next</h2>
+        <ul>
+          <li>
+            MCP docs: <Link to="/docs/toolchain/mcp-kit">/docs/toolchain/mcp-kit</Link>
+          </li>
+          <li>
+            Postgres demo: <Link to="/mcp/demo">/mcp/demo</Link>
+          </li>
+          <li>
+            Hardproof install: <Link to="/hardproof/install">/hardproof/install</Link>
+          </li>
+        </ul>
       </main>
     </Layout>
   );

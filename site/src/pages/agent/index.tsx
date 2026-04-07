@@ -91,8 +91,14 @@ export default function AgentPortal(): ReactNode {
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent portal</Heading>
         <p>
-          Agents should consume JSON endpoints. The HTML pages under <code>/agent</code> are for
-          discoverability and link to stable, machine-first contracts.
+          <code>/agent</code> is the machine entry surface for coding agents. Agents should consume
+          the JSON endpoints directly; the HTML pages under <code>/agent</code> exist so humans can
+          discover the contract without scraping repo internals.
+        </p>
+        <p>
+          If you are evaluating X07 as a human, start with <Link to="/docs/">Docs home</Link> and{' '}
+          <Link to="/docs/getting-started/install">Getting started</Link>. If you are wiring an
+          agent integration, start with the stable machine entrypoints below.
         </p>
 
         <div className="alert alert--info">
@@ -193,7 +199,11 @@ export default function AgentPortal(): ReactNode {
           <code>{MINIMAL_AGENT_LOOP_COMMANDS.join('\n')}</code>
         </pre>
 
-        <Heading as="h2">Start here</Heading>
+        <Heading as="h2">Agent bootstrap</Heading>
+        <p>
+          This is the shortest supported path from a fresh toolchain download to a working
+          machine-driven edit, repair, run, and test loop.
+        </p>
         <ol>
           <li>
             Choose a toolchain version from{' '}

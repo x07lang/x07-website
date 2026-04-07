@@ -1,3 +1,4 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
@@ -8,7 +9,7 @@ import {
   hardproofAssetUrl,
 } from './_config';
 
-export default function HardproofInstall(): JSX.Element {
+export default function HardproofInstall(): ReactNode {
   const installCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
   const doctorCmd = 'hardproof doctor --machine json';
   const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
@@ -16,9 +17,9 @@ export default function HardproofInstall(): JSX.Element {
   return (
     <Layout
       title="Install Hardproof"
-      description="Install the Hardproof verifier binary (beta preview).">
+      description="Install the standalone Hardproof verifier binary.">
       <main className="container margin-vert--lg">
-        <h1>Install Hardproof (beta preview)</h1>
+        <h1>Install Hardproof</h1>
         <p>
           Prebuilt binaries for Linux and macOS. On Windows, run inside WSL2 and use the Linux
           artifact (<code>linux_x86_64</code>).
@@ -28,8 +29,7 @@ export default function HardproofInstall(): JSX.Element {
           it. <b>Built with x07.</b>
         </p>
         <p>
-          Current public builds are tagged <code>{HARDPROOF_TAG}</code> while we converge on a
-          stable public-beta interface.
+          Current public beta builds are tagged <code>{HARDPROOF_TAG}</code>.
         </p>
 
         <h2>Install script</h2>

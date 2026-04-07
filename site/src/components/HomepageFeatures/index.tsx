@@ -10,29 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Agents can\'t hallucinate APIs that don\'t exist',
+    title: 'Humans and agents read the same contracts',
     description: (
       <>
-        One canonical API per capability means there is exactly one right
-        answer. No ambiguous choices, no wrong guesses, no import roulette.
+        Docs, schemas, CLI reports, and package metadata line up, so the same
+        contract survives from code review to CI to release operations.
       </>
     ),
   },
   {
-    title: 'Errors tell agents exactly what to fix',
+    title: 'Canonical APIs cut down repair noise',
     description: (
       <>
-        Every error carries a structured ID, a machine-readable explanation,
-        and a suggested fix. Agents don't guess at repairs — they read and apply.
+        X07 tries to make each capability look like one obvious shape, which
+        keeps generated code and repair patches more uniform and reviewable.
       </>
     ),
   },
   {
-    title: 'From edit to production, one toolchain',
+    title: 'Deterministic loops are easier to trust',
     description: (
       <>
-        Formatter, linter, test runner, MCP bridge, WASM compiler, package
-        registry, and deploy platform — all speaking the same typed contracts.
+        Lint, fix, test, run, MCP, packaging, and verification surfaces speak
+        stable JSON and versioned schemas instead of ad hoc terminal output.
       </>
     ),
   },

@@ -1,7 +1,8 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
-export default function McpDemo(): JSX.Element {
+export default function McpDemo(): ReactNode {
   const cmds = `git clone https://github.com/x07lang/x07-mcp
 cd x07-mcp/demos/postgres-public-beta
 
@@ -20,15 +21,15 @@ cd x07-mcp/demos/postgres-public-beta
   return (
     <Layout
       title="MCP demo"
-      description="Structure for the public hero demo: Postgres MCP server + Hardproof verification artifacts.">
+      description="End-to-end demo: X07-native Postgres MCP server plus Hardproof verification artifacts.">
       <main>
         <div className="container margin-vert--lg">
           <h1>Postgres demo</h1>
 
           <p>
-            This is the end-to-end “hero” demo path: run a real MCP server, then capture a
-            deterministic Hardproof scan report (five dimensions + usage metrics) plus replay/trust
-            evidence you can keep in CI or attach to a review.
+            This is the end-to-end demo path for the X07 MCP lane: run a real MCP server, then
+            capture a deterministic Hardproof scan report plus replay, trust, and bundle evidence
+            you can keep in CI or attach to a review.
           </p>
 
           <h2>What you run</h2>
@@ -70,8 +71,9 @@ cd x07-mcp/demos/postgres-public-beta
 
           <p>
             Related pages:{' '}
-            <Link to="/mcp/quality-report">quality report</Link>,{' '}
-            <Link to="/mcp/security">security guide</Link>.
+            <Link to="/mcp/codespaces">Codespaces</Link>,{' '}
+            <Link to="/hardproof/methodology">Hardproof methodology</Link>,{' '}
+            <Link to="/hardproof/report-format">report format</Link>.
           </p>
         </div>
       </main>

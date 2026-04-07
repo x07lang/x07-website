@@ -85,6 +85,17 @@
   margin-top: 2rem;
 }
 
+.pathSection {
+  padding: 4rem 0;
+  background: #fafafa;
+  color: #111827;
+}
+
+:global([data-theme='dark']) .pathSection {
+  background: #111111;
+  color: #e2e8f0;
+}
+
 /* --- Comparison Section --- */
 
 .comparisonSection {

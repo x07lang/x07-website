@@ -10,6 +10,10 @@ export default function AgentStdlib(): ReactNode {
     <Layout title="Agent stdlib index" description="Pinned stdlib module inventory for agents.">
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent stdlib index</Heading>
+        <p>
+          This page mirrors the published stdlib inventory for humans. Agents should consume the
+          JSON index below directly.
+        </p>
         <div className="alert alert--info">
           <strong>Machine-first index</strong>
           <ul>

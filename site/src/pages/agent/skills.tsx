@@ -13,6 +13,10 @@ export default function AgentSkills(): ReactNode {
     <Layout title="Agent skills" description="Tooling skills available to coding agents.">
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent skills</Heading>
+        <p>
+          This page mirrors the skill catalog for human discovery. Agents should consume the JSON
+          index below and pin to the matching toolchain release.
+        </p>
         <div className="alert alert--info">
           <strong>Machine-first index</strong>
           <ul>

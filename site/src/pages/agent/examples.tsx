@@ -10,6 +10,10 @@ export default function AgentExamples(): ReactNode {
     <Layout title="Agent examples" description="Example X07 programs for agents to copy.">
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent examples</Heading>
+        <p>
+          This page is a human-readable mirror of the agent example indexes. Use the JSON endpoints
+          below in automation.
+        </p>
         <div className="alert alert--info">
           <strong>Machine-first index</strong>
           <p>

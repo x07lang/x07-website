@@ -1,9 +1,10 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import {HARDPROOF_ACTION_USES, HARDPROOF_TAG} from './_config';
 
-export default function HardproofCi(): JSX.Element {
+export default function HardproofCi(): ReactNode {
   const yaml = `name: hardproof
 
 on:
@@ -28,7 +29,8 @@ jobs:
           version: ${HARDPROOF_TAG}
           full-suite: "false"
           sarif: "true"
-          threshold: "80"
+          threshold: "85"
+          require-trust-for-full-score: "true"
 
       - name: Upload reports
         if: always()
@@ -52,6 +54,10 @@ jobs:
         <p>
           <code>hardproof ci</code> runs <code>scan</code> and fails the job when verification fails
           or the score falls below <code>threshold</code>.
+        </p>
+        <p>
+          For release-grade gating, require trust evidence as well so a partial score cannot pass as
+          a publishable full score.
         </p>
 
         <h2>Workflow snippet</h2>

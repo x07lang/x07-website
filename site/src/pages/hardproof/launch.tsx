@@ -1,3 +1,4 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
@@ -8,7 +9,7 @@ import {
   HARDPROOF_TAG,
 } from './_config';
 
-export default function HardproofLaunch(): JSX.Element {
+export default function HardproofLaunch(): ReactNode {
   const installCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
   const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
   const ciCmd =
@@ -26,7 +27,8 @@ export default function HardproofLaunch(): JSX.Element {
           <b>Hardproof is deterministic verification for MCP servers.</b>
         </p>
         <p>
-          A single scan report with five dimensions plus token/context usage metrics. <b>Built with x07.</b>
+          A single scan report with five dimensions, a usage overlay, and explicit score truth.
+          <b> Built with x07.</b>
         </p>
 
         <div className="alert alert--info" role="alert">
@@ -51,6 +53,13 @@ export default function HardproofLaunch(): JSX.Element {
         </pre>
         <p>
           GitHub Actions: <Link to="/hardproof/ci">/hardproof/ci</Link>
+        </p>
+
+        <h2>Score truth</h2>
+        <p>
+          Full scores are publishable. Partial scores are still useful, but they keep{' '}
+          <code>overall_score</code> at <code>null</code> until the missing gates, typically trust
+          evidence, are satisfied.
         </p>
 
         <h2>Demo</h2>

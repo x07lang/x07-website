@@ -1,5 +1,5 @@
 export const HARDPROOF_REPO = 'x07lang/hardproof';
-export const HARDPROOF_TAG = 'v0.3.0-beta.0';
+export const HARDPROOF_TAG = 'v0.4.0-beta.0';
 
 export const HARDPROOF_FEEDBACK_URL = `https://github.com/${HARDPROOF_REPO}/issues/new/choose`;
 

@@ -10,6 +10,10 @@ export default function AgentPackages(): ReactNode {
     <Layout title="Agent packages" description="Machine-first indexes for official external packages.">
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent packages</Heading>
+        <p>
+          This page mirrors the published package index for humans. Agents should read the JSON
+          index below directly.
+        </p>
         <div className="alert alert--info">
           <strong>Machine-first index</strong>
           <ul>
@@ -51,4 +55,3 @@ export default function AgentPackages(): ReactNode {
     </Layout>
   );
 }
-

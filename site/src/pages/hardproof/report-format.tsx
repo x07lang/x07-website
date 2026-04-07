@@ -1,18 +1,32 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
-export default function HardproofReportFormat(): JSX.Element {
+export default function HardproofReportFormat(): ReactNode {
   const schemaId = 'https://x07.io/schemas/x07.mcp.scan.report.schema.json';
-  const schemaVersion = 'x07.mcp.scan.report@0.3.0';
+  const schemaVersion = 'x07.mcp.scan.report@0.4.0';
   const example = `{
   "schema_version": "${schemaVersion}",
   "tool": "hardproof",
-  "tool_version": "v…",
+  "tool_version": "0.4.0-beta.0",
   "report_kind": "scan",
   "target": { "kind": "mcp_server", "transport": "streamable_http", "ref": "…", "meta": {} },
-  "status": "pass",
+  "status": "warn",
   "score_available": true,
-  "overall_score": 92,
+  "score_mode": "partial",
+  "score_truth_status": "partial",
+  "overall_score": null,
+  "partial_score": 89,
+  "dimension_coverage": {
+    "conformance": true,
+    "security": true,
+    "performance": true,
+    "reliability": true,
+    "trust": false
+  },
+  "unknown_dimensions": ["trust"],
+  "partial_reasons": ["TRUST-UNKNOWN"],
+  "gating_reasons": ["TRUST-UNKNOWN"],
   "dimensions": [ /* conformance, reliability, performance, security, trust */ ],
   "usage_metrics": { /* token/context estimates */ },
   "findings": [ /* codes + evidence + suggested_fix */ ],
@@ -24,7 +38,7 @@ export default function HardproofReportFormat(): JSX.Element {
   return (
     <Layout
       title="Hardproof report format"
-      description="Report format for Hardproof scan reports (x07.mcp.scan.report@0.3.0).">
+      description="Report format for Hardproof scan reports (x07.mcp.scan.report@0.4.0).">
       <main className="container margin-vert--lg">
         <h1>Scan report format</h1>
 
@@ -55,6 +69,11 @@ export default function HardproofReportFormat(): JSX.Element {
             an overlay focused on token/context footprint.
           </li>
           <li>
+            <code>score_truth_status</code> tells you whether the score is publishable, partial, or
+            insufficient. Partial scans keep <code>overall_score</code> at <code>null</code> and
+            move the numeric signal to <code>partial_score</code>.
+          </li>
+          <li>
             <code>findings[]</code> is the stable place to look for actionable problems (codes, evidence, fixes).
           </li>
           <li>
@@ -75,4 +94,3 @@ export default function HardproofReportFormat(): JSX.Element {
     </Layout>
   );
 }
-

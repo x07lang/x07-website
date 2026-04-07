@@ -1,3 +1,4 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
@@ -5,24 +6,28 @@ import {
   MCP_CODESPACES_URL,
 } from './_config';
 
-export default function McpLanding(): JSX.Element {
+export default function McpLanding(): ReactNode {
   return (
     <Layout
       title="x07-mcp"
-      description="Build MCP servers in x07: templates, reference servers, and a Codespaces quickstart.">
+      description="The MCP authoring and bridge layer in the X07 ecosystem: build servers in X07, connect agents to X07 tooling, and pair them with Hardproof verification.">
       <header className="hero hero--primary">
         <div className="container">
-          <h1>Build MCP servers in x07</h1>
+          <h1>Build and connect MCP servers with X07</h1>
           <p>
-            x07-mcp is the x07-native Model Context Protocol toolkit: templates, reference servers,
-            and a Codespaces path that gets you to a working server quickly.
+            x07-mcp is the MCP lane in the X07 ecosystem: an authoring toolkit for X07-native
+            servers, the official bridge for exposing X07 tooling to agent runtimes, and a clean
+            handoff into Hardproof verification.
           </p>
           <div className="buttons">
-            <Link className="button button--secondary button--lg" to="/mcp/codespaces">
-              Open Codespaces
+            <Link className="button button--secondary button--lg" to="/docs/toolchain/mcp-kit">
+              Open MCP docs
             </Link>
             <Link className="button button--outline button--lg" to="/hardproof">
               Verify with Hardproof
+            </Link>
+            <Link className="button button--outline button--lg" to="/mcp/codespaces">
+              Open Codespaces
             </Link>
             <Link className="button button--outline button--lg" to="/mcp/demo">
               Postgres demo
@@ -32,28 +37,35 @@ export default function McpLanding(): JSX.Element {
       </header>
       <main>
         <div className="container margin-vert--lg">
-          <h2>Two paths</h2>
+          <h2>How the pieces fit</h2>
           <ul>
             <li>
-              <b>Verify any MCP server</b>: use <Link to="/hardproof">Hardproof</Link> to run
-              deterministic verification and emit CI-grade artifacts.
+              <b>Build an MCP server in X07</b>: use x07-mcp to scaffold, run, bundle, and publish
+              X07-native servers with a consistent architecture.
             </li>
             <li>
-              <b>Build an MCP server in x07</b>: use x07-mcp to scaffold, run, bundle, and publish
-              x07-native servers with a consistent architecture.
+              <b>Connect agents to X07 tooling</b>: use the official x07lang-mcp bridge when you
+              want typed MCP access to X07 toolchain operations from an agent runtime.
+            </li>
+            <li>
+              <b>Verify any MCP server</b>: use <Link to="/hardproof">Hardproof</Link> to run
+              deterministic verification and emit CI-grade artifacts with explicit score truth.
             </li>
           </ul>
 
-          <h2>Next steps</h2>
+          <h2>Start with one path</h2>
           <ul>
             <li>
-              Start with the Codespaces quickstart: <Link to="/mcp/codespaces">/mcp/codespaces</Link>
+              Zero-install evaluation: <Link to="/mcp/codespaces">/mcp/codespaces</Link>
             </li>
             <li>
-              Follow the Postgres demo: <Link to="/mcp/demo">/mcp/demo</Link>
+              End-to-end demo: <Link to="/mcp/demo">/mcp/demo</Link>
             </li>
             <li>
-              Verify with Hardproof: <Link to="/hardproof/install">/hardproof/install</Link>
+              Build docs: <Link to="/docs/toolchain/mcp-kit">/docs/toolchain/mcp-kit</Link>
+            </li>
+            <li>
+              Verification docs: <Link to="/hardproof/install">/hardproof/install</Link>
             </li>
           </ul>
 

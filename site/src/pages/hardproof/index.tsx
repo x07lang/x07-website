@@ -1,20 +1,21 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import {HARDPROOF_FEEDBACK_URL} from './_config';
 
-export default function HardproofLanding(): JSX.Element {
+export default function HardproofLanding(): ReactNode {
   return (
     <Layout
       title="Hardproof"
-      description="Ship MCP servers you can verify: deterministic scoring and verification across five dimensions, plus token/context usage metrics.">
+      description="Deterministic verification for MCP servers: explicit score truth, machine-readable evidence, and review-friendly artifacts.">
       <header className="hero hero--primary">
         <div className="container">
-          <h1>Ship MCP servers you can verify</h1>
+          <h1>Verify MCP servers with evidence you can keep</h1>
           <p>
-            Hardproof gives you deterministic scoring and verification for MCP servers: five
-            dimensions plus token/context usage metrics, emitted as a stable scan report you can
-            store, diff, and gate in CI.
+            Hardproof gives you deterministic verification for MCP servers: five dimensions, a
+            usage overlay, explicit score truth, and stable artifacts you can store, diff, and gate
+            in CI.
           </p>
           <div className="buttons">
             <Link className="button button--secondary button--lg" to="/hardproof/install">
@@ -34,24 +35,43 @@ export default function HardproofLanding(): JSX.Element {
       </header>
       <main>
         <div className="container margin-vert--lg">
-          <h2>What it does</h2>
+          <h2>What you get</h2>
           <ul>
             <li>
-              <b>Scan</b>: run <code>hardproof scan</code> and emit <code>scan.json</code> with
-              five dimensions (conformance, reliability, performance, security, trust) plus a
-              usage metrics overlay.
+              <b>Scan report</b>: <code>hardproof scan</code> emits <code>scan.json</code> and{' '}
+              <code>scan.events.jsonl</code> with five dimensions plus a usage overlay.
             </li>
             <li>
-              <b>CI</b>: run <code>hardproof ci</code> to fail builds when verification fails or
-              scores drop below your policy thresholds.
+              <b>CI gate</b>: <code>hardproof ci</code> fails builds when verification fails or
+              policy thresholds are crossed.
             </li>
             <li>
-              <b>Replay</b>: record and replay a deterministic session cassette to keep regressions
-              reproducible.
+              <b>Replay and trust evidence</b>: replay sessions, trust summaries, and bundle checks
+              keep releases reviewable and reproducible.
             </li>
             <li>
-              <b>Reports</b>: render summaries and export SARIF/HTML from an existing scan report
+              <b>Rendered outputs</b>: export summary, HTML, and SARIF from an existing scan report
               with <code>hardproof report</code>.
+            </li>
+          </ul>
+
+          <h2>Score truth</h2>
+          <p>
+            Hardproof separates a useful scan from a publishable full score.
+          </p>
+          <ul>
+            <li>
+              <b>Publishable</b>: <code>overall_score</code> is present and backed by enough
+              weighted dimensions, including trust evidence when required.
+            </li>
+            <li>
+              <b>Partial</b>: <code>overall_score</code> stays <code>null</code>,{' '}
+              <code>partial_score</code> carries the numeric signal, and{' '}
+              <code>partial_reasons</code> explains what is missing.
+            </li>
+            <li>
+              <b>Insufficient</b>: the scan does not have enough evidence to defend any numeric
+              score yet.
             </li>
           </ul>
 

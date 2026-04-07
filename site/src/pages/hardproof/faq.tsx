@@ -1,9 +1,10 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 import {HARDPROOF_ACTION_USES, HARDPROOF_FEEDBACK_URL} from './_config';
 
-export default function HardproofFaq(): JSX.Element {
+export default function HardproofFaq(): ReactNode {
   const scanCmd =
     'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
 
@@ -36,6 +37,13 @@ export default function HardproofFaq(): JSX.Element {
         <pre>
           <code>{scanCmd}</code>
         </pre>
+
+        <h2>Why is my score marked partial?</h2>
+        <p>
+          Partial means the scan is still useful, but not fully publishable yet. The common case is
+          missing trust evidence, which keeps <code>overall_score</code> at <code>null</code> while
+          <code>partial_score</code> still carries the numeric result.
+        </p>
 
         <h2>GitHub Action</h2>
         <p>

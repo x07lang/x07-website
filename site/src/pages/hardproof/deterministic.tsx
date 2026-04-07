@@ -1,7 +1,8 @@
+import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
-export default function HardproofDeterministic(): JSX.Element {
+export default function HardproofDeterministic(): ReactNode {
   return (
     <Layout
       title="Why deterministic verification"
@@ -51,4 +52,3 @@ export default function HardproofDeterministic(): JSX.Element {
     </Layout>
   );
 }
-

@@ -2,6 +2,8 @@
 
 The `/agent` surface is **machine-first**: agents should consume JSON endpoints, and the HTML pages are only for discoverability.
 
+Humans looking for conceptual docs should start at `/docs/` and use `/agent` when they need the stable machine contracts directly.
+
 ## Stable entrypoints
 
 - `GET /agent/latest/entrypoints.json`

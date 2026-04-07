@@ -65,10 +65,18 @@ x07 fix --input src/main.x07.json --write
 
 const ecosystemCards = [
   {
-    eyebrow: 'MCP kit',
-    title: 'Give your agent structured access to every X07 tool',
+    eyebrow: 'Core docs',
+    title: 'Understand the language, worlds, toolchain, and ecosystem',
     body:
-      'Scaffold MCP servers in X07, or connect any agent runtime to the official x07lang-mcp bridge for editing, packaging, and deployment — all through typed, versioned contracts.',
+      'Start at the docs if you are evaluating X07, installing the toolchain, or trying to understand how the pieces fit together before you build anything.',
+    href: '/docs/',
+    cta: 'Read the docs',
+  },
+  {
+    eyebrow: 'MCP',
+    title: 'Author servers in X07 or connect agents through the official bridge',
+    body:
+      'Use x07-mcp to build MCP servers in X07, run demos, or connect agent runtimes to the official x07lang-mcp bridge for typed access to X07 tooling.',
     href: '/docs/toolchain/mcp-kit',
     cta: 'Open MCP docs',
   },
@@ -89,29 +97,56 @@ const ecosystemCards = [
     cta: 'Open platform docs',
   },
   {
+    eyebrow: 'Hardproof',
+    title: 'Verify MCP servers with evidence you can keep in CI and review',
+    body:
+      'Hardproof is the verification lane: deterministic scans, explicit score truth, replay artifacts, trust checks, and usage metrics for MCP servers.',
+    href: '/hardproof',
+    cta: 'Open Hardproof',
+  },
+  {
     eyebrow: 'Registry',
     title: 'Install and publish packages through x07.io',
     body:
-      'Pinned dependencies, machine-readable metadata, and versioned schemas — all aligned with the toolchain so agents never guess at compatibility.',
+      'Pinned dependencies, machine-readable metadata, and versioned schemas stay aligned with the toolchain so humans and agents do not guess at compatibility.',
     href: 'https://x07.io',
     cta: 'Open x07.io',
   },
-  {
-    eyebrow: 'Docs',
-    title: 'One source of truth for humans and agents',
-    body:
-      'Every release ships docs for developers and a machine-first agent portal with versioned schemas, skills, stdlib indexes, and runnable examples.',
-    href: '/docs/',
-    cta: 'Browse docs',
-  },
 ];
+
+const quickStartPaths = [
+  {
+    eyebrow: 'For humans',
+    title: 'Start with the docs and ecosystem overview',
+    body:
+      'Use this path if you are opening X07 for the first time and want the clearest explanation of the language, the toolchain, and where MCP, WASM, packages, and platform fit.',
+    href: '/docs/',
+    cta: 'Read docs',
+  },
+  {
+    eyebrow: 'For builders',
+    title: 'Build or verify MCP servers',
+    body:
+      'Use x07-mcp to author servers in X07 and Hardproof to verify any MCP server with deterministic reports, CI gates, and review artifacts.',
+    href: '/mcp',
+    cta: 'Open MCP lane',
+  },
+  {
+    eyebrow: 'For agents',
+    title: 'Consume stable machine entrypoints',
+    body:
+      'Use the agent portal for versioned schemas, skills, stdlib indexes, package indexes, examples, and release manifests. The HTML pages are discoverability only.',
+    href: '/agent',
+    cta: 'Open agent portal',
+  },
+] as const;
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <div className={styles.heroKicker}>The agent-first language</div>
+        <div className={styles.heroKicker}>Dependable software for humans and agents</div>
         <img
           src="/img/logo-full-light.png"
           alt={siteConfig.title}
@@ -123,32 +158,32 @@ function HomepageHeader() {
           className={clsx(styles.heroLogo, styles.heroLogoDark)}
         />
         <h1 className={styles.heroTitle}>
-          AI agents guess when the language leaves room for guesswork.
+          Build software that agents can modify and humans can trust.
           {' '}
           <span className={styles.heroHighlight}>
-            x07 is designed so they don't have to.
+            X07 gives both sides the same contracts.
           </span>
         </h1>
         <p className={styles.heroLead}>
-          One canonical API per capability. Zero ambiguity. Agents get it right
-          on the first try — with sandboxed execution, structured error IDs, and
-          machine-applicable fixes.
+          X07 gives agents canonical APIs, structured diagnostics, and
+          deterministic repair loops, while giving teams one coherent story for
+          CLIs, services, MCP servers, WASM, packages, and release review.
         </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/getting-started/agent-quickstart">
-            Start here
+            to="/docs/">
+            Read docs
           </Link>
           <Link
             className="button button--outline button--lg"
-            to="/docs/toolchain/mcp-kit">
-            MCP kit
+            to="/docs/getting-started/install">
+            Install X07
           </Link>
           <Link
             className="button button--outline button--lg"
-            to="/docs/toolchain/wasm">
-            WASM
+            to="/mcp">
+            MCP + Hardproof
           </Link>
           <Link
             className="button button--outline button--lg"
@@ -161,16 +196,47 @@ function HomepageHeader() {
   );
 }
 
+function QuickStartSection() {
+  return (
+    <section className={styles.pathSection}>
+      <div className="container">
+        <div className={styles.sectionIntro}>
+          <p className={styles.sectionEyebrow}>Choose a path</p>
+          <h2>Start from the entrypoint that matches the job</h2>
+          <p>
+            The website serves two audiences on purpose: humans need a clear
+            overview, and agents need stable machine-readable contracts.
+          </p>
+        </div>
+        <div className={styles.cardGrid}>
+          {quickStartPaths.map((card) => (
+            <Link
+              key={card.title}
+              className={styles.card}
+              to={card.href}>
+              <p className={styles.cardEyebrow}>{card.eyebrow}</p>
+              <h3>{card.title}</h3>
+              <p>{card.body}</p>
+              <span className={styles.cardCta}>{card.cta}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ComparisonSection() {
   return (
     <section className={styles.comparisonSection}>
       <div className="container">
         <div className={styles.sectionIntro}>
-          <p className={styles.sectionEyebrow}>Why it matters</p>
+          <p className={styles.sectionEyebrow}>Why X07 is opinionated</p>
           <h2>Less guesswork in the language. Less guesswork in the repair loop.</h2>
           <p>
             The first example is about API ambiguity. The second is about what
-            happens when the first attempt is wrong.
+            happens when the first attempt is wrong and you need a repair loop a
+            human reviewer can follow.
           </p>
         </div>
         {comparisonExamples.map((example) => (
@@ -219,9 +285,10 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="x07lang.org"
-      description="AI agents guess when languages leave room for guesswork. X07 is designed with canonical APIs, structured errors, and machine-applicable fixes so agents do not have to.">
+      description="X07 is a language and toolchain for dependable agent-built software: canonical APIs, structured diagnostics, deterministic repair loops, and one coherent story from local edit to release review.">
       <HomepageHeader />
       <main>
+        <QuickStartSection />
         <ComparisonSection />
         <section className={styles.ecosystemSection}>
           <div className="container">

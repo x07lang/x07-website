@@ -10,6 +10,10 @@ export default function AgentSchemas(): ReactNode {
     <Layout title="Agent schemas" description="JSON schemas required by agents and tooling.">
       <main className="container margin-vert--lg">
         <Heading as="h1">Agent schemas</Heading>
+        <p>
+          This page mirrors the published schema index for human browsing. Automation should use the
+          JSON endpoint below.
+        </p>
         <div className="alert alert--info">
           <strong>Machine-first index</strong>
           <ul>
