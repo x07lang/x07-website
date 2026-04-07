@@ -1,0 +1,130 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-cli-ux",
+  "version": "0.1.4",
+  "description": "CLI UX primitives: deterministic progress, tables, JSONL, and small rich-layout helpers (pinned via arch/cli).",
+  "docs": "CLI UX primitives: deterministic progress, tables, JSONL, and small rich-layout helpers (pinned via arch/cli).\n\nModules:\n- std.cli.profile\n- std.cli.progress\n- std.cli.table\n- std.cli.jsonl\n- std.cli.panel\n- std.cli.bar\n- std.cli.status\n- std.cli.section\n- std.cli.kv\n- std.cli.layout\n- std.cli.term\n- std.cli.events\n- std.cli.tests\n\nUsage:\n- Add dependency: x07 pkg add ext-cli-ux@0.1.4\n- Load profile from arch: std.cli.profile.from_arch_v1\n- Render progress: std.cli.progress.render_v1\n- Render tables: std.cli.table.render_v1\n- Emit JSONL: std.cli.jsonl.encode_v1\n- Render panels: std.cli.panel.render_v1\n- Render score bars: std.cli.bar.render_v1\n- Render status labels: std.cli.status.render_v1\n- Render sections: std.cli.section.render_v1\n- Render key/value rows: std.cli.kv.render_v1\n- Render columns: std.cli.layout.columns_v1\n- Render JSONL event stream: std.cli.events.render_jsonl_v1\n",
+  "module_root": "modules",
+  "meta": {
+    "determinism_tier": "mixed",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "requires_packages": [
+      "ext-data-model@0.1.11",
+      "ext-json-rs@0.1.7"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.cli.bar",
+      "path": "std/cli/bar.x07.json",
+      "exports": [
+        "std.cli.bar.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.events",
+      "path": "std/cli/events.x07.json",
+      "exports": [
+        "std.cli.events.render_jsonl_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.jsonl",
+      "path": "std/cli/jsonl.x07.json",
+      "exports": [
+        "std.cli.jsonl.encode_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.kv",
+      "path": "std/cli/kv.x07.json",
+      "exports": [
+        "std.cli.kv.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.layout",
+      "path": "std/cli/layout.x07.json",
+      "exports": [
+        "std.cli.layout.columns_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.panel",
+      "path": "std/cli/panel.x07.json",
+      "exports": [
+        "std.cli.panel.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.profile",
+      "path": "std/cli/profile.x07.json",
+      "exports": [
+        "std.cli.profile.from_arch_v1",
+        "std.cli.profile.max_line_bytes_v1",
+        "std.cli.profile.mode_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.progress",
+      "path": "std/cli/progress.x07.json",
+      "exports": [
+        "std.cli.progress.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.section",
+      "path": "std/cli/section.x07.json",
+      "exports": [
+        "std.cli.section.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.status",
+      "path": "std/cli/status.x07.json",
+      "exports": [
+        "std.cli.status.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.table",
+      "path": "std/cli/table.x07.json",
+      "exports": [
+        "std.cli.table.render_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.term",
+      "path": "std/cli/term.x07.json",
+      "exports": [
+        "std.cli.term.capabilities_v1"
+      ]
+    },
+    {
+      "module_id": "std.cli.tests",
+      "path": "std/cli/tests.x07.json",
+      "exports": [
+        "std.cli.tests.test_bar_v1",
+        "std.cli.tests.test_events_render_jsonl_v1",
+        "std.cli.tests.test_jsonl_v1",
+        "std.cli.tests.test_kv_v1",
+        "std.cli.tests.test_layout_columns_v1",
+        "std.cli.tests.test_panel_v1",
+        "std.cli.tests.test_profile_from_arch_v1",
+        "std.cli.tests.test_progress_v1",
+        "std.cli.tests.test_section_v1",
+        "std.cli.tests.test_status_v1",
+        "std.cli.tests.test_table_v1",
+        "std.cli.tests.test_term_caps_v1"
+      ]
+    }
+  ]
+}
