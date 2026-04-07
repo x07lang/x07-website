@@ -4,8 +4,8 @@
   "versions": [
     {
       "toolchain_version": "0.1.110",
-      "docs_bundle_sha256": "d3b5c45c4ba917000cb69f91b7ed45710ca9b8f34ee5ef957fb8f5a5e75fa39e",
-      "published_at_utc": "2026-04-07T03:30:37Z"
+      "docs_bundle_sha256": "b42cfe17b0ba5b9e042dea68c37fc9371399ba57aaa6c1d9b19bbaa911d5c6df",
+      "published_at_utc": "2026-04-07T13:26:25Z"
     },
     {
       "toolchain_version": "0.1.109",

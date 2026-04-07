@@ -1,7 +1,7 @@
 {
   "schema_version": "x07.website.docs-bundle-manifest@0.1.0",
   "toolchain_version": "0.1.110",
-  "docs_bundle_sha256": "d3b5c45c4ba917000cb69f91b7ed45710ca9b8f34ee5ef957fb8f5a5e75fa39e",
+  "docs_bundle_sha256": "b42cfe17b0ba5b9e042dea68c37fc9371399ba57aaa6c1d9b19bbaa911d5c6df",
   "human_docs": [
     {
       "path": "SUMMARY.md",
@@ -5245,8 +5245,8 @@
     },
     {
       "path": "spec/internal/x07-stdlib-translation.md",
-      "sha256": "cce0afc6c011efac0b5860954bac67c6ceba030b268abc391febc289d450a445",
-      "size": 114319
+      "sha256": "0138f99cd22c628d67ec1241bac516a458f8c6e25007774260fa857e33ffc333",
+      "size": 114349
     },
     {
       "path": "spec/internal/x07-stdlib.md",
@@ -8202,7 +8202,7 @@
     },
     {
       "path": "index.json",
-      "sha256": "9844937f2faf6331321ea1e22d99a254a8580525666824ff57fbe56959197a7c",
+      "sha256": "92903af38a6ceea4b2d407a21ab77afa9685fadf1f04719a240da251ece10f99",
       "size": 662
     },
     {
