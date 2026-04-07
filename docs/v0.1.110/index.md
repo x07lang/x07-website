@@ -36,7 +36,6 @@ Programs are stored and exchanged in a **structured AST format** (x07AST JSON). 
 - [Agent quickstart (learn X07 from scratch)](getting-started/agent-quickstart.md)
 - [The agent workflow](getting-started/agent-workflow.md)
 - [Agent contracts](agent/contract.md)
-- [Agent portal contract](site/agent-portal-contract.md)
 - [Formal verification & certification](toolchain/formal-verification.md)
 
 ## Ecosystem at a glance
