@@ -70,28 +70,53 @@ export default function HardproofMethodology(): ReactNode {
 
         <h2>Confidence and estimates</h2>
         <p>
-          The report is designed to separate machine-readable evidence from the confidence you
-          should attach to each number. This methodology page will document confidence and
-          estimate-grade signals explicitly, including how to interpret:
+          Hardproof tries to keep evidence and confidence separable. Some outputs are
+          pass/fail-deterministic; others are bounded probes or deterministic estimates. Treat the
+          report as a starting point for review, not as a substitute for judgment.
         </p>
         <ul>
           <li>
-            usage metrics (<code>usage_metrics</code>) as deterministic estimates, not billing-grade
-            truth
+            <b>Usage metrics</b> (<code>usage_metrics</code>) are deterministic estimates derived from
+            byte counts and a fixed estimator. They are useful for comparing relative context
+            pressure and enforcing policy, but they are not billing-grade truth.
           </li>
-          <li>performance probes and any confidence markers they emit</li>
-          <li>partial vs full score semantics when trust inputs are missing</li>
+          <li>
+            <b>Performance probes</b> are bounded smoke/steady signals intended to stay cheap enough
+            for CI. They include sample counts and a confidence marker (for example{' '}
+            <code>tool_call_confidence</code>).
+          </li>
+          <li>
+            <b>Score truth</b> is the public confidence boundary: partial scans keep{' '}
+            <code>overall_score</code> at <code>null</code> until missing evidence gates (typically
+            Trust) are satisfied.
+          </li>
+          <li>
+            <b>Trust</b> requires release metadata inputs. Without trust artifacts, the Trust
+            dimension stays unknown and the scan remains partial; with trust inputs, it can become
+            publishable while still emitting warnings for missing transparency evidence.
+          </li>
         </ul>
 
         <h2>Fairness and exclusions</h2>
         <p>
-          Hardproof is intentionally scoped. This methodology page will document what is in-scope
-          and out-of-scope so scores are not over-interpreted.
+          Hardproof is intentionally scoped and deterministic. It does not attempt to answer every
+          security or performance question, and its scores are not a cross-class leaderboard.
         </p>
         <ul>
-          <li>dimension boundaries and what each dimension does and does not claim</li>
-          <li>exclusions (for example, deep exploitation, non-deterministic load testing)</li>
-          <li>fair comparisons across different classes of servers and transports</li>
+          <li>
+            <b>Exclusions</b>: deep exploitation, vulnerability confirmation, non-deterministic fuzzing,
+            unconstrained load testing, and “LLM judge” evaluations.
+          </li>
+          <li>
+            <b>Fair comparisons</b> require comparable conditions: same protocol baseline and suite,
+            same transport, similar hardware/network, the same workload profile/budgets, and the
+            same Trust inputs (or the same intentional absence of them).
+          </li>
+          <li>
+            <b>Dimension boundaries</b>: Security findings include both hard checks (transport/auth
+            exposure, Host/Origin guard behavior) and heuristic surface signals (injection patterns,
+            command-risk patterns). Warnings are review prompts, not proofs of exploitation.
+          </li>
         </ul>
 
         <h2>Usage metrics are an overlay</h2>
@@ -110,11 +135,13 @@ export default function HardproofMethodology(): ReactNode {
         <h2>Next</h2>
         <ul>
           <li>
+            Quality report: <Link to="/hardproof/quality-report">/hardproof/quality-report</Link>
+          </li>
+          <li>
             Report format: <Link to="/hardproof/report-format">/hardproof/report-format</Link>
           </li>
           <li>
-            Security guide (draft):{' '}
-            <Link to="/hardproof/security-guide">/hardproof/security-guide</Link>
+            Security guide: <Link to="/hardproof/security-guide">/hardproof/security-guide</Link>
           </li>
           <li>
             Quality report pipeline (draft):{' '}

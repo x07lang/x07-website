@@ -5,10 +5,10 @@ import Layout from '@theme/Layout';
 export default function HardproofSecurityGuide(): ReactNode {
   return (
     <Layout
-      title="Hardproof security guide (draft)"
-      description="Draft guide: what Hardproof Security does and does not claim today (deterministic-only).">
+      title="Hardproof security guide"
+      description="What Hardproof Security does and does not claim today (deterministic-only).">
       <main className="container margin-vert--lg">
-        <h1>Hardproof security guide (draft)</h1>
+        <h1>Hardproof security guide</h1>
 
         <p>
           This guide documents the current <b>deterministic-only</b> Security dimension. It is not a
@@ -48,6 +48,18 @@ export default function HardproofSecurityGuide(): ReactNode {
           </li>
         </ul>
 
+        <h2>How to interpret findings</h2>
+        <ul>
+          <li>
+            <b>Hard checks</b> (transport/auth exposure and Host/Origin guard behavior) are strong
+            signals about a concrete surface area.
+          </li>
+          <li>
+            <b>Heuristic checks</b> (injection/command-risk patterns, descriptor bloat) are review
+            prompts. They flag places where a human should look, not confirmed vulnerabilities.
+          </li>
+        </ul>
+
         <h2>What Security does not claim</h2>
         <ul>
           <li>Deep exploitation, adversarial chaining, or vulnerability confirmation.</li>
@@ -76,6 +88,9 @@ export default function HardproofSecurityGuide(): ReactNode {
             Methodology: <Link to="/hardproof/methodology">/hardproof/methodology</Link>
           </li>
           <li>
+            Quality report: <Link to="/hardproof/quality-report">/hardproof/quality-report</Link>
+          </li>
+          <li>
             Usage overlay: <Link to="/hardproof/usage-metrics">/hardproof/usage-metrics</Link>
           </li>
         </ul>
@@ -83,4 +98,3 @@ export default function HardproofSecurityGuide(): ReactNode {
     </Layout>
   );
 }
-
