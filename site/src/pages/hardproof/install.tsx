@@ -4,13 +4,15 @@ import Layout from '@theme/Layout';
 
 import {
   HARDPROOF_CHECKSUMS_URL,
+  HARDPROOF_INSTALL_SH_MAIN_URL,
   HARDPROOF_INSTALL_SH_URL,
   HARDPROOF_TAG,
   hardproofAssetUrl,
 } from './_config';
 
 export default function HardproofInstall(): ReactNode {
-  const installCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
+  const installLatestBetaCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_MAIN_URL}" | bash -s -- --tag latest-beta`;
+  const installPinnedCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
   const doctorCmd = 'hardproof doctor --machine json';
   const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
 
@@ -29,20 +31,24 @@ export default function HardproofInstall(): ReactNode {
           it. <b>Built with x07.</b>
         </p>
         <p>
-          Current public beta builds are tagged <code>{HARDPROOF_TAG}</code>.
+          Pinned beta tag (reproducible): <code>{HARDPROOF_TAG}</code>.
         </p>
 
         <h2>Install script</h2>
+        <p>Install the latest beta (recommended):</p>
         <pre>
-          <code>{installCmd}</code>
+          <code>{installLatestBetaCmd}</code>
+        </pre>
+        <p>Install a pinned beta tag (reproducible):</p>
+        <pre>
+          <code>{installPinnedCmd}</code>
         </pre>
         <p>
-          The installer downloads the correct archive for your OS/arch, verifies it via{' '}
-          <a href={HARDPROOF_CHECKSUMS_URL}>checksums.txt</a>, and installs into{' '}
-          <code>~/.local/bin</code>.
+          The installer downloads the correct archive for your OS/arch, verifies it via the
+          release <code>checksums.txt</code>, and installs into <code>~/.local/bin</code>.
         </p>
 
-        <h2>Manual download</h2>
+        <h2>Manual download (pinned tag)</h2>
         <ul>
           <li>
             Linux x86_64:{' '}

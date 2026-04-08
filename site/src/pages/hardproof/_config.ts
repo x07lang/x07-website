@@ -5,6 +5,9 @@ export const HARDPROOF_FEEDBACK_URL = `https://github.com/${HARDPROOF_REPO}/issu
 
 export const HARDPROOF_ACTION_USES = `x07lang/hardproof/hardproof-scan@${HARDPROOF_TAG}`;
 
+// Used for "latest-beta" installs, where the tag is resolved at runtime.
+export const HARDPROOF_INSTALL_SH_MAIN_URL = `https://raw.githubusercontent.com/${HARDPROOF_REPO}/main/scripts/install.sh`;
+
 export function hardproofReleaseUrl(path: string): string {
   return `https://github.com/${HARDPROOF_REPO}/releases/download/${HARDPROOF_TAG}/${path}`;
 }
