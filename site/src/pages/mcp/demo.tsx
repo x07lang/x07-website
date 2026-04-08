@@ -18,6 +18,31 @@ cd x07-mcp/demos/postgres-public-beta
 # 4) Copy outputs into a captured asset set
 ./scripts/capture_outputs.sh`;
 
+  const expectedFullScore = `+-----------------------------------------------+
+| Hardproof - FULL SCORE                        |
++-----------------------------------------------+
+| AI Infrastructure Score | Score Truth: [PASS] |
+|                                               |
+| target: http://127.0.0.1:8403/mcp             |
+| transport: streamable_http                    |
+| elapsed_ms: 14089ms                           |
+| status: [WARN]                                |
+| score: 93                                     |
+| findings: critical 0, warning 2               |
++-----------------------------------------------+
+
+== Dimensions ==
+conformance  [########|#] 100 [PASS]
+security     [########|#] 100 [PASS]
+performance  [########~-] 83 [WARN]
+trust        [########~-] 80 [WARN]
+reliability  [########|#] 100 [PASS]
+
+== Findings ==
+warning:
+- PERF-CONCURRENT-TOOLS-CALL-LOW: Low concurrent tool-call success
+- TRUST-TRUSTPACK-MISSING: Trust pack metadata missing`;
+
   return (
     <Layout
       title="MCP demo"
@@ -62,6 +87,15 @@ cd x07-mcp/demos/postgres-public-beta
             <code>{cmds}</code>
           </pre>
 
+          <h2>Current hardened output (example)</h2>
+          <p>
+            This is an example rich summary from the demo’s publishable/full-score path (Trust
+            evaluated). Exact timings and scores may vary slightly run-to-run.
+          </p>
+          <pre>
+            <code>{expectedFullScore}</code>
+          </pre>
+
           <p>
             The demo produces artifacts under <code>demos/postgres-public-beta/out/</code>, including{' '}
             <code>scan/scan.json</code>, <code>scan/scan.events.jsonl</code>,{' '}
@@ -73,7 +107,8 @@ cd x07-mcp/demos/postgres-public-beta
             Related pages:{' '}
             <Link to="/mcp/codespaces">Codespaces</Link>,{' '}
             <Link to="/hardproof/methodology">Hardproof methodology</Link>,{' '}
-            <Link to="/hardproof/report-format">report format</Link>.
+            <Link to="/hardproof/report-format">report format</Link>,{' '}
+            <Link to="/hardproof/report-viewer">sample report viewer</Link>.
           </p>
         </div>
       </main>

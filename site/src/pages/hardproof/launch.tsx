@@ -14,7 +14,8 @@ export default function HardproofLaunch(): ReactNode {
   const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
   const ciCmd =
     'hardproof ci --url "http://127.0.0.1:3000/mcp" --out out/scan --machine json --threshold 80';
-  const exampleSummaryUrl = `https://github.com/${HARDPROOF_REPO}/blob/${HARDPROOF_TAG}/docs/examples/hardproof-scan/scan.json`;
+  const examplePartialUrl = `https://github.com/${HARDPROOF_REPO}/blob/${HARDPROOF_TAG}/docs/examples/hardproof-scan/scan.json`;
+  const exampleFullUrl = `https://github.com/${HARDPROOF_REPO}/blob/${HARDPROOF_TAG}/docs/examples/hardproof-scan-full/scan.json`;
 
   return (
     <Layout
@@ -73,8 +74,12 @@ export default function HardproofLaunch(): ReactNode {
 
         <h2>Sample report</h2>
         <p>
+          Sample viewer: <Link to="/hardproof/report-viewer">/hardproof/report-viewer</Link>
+        </p>
+        <p>
           Canonical sample scan report JSON:{' '}
-          <a href={exampleSummaryUrl}>{exampleSummaryUrl}</a>
+          <a href={examplePartialUrl}>{examplePartialUrl}</a> (partial) ·{' '}
+          <a href={exampleFullUrl}>{exampleFullUrl}</a> (full)
         </p>
 
         <h2>Feedback</h2>

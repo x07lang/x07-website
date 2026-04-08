@@ -5,10 +5,11 @@ import Layout from '@theme/Layout';
 export default function HardproofReportFormat(): ReactNode {
   const schemaId = 'https://x07.io/schemas/x07.mcp.scan.report.schema.json';
   const schemaVersion = 'x07.mcp.scan.report@0.4.0';
+  const toolVersion = '0.4.0-beta.2';
   const example = `{
   "schema_version": "${schemaVersion}",
   "tool": "hardproof",
-  "tool_version": "0.4.0-beta.0",
+  "tool_version": "${toolVersion}",
   "report_kind": "scan",
   "target": { "kind": "mcp_server", "transport": "streamable_http", "ref": "…", "meta": {} },
   "status": "warn",
@@ -25,8 +26,8 @@ export default function HardproofReportFormat(): ReactNode {
     "trust": false
   },
   "unknown_dimensions": ["trust"],
-  "partial_reasons": ["TRUST-UNKNOWN"],
-  "gating_reasons": ["TRUST-UNKNOWN"],
+  "partial_reasons": ["TRUST-NOT-EVALUABLE", "SERVER-JSON-MISSING", "WEIGHT-COVERAGE-BELOW-FULL", "UNKNOWN-DIMENSIONS"],
+  "gating_reasons": ["TRUST-NOT-EVALUABLE", "SERVER-JSON-MISSING", "WEIGHT-COVERAGE-BELOW-FULL", "UNKNOWN-DIMENSIONS"],
   "dimensions": [ /* conformance, reliability, performance, security, trust */ ],
   "usage_metrics": { /* token/context estimates + estimator_family/version/confidence */ },
   "findings": [ /* codes + evidence + suggested_fix */ ],
@@ -72,6 +73,9 @@ export default function HardproofReportFormat(): ReactNode {
             <code>score_mode</code> is the dominant public truth field. Partial scans keep{' '}
             <code>overall_score</code> at <code>null</code>; <code>partial_score</code> remains a
             machine-readable comparison aid rather than the primary public score.
+          </li>
+          <li>
+            Sample viewer: <Link to="/hardproof/report-viewer">/hardproof/report-viewer</Link>
           </li>
           <li>
             <code>findings[]</code> is the stable place to look for actionable problems (codes, evidence, fixes).

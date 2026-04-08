@@ -32,6 +32,17 @@ export default function HardproofFaq(): ReactNode {
           No. Official MCP tools provide the protocol baseline. Hardproof runs deterministic checks
           and emits machine-readable evidence you can use locally and in CI.
         </p>
+        <ul>
+          <li>
+            <b>MCP Inspector</b>: interactive debugging and manual exploration.
+          </li>
+          <li>
+            <b>MCP registry</b>: discovery and publishing.
+          </li>
+          <li>
+            <b>Hardproof</b>: deterministic verification + artifacts for CI/review.
+          </li>
+        </ul>
 
         <h2>What’s the fastest way to use Hardproof?</h2>
         <pre>
@@ -43,6 +54,11 @@ export default function HardproofFaq(): ReactNode {
           Partial means the scan is still useful, but not fully publishable yet. The common case is
           missing trust evidence, which keeps <code>overall_score</code> at <code>null</code> while
           <code>partial_score</code> still carries the numeric result.
+        </p>
+        <p>
+          If you want to require Trust before treating a score as publishable, use{' '}
+          <code>--require-trust-for-full-score</code> (scan) or{' '}
+          <code>--require-trust-for-full-score</code> (ci).
         </p>
 
         <h2>GitHub Action</h2>
