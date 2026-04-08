@@ -40,24 +40,24 @@ export default function HardproofMethodology(): ReactNode {
           </li>
         </ul>
 
-        <h2>Score truth and score mode</h2>
+        <h2>Score truth (publishable vs partial)</h2>
         <p>
           Hardproof does not treat every numeric signal as equally publishable. The report makes
-          score truth explicit:
+          score truth explicit.
         </p>
         <ul>
           <li>
-            <code>score_mode=full</code>: <code>overall_score</code> is present and backed by
-            enough weighted dimensions.
+            <code>score_truth_status=publishable</code> yields <code>score_mode=full</code>, where{' '}
+            <code>overall_score</code> is present and backed by enough weighted dimensions.
           </li>
           <li>
-            <code>score_mode=partial</code>: <code>overall_score</code> stays <code>null</code>{' '}
-            because at least one gate is still missing or unknown. <code>partial_score</code>{' '}
-            remains machine-readable as a comparison aid, and rich output withholds the primary
-            score.
+            <code>score_truth_status=partial</code> yields <code>score_mode=partial</code>, where{' '}
+            <code>overall_score</code> stays <code>null</code>, <code>partial_score</code> remains
+            machine-readable as a comparison aid, and rich output withholds the primary score.
           </li>
           <li>
-            <code>insufficient</code>: there is not enough evidence to defend a numeric score yet.
+            <code>score_truth_status=insufficient</code> means there is not enough evidence to
+            defend a numeric score yet.
           </li>
         </ul>
         <p>
@@ -67,6 +67,32 @@ export default function HardproofMethodology(): ReactNode {
           intentional, and <code>--require-trust-for-full-score</code> when you want the strictest
           trust-aware gate.
         </p>
+
+        <h2>Confidence and estimates</h2>
+        <p>
+          The report is designed to separate machine-readable evidence from the confidence you
+          should attach to each number. This methodology page will document confidence and
+          estimate-grade signals explicitly, including how to interpret:
+        </p>
+        <ul>
+          <li>
+            usage metrics (<code>usage_metrics</code>) as deterministic estimates, not billing-grade
+            truth
+          </li>
+          <li>performance probes and any confidence markers they emit</li>
+          <li>partial vs full score semantics when trust inputs are missing</li>
+        </ul>
+
+        <h2>Fairness and exclusions</h2>
+        <p>
+          Hardproof is intentionally scoped. This methodology page will document what is in-scope
+          and out-of-scope so scores are not over-interpreted.
+        </p>
+        <ul>
+          <li>dimension boundaries and what each dimension does and does not claim</li>
+          <li>exclusions (for example, deep exploitation, non-deterministic load testing)</li>
+          <li>fair comparisons across different classes of servers and transports</li>
+        </ul>
 
         <h2>Usage metrics are an overlay</h2>
         <p>
