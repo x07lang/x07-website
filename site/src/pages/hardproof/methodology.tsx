@@ -113,6 +113,14 @@ export default function HardproofMethodology(): ReactNode {
             Report format: <Link to="/hardproof/report-format">/hardproof/report-format</Link>
           </li>
           <li>
+            Security guide (draft):{' '}
+            <Link to="/hardproof/security-guide">/hardproof/security-guide</Link>
+          </li>
+          <li>
+            Quality report pipeline (draft):{' '}
+            <Link to="/hardproof/quality-report-pipeline">/hardproof/quality-report-pipeline</Link>
+          </li>
+          <li>
             Usage metrics: <Link to="/hardproof/usage-metrics">/hardproof/usage-metrics</Link>
           </li>
           <li>
