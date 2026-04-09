@@ -29,7 +29,7 @@ export default function HardproofReportFormat(): ReactNode {
   "partial_reasons": ["TRUST-NOT-EVALUABLE", "SERVER-JSON-MISSING", "WEIGHT-COVERAGE-BELOW-FULL", "UNKNOWN-DIMENSIONS"],
   "gating_reasons": ["TRUST-NOT-EVALUABLE", "SERVER-JSON-MISSING", "WEIGHT-COVERAGE-BELOW-FULL", "UNKNOWN-DIMENSIONS"],
   "dimensions": [ /* conformance, reliability, performance, security, trust */ ],
-  "usage_metrics": { /* token/context estimates + estimator_family/version/confidence */ },
+  "usage_metrics": { /* token/context metrics + usage_mode truth class (+ estimator/tokenizer/trace metadata) */ },
   "findings": [ /* codes + evidence + suggested_fix */ ],
   "artifacts": [ /* referenced files (JSON/JUnit/HTML/SARIF, etc) */ ],
   "report_digest": "…",

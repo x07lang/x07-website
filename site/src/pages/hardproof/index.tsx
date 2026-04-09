@@ -42,6 +42,10 @@ export default function HardproofLanding(): ReactNode {
               <code>scan.events.jsonl</code> with five dimensions plus a usage overlay.
             </li>
             <li>
+              <b>Live scan UX</b>: interactive terminals show live progress in rich mode and an
+              alternate-screen TUI (<code>--ui rich</code> / <code>--ui tui</code>).
+            </li>
+            <li>
               <b>CI gate</b>: <code>hardproof ci</code> fails builds when verification fails or
               policy thresholds are crossed.
             </li>
@@ -82,6 +86,10 @@ export default function HardproofLanding(): ReactNode {
             </li>
             <li>
               Report format: <Link to="/hardproof/report-format">/hardproof/report-format</Link>
+            </li>
+            <li>
+              Sample reports + live clips:{' '}
+              <Link to="/hardproof/report-viewer">/hardproof/report-viewer</Link>
             </li>
             <li>
               Usage metrics: <Link to="/hardproof/usage-metrics">/hardproof/usage-metrics</Link>

@@ -76,9 +76,10 @@ export default function HardproofMethodology(): ReactNode {
         </p>
         <ul>
           <li>
-            <b>Usage metrics</b> (<code>usage_metrics</code>) are deterministic estimates derived from
-            byte counts and a fixed estimator. They are useful for comparing relative context
-            pressure and enforcing policy, but they are not billing-grade truth.
+            <b>Usage metrics</b> (<code>usage_metrics</code>) are deterministic usage signals derived
+            from byte counts by default, but the report can also include exact tokenization under a chosen
+            tokenizer profile (<code>--tokenizer</code>) or observed usage from a real client trace
+            (<code>--token-trace</code>). <code>usage_mode</code> makes the truth class explicit.
           </li>
           <li>
             <b>Performance probes</b> are bounded smoke/steady signals intended to stay cheap enough

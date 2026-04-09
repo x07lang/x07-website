@@ -10,8 +10,11 @@ type SampleConfig = {
   title: string;
   description: string;
   scanUrl: string;
+  eventsUrl: string;
   reportUrl: string;
   terminalUrl: string;
+  liveRichVideoUrl: string;
+  liveTuiVideoUrl: string;
 };
 
 const SAMPLES: SampleConfig[] = [
@@ -21,8 +24,11 @@ const SAMPLES: SampleConfig[] = [
     description:
       'Trust is missing, so overall_score stays null and the primary score is withheld in rich output.',
     scanUrl: '/hardproof/sample-reports/partial/scan.json',
+    eventsUrl: '/hardproof/sample-reports/partial/scan.events.jsonl',
     reportUrl: '/hardproof/sample-reports/partial/report.html',
     terminalUrl: '/hardproof/sample-reports/partial/terminal.svg',
+    liveRichVideoUrl: '/hardproof/sample-reports/partial/live-rich.webm',
+    liveTuiVideoUrl: '/hardproof/sample-reports/partial/live-tui.webm',
   },
   {
     id: 'full',
@@ -30,8 +36,11 @@ const SAMPLES: SampleConfig[] = [
     description:
       'Trust inputs are present, so overall_score is publishable and rich output shows the full score.',
     scanUrl: '/hardproof/sample-reports/full/scan.json',
+    eventsUrl: '/hardproof/sample-reports/full/scan.events.jsonl',
     reportUrl: '/hardproof/sample-reports/full/report.html',
     terminalUrl: '/hardproof/sample-reports/full/terminal.svg',
+    liveRichVideoUrl: '/hardproof/sample-reports/full/live-rich.webm',
+    liveTuiVideoUrl: '/hardproof/sample-reports/full/live-tui.webm',
   },
 ];
 
@@ -92,6 +101,12 @@ export default function HardproofReportViewer(): ReactNode {
   const dimensions = Array.isArray(scanDoc?.dimensions) ? (scanDoc?.dimensions as unknown[]) : [];
   const findings = Array.isArray(scanDoc?.findings) ? (scanDoc?.findings as unknown[]) : [];
   const usageMetrics = isRecord(scanDoc?.usage_metrics) ? scanDoc?.usage_metrics : null;
+  const usageMode =
+    typeof usageMetrics?.usage_mode === 'string' ? (usageMetrics.usage_mode as string) : 'estimate';
+  const usageTokenizerId =
+    typeof usageMetrics?.tokenizer_id === 'string' ? (usageMetrics.tokenizer_id as string) : '';
+  const usageTraceSource =
+    typeof usageMetrics?.trace_source === 'string' ? (usageMetrics.trace_source as string) : '';
 
   const overallScore = scanDoc?.overall_score;
   const scoreTruth = typeof scanDoc?.score_truth_status === 'string' ? scanDoc?.score_truth_status : '';
@@ -133,6 +148,35 @@ export default function HardproofReportViewer(): ReactNode {
         <img
           src={sample.terminalUrl}
           alt={`Hardproof ${sampleId} score terminal snapshot`}
+          style={{maxWidth: '100%', borderRadius: 8, border: '1px solid var(--ifm-color-emphasis-300)'}}
+        />
+
+        <h2>Live scan clips</h2>
+        <p className="text--muted">
+          These short clips show the live scan UX for the same sample target (rich mode and alternate-screen TUI).
+        </p>
+
+        <h3>Live rich</h3>
+        <p>
+          <a href={sample.liveRichVideoUrl}>{sample.liveRichVideoUrl}</a>
+        </p>
+        <video
+          src={sample.liveRichVideoUrl}
+          controls
+          playsInline
+          preload="metadata"
+          style={{maxWidth: '100%', borderRadius: 8, border: '1px solid var(--ifm-color-emphasis-300)'}}
+        />
+
+        <h3>Live TUI</h3>
+        <p>
+          <a href={sample.liveTuiVideoUrl}>{sample.liveTuiVideoUrl}</a>
+        </p>
+        <video
+          src={sample.liveTuiVideoUrl}
+          controls
+          playsInline
+          preload="metadata"
           style={{maxWidth: '100%', borderRadius: 8, border: '1px solid var(--ifm-color-emphasis-300)'}}
         />
 
@@ -245,9 +289,27 @@ export default function HardproofReportViewer(): ReactNode {
         <h2>Usage overlay</h2>
         {usageMetrics ? (
           <>
-            <p>
-              Token values are deterministic estimates for comparison and gating, not billing-grade truth.
-            </p>
+            {usageMode === 'tokenizer_exact' ? (
+              <p>
+                Token values are exact under tokenizer profile{' '}
+                <code>{usageTokenizerId || '(unknown)'}</code>.
+              </p>
+            ) : usageMode === 'trace_observed' ? (
+              <p>
+                Token values are observed from a client trace{' '}
+                <code>{usageTraceSource || '(unknown)'}</code>.
+              </p>
+            ) : usageMode === 'mixed' ? (
+              <p>
+                Token values include a per-metric mix of exact + observed truth sources (tokenizer{' '}
+                <code>{usageTokenizerId || '(unknown)'}</code>, trace{' '}
+                <code>{usageTraceSource || '(unknown)'}</code>).
+              </p>
+            ) : (
+              <p>
+                Token values are deterministic estimates for comparison and gating, not billing-grade truth.
+              </p>
+            )}
             <pre>
               <code>{pretty(usageMetrics)}</code>
             </pre>
@@ -262,10 +324,19 @@ export default function HardproofReportViewer(): ReactNode {
             scan.json: <a href={sample.scanUrl}>{sample.scanUrl}</a>
           </li>
           <li>
+            scan.events.jsonl: <a href={sample.eventsUrl}>{sample.eventsUrl}</a>
+          </li>
+          <li>
             report.html (raw JSON rendering): <a href={sample.reportUrl}>{sample.reportUrl}</a>
           </li>
           <li>
             terminal.svg: <a href={sample.terminalUrl}>{sample.terminalUrl}</a>
+          </li>
+          <li>
+            live-rich.webm: <a href={sample.liveRichVideoUrl}>{sample.liveRichVideoUrl}</a>
+          </li>
+          <li>
+            live-tui.webm: <a href={sample.liveTuiVideoUrl}>{sample.liveTuiVideoUrl}</a>
           </li>
         </ul>
 

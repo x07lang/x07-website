@@ -12,7 +12,7 @@ export default function HardproofUsageMetrics(): ReactNode {
 
         <p>
           Hardproof includes a usage overlay in every scan report under <code>usage_metrics</code>.
-          These metrics estimate how much context a server consumes for an agent, especially around{' '}
+          The overlay measures how much context a server consumes for an agent, especially around{' '}
           <code>tools/list</code>, schema payloads, and typical response sizes.
         </p>
 
@@ -31,22 +31,21 @@ export default function HardproofUsageMetrics(): ReactNode {
 
         <h2>What’s measured</h2>
         <p>
-          The report includes estimated token counts for:
+          The report includes byte counts and token counts for:
         </p>
         <ul>
           <li>
-            <b>Tool catalog</b>: size of <code>tools/list</code> in bytes and estimated tokens
-            across the shipped token estimators.
+            <b>Tool catalog</b>: size of <code>tools/list</code> and its token footprint.
           </li>
           <li>
             <b>Descriptions and tool count</b>: average and max description size, plus overall tool
             count.
           </li>
           <li>
-            <b>Schema footprint</b>: total estimated tokens for tool input schemas.
+            <b>Schema footprint</b>: total tool input schema size and token footprint.
           </li>
           <li>
-            <b>Response footprint</b>: estimated response payload tokens (p50/p95).
+            <b>Response footprint</b>: typical response payload token footprint (p50/p95).
           </li>
           <li>
             <b>Metadata-to-payload ratio</b>: how much schema and descriptor overhead the server
@@ -54,11 +53,34 @@ export default function HardproofUsageMetrics(): ReactNode {
           </li>
         </ul>
 
+        <h2>Truth classes</h2>
+        <p>
+          There is no universal single “real token count” for an MCP server unless you either choose a
+          tokenizer family or ingest a real client trace. Hardproof makes this explicit in{' '}
+          <code>usage_metrics.usage_mode</code>:
+        </p>
+        <ul>
+          <li>
+            <code>usage_mode=estimate</code>: deterministic estimate fallback (default).
+          </li>
+          <li>
+            <code>usage_mode=tokenizer_exact</code>: exact counts under a chosen tokenizer profile
+            (for example <code>--tokenizer openai:o200k_base</code>).
+          </li>
+          <li>
+            <code>usage_mode=trace_observed</code>: observed counts from a real client trace
+            (<code>--token-trace</code>).
+          </li>
+          <li>
+            <code>usage_mode=mixed</code>: per-metric mix of exact + observed when both are available.
+          </li>
+        </ul>
+
         <h2>Estimator metadata</h2>
         <p>
-          The usage overlay records <code>estimator_family</code>, <code>estimator_version</code>,
-          and confidence next to the token estimates. These values are deterministic estimates for
-          comparison and gating, not billing-grade truth.
+          In estimate mode, the usage overlay records <code>estimator_family</code>,{' '}
+          <code>estimator_version</code>, and confidence next to the estimate fields. These values are
+          deterministic comparison signals, not billing-grade truth.
         </p>
 
         <h2>Why two token estimates exist</h2>
