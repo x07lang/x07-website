@@ -41,8 +41,8 @@ export default function HardproofQualityReport(): ReactNode {
         </p>
 
         <div className="alert alert--info" role="alert">
-          Hardproof tag: <code>{HARDPROOF_TAG}</code> · Evidence: <code>{EVIDENCE_VERSION}</code> ·{' '}
-          <a href={evidenceSummary}>SUMMARY.md</a>
+          Current Hardproof tag: <code>{HARDPROOF_TAG}</code> · Evidence recorded for:{' '}
+          <code>{EVIDENCE_VERSION}</code> · <a href={evidenceSummary}>SUMMARY.md</a>
         </div>
 
         <h2>Evidence bundle</h2>
@@ -193,4 +193,3 @@ export default function HardproofQualityReport(): ReactNode {
     </Layout>
   );
 }
-

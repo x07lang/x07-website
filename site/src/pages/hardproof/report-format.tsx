@@ -2,10 +2,12 @@ import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
+import {HARDPROOF_TAG} from './_config';
+
 export default function HardproofReportFormat(): ReactNode {
   const schemaId = 'https://x07.io/schemas/x07.mcp.scan.report.schema.json';
   const schemaVersion = 'x07.mcp.scan.report@0.4.0';
-  const toolVersion = '0.4.0-beta.2';
+  const toolVersion = HARDPROOF_TAG.startsWith('v') ? HARDPROOF_TAG.slice(1) : HARDPROOF_TAG;
   const example = `{
   "schema_version": "${schemaVersion}",
   "tool": "hardproof",
