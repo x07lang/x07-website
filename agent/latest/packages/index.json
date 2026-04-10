@@ -465,6 +465,13 @@
       "docs_url": "/agent/latest/packages/ext-cli-ux/0.1.5/index.json#docs"
     },
     {
+      "name": "ext-cli-ux",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-cli-ux/0.1.6/index.json",
+      "description": "CLI UX primitives: deterministic progress, tables, JSONL, and small rich-layout helpers (pinned via arch/cli).",
+      "docs_url": "/agent/latest/packages/ext-cli-ux/0.1.6/index.json#docs"
+    },
+    {
       "name": "ext-compress-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-compress-rs/0.1.0/index.json",
@@ -2038,6 +2045,13 @@
       "url": "/agent/latest/packages/ext-regex/0.2.4/index.json",
       "description": "Regular expression matching and searching.",
       "docs_url": "/agent/latest/packages/ext-regex/0.2.4/index.json#docs"
+    },
+    {
+      "name": "ext-regex",
+      "version": "0.2.5",
+      "url": "/agent/latest/packages/ext-regex/0.2.5/index.json",
+      "description": "Regular expression matching and searching.",
+      "docs_url": "/agent/latest/packages/ext-regex/0.2.5/index.json#docs"
     },
     {
       "name": "ext-robots-txt-rs",
