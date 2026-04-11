@@ -242,6 +242,7 @@ def _validate_meta(meta: Any) -> list[dict]:
         "determinism_tier",
         "worlds_allowed",
         "import_mode",
+        "x07c_compat",
         "requires_packages",
         "ffi_libs",
         "capabilities",
@@ -294,6 +295,13 @@ def _validate_meta(meta: Any) -> list[dict]:
         msg, _ = _validate_unique_str_array(caps, item_validator=_validate_capability, allow_empty=True)
         if msg is not None:
             errors.append({"pointer": "/meta/capabilities", "message": msg})
+
+    x07c_compat = meta.get("x07c_compat")
+    if x07c_compat is not None:
+        if not _is_nonempty_str(x07c_compat):
+            errors.append({"pointer": "/meta/x07c_compat", "message": "must be non-empty string"})
+        elif len(x07c_compat) > 256:
+            errors.append({"pointer": "/meta/x07c_compat", "message": "too long (max 256)"})
 
     return errors
 
