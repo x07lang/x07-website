@@ -8,6 +8,12 @@ export const latestSkillsIndex = {
   "generated_from": "agent/latest/skills/*/SKILL.md",
   "items": [
     {
+      "id": "x07-agent-context",
+      "summary": "Produce deterministic, token-efficient context packs (`x07 agent context`) that agents can use to repair a failing X07 project.",
+      "docs_url": "/agent/latest/skills/x07-agent-context/SKILL.md",
+      "report_schema_url": null
+    },
+    {
       "id": "x07-agent-playbook",
       "summary": "Agent-first workflow and design rails for building X07 programs with the released toolchain (no repo-only dependencies). Canonical execution is via `x07 run`.",
       "docs_url": "/agent/latest/skills/x07-agent-playbook/SKILL.md",
@@ -335,6 +341,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-lock.v0.3.0.schema.json"
     },
     {
+      "id": "x07-lock.v0.4.0.schema.json",
+      "url": "/agent/latest/schemas/x07-lock.v0.4.0.schema.json"
+    },
+    {
       "id": "x07-mem.provenance-graph.schema.json",
       "url": "/agent/latest/schemas/x07-mem.provenance-graph.schema.json"
     },
@@ -385,6 +395,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-project.v0.4.0.schema.json",
       "url": "/agent/latest/schemas/x07-project.v0.4.0.schema.json"
+    },
+    {
+      "id": "x07-project.v0.5.0.schema.json",
+      "url": "/agent/latest/schemas/x07-project.v0.5.0.schema.json"
     },
     {
       "id": "x07-review.diff.schema.json",
@@ -559,6 +573,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-doctor.report.schema.json"
     },
     {
+      "id": "x07-tool-explain.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-explain.report.schema.json"
+    },
+    {
       "id": "x07-tool-fix.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-fix.report.schema.json"
     },
@@ -583,6 +601,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-mcp.report.schema.json"
     },
     {
+      "id": "x07-tool-migrate.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-migrate.report.schema.json"
+    },
+    {
       "id": "x07-tool-patch-apply.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-patch-apply.report.schema.json"
     },
@@ -597,6 +619,14 @@ export const latestSchemasIndex = {
     {
       "id": "x07-tool-pkg-attest-closure.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-attest-closure.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-info.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-info.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-list.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-list.report.schema.json"
     },
     {
       "id": "x07-tool-pkg-lock.report.schema.json",
@@ -623,6 +653,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-pkg-remove.report.schema.json"
     },
     {
+      "id": "x07-tool-pkg-repair.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-repair.report.schema.json"
+    },
+    {
       "id": "x07-tool-pkg-versions.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-versions.report.schema.json"
     },
@@ -639,12 +673,28 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-policy.report.schema.json"
     },
     {
+      "id": "x07-tool-project-migrate.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-project-migrate.report.schema.json"
+    },
+    {
+      "id": "x07-tool-project.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-project.report.schema.json"
+    },
+    {
       "id": "x07-tool-prove-check.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-prove-check.report.schema.json"
     },
     {
       "id": "x07-tool-prove.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-prove.report.schema.json"
+    },
+    {
+      "id": "x07-tool-repro-compile.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-repro-compile.report.schema.json"
+    },
+    {
+      "id": "x07-tool-repro.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-repro.report.schema.json"
     },
     {
       "id": "x07-tool-review-diff.report.schema.json",
@@ -1477,6 +1527,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-cli-ux/0.1.6/index.json",
       "description": "CLI UX primitives: deterministic progress, tables, JSONL, and small rich-layout helpers (pinned via arch/cli).",
       "docs_url": "/agent/latest/packages/ext-cli-ux/0.1.6/index.json#docs"
+    },
+    {
+      "name": "ext-cli-ux",
+      "version": "0.1.7",
+      "url": "/agent/latest/packages/ext-cli-ux/0.1.7/index.json",
+      "description": "CLI UX primitives: deterministic progress, tables, JSONL, and small rich-layout helpers (pinned via arch/cli).",
+      "docs_url": "/agent/latest/packages/ext-cli-ux/0.1.7/index.json#docs"
     },
     {
       "name": "ext-compress-rs",
@@ -3835,5 +3892,5 @@ export const latestPackagesIndex = {
 
 export const latestStdlibIndexMeta = {
   url: '/agent/latest/stdlib/index.json',
-  module_count: 48,
+  module_count: 19,
 } as const;

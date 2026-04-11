@@ -251,6 +251,10 @@
       "url": "/agent/latest/schemas/x07-lock.v0.3.0.schema.json"
     },
     {
+      "id": "x07-lock.v0.4.0.schema.json",
+      "url": "/agent/latest/schemas/x07-lock.v0.4.0.schema.json"
+    },
+    {
       "id": "x07-mem.provenance-graph.schema.json",
       "url": "/agent/latest/schemas/x07-mem.provenance-graph.schema.json"
     },
@@ -301,6 +305,10 @@
     {
       "id": "x07-project.v0.4.0.schema.json",
       "url": "/agent/latest/schemas/x07-project.v0.4.0.schema.json"
+    },
+    {
+      "id": "x07-project.v0.5.0.schema.json",
+      "url": "/agent/latest/schemas/x07-project.v0.5.0.schema.json"
     },
     {
       "id": "x07-review.diff.schema.json",
@@ -475,6 +483,10 @@
       "url": "/agent/latest/schemas/x07-tool-doctor.report.schema.json"
     },
     {
+      "id": "x07-tool-explain.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-explain.report.schema.json"
+    },
+    {
       "id": "x07-tool-fix.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-fix.report.schema.json"
     },
@@ -499,6 +511,10 @@
       "url": "/agent/latest/schemas/x07-tool-mcp.report.schema.json"
     },
     {
+      "id": "x07-tool-migrate.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-migrate.report.schema.json"
+    },
+    {
       "id": "x07-tool-patch-apply.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-patch-apply.report.schema.json"
     },
@@ -513,6 +529,14 @@
     {
       "id": "x07-tool-pkg-attest-closure.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-attest-closure.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-info.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-info.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-list.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-list.report.schema.json"
     },
     {
       "id": "x07-tool-pkg-lock.report.schema.json",
@@ -539,6 +563,10 @@
       "url": "/agent/latest/schemas/x07-tool-pkg-remove.report.schema.json"
     },
     {
+      "id": "x07-tool-pkg-repair.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-repair.report.schema.json"
+    },
+    {
       "id": "x07-tool-pkg-versions.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-versions.report.schema.json"
     },
@@ -555,12 +583,28 @@
       "url": "/agent/latest/schemas/x07-tool-policy.report.schema.json"
     },
     {
+      "id": "x07-tool-project-migrate.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-project-migrate.report.schema.json"
+    },
+    {
+      "id": "x07-tool-project.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-project.report.schema.json"
+    },
+    {
       "id": "x07-tool-prove-check.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-prove-check.report.schema.json"
     },
     {
       "id": "x07-tool-prove.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-prove.report.schema.json"
+    },
+    {
+      "id": "x07-tool-repro-compile.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-repro-compile.report.schema.json"
+    },
+    {
+      "id": "x07-tool-repro.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-repro.report.schema.json"
     },
     {
       "id": "x07-tool-review-diff.report.schema.json",

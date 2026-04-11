@@ -612,83 +612,6 @@
       "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-math/0.1.4/modules/std/math/i32.x07.json"
     },
     {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/codec",
-      "purpose": "codec",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/codec.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/codec.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/dns",
-      "purpose": "dns",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/dns.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/dns.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/err",
-      "purpose": "err",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/err.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/err.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http",
-      "purpose": "http",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/client",
-      "purpose": "client",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/client.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/client.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/server",
-      "purpose": "server",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/server.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/server.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/spec",
-      "purpose": "spec",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/spec.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/http/spec.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/io",
-      "purpose": "io",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/io.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/io.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tcp",
-      "purpose": "tcp",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tcp.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tcp.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tls",
-      "purpose": "tls",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tls.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/tls.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/udp",
-      "purpose": "udp",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/udp.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-net/0.1.8/modules/std/net/udp.x07.json"
-    },
-    {
       "id": "apps/x07-api-gateway/.x07/deps/ext-obs/0.1.2/modules/std/obs/export",
       "purpose": "export",
       "scope": "nested",
@@ -806,20 +729,6 @@
       "scope": "nested",
       "path": "apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/tests.x07.json",
       "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-toml-rs/0.1.5/modules/ext/toml/tests.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64",
-      "purpose": "u64",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64.x07.json"
-    },
-    {
-      "id": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64/tests",
-      "purpose": "tests",
-      "scope": "nested",
-      "path": "apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64/tests.x07.json",
-      "url": "/agent/latest/examples/catalog-files/apps/x07-api-gateway/.x07/deps/ext-u64-rs/0.1.4/modules/ext/u64/tests.x07.json"
     },
     {
       "id": "apps/x07-api-gateway/.x07/deps/ext-unicode-rs/0.1.5/modules/ext/unicode",
