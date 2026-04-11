@@ -52,8 +52,8 @@ export default function HardproofMethodology(): ReactNode {
           </li>
           <li>
             <code>score_truth_status=partial</code> yields <code>score_mode=partial</code>, where{' '}
-            <code>overall_score</code> stays <code>null</code>, <code>partial_score</code> remains
-            machine-readable as a comparison aid, and rich output withholds the primary score.
+            <code>overall_score</code> is still computed as the effective score (matching{' '}
+            <code>partial_score</code>), but the score is not publishable yet.
           </li>
           <li>
             <code>score_truth_status=insufficient</code> means there is not enough evidence to
@@ -77,9 +77,9 @@ export default function HardproofMethodology(): ReactNode {
         <ul>
           <li>
             <b>Usage metrics</b> (<code>usage_metrics</code>) are deterministic usage signals derived
-            from byte counts by default, but the report can also include exact tokenization under a chosen
-            tokenizer profile (<code>--tokenizer</code>) or observed usage from a real client trace
-            (<code>--token-trace</code>). <code>usage_mode</code> makes the truth class explicit.
+            from exact tokenization under a selected tokenizer profile (default: <code>openai:o200k_base</code>)
+            when tokenizer tables are available, with deterministic estimate fallback and optional observed truth
+            from a real client trace (<code>--token-trace</code>). <code>usage_mode</code> makes the truth class explicit.
           </li>
           <li>
             <b>Performance probes</b> are bounded smoke/steady signals intended to stay cheap enough
@@ -88,13 +88,13 @@ export default function HardproofMethodology(): ReactNode {
           </li>
           <li>
             <b>Score truth</b> is the public confidence boundary: partial scans keep{' '}
-            <code>overall_score</code> at <code>null</code> until missing evidence gates (typically
-            Trust) are satisfied.
+            <code>score_truth_status=partial</code> until missing evidence gates (typically Trust) are satisfied.
           </li>
           <li>
             <b>Trust</b> requires release metadata inputs. Without trust artifacts, the Trust
-            dimension stays unknown and the scan remains partial; with trust inputs, it can become
-            publishable while still emitting warnings for missing transparency evidence.
+            dimension fails deterministically and the scan remains partial; with trust inputs, it can become
+            publishable while still emitting warnings for missing transparency evidence. Use{' '}
+            <code>--require-trust-for-full-score</code> if you want Trust to stay unknown until evidence is present.
           </li>
         </ul>
 

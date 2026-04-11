@@ -20,9 +20,9 @@ type SampleConfig = {
 const SAMPLES: SampleConfig[] = [
   {
     id: 'partial',
-    title: 'Partial score (Trust not evaluated)',
+    title: 'Partial score (Trust evidence missing)',
     description:
-      'Trust is missing, so overall_score stays null and the primary score is withheld in rich output.',
+      'Trust evidence is missing, so Trust fails deterministically and the scan remains score_truth_status=partial (overall_score is still computed as the effective score).',
     scanUrl: '/hardproof/sample-reports/partial/scan.json',
     eventsUrl: '/hardproof/sample-reports/partial/scan.events.jsonl',
     reportUrl: '/hardproof/sample-reports/partial/report.html',
@@ -123,8 +123,8 @@ export default function HardproofReportViewer(): ReactNode {
       <main className="container margin-vert--lg">
         <h1>Sample scan reports</h1>
         <p>
-          This page renders two shipped sample scan reports: a partial score (Trust missing) and a
-          publishable full score (Trust evaluated).
+          This page renders two shipped sample scan reports: a partial score (Trust evidence missing; Trust fails) and a
+          publishable full score (Trust verified).
         </p>
 
         <h2>Choose a sample</h2>
