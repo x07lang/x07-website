@@ -1,0 +1,56 @@
+{
+  "schema_version": "x07.website.package-index@0.2.0",
+  "name": "ext-obj-core",
+  "version": "0.1.1",
+  "description": "Object storage core: canonical object metadata, request/response envelopes, and logical driver interface.",
+  "docs": "Object storage core for X07 services.\n\nModules:\n- std.obj\n- std.obj.spec\n\nUsage:\n- Add dependency: x07 pkg add ext-obj-core@0.1.1\n- Bind logical object stores like obj.documents in the service manifest.\n- Decode operation results with std.obj.spec.resp_is_ok_v1 and std.obj.spec.resp_ok_payload_v1.\n",
+  "module_root": "modules",
+  "meta": {
+    "x07c_compat": ">=0.1.111 <0.3.0",
+    "determinism_tier": "mixed",
+    "worlds_allowed": [
+      "solve-pure",
+      "solve-fs",
+      "solve-rr",
+      "solve-full",
+      "run-os",
+      "run-os-sandboxed"
+    ],
+    "import_mode": "handwritten",
+    "visibility": "canonical"
+  },
+  "modules": [
+    {
+      "module_id": "std.obj",
+      "path": "std/obj.x07.json",
+      "exports": [
+        "std.obj.delete_v1",
+        "std.obj.get_v1",
+        "std.obj.head_v1",
+        "std.obj.put_v1"
+      ]
+    },
+    {
+      "module_id": "std.obj.spec",
+      "path": "std/obj/spec.x07.json",
+      "exports": [
+        "std.obj.spec.driver_s3_v1",
+        "std.obj.spec.flags_none_v1",
+        "std.obj.spec.op_delete_v1",
+        "std.obj.spec.op_get_v1",
+        "std.obj.spec.op_head_v1",
+        "std.obj.spec.op_put_v1",
+        "std.obj.spec.req_delete_v1",
+        "std.obj.spec.req_get_v1",
+        "std.obj.spec.req_head_v1",
+        "std.obj.spec.req_put_v1",
+        "std.obj.spec.resp_check_v1",
+        "std.obj.spec.resp_err_code_v1",
+        "std.obj.spec.resp_err_msg_v1",
+        "std.obj.spec.resp_is_ok_v1",
+        "std.obj.spec.resp_ok_payload_v1",
+        "std.obj.spec.resp_op_v1"
+      ]
+    }
+  ]
+}
