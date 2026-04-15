@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/v0.2.3/skills/x07-agent-context/SKILL.md",
+  "id": "x07-agent-context",
+  "summary": "Produce deterministic, token-efficient context packs (`x07 agent context`) that agents can use to repair a failing X07 project.",
+  "docs_url": "/agent/v0.2.3/skills/x07-agent-context/SKILL.md",
+  "report_schema_url": null
+}

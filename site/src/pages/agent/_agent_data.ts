@@ -589,6 +589,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-guide.report.schema.json"
     },
     {
+      "id": "x07-tool-info.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-info.report.schema.json"
+    },
+    {
       "id": "x07-tool-init.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-init.report.schema.json"
     },
@@ -619,6 +623,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-tool-pkg-attest-closure.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-attest-closure.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-check-semver.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-check-semver.report.schema.json"
     },
     {
       "id": "x07-tool-pkg-info.report.schema.json",
@@ -655,6 +663,14 @@ export const latestSchemasIndex = {
     {
       "id": "x07-tool-pkg-repair.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-repair.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-tree.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-tree.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-verify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-verify.report.schema.json"
     },
     {
       "id": "x07-tool-pkg-versions.report.schema.json",
@@ -1130,6 +1146,20 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-archive-c/0.1.4/index.json#docs"
     },
     {
+      "name": "ext-archive-c",
+      "version": "0.1.5",
+      "url": "/agent/latest/packages/ext-archive-c/0.1.5/index.json",
+      "description": "Safe archive parsing/extraction helpers + pinned archive policies (tar/tgz/zip v1).",
+      "docs_url": "/agent/latest/packages/ext-archive-c/0.1.5/index.json#docs"
+    },
+    {
+      "name": "ext-archive-c",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-archive-c/0.1.6/index.json",
+      "description": "Safe archive parsing/extraction helpers + pinned archive policies (tar/tgz/zip v1).",
+      "docs_url": "/agent/latest/packages/ext-archive-c/0.1.6/index.json#docs"
+    },
+    {
       "name": "ext-auth-jwt",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-auth-jwt/0.1.0/index.json",
@@ -1478,6 +1508,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-cli/0.1.15/index.json",
       "description": "Command-line argument parsing, help, and shell completion.",
       "docs_url": "/agent/latest/packages/ext-cli/0.1.15/index.json#docs"
+    },
+    {
+      "name": "ext-cli",
+      "version": "0.1.17",
+      "url": "/agent/latest/packages/ext-cli/0.1.17/index.json",
+      "description": "Command-line argument parsing, help, and shell completion.",
+      "docs_url": "/agent/latest/packages/ext-cli/0.1.17/index.json#docs"
     },
     {
       "name": "ext-cli-ux",
@@ -2257,6 +2294,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-fs/0.1.5/index.json#docs"
     },
     {
+      "name": "ext-fs",
+      "version": "0.1.6",
+      "url": "/agent/latest/packages/ext-fs/0.1.6/index.json",
+      "description": "OS filesystem API (run-os only).",
+      "docs_url": "/agent/latest/packages/ext-fs/0.1.6/index.json#docs"
+    },
+    {
       "name": "ext-glob-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-glob-rs/0.1.0/index.json",
@@ -3020,6 +3064,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-path-glob-rs/0.1.3/index.json#docs"
     },
     {
+      "name": "ext-path-glob-rs",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-path-glob-rs/0.1.4/index.json",
+      "description": "OS-world glob + walk helpers under std.os.fs.* (deterministic ordering).",
+      "docs_url": "/agent/latest/packages/ext-path-glob-rs/0.1.4/index.json#docs"
+    },
+    {
       "name": "ext-pb-rs",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-pb-rs/0.1.0/index.json",
@@ -3690,6 +3741,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-walkdir-rs/0.1.3/index.json",
       "description": "Directory traversal helpers for OS worlds (wrap std.os.fs.walk_glob_sorted_text_v1).",
       "docs_url": "/agent/latest/packages/ext-walkdir-rs/0.1.3/index.json#docs"
+    },
+    {
+      "name": "ext-walkdir-rs",
+      "version": "0.1.4",
+      "url": "/agent/latest/packages/ext-walkdir-rs/0.1.4/index.json",
+      "description": "Directory traversal helpers for OS worlds (wrap std.os.fs.walk_glob_sorted_text_v1).",
+      "docs_url": "/agent/latest/packages/ext-walkdir-rs/0.1.4/index.json#docs"
     },
     {
       "name": "ext-web-crawl",

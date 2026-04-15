@@ -499,6 +499,10 @@
       "url": "/agent/latest/schemas/x07-tool-guide.report.schema.json"
     },
     {
+      "id": "x07-tool-info.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-info.report.schema.json"
+    },
+    {
       "id": "x07-tool-init.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-init.report.schema.json"
     },
@@ -529,6 +533,10 @@
     {
       "id": "x07-tool-pkg-attest-closure.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-attest-closure.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-check-semver.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-check-semver.report.schema.json"
     },
     {
       "id": "x07-tool-pkg-info.report.schema.json",
@@ -565,6 +573,14 @@
     {
       "id": "x07-tool-pkg-repair.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-repair.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-tree.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-tree.report.schema.json"
+    },
+    {
+      "id": "x07-tool-pkg-verify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-verify.report.schema.json"
     },
     {
       "id": "x07-tool-pkg-versions.report.schema.json",
