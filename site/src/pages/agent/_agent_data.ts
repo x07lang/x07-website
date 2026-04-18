@@ -84,6 +84,12 @@ export const latestSkillsIndex = {
       "summary": "Run project tests using the X07 test harness (x07 test), producing a machine-readable JSON report.",
       "docs_url": "/agent/latest/skills/x07-test/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07test.schema.json"
+    },
+    {
+      "id": "x07-xtal",
+      "summary": "Spec-first workflows and incident improvement via `x07 xtal ...`, producing deterministic artifacts under `target/xtal/`.",
+      "docs_url": "/agent/latest/skills/x07-xtal/SKILL.md",
+      "report_schema_url": null
     }
   ]
 } as const;
@@ -155,6 +161,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-arch.db.queries.schema.json",
       "url": "/agent/latest/schemas/x07-arch.db.queries.schema.json"
+    },
+    {
+      "id": "x07-arch.gen.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.gen.index.schema.json"
     },
     {
       "id": "x07-arch.manifest.lock.schema.json",
@@ -231,6 +241,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-arch.stream-plugins.index.schema.json",
       "url": "/agent/latest/schemas/x07-arch.stream-plugins.index.schema.json"
+    },
+    {
+      "id": "x07-arch.tasks.index.schema.json",
+      "url": "/agent/latest/schemas/x07-arch.tasks.index.schema.json"
     },
     {
       "id": "x07-arch.web.api.schema.json",
@@ -585,6 +599,18 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-fmt.report.schema.json"
     },
     {
+      "id": "x07-tool-gen-verify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-gen-verify.report.schema.json"
+    },
+    {
+      "id": "x07-tool-gen-write.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-gen-write.report.schema.json"
+    },
+    {
+      "id": "x07-tool-gen.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-gen.report.schema.json"
+    },
+    {
       "id": "x07-tool-guide.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-guide.report.schema.json"
     },
@@ -825,6 +851,86 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-wasm.report.schema.json"
     },
     {
+      "id": "x07-tool-xtal-certify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-certify.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-dev.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-dev.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-impl-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-impl-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-impl-sync.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-impl-sync.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-impl.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-impl.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-improve.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-improve.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-ingest.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-ingest.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-repair.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-repair.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-spec-check.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-spec-check.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-spec-extract.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-spec-extract.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-spec-fmt.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-spec-fmt.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-spec-lint.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-spec-lint.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-spec-scaffold.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-spec-scaffold.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-spec.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-spec.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-tasks-run.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-tasks-run.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-tasks.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-tasks.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-tests-gen-from-spec.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-tests-gen-from-spec.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-tests.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-tests.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal-verify.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal-verify.report.schema.json"
+    },
+    {
+      "id": "x07-tool-xtal.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-xtal.report.schema.json"
+    },
+    {
       "id": "x07-tool.events.schema.json",
       "url": "/agent/latest/schemas/x07-tool.events.schema.json"
     },
@@ -923,6 +1029,50 @@ export const latestSchemasIndex = {
     {
       "id": "x07.verify.cex@0.2.0.schema.json",
       "url": "/agent/latest/schemas/x07.verify.cex@0.2.0.schema.json"
+    },
+    {
+      "id": "x07.x07spec@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.x07spec@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.x07spec_examples@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.x07spec_examples@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.cert_bundle@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.cert_bundle@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.certify_summary@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.certify_summary@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.improve_summary@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.improve_summary@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.ingest_summary@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.ingest_summary@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.manifest@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.manifest@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.recovery_event@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.recovery_event@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.repair_summary@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.repair_summary@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.verify_summary@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.verify_summary@0.1.0.schema.json"
+    },
+    {
+      "id": "x07.xtal.violation@0.1.0.schema.json",
+      "url": "/agent/latest/schemas/x07.xtal.violation@0.1.0.schema.json"
     },
     {
       "id": "x07ast.schema.json",

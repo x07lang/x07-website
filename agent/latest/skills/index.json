@@ -79,6 +79,12 @@
       "summary": "Run project tests using the X07 test harness (x07 test), producing a machine-readable JSON report.",
       "docs_url": "/agent/latest/skills/x07-test/SKILL.md",
       "report_schema_url": "/agent/latest/schemas/x07test.schema.json"
+    },
+    {
+      "id": "x07-xtal",
+      "summary": "Spec-first workflows and incident improvement via `x07 xtal ...`, producing deterministic artifacts under `target/xtal/`.",
+      "docs_url": "/agent/latest/skills/x07-xtal/SKILL.md",
+      "report_schema_url": null
     }
   ]
 }

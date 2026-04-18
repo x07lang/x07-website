@@ -1,0 +1,8 @@
+{
+  "schema_version": "x07.website.agent.skill@v1",
+  "generated_from": "agent/latest/skills/x07-xtal/SKILL.md",
+  "id": "x07-xtal",
+  "summary": "Spec-first workflows and incident improvement via `x07 xtal ...`, producing deterministic artifacts under `target/xtal/`.",
+  "docs_url": "/agent/latest/skills/x07-xtal/SKILL.md",
+  "report_schema_url": null
+}

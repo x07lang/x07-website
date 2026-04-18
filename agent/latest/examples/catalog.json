@@ -423,6 +423,27 @@
       "url": "/agent/latest/examples/catalog-files/agent-gate/web-crawler-local/src/main.x07.json"
     },
     {
+      "id": "agent-gate/xtal/toy-sorter/gen/xtal/toy/sorter/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/xtal/toy-sorter/gen/xtal/toy/sorter/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/toy-sorter/gen/xtal/toy/sorter/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/toy-sorter/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/xtal/toy-sorter/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/toy-sorter/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/toy-sorter/src/toy/sorter",
+      "purpose": "sorter",
+      "scope": "nested",
+      "path": "agent-gate/xtal/toy-sorter/src/toy/sorter.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/toy-sorter/src/toy/sorter.x07.json"
+    },
+    {
       "id": "apps/x07-api-gateway/src/app",
       "purpose": "app",
       "scope": "nested",
