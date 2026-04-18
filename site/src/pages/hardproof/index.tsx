@@ -69,9 +69,10 @@ export default function HardproofLanding(): ReactNode {
               weighted dimensions, including trust evidence when required.
             </li>
             <li>
-              <b>Partial</b>: <code>overall_score</code> stays <code>null</code>,{' '}
-              <code>partial_score</code> carries the numeric signal, and{' '}
-              <code>partial_reasons</code> explains what is missing.
+              <b>Partial</b>: <code>overall_score</code> is still computed as the effective score
+              (matching <code>partial_score</code>), but the scan is not publishable yet (
+              <code>score_truth_status=partial</code>). <code>partial_reasons</code> explains what
+              is missing.
             </li>
             <li>
               <b>Insufficient</b>: the scan does not have enough evidence to defend any numeric

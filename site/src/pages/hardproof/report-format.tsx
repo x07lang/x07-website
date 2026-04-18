@@ -18,7 +18,7 @@ export default function HardproofReportFormat(): ReactNode {
   "score_available": true,
   "score_mode": "partial",
   "score_truth_status": "partial",
-  "overall_score": null,
+  "overall_score": 94,
   "partial_score": 94,
   "dimension_coverage": {
     "conformance": true,
@@ -73,8 +73,10 @@ export default function HardproofReportFormat(): ReactNode {
           </li>
           <li>
             <code>score_mode</code> is the dominant public truth field. Partial scans keep{' '}
-            <code>overall_score</code> at <code>null</code>; <code>partial_score</code> remains a
-            machine-readable comparison aid rather than the primary public score.
+            <code>score_truth_status=partial</code> and are not publishable yet.{' '}
+            <code>overall_score</code> is still computed as the effective score (matching{' '}
+            <code>partial_score</code>), and <code>partial_reasons</code> / <code>gating_reasons</code>{' '}
+            explain what evidence is missing.
           </li>
           <li>
             Sample viewer: <Link to="/hardproof/report-viewer">/hardproof/report-viewer</Link>

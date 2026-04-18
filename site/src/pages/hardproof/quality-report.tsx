@@ -64,9 +64,16 @@ export default function HardproofQualityReport(): ReactNode {
 
         <h2>Scan summary</h2>
         <p>
-          Hardproof makes score truth explicit. Partial scans keep <code>overall_score</code> at{' '}
-          <code>null</code>; full scans publish <code>overall_score</code> once the weighted evidence
-          gates (typically Trust) are satisfied.
+          Hardproof makes score truth explicit. Partial scans are numeric-but-not-publishable (
+          <code>score_truth_status=partial</code>). <code>overall_score</code> is still computed as
+          the effective score (matching <code>partial_score</code>); full scans publish{' '}
+          <code>overall_score</code> once the weighted evidence gates (typically Trust) are
+          satisfied.
+        </p>
+        <p>
+          Note: this evidence bundle was recorded with <code>{EVIDENCE_VERSION}</code>, which used{' '}
+          <code>overall_score=null</code> for partial scans. The table below shows the effective
+          score (the value that now appears as <code>overall_score</code> in partial scans).
         </p>
         <div className="table-responsive">
           <table>
@@ -96,7 +103,7 @@ export default function HardproofQualityReport(): ReactNode {
                   <code>partial</code>
                 </td>
                 <td>
-                  <code>null</code>
+                  <code>78</code>
                 </td>
                 <td>
                   <code>78</code>
@@ -119,7 +126,7 @@ export default function HardproofQualityReport(): ReactNode {
                   <code>partial</code>
                 </td>
                 <td>
-                  <code>null</code>
+                  <code>96</code>
                 </td>
                 <td>
                   <code>96</code>

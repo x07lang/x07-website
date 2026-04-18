@@ -58,9 +58,10 @@ export default function HardproofLaunch(): ReactNode {
 
         <h2>Score truth</h2>
         <p>
-          Full scores are publishable. Partial scores are still useful, but they keep{' '}
-          <code>overall_score</code> at <code>null</code> until the missing gates, typically trust
-          evidence, are satisfied.
+          Full scores are publishable. Partial scores are still useful, but they are not publishable
+          yet (<code>score_truth_status=partial</code>). <code>overall_score</code> is still
+          computed as the effective score (matching <code>partial_score</code>) while gates like
+          trust evidence are missing.
         </p>
 
         <h2>Demo</h2>

@@ -57,11 +57,13 @@ export default function HardproofUsageMetrics(): ReactNode {
         <p>
           There is no universal single “real token count” for an MCP server unless you either choose a
           tokenizer family or ingest a real client trace. Hardproof makes this explicit in{' '}
-          <code>usage_metrics.usage_mode</code>:
+          <code>usage_metrics</code> (requested mode, status, and the effective{' '}
+          <code>usage_mode</code>):
         </p>
         <ul>
           <li>
-            <code>usage_mode=estimate</code>: deterministic estimate fallback (default).
+            <code>usage_mode=estimate</code>: deterministic estimates (used when auto falls back, or
+            when explicitly requested).
           </li>
           <li>
             <code>usage_mode=tokenizer_exact</code>: exact counts under a chosen tokenizer profile
@@ -75,6 +77,12 @@ export default function HardproofUsageMetrics(): ReactNode {
             <code>usage_mode=mixed</code>: per-metric mix of exact + observed when both are available.
           </li>
         </ul>
+        <p>
+          By default, Hardproof uses <code>requested_usage_mode=auto</code>. Auto prefers exact
+          tokenization when tokenizer tables are available and falls back to estimates when exact
+          counting cannot be honored. Fallbacks and errors are explicit in{' '}
+          <code>usage_metrics.usage_status</code> and <code>usage_metrics.usage_fallback_reason</code>.
+        </p>
 
         <h2>Estimator metadata</h2>
         <p>

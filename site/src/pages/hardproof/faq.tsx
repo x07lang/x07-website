@@ -52,8 +52,9 @@ export default function HardproofFaq(): ReactNode {
         <h2>Why is my score marked partial?</h2>
         <p>
           Partial means the scan is still useful, but not fully publishable yet. The common case is
-          missing trust evidence, which keeps <code>overall_score</code> at <code>null</code> while
-          <code>partial_score</code> still carries the numeric result.
+          missing trust evidence, which keeps <code>score_truth_status=partial</code>.{' '}
+          <code>overall_score</code> is still computed as the effective score (matching{' '}
+          <code>partial_score</code>), but the scan is not publishable yet.
         </p>
         <p>
           If you want to require Trust before treating a score as publishable, use{' '}
