@@ -659,6 +659,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-pkg-info.report.schema.json"
     },
     {
+      "id": "x07-tool-pkg-inventory.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-pkg-inventory.report.schema.json"
+    },
+    {
       "id": "x07-tool-pkg-list.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-pkg-list.report.schema.json"
     },

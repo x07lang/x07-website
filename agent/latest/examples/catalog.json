@@ -444,6 +444,55 @@
       "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/toy-sorter/src/toy/sorter.x07.json"
     },
     {
+      "id": "agent-gate/xtal/workflow-graph/gen/xtal/workflow/graph/tests",
+      "purpose": "tests",
+      "scope": "nested",
+      "path": "agent-gate/xtal/workflow-graph/gen/xtal/workflow/graph/tests.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/workflow-graph/gen/xtal/workflow/graph/tests.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/workflow-graph/src/main",
+      "purpose": "main",
+      "scope": "nested",
+      "path": "agent-gate/xtal/workflow-graph/src/main.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/workflow-graph/src/main.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/workflow-graph/src/workflow/graph",
+      "purpose": "graph",
+      "scope": "nested",
+      "path": "agent-gate/xtal/workflow-graph/src/workflow/graph.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/workflow-graph/src/workflow/graph.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/workflow-graph/src/workflow/graph/brands",
+      "purpose": "brands",
+      "scope": "nested",
+      "path": "agent-gate/xtal/workflow-graph/src/workflow/graph/brands.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/workflow-graph/src/workflow/graph/brands.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/workflow-graph/src/workflow/graph/props",
+      "purpose": "props",
+      "scope": "nested",
+      "path": "agent-gate/xtal/workflow-graph/src/workflow/graph/props.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/workflow-graph/src/workflow/graph/props.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/workflow-graph/src/workflow/graph/tasks",
+      "purpose": "tasks",
+      "scope": "nested",
+      "path": "agent-gate/xtal/workflow-graph/src/workflow/graph/tasks.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/workflow-graph/src/workflow/graph/tasks.x07.json"
+    },
+    {
+      "id": "agent-gate/xtal/workflow-graph/tests/core",
+      "purpose": "core",
+      "scope": "nested",
+      "path": "agent-gate/xtal/workflow-graph/tests/core.x07.json",
+      "url": "/agent/latest/examples/catalog-files/agent-gate/xtal/workflow-graph/tests/core.x07.json"
+    },
+    {
       "id": "apps/x07-api-gateway/src/app",
       "purpose": "app",
       "scope": "nested",

@@ -1,16 +1,16 @@
 {
   "channel": "stable",
-  "min_x07up_version": "0.2.9",
+  "min_x07up_version": "0.2.10",
   "packages": {
     "std_web_ui": "0.2.6"
   },
-  "published_at_utc": "2026-04-18T02:28:25Z",
+  "published_at_utc": "2026-04-19T06:04:27Z",
   "schema_version": "x07.release.bundle@0.1.0",
   "x07_core": {
-    "release_manifest_sha256": "sha256:e6edac5c7c0c00e8ab79777c97184af29434e777bcf070cc794316861bf7a8bc",
-    "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.2.9/x07-0.2.9-release.json",
-    "tag": "v0.2.9",
-    "version": "0.2.9"
+    "release_manifest_sha256": "sha256:bb355a1dae1e94213135e62e9a2d4c0114141ead34f93ea2e0bc2d7f7c54c4a0",
+    "release_manifest_url": "https://github.com/x07lang/x07/releases/download/v0.2.10/x07-0.2.10-release.json",
+    "tag": "v0.2.10",
+    "version": "0.2.10"
   },
   "x07_device_host": {
     "release_manifest_sha256": "sha256:5a5eb0170fba42457ba18209adde5a9d6dff4d359443054b6ada3ad17ee3ba09",
