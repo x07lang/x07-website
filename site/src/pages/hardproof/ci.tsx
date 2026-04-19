@@ -26,6 +26,7 @@ jobs:
         uses: ${HARDPROOF_ACTION_USES}
         with:
           url: http://127.0.0.1:3000/mcp
+          allow-private-targets: "true"
           version: ${HARDPROOF_TAG}
           full-suite: "false"
           sarif: "true"
@@ -74,7 +75,7 @@ jobs:
             <code>report_json</code>: <code>out/scan/scan.json</code>
           </li>
           <li>
-            <code>report_sarif</code>: <code>out/scan/scan.sarif.json</code> (when enabled)
+            <code>report_sarif</code>: <code>out/scan/report.sarif.json</code> (when enabled)
           </li>
         </ul>
 

@@ -14,7 +14,8 @@ export default function HardproofInstall(): ReactNode {
   const installLatestBetaCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_MAIN_URL}" | bash -s -- --tag latest-beta`;
   const installPinnedCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
   const doctorCmd = 'hardproof doctor --machine json';
-  const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
+  const scanCmd =
+    'hardproof scan --url "http://127.0.0.1:3000/mcp" --allow-private-targets --out out/scan';
 
   return (
     <Layout

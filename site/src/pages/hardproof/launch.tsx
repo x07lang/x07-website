@@ -11,9 +11,10 @@ import {
 
 export default function HardproofLaunch(): ReactNode {
   const installCmd = `curl -fsSL "${HARDPROOF_INSTALL_SH_URL}" | bash -s -- --tag "${HARDPROOF_TAG}"`;
-  const scanCmd = 'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
+  const scanCmd =
+    'hardproof scan --url "http://127.0.0.1:3000/mcp" --allow-private-targets --out out/scan';
   const ciCmd =
-    'hardproof ci --url "http://127.0.0.1:3000/mcp" --out out/scan --machine json --threshold 80';
+    'hardproof ci --url "http://127.0.0.1:3000/mcp" --allow-private-targets --out out/scan --machine json --threshold 80';
   const examplePartialUrl = `https://github.com/${HARDPROOF_REPO}/blob/${HARDPROOF_TAG}/docs/examples/hardproof-scan/scan.json`;
   const exampleFullUrl = `https://github.com/${HARDPROOF_REPO}/blob/${HARDPROOF_TAG}/docs/examples/hardproof-scan-full/scan.json`;
 

@@ -6,7 +6,7 @@ import {HARDPROOF_ACTION_USES, HARDPROOF_FEEDBACK_URL} from './_config';
 
 export default function HardproofFaq(): ReactNode {
   const scanCmd =
-    'hardproof scan --url "http://127.0.0.1:3000/mcp" --out out/scan';
+    'hardproof scan --url "http://127.0.0.1:3000/mcp" --allow-private-targets --out out/scan';
 
   return (
     <Layout
