@@ -44,6 +44,7 @@ jobs:
             --no-progress
             --base-url https://x07lang.org/
             --exclude ^https?://x07lang\\.org/
+            --exclude ^https?://en\\.cppreference\\.com/
             --exclude-path docs/_overlays/site/agent-portal-contract.md
             "**/*.md"
           failIfEmpty: false
