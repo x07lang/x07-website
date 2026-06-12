@@ -10,29 +10,31 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Humans and agents read the same contracts',
+    title: 'Deterministic execution',
     description: (
       <>
-        Docs, schemas, CLI reports, and package metadata line up, so the same
-        contract survives from code review to CI to release operations.
+        Programs run in solve worlds with record/replay, so the same input
+        produces the same output, the same diagnostics, and a rerunnable trace.
       </>
     ),
   },
   {
-    title: 'Canonical APIs cut down repair noise',
+    title: 'Budgeted and capability-sandboxed',
     description: (
       <>
-        X07 tries to make each capability look like one obvious shape, which
-        keeps generated code and repair patches more uniform and reviewable.
+        Explicit budgets bound how long code runs and what it allocates;
+        capability sandboxes decide what it can touch. Agent-written code runs
+        inside limits you set, not limits it picks.
       </>
     ),
   },
   {
-    title: 'Deterministic loops are easier to trust',
+    title: 'Certifiable, not just plausible',
     description: (
       <>
-        Lint, fix, test, run, MCP, packaging, and verification surfaces speak
-        stable JSON and versioned schemas instead of ad hoc terminal output.
+        Spec-first XTAL tests, structured diagnostics with quickfixes, and
+        proof-backed certification produce evidence a reviewer can check
+        instead of take on faith.
       </>
     ),
   },

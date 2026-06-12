@@ -7,7 +7,7 @@ import {createRedirects} from './redirects.generated';
 
 const config: Config = {
   title: 'X07',
-  tagline: 'The language and toolchain for dependable agent-built software',
+  tagline: 'The deterministic, certifiable execution substrate for agent-written software',
   favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

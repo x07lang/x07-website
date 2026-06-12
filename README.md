@@ -80,11 +80,15 @@ bash scripts/ci/check_all.sh
 
 ## How It Fits The X07 Ecosystem
 
+Since the 2026-06 scope cut, the active ecosystem the site presents is:
+
 - [`x07`](https://github.com/x07lang/x07) is the source of truth for released docs and installer assets
 - [`x07-mcp`](https://github.com/x07lang/x07-mcp) provides the MCP kit and official MCP server content surfaced on the site
-- [`x07-wasm-backend`](https://github.com/x07lang/x07-wasm-backend), [`x07-web-ui`](https://github.com/x07lang/x07-web-ui), and [`x07-device-host`](https://github.com/x07lang/x07-device-host) provide the browser and device application story
-- [`x07-platform`](https://github.com/x07lang/x07-platform) provides the workload and lifecycle platform story
+- [`x07-wasm-backend`](https://github.com/x07lang/x07-wasm-backend) provides the WebAssembly target
 - [`x07-registry`](https://github.com/x07lang/x07-registry) and [`x07-registry-web`](https://github.com/x07lang/x07-registry-web) back the package ecosystem at [x07.io](https://x07.io)
+- [`hardproof`](https://github.com/x07lang/hardproof) backs the MCP verification lane published at `/hardproof`
+
+Repos from earlier experiments (`x07-studio`, `x07-forge`, `x07-crewops`, `x07-tactics`, `x07-device-host`, `x07-web-ui`, `x07-sentinel-reference-stack`, and `x07-platform` with its contracts and cloud repos) are archived and must not be listed as active surfaces on the site.
 
 ## Related Repos
 

@@ -282,6 +282,19 @@
   gap: 1rem;
 }
 
+.sectionNote {
+  max-width: 680px;
+  margin: 2rem auto 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+:global([data-theme='dark']) .sectionNote {
+  color: rgba(245, 245, 245, 0.5);
+}
+
 .card {
   display: block;
   padding: 1.25rem;

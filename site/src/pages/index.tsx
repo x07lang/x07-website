@@ -63,6 +63,42 @@ x07 fix --input src/main.x07.json --write
   },
 ] as const;
 
+const authoringFeatures = [
+  {
+    eyebrow: 'x07text',
+    title: 'Lossless text projection',
+    body: (
+      <>
+        <code>x07 ast to-text</code> and <code>x07 ast from-text</code>{' '}
+        round-trip between canonical x07AST JSON and a readable, writable text
+        form, so agents and humans can author X07 directly without losing
+        structure.
+      </>
+    ),
+  },
+  {
+    eyebrow: 'x07 doc',
+    title: 'Behavioral API summaries',
+    body: (
+      <>
+        <code>x07 doc</code> describes what stdlib and package functions do —
+        inputs, outputs, and effects — so authors guess less before the first
+        compile.
+      </>
+    ),
+  },
+  {
+    eyebrow: 'Diagnostics',
+    title: 'Did-you-mean suggestions',
+    body: (
+      <>
+        Near-miss identifiers come back as structured diagnostics with concrete
+        suggestions, which keeps the first repair iteration short.
+      </>
+    ),
+  },
+] as const;
+
 const ecosystemCards = [
   {
     eyebrow: 'Core docs',
@@ -82,19 +118,11 @@ const ecosystemCards = [
   },
   {
     eyebrow: 'WASM',
-    title: 'Ship to browser, server, and device from one codebase',
+    title: 'Compile the same programs to a wasm target',
     body:
-      'Compile to WebAssembly for browser UIs, backend services, or packaged desktop and mobile apps — with one build system and one test story.',
+      'x07-wasm-backend compiles X07 programs to WebAssembly for environments where a native binary is not an option, with the same determinism and test story.',
     href: '/docs/toolchain/wasm',
     cta: 'Open WASM docs',
-  },
-  {
-    eyebrow: 'Platform',
-    title: 'Automate the full lifecycle: deploy, monitor, repair',
-    body:
-      'One operational model for rollout control, incident tracking, regression testing, and device release supervision — built for agents and operators alike.',
-    href: '/docs/agent/platform',
-    cta: 'Open platform docs',
   },
   {
     eyebrow: 'Hardproof',
@@ -119,7 +147,7 @@ const quickStartPaths = [
     eyebrow: 'For humans',
     title: 'Start with the docs and ecosystem overview',
     body:
-      'Use this path if you are opening X07 for the first time and want the clearest explanation of the language, the toolchain, and where MCP, WASM, packages, and platform fit.',
+      'Use this path if you are opening X07 for the first time and want a clear explanation of the execution model, the toolchain, and where MCP, the wasm target, packages, and certification fit.',
     href: '/docs/',
     cta: 'Read docs',
   },
@@ -146,7 +174,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <div className={styles.heroKicker}>Dependable software for humans and agents</div>
+        <div className={styles.heroKicker}>Code generation is getting cheap. Trust is the bottleneck.</div>
         <img
           src="/img/logo-full-light.png"
           alt={siteConfig.title}
@@ -158,16 +186,18 @@ function HomepageHeader() {
           className={clsx(styles.heroLogo, styles.heroLogoDark)}
         />
         <h1 className={styles.heroTitle}>
-          Build software that agents can modify and humans can trust.
+          X07 is the deterministic, certifiable execution substrate
           {' '}
           <span className={styles.heroHighlight}>
-            X07 gives both sides the same contracts.
+            for agent-written software.
           </span>
         </h1>
         <p className={styles.heroLead}>
-          X07 gives agents canonical APIs, structured diagnostics, and
-          deterministic repair loops, while giving teams one coherent story for
-          CLIs, services, MCP servers, WASM, packages, and release review.
+          X07 runs agent-written code deterministically — solve worlds,
+          record/replay — under explicit budgets and capability sandboxes, with
+          structured diagnostics and quickfixes, spec-first testing (XTAL), and
+          proof-backed certification. The C backend compiles fast to small
+          native binaries, with a wasm target.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -281,23 +311,63 @@ function ComparisonSection() {
   );
 }
 
+function AuthoringSection() {
+  return (
+    <section className={styles.pathSection}>
+      <div className="container">
+        <div className={styles.sectionIntro}>
+          <p className={styles.sectionEyebrow}>Direct authoring</p>
+          <h2>Authoring X07 directly is a bet we test, not assume</h2>
+          <p>
+            Agents and humans can write X07 directly, and the toolchain now
+            backs that path with a text projection, behavioral docs, and
+            suggestion-bearing diagnostics.
+          </p>
+        </div>
+        <div className={styles.cardGrid}>
+          {authoringFeatures.map((card) => (
+            <div key={card.title} className={styles.card}>
+              <p className={styles.cardEyebrow}>{card.eyebrow}</p>
+              <h3>{card.title}</h3>
+              <p>{card.body}</p>
+            </div>
+          ))}
+        </div>
+        <p className={styles.sectionNote}>
+          Direct authoring is an explicitly gated bet, not a settled
+          conclusion. A comparative agent eval in the x07 repo (
+          <Link href="https://github.com/x07lang/x07/tree/main/labs/agent-eval">
+            labs/agent-eval
+          </Link>
+          ) decides how much deeper the language investment goes. The results
+          will be published either way.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): ReactNode {
   return (
     <Layout
       title="x07lang.org"
-      description="X07 is a language and toolchain for dependable agent-built software: canonical APIs, structured diagnostics, deterministic repair loops, and one coherent story from local edit to release review.">
+      description="X07 is the deterministic, certifiable execution substrate for agent-written software: solve worlds, record/replay, budgets, capability sandboxes, structured diagnostics with quickfixes, spec-first testing (XTAL), and proof-backed certification.">
       <HomepageHeader />
       <main>
         <QuickStartSection />
         <ComparisonSection />
+        <AuthoringSection />
         <section className={styles.ecosystemSection}>
           <div className="container">
             <div className={styles.sectionIntro}>
               <p className={styles.sectionEyebrow}>Ecosystem</p>
-              <h2>One language, one story across the stack</h2>
+              <h2>A deliberately small active surface</h2>
               <p>
-                Start with the core toolchain, then move into the official
-                surfaces that ship real software.
+                The 2026-06 scope cut focused the project on five active repos:
+                x07, x07-mcp, x07-registry, x07-wasm-backend, and Hardproof.
+                Earlier experiments — studio, forge, crewops, tactics, device
+                host, web UI, the sentinel reference stack, and the app
+                platform — are archived.
               </p>
             </div>
             <div className={styles.cardGrid}>
