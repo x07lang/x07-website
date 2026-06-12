@@ -60,6 +60,20 @@
       "properties": {
         "world": { "type": "string", "minLength": 1, "maxLength": 64 },
         "proof_policy": { "type": "string", "enum": ["balanced", "strict"] },
+        "entry_filter": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1, "maxLength": 512 },
+          "uniqueItems": true
+        },
+        "test_filter": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["filter", "exact"],
+          "properties": {
+            "filter": { "type": "string", "minLength": 1, "maxLength": 512 },
+            "exact": { "type": "boolean" }
+          }
+        },
         "verify_bounds": {
           "type": "object",
           "additionalProperties": false,
@@ -67,6 +81,14 @@
             "unwind": { "type": "integer", "minimum": 0 },
             "max_bytes_len": { "type": "integer", "minimum": 0 },
             "input_len_bytes": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "proof_budget": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "z3_timeout_seconds": { "type": "integer", "minimum": 0 },
+            "z3_memory_mb": { "type": "integer", "minimum": 0 }
           }
         }
       }
@@ -294,6 +316,15 @@
           "properties": {
             "raw": { "$ref": "#/$defs/prove_raw" },
             "policy_outcome": { "$ref": "#/$defs/outcome" },
+            "first_diagnostic": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["code", "message"],
+              "properties": {
+                "code": { "type": "string", "minLength": 1, "maxLength": 128 },
+                "message": { "type": "string", "maxLength": 4096 }
+              }
+            },
             "report": { "$ref": "#/$defs/report_ref" },
             "proof_object": { "$ref": "#/$defs/report_ref" }
           }

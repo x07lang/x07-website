@@ -15,7 +15,7 @@ export const latestSkillsIndex = {
     },
     {
       "id": "x07-agent-playbook",
-      "summary": "Agent-first workflow and design rails for building X07 programs with the released toolchain (no repo-only dependencies). Canonical execution is via `x07 run`.",
+      "summary": "Canonical agent workflow and design rails for building X07 programs with the released toolchain (no repo-only dependencies). Canonical execution is via `x07 run`.",
       "docs_url": "/agent/latest/skills/x07-agent-playbook/SKILL.md",
       "report_schema_url": null
     },
@@ -479,6 +479,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07-tool-ast-edit.report.schema.json"
     },
     {
+      "id": "x07-tool-ast-from-text.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-from-text.report.schema.json"
+    },
+    {
       "id": "x07-tool-ast-get.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-get.report.schema.json"
     },
@@ -497,6 +501,10 @@ export const latestSchemasIndex = {
     {
       "id": "x07-tool-ast-slice.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-slice.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-to-text.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-to-text.report.schema.json"
     },
     {
       "id": "x07-tool-ast-validate.report.schema.json",

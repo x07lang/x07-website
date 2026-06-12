@@ -383,6 +383,10 @@
       "url": "/agent/latest/schemas/x07-tool-ast-edit.report.schema.json"
     },
     {
+      "id": "x07-tool-ast-from-text.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-from-text.report.schema.json"
+    },
+    {
       "id": "x07-tool-ast-get.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-get.report.schema.json"
     },
@@ -401,6 +405,10 @@
     {
       "id": "x07-tool-ast-slice.report.schema.json",
       "url": "/agent/latest/schemas/x07-tool-ast-slice.report.schema.json"
+    },
+    {
+      "id": "x07-tool-ast-to-text.report.schema.json",
+      "url": "/agent/latest/schemas/x07-tool-ast-to-text.report.schema.json"
     },
     {
       "id": "x07-tool-ast-validate.report.schema.json",
