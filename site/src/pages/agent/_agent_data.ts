@@ -1994,6 +1994,13 @@ export const latestPackagesIndex = {
       "docs_url": "/agent/latest/packages/ext-data-model/0.1.11/index.json#docs"
     },
     {
+      "name": "ext-data-model",
+      "version": "0.1.12",
+      "url": "/agent/latest/packages/ext-data-model/0.1.12/index.json",
+      "description": "Typed data model with JSON/TOML/YAML/XML/INI/CSV codecs.",
+      "docs_url": "/agent/latest/packages/ext-data-model/0.1.12/index.json#docs"
+    },
+    {
       "name": "ext-db-core",
       "version": "0.1.0",
       "url": "/agent/latest/packages/ext-db-core/0.1.0/index.json",
@@ -2636,6 +2643,13 @@ export const latestPackagesIndex = {
       "url": "/agent/latest/packages/ext-json-rs/0.1.7/index.json",
       "description": "JSON canonicalization, JSON Pointer, and ext.data_model parsing.",
       "docs_url": "/agent/latest/packages/ext-json-rs/0.1.7/index.json#docs"
+    },
+    {
+      "name": "ext-json-rs",
+      "version": "0.1.8",
+      "url": "/agent/latest/packages/ext-json-rs/0.1.8/index.json",
+      "description": "JSON canonicalization, JSON Pointer, and ext.data_model parsing.",
+      "docs_url": "/agent/latest/packages/ext-json-rs/0.1.8/index.json#docs"
     },
     {
       "name": "ext-jsonschema-rs",
