@@ -14,7 +14,11 @@ _EXPECTED_INSTANCE_SCHEMA_VERSION = "x07.website.package-index@0.2.0"
 # Keep these patterns in sync with agent/latest/schemas/x07-website.package-index.schema.json
 _RE_SEMVER = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+([+-][0-9A-Za-z.-]+)?$")
 _RE_PKG_NAME = re.compile(r"^[a-z][a-z0-9_-]{0,127}$")
-_RE_PKG_REF = re.compile(r"^[a-z][a-z0-9_-]{0,127}@[0-9]+\.[0-9]+\.[0-9]+([+-][0-9A-Za-z.-]+)?$")
+_RE_PKG_REF = re.compile(
+    r"^[a-z][a-z0-9_-]{0,127}@"
+    r"(?:>=|<=|>|<|=)?\s*[0-9]+\.[0-9]+\.[0-9]+([+-][0-9A-Za-z.-]+)?"
+    r"([,\s]+(?:>=|<=|>|<|=)?\s*[0-9]+\.[0-9]+\.[0-9]+([+-][0-9A-Za-z.-]+)?)*$"
+)
 _RE_CAPABILITY = re.compile(r"^[a-z][a-z0-9._-]{0,63}$")
 _RE_FFI_LIB = re.compile(r"^[A-Za-z0-9_.+-]+$")
 _RE_MODULE_ID = re.compile(r"^[a-z][a-z0-9_]*(\.[a-z0-9_]+)*$")
@@ -160,7 +164,7 @@ def _validate_pkg_ref(ref: Any) -> str | None:
     if len(ref) > 256:
         return "too long"
     if _RE_PKG_REF.match(ref) is None:
-        return "invalid pkg ref (expected name@version)"
+        return "invalid pkg ref (expected name@version or name@range)"
     return None
 
 
