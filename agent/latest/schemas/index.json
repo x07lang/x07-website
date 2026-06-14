@@ -1023,6 +1023,10 @@
       "url": "/agent/latest/schemas/x07ast.v0.8.0.schema.json"
     },
     {
+      "id": "x07ast.v0.9.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.9.0.schema.json"
+    },
+    {
       "id": "x07c.report.schema.json",
       "url": "/agent/latest/schemas/x07c.report.schema.json"
     },

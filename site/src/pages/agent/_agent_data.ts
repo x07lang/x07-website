@@ -1119,6 +1119,10 @@ export const latestSchemasIndex = {
       "url": "/agent/latest/schemas/x07ast.v0.8.0.schema.json"
     },
     {
+      "id": "x07ast.v0.9.0.schema.json",
+      "url": "/agent/latest/schemas/x07ast.v0.9.0.schema.json"
+    },
+    {
       "id": "x07c.report.schema.json",
       "url": "/agent/latest/schemas/x07c.report.schema.json"
     },
@@ -4252,5 +4256,5 @@ export const latestPackagesIndex = {
 
 export const latestStdlibIndexMeta = {
   url: '/agent/latest/stdlib/index.json',
-  module_count: 19,
+  module_count: 20,
 } as const;
