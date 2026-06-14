@@ -11,7 +11,7 @@ Most code written by coding agents should not be trusted on sight.
 
 That is not because agents are useless. It is because normal languages and normal toolchains were built for human review, not for machine-checkable trust. So the default reaction is still, "I need to read the code." X07 changes that by changing what counts as evidence.
 
-Two ideas from other engineering fields make this possible. **Formal verification** means using mathematical proof to show that code does exactly what its specification says — not "we ran some tests and they passed," but "we can prove this function never returns a negative number under any input." **Code certification** takes that further: it bundles proofs, test results, architecture checks, and runtime evidence into a structured package — a certificate — that a reviewer can inspect and approve without reading every line of source. Think of it like a building inspection report: you do not need to watch every nail go in if you trust the inspection process, the inspector's credentials, and the evidence they collected. The idea is not new in principle: Clover showed that verification can act as a strong filter in a closed loop, with up to 87% acceptance on correct CloverBench examples and no false positives on adversarial incorrect ones in that evaluation setting. The lesson is not "trust the model." The lesson is "make the checker honest, explicit, and useful." ([arXiv](https://arxiv.org/abs/2310.17807))
+Two ideas from other engineering fields make this possible. **Formal verification** means using mathematical proof to show that code does exactly what its specification says — not "we ran some tests and they passed," but "we can prove this function never returns a negative number under any input." **Code certification** takes that further: it bundles proofs, test results, architecture checks, and runtime evidence into a structured package — a certificate — that a reviewer can inspect and approve without reading every line of source. Think of a building inspection report: you do not need to watch every nail go in if you trust the inspection process, the inspector's credentials, and the evidence they collected. The principle is not new. Clover showed that verification can act as a strong filter in a closed loop, with up to 87% acceptance on correct CloverBench examples and no false positives on the adversarial incorrect ones in that evaluation. The lesson there is not "trust the model" — it is "make the checker honest, explicit, and useful." ([arXiv](https://arxiv.org/abs/2310.17807))
 
 <!-- truncate -->
 
@@ -88,7 +88,7 @@ Older verification systems often collapse too many things into one fuzzy green c
 
 The certification side is stricter than a single-function proof. `x07 trust certify` checks per-symbol prove evidence, boundaries, smoke and PBT resolution, schema drift, trust report cleanliness, dependency-closure attestation when required, compile attestation, capsule attestations when required, peer-policy evidence for networked profiles, and runtime attestation for sandboxed profiles. For strong profiles it also requires that the entry matches `project.operational_entry_symbol`, rejects proof-only surrogates, rejects developer-only imported stubs, rejects coverage-only imports, rejects bounded recursion, and exposes whether the operational entry body itself was formally proved.
 
-That is the biggest trust improvement X07 has made.
+This is the layer I am most proud of. It is the difference between "a proof exists somewhere in the tree" and "the thing you ship is the thing that was proved."
 
 ### 5. Runtime and capsule evidence
 
@@ -141,7 +141,7 @@ These examples use the X07 toolchain. The comments explain what each field and c
 
 ```jsonc
 {
-  "schema_version": "x07.project@0.4.0", // Project manifest schema version.
+  "schema_version": "x07.project@0.4.0", // Project manifest schema version (0.4.0 and the newer 0.5.0 are both accepted).
   "name": "example",                      // Package name.
   "entry": "src/example.x07.json",        // Path to the main X07 source file.
   "operational_entry_symbol": "example.main" // The symbol that must be certified — this is what actually ships.
@@ -205,8 +205,6 @@ What it can claim is better and more useful:
 
 > **For named strong profiles, X07 can give a human reviewer enough structured evidence to approve the operational entry from the certificate bundle rather than from a full source dive.**
 
-That is a real milestone.
-
 It is also a healthier way to talk about trust. The question is no longer:
 
 > "Do I personally understand every line the agent wrote?"
@@ -215,7 +213,7 @@ The better question is:
 
 > "Did this change satisfy the selected certification profile for the operational entry, with the required proof, test, boundary, capsule, dependency, and runtime evidence, and without widening the trust posture?"
 
-That is a better engineering question. It scales better. It is more honest. And it is much closer to the way people will actually need to review code in a world where coding agents do a lot of the writing.
+That is a better engineering question: it scales, it is honest, and it is much closer to how people will actually review code once agents do most of the writing.
 
 ```mermaid
 flowchart LR

@@ -5,13 +5,11 @@ description: X07 Genpack lets local models target x07AST with schema- and gramma
 tags: [x07, local llms, genpack, constrained decoding]
 ---
 
-One of the most common failure modes with local code models is not bad logic. It is broken structure.
+Run a small local code model for a while and you notice the failures are rarely about logic. They are about structure. The model gets close, but the output does not parse, the imports drift, a block never closes, or the file shape just is not valid for the target language.
 
-The model gets close, but the output does not parse, the imports drift, the syntax is incomplete, or the generated file shape is not valid for the target language.
+X07 sidesteps that. The canonical source format is [x07AST JSON](/docs/language/syntax-x07ast), and the toolchain can export both a JSON Schema and a grammar bundle describing that structure. The docs call that export surface [Genpack](/docs/genpack/).
 
-X07 takes a different path: the canonical source format is [x07AST JSON](/docs/language/syntax-x07ast), and the toolchain can export both a JSON Schema and a grammar bundle for that structure. In X07 docs, that export surface is called [Genpack](/docs/genpack/).
-
-That matters for local models because constrained decoding can now target the language's real source form instead of a best-effort textual approximation.
+The payoff for local models: constrained decoding can target the language's actual source form, not a best-effort textual approximation of it.
 
 <!-- truncate -->
 
@@ -26,15 +24,13 @@ flowchart LR
 
 ## Why X07 works well with constrained decoding
 
-The target is not "some text that probably looks like code."
-
-The target is a concrete JSON tree with a published schema, stable versions, and deterministic tooling around it. The current docs expose:
+The target is not "some text that probably looks like code." It is a concrete JSON tree with a published schema, stable versions, and deterministic tooling around it. The docs expose:
 
 - `x07 ast schema`
 - `x07 ast grammar --cfg`
 - Python and TypeScript SDK surfaces under `x07-genpack` and `@x07/genpack`
 
-That gives local-model workflows a clean split:
+So a local-model workflow splits cleanly:
 
 1. constrain the decoder so it can only emit structurally valid x07AST
 2. run X07's deterministic formatting and linting passes
@@ -117,11 +113,13 @@ This tiny example is a real X07 entry program in canonical `x07AST` JSON form. T
 }
 ```
 
-That example is intentionally small, but it shows the important point: the target is explicit structure, not free-form source text.
+JSON is what the decoder constrains against, so JSON is what stays on disk. If you want a readable view of the same program, `x07 ast to-text` projects it losslessly to x07text — here that `solve` becomes `(view.to_bytes input)`.
+
+The example is tiny on purpose, and it makes the point: the target is explicit structure, not free-form source text.
 
 ## Converge deterministically after generation
 
-Even with constrained decoding, you still want deterministic cleanup and validation.
+Constrained decoding gets you valid structure; it does not get you canonical, lint-clean output. That last step is deterministic.
 
 ```bash
 # Canonicalize the generated X07 AST so later diffs are stable.
@@ -136,15 +134,13 @@ x07 fix --input generated.x07.json --write --json
 
 Inside a full X07 project, [`x07 run`, `x07 build`, and `x07 bundle`](/docs/toolchain/repair-loop) already apply that repair loop automatically by default.
 
-## Why this is especially useful for local models
+## Why this matters more for local models
 
-Local models often have less margin for wasted tokens and less room for syntax retries.
-
-Targeting x07AST directly helps because:
+Local models have less margin: fewer tokens to waste, less room for syntax retries. Targeting x07AST directly helps on every front:
 
 - the output grammar is narrower than a general-purpose text language
 - the source form is explicitly machine-editable
 - the toolchain returns structured diagnostics and quickfixes
 - the repair loop is deterministic
 
-That combination is what makes Genpack interesting. It is not "prompt harder until the syntax looks right." It is "make the language a first-class structured target for the decoder."
+That is the whole idea behind Genpack. Not "prompt harder until the syntax looks right," but "make the language a first-class structured target for the decoder."

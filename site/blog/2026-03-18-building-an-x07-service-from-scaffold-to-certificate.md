@@ -7,9 +7,9 @@ tags: [x07, agentic coding, services, walkthrough]
 
 > **Previously:** [How to Trust X07 Code Written by Coding Agents](/blog/how-to-trust-x07-code-written-by-coding-agents)
 
-The previous posts explained *why* X07 exists and how its trust model works. This post walks through *doing* it — scaffolding a service, adding domain logic, wiring tests and contracts, and producing the kind of certificate bundle that lets a reviewer approve a change without reading the whole source tree.
+The previous posts explained *why* X07 exists and how its trust model works. This one is the walkthrough: scaffold a service, add domain logic, wire up tests and contracts, and produce a certificate bundle that lets a reviewer approve the change without reading the whole source tree.
 
-Everything below is something a coding agent can execute in one session. That is the point.
+A coding agent can run every step below in a single session. That is the part that matters.
 
 <!-- truncate -->
 
@@ -27,11 +27,7 @@ x07 init --template api-cell
 ```
 
 :::note
-As of `x07 0.1.102`, service archetype scaffolds (`api-cell`, `event-consumer`, etc) are not yet usable from the prebuilt `x07` binary alone. If `x07 init --template api-cell` fails, run it via a source checkout:
-
-```bash
-cargo run -q -p x07 --manifest-path /path/to/x07/Cargo.toml -- init --template api-cell
-```
+The service archetype templates (`api-cell`, `event-consumer`, …) are copied from the toolchain's bundled docs examples (`docs/examples/service_api_cell_v1`). They ship with a toolchain that includes the docs component; a stripped binary-only install will not have them. If `x07 init --template api-cell` reports a missing template directory, reinstall the toolchain with docs (`x07up`) or scaffold from a source checkout. The non-service templates (`cli`, `web-service`, …) are generated in-process and always available.
 :::
 
 That single command produces a complete, buildable project:
@@ -143,58 +139,28 @@ The most important code in an X07 service lives in the pure domain kernel. This 
 In practice, you typically certify the kernel as its own `solve-pure` project/package, and keep the service shell as a separate `run-os-sandboxed` service project that depends on it.
 :::
 
-:::note
-This example uses X07's canonical `x07AST` JSON format. The comments explain what each field means for readers who are new to the language.
-:::
+On disk this module is canonical `x07AST` JSON, but you rarely have to read the JSON. Rendered as x07text — the lossless S-expression projection you get from `x07 ast to-text` — the same module is compact enough to scan in one screen:
 
-```jsonc
+```clojure
+; x07text
 {
-  "schema_version": "x07.x07ast@0.8.0",          // x07AST format version.
-  "kind": "module",                                // This file defines an x07 module.
-  "module_id": "orders.core",                      // Fully qualified module name.
-  "imports": [],                                   // No external dependencies — pure logic only.
-  "decls": [
-    {
-      "kind": "defn",                              // Define a pure, synchronous function.
-      "name": "orders.core.compute_total_v1",      // Stable module-qualified symbol name.
-      "params": [
-        { "name": "item_count", "ty": "i32" },    // Number of items in the order.
-        { "name": "unit_price", "ty": "i32" },    // Price per item in cents.
-        { "name": "discount_pct", "ty": "i32" }   // Discount percentage (0-100).
-      ],
-      "result": "i32",                             // Returns the total in cents.
-
-      "requires": [
-        { "id": "valid_count",    "expr": [">=", "item_count", 0] },
-        { "id": "valid_price",    "expr": [">=", "unit_price", 0] },
-        { "id": "bound_discount", "expr": ["and",
-            [">=", "discount_pct", 0],
-            ["<=", "discount_pct", 100]] }
-      ],
-
-      "ensures": [
-        { "id": "non_negative", "expr": [">=", "__result", 0] }
-      ],
-
-      "body": ["begin",
-        ["let", "subtotal", ["*", "item_count", "unit_price"]],
-        ["let", "reduction", ["/", ["*", "subtotal", "discount_pct"], 100]],
-        ["-", "subtotal", "reduction"]
-      ]
-    },
-    {
-      "kind": "export",                            // Make the symbol visible to other modules.
-      "names": ["orders.core.compute_total_v1"]
-    }
-  ]
+  :kind module
+  :module_id orders.core
+  :schema_version x07.x07ast@0.8.0
+  :imports ()
+  :decls ({:kind defn :name orders.core.compute_total_v1 :body (begin (let subtotal (* item_count unit_price)) (let reduction (/ (* subtotal discount_pct) 100)) (- subtotal reduction)) :ensures ({:expr (>= __result 0) :id non_negative}) :params ({:name item_count :ty i32} {:name unit_price :ty i32} {:name discount_pct :ty i32}) :requires ({:expr (>= item_count 0) :id valid_count} {:expr (>= unit_price 0) :id valid_price} {:expr (and (>= discount_pct 0) (<= discount_pct 100)) :id bound_discount}) :result i32}
+    {:kind export :names (orders.core.compute_total_v1)}
+  )
 }
 ```
+
+`compute_total_v1` takes an item count, a unit price in cents, and a discount percentage, and returns the discounted total. `x07 ast from-text` parses this straight back to the canonical JSON, byte for byte — the projection is lossless in both directions.
 
 A few things worth pointing out:
 
 - **`requires` and `ensures` are contracts, not comments.** They are machine-checkable and the verifier uses them as proof obligations. The `id` on each clause gives diagnostics and review artifacts a stable name to reference.
 
-- **The body is an expression tree, not text.** An agent does not need to parse indentation or deal with syntax ambiguity. It edits a tree, and the toolchain validates the tree.
+- **The canonical body is an expression tree, not text.** x07text is a faithful projection of that tree, so a human can read it, but the source of truth is the JSON. There is no whitespace or syntax ambiguity for an agent to trip over — it edits a tree, and the toolchain validates the tree.
 
 - **There are no imports.** This function is pure — it depends on nothing outside its own parameters. That purity is what makes formal verification practical rather than aspirational.
 

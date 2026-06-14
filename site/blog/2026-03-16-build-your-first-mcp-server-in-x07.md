@@ -5,11 +5,9 @@ description: Scaffold, bundle, and run a minimal MCP server with the current X07
 tags: [x07, mcp, tutorial]
 ---
 
-The [Model Context Protocol](https://modelcontextprotocol.io/specification) is now the standard way to connect coding agents to tools and data sources.
+The [Model Context Protocol](https://modelcontextprotocol.io/specification) is how coding agents reach tools and data sources. X07 ships an MCP kit in [`x07-mcp`](/docs/toolchain/mcp-kit), and the `x07` CLI hands template scaffolding and conformance tooling off to it.
 
-X07 ships an MCP kit through [`x07-mcp`](/docs/toolchain/mcp-kit), and the core `x07` CLI delegates template scaffolding and conformance tooling to it.
-
-This tutorial uses the current HTTP template because it is the easiest one to probe with `curl`. If you want stdio transport instead, use `mcp-server-stdio`. If you need long-running task APIs, use `mcp-server-http-tasks`.
+This walkthrough uses the HTTP template because you can poke at it with `curl`. Two siblings exist: `mcp-server-stdio` for stdio transport, and `mcp-server-http-tasks` when you need long-running task APIs.
 
 <!-- truncate -->
 
@@ -46,11 +44,11 @@ If you want a machine-readable environment check after install, run `x07 doctor`
 ## 2. Scaffold the HTTP MCP template
 
 ```bash
-# Generate a starter MCP server project from the current HTTP template.
-x07 init --template mcp-server-http --dir ./my-mcp-http
+# x07 init scaffolds into the current directory, so make one and step in first.
+mkdir my-mcp-http && cd my-mcp-http
 
-# Enter the new project directory.
-cd ./my-mcp-http
+# Generate the HTTP MCP server from the template.
+x07 init --template mcp-server-http
 
 # Resolve and lock the template's package graph.
 x07 pkg lock
@@ -68,34 +66,28 @@ The generated project includes the pieces you need to get moving:
 
 ## 3. Look at one tool implementation
 
-The scaffold already includes a simple echo-style tool. The real template has extra validation and error handling, but this trimmed excerpt shows the shape.
+The scaffold ships with an echo tool. The real one carries more validation and error handling; this trimmed version shows the shape.
 
 :::note
-This snippet is based on the X07 language itself, using the canonical `x07AST` JSON form from the scaffolded MCP template. Every line is commented because many readers will be new to X07.
+On disk the canonical form is `*.x07.json`. Here it is shown as x07text, the lossless S-expression projection of that JSON, which is easier to read. Run `x07 ast to-text` and `x07 ast from-text` to convert between the two.
 :::
 
-```jsonc
+```clojure
+; x07text
 {
-  "kind": "defn", // Define one X07 function that implements a tool.
-  "name": "mcp.user._tool_echo_v1", // Give the tool a stable module-qualified symbol name.
-  "params": [
-    {"name": "args_json", "ty": "bytes_view"} // Tool arguments arrive as UTF-8 JSON bytes.
-  ],
-  "result": "bytes", // MCP tool responses are returned as bytes.
-  "body": [
-    "begin", // Evaluate the tool body as a sequence of expressions.
-    ["let", "doc_b", ["ext.json.data_model.parse", "args_json"]], // Parse the incoming JSON argument object.
-    ["let", "doc", ["bytes.view", "doc_b"]], // Borrow the parsed document without copying it.
-    ["let", "root", ["ext.data_model.root_offset", "doc"]], // Find the root object inside the parsed JSON document.
-    ["let", "k_text", ["bytes.lit", "text"]], // Build the key name for the argument lookup.
-    ["let", "text_off", ["ext.data_model.map_find", "doc", "root", ["bytes.view", "k_text"]]], // Locate the "text" field in the argument object.
-    ["let", "text", ["ext.data_model.string_get", "doc", "text_off"]], // Read the string value for that field.
-    ["std.mcp.tool.result.ok_text_v1", ["bytes.view", "text"]] // Return a successful MCP text result.
-  ]
+  :kind entry
+  :module_id mcp.user
+  :schema_version x07.x07ast@0.8.0
+  :imports ()
+  :decls ({:kind defn :name mcp.user._tool_echo_v1 :body (begin (let doc_b (ext.json.data_model.parse args_json)) (let doc (bytes.view doc_b)) (let root (ext.data_model.root_offset doc)) (let k_text (bytes.lit text)) (let text_off (ext.data_model.map_find doc root (bytes.view k_text))) (let text (ext.data_model.string_get doc text_off)) (std.mcp.tool.result.ok_text_v1 (bytes.view text))) :params ({:name args_json :ty bytes_view}) :result bytes}
+  )
+  :solve (bytes.lit ok)
 }
 ```
 
-The important part is the contract: your tool code stays in `src/mcp/user.x07.json`, and the router/worker infrastructure is already scaffolded around it.
+The tool parses its JSON arguments, reads the `text` field, and returns it as an MCP text result. The `:solve` line is a placeholder; the real module exports the `defn` and the worker dispatches to it by name.
+
+The contract is what matters: your tool code lives in `src/mcp/user.x07.json`, and the router and worker are already wired around it.
 
 ## 4. Bundle the router and the sandboxed worker
 
@@ -160,4 +152,4 @@ If you want to keep building:
 - edit `src/mcp/user.x07.json` to add real tools
 - keep `x07 test --manifest tests/tests.json` in your loop so replay fixtures stay deterministic
 
-The main point is that X07 gives you a scaffolded MCP architecture, a sandboxed worker split, and conformance tooling from the start instead of expecting you to assemble those pieces later.
+You start with the architecture in place: a router/worker split, a sandboxed worker, and conformance tooling, instead of bolting those on later.

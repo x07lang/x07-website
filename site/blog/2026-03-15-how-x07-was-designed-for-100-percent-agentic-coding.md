@@ -24,7 +24,7 @@ Even if you never plan to let an agent write code, the design still matters to y
 * reliable defaults instead of raw-memory footguns
 * native runtime targets instead of toy execution
 * structured concurrency instead of orphan-task chaos
-* one ecosystem that covers CLIs, MCP servers, web UI, device apps, WASM backends, package publishing, and lifecycle operations
+* one ecosystem that covers CLIs, MCP servers, WASM targets, package publishing, and independent proof checking
 * a simpler mental model because there are fewer almost-equivalent ways to do the same thing
 
 That last point is underrated. A simple mental model is a reliability feature.
@@ -140,29 +140,30 @@ It is anti-ambiguity.
 
 ## 7. The ecosystem keeps the same story all the way out
 
-The surrounding repos reinforce the same direction:
+The whole story is small on purpose. Five repos carry it, and they all pull in the same direction:
 
-* `x07-mcp` provides the official MCP kit and server story
-* `x07-wasm-backend` handles WASM modules and browser packaging
-* `x07-device-host` runs the same reducer-style UI model inside desktop and mobile WebViews
-* `x07-platform` extends the same trust-first thinking into deploy plans, incidents, and operational controls
+* `x07` is the toolchain itself: compiler, CLI, stdlib, and docs.
+* `x07-mcp` is the MCP kit and the official `x07lang-mcp` server, so an agent drives x07 through the same protocol it uses for everything else.
+* `x07-registry` is the package backend, with browsing and token management live on x07.io.
+* `x07-wasm-backend` is the WASM target for portable, sandboxed execution.
+* `hardproof` is a standalone MCP verifier, so the proof checking does not live inside the same process that produced the code.
 
-That matters because agent reliability usually falls apart at the edges. A language may be neat, but packaging, deployment, browser integration, device runtime, and operations often become unrelated stacks with unrelated rules.
+Agent reliability usually falls apart at the edges. A language can be clean while packaging, distribution, and verification drift into unrelated stacks with unrelated rules. Keeping the surface to five repos is the cheapest way I know to stop that drift before it starts.
 
-X07 is trying to prevent that fracture. On the interoperability side, it also aligns with the [Model Context Protocol specification](https://modelcontextprotocol.io/specification), which gives agents a standard surface for tools, prompts, and resources.
+On interoperability, x07 follows the [Model Context Protocol specification](https://modelcontextprotocol.io/specification), which gives agents a standard surface for tools, prompts, and resources.
 
 ```mermaid
 flowchart TD
     A[Agent] --> B[x07AST JSON]
-    B --> C[Toolchain]
+    B --> C[x07 toolchain]
     C --> D[arch check]
     C --> E[test and PBT]
     C --> F[verify]
     C --> G[review and trust]
-    C --> H[MCP]
-    C --> I[WASM and web]
-    C --> J[Device host]
-    C --> K[Platform operations]
+    C --> H[x07-mcp server]
+    C --> I[x07-registry packages]
+    C --> J[x07-wasm-backend target]
+    C --> K[hardproof verifier]
 ```
 
 ## A small example of why this works

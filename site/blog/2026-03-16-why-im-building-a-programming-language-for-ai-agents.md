@@ -48,30 +48,22 @@ That is why X07's canonical source form is [x07AST JSON](/docs/language/syntax-x
 ## What that looks like in code
 
 :::note
-This example is based on the X07 language itself, using canonical `x07AST` JSON. The comments explain the structure because many readers will not be familiar with X07 yet.
+Canonical X07 source is `x07AST` JSON, but reading raw JSON is rough on the eyes. Below is the same module in x07text, the lossless S-expression projection you get from `x07 ast to-text`. It parses straight back to the JSON on disk.
 :::
 
-```jsonc
+```clojure
+; x07text
 {
-  "kind": "defn", // Define one pure X07 function.
-  "name": "app.core.normalize_path_v1", // Use a stable module-qualified symbol name.
-  "params": [
-    {"name": "path", "ty": "bytes_view"} // Accept a borrowed byte-view input.
-  ],
-  "result": "bytes", // Return owned normalized bytes.
-  "requires": [
-    {
-      "id": "non_empty", // Name the contract clause for diagnostics and review.
-      "expr": [">", ["view.len", "path"], 0] // Require the input path to contain at least one byte.
-    }
-  ],
-  "body": ["app.core.trim_path_v1", "path"] // Delegate the real work to another pure helper.
+  :kind module
+  :module_id app.core
+  :schema_version x07.x07ast@0.8.0
+  :imports ()
+  :decls ({:kind defn :name app.core.normalize_path_v1 :body (app.core.trim_path_v1 path) :params ({:name path :ty bytes_view}) :requires ({:expr (> (view.len path) 0) :id non_empty}) :result bytes}
+  )
 }
 ```
 
-That snippet is tiny, but it captures the design goal:
-
-make the constraints explicit enough that both a human and an agent can see the intended boundary.
+One pure function, `normalize_path_v1`: it borrows a byte view, returns owned bytes, and carries a named contract clause (`non_empty`) that says the input must hold at least one byte. The real work is delegated to a helper. The point isn't the function — it's that the boundary is written down where a human or an agent can both see it.
 
 ## What surprised me during the work
 
@@ -104,28 +96,14 @@ That is one snapshot on one machine, not a universal law. But it is enough to re
 
 ## The broader bet
 
-I do not think the coding-agent reliability problem is only a model problem.
+I do not think coding-agent reliability is only a model problem. Better models, better prompting, and better tools all help. But underneath that there is a structural mismatch: the way agents generate code does not match the way most languages expect code to be produced, edited, and verified.
 
-Better models clearly matter. Better prompting matters. Better tools matter.
-
-But there is also a structural mismatch between how agents generate code and how most languages expect code to be produced, edited, and verified.
-
-That is why I keep coming back to a simple idea:
+So I keep coming back to one idea:
 
 **if agents are going to write a large share of the code, the language should expose explicit contracts at the points where failure is most expensive.**
 
-X07 is my attempt at building that idea all the way through:
+X07 is my attempt at building that idea all the way through: the language, the toolchain, the MCP kit, the WASM target, and the review and trust artifacts that let you check the result.
 
-- language
-- toolchain
-- MCP kit
-- WASM and device flows
-- review and trust artifacts
+It is still under active development. APIs will change, and some surfaces are far more mature than others. But the direction is deliberate, and the docs describe a stack that actually runs, not a slide-deck thesis.
 
-It is still under active development. APIs will change. Some surfaces are much more mature than others. But the direction is intentional, and the current docs already describe a real working stack rather than a slide-deck thesis.
-
-If you are hitting the wall where coding agents produce code that is plausible but not dependable, I think the right question is no longer just "which model should I use?"
-
-It is also:
-
-**what kind of language and toolchain am I asking that model to work inside?**
+If you keep hitting the wall where agents produce code that is plausible but not dependable, the model is only half the question. The other half is what kind of language and toolchain you are asking that model to work inside.

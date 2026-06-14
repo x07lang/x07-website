@@ -5,15 +5,11 @@ description: Agent failures often come from language structure and tool boundari
 tags: [agentic coding, language design, reliability]
 ---
 
-A lot of AI-generated code fails in the same frustrating way: it looks reasonable, maybe even passes a few checks, and then breaks when the real system touches it.
+A lot of AI-generated code fails the same way: it looks reasonable, maybe passes a few checks, and then falls apart the moment the real system touches it. The easy explanation is "the models aren't good enough yet." The more useful one is that most languages still assume a human is carrying the missing context in their head.
 
-The easy explanation is "the models are not good enough yet."
+Hand an agent five equivalent patterns, prose-only errors, implicit side effects, and a flaky test surface, and it has to improvise at exactly the points where you need it to be mechanical.
 
-The harder and more useful explanation is that most programming languages still assume a human is carrying the missing context in their head.
-
-If the language gives the agent five equivalent patterns, prose-only errors, implicit side effects, and flaky test surfaces, the model has to improvise at the exact points where you need it to be mechanical.
-
-That is why recent discussion around agent-first languages matters. Armin Ronacher's essay [A Language For Agents](https://lucumr.pocoo.org/2026/2/9/a-language-for-agents/) made the thesis explicit. My view is slightly more practical: the reliability gap shows up wherever the language and toolchain leave too much ambiguity at the repair boundary.
+That is why the recent argument for agent-first languages is worth taking seriously. Armin Ronacher's essay [A Language For Agents](https://lucumr.pocoo.org/2026/2/9/a-language-for-agents/) made the thesis explicit; my own take is a bit more narrow. The reliability gap shows up wherever the language and toolchain leave too much ambiguity at the repair boundary.
 
 <!-- truncate -->
 
@@ -28,13 +24,9 @@ flowchart LR
 
 ## 1. Canonical representation beats stylistic freedom
 
-Most mainstream languages let one team solve the same problem in several equally legal ways.
+Most mainstream languages let one team solve the same problem in several equally legal ways. That is convenient for humans and expensive for agents. A model trained on many styles keeps reaching for the most statistically likely pattern, not the one your repo actually expects, and you get code that is locally plausible but globally wrong for the codebase.
 
-That is convenient for humans. It is expensive for agents.
-
-A model trained on many styles will keep selecting the most statistically likely pattern, not the one your repo expects. The result is code that is locally plausible but globally wrong for the codebase.
-
-The cleanest fix is to reduce representational ambiguity on purpose.
+The cleanest fix is to cut the representational ambiguity on purpose.
 
 In X07, the canonical source form is [x07AST JSON](/docs/language/syntax-x07ast), not a text syntax that has to survive string-based edits. That means agents can edit tree structure directly instead of gambling on whitespace and parser recovery.
 
@@ -59,11 +51,7 @@ That is a very different editing problem from "insert a guard near line 47 and h
 
 ## 2. Diagnostics should be data first
 
-A normal compiler error is often a paragraph written for a human.
-
-That is a weak interface for an autonomous repair loop.
-
-What an agent needs is:
+A normal compiler error is a paragraph written for a human. That is a weak interface for an autonomous repair loop. What an agent needs is:
 
 - a stable code
 - a precise location
@@ -71,7 +59,7 @@ What an agent needs is:
 
 X07 leans into that model. The current docs expose [machine-readable diagnostics and the canonical repair loop](/docs/toolchain/repair-loop), where `x07 run`, `x07 build`, and `x07 bundle` automatically iterate through format, lint, quickfix, and retry.
 
-That shift matters because an agent can act on data. It always struggles more when it has to interpret prose.
+An agent can act on data directly. It struggles the moment it has to interpret prose first.
 
 ## 3. Side effects need named boundaries
 
@@ -86,9 +74,7 @@ X07 makes that boundary explicit with [worlds](/docs/worlds):
 - `run-os` for real OS access
 - `run-os-sandboxed` for policy-limited OS access
 
-That does not just help agents. It helps humans reason locally too.
-
-If the edit happens in `solve-pure`, the blast radius is intentionally small.
+This is not only an agent affordance. It lets humans reason locally too: if the edit happens in `solve-pure`, the blast radius is intentionally small.
 
 ## 4. Deterministic replay changes the debugging loop
 
@@ -100,47 +86,32 @@ X07 treats that as part of the normal toolchain story, not as an afterthought. T
 
 ## 5. Local budgets stop small mistakes from becoming expensive incidents
 
-A lot of "agent failure" stories are really "unbounded execution" stories.
-
-The model emits a bad loop or an unnecessary copy path, and then the runtime keeps paying for it until a human notices.
+A lot of "agent failure" stories are really "unbounded execution" stories. The model emits a runaway loop or a needless copy path, and the runtime keeps paying for it until a human notices.
 
 X07 exposes [budget scopes](/docs/language/budget-scopes) as a language primitive so resource limits can live next to the code they protect.
 
 :::note
-This example is based on the X07 language itself, using the canonical `x07AST` JSON form. The comments explain what each line means for readers who are not already familiar with X07.
+The canonical form on disk is `x07AST` JSON. Below it is shown as **x07text**, the lossless S-expression projection from `x07 ast to-text` (and convertible back with `x07 ast from-text`). The budgeted region traps deterministically if it exceeds either cap: 64 KiB of allocation or 1 MiB of copied bytes.
 :::
 
-```jsonc
-[
-  "budget.scope_v1", // Start a local budgeted region inside the current X07 expression tree.
-  [
-    "budget.cfg_v1", // Describe the policy for this region.
-    ["mode", "trap_v1"], // Trap deterministically if the scope exceeds its budget.
-    ["label", ["bytes.lit", "parse_headers"]], // Give the budgeted region a stable diagnostic label.
-    ["alloc_bytes", 65536], // Cap total allocated bytes inside this scope.
-    ["memcpy_bytes", 1048576] // Cap copied bytes inside this scope.
-  ],
-  ["app.parse_headers_v1", "input"] // Run the actual X07 work inside the local budget.
-]
+```clojure
+; x07text
+(budget.scope_v1
+  (budget.cfg_v1
+    (mode trap_v1)
+    (label (bytes.lit parse_headers))
+    (alloc_bytes 65536)
+    (memcpy_bytes 1048576))
+  (app.parse_headers_v1 input))
 ```
 
-The important part is not the exact numbers.
+The exact numbers do not matter. What matters is that the cost boundary is explicit, local, and reviewable, sitting right next to the code it constrains.
 
-The important part is that the cost boundary is explicit, local, and reviewable.
+## What this adds up to
 
-## A practical checklist
+The five sections above are not five unrelated features. They are the same move applied five times: take something a language normally leaves implicit, and make it explicit and mechanical at the point where an agent has to act. Representation, diagnostics, effects, replay, cost. Pin each one down, then be far more selective about where you still allow open-ended flexibility.
 
-If you want better agent reliability, force the things that remove entire classes of failure:
-
-- one canonical representation for shared code and data
-- diagnostics with stable machine-readable structure
-- explicit capability boundaries for effects
-- deterministic replay for debugging and tests
-- local resource budgets
-
-Then be much more selective about where you allow open-ended flexibility.
-
-That is the deeper lesson here. Better prompts help. Better models help. But language and toolchain structure decide how much improvisation the agent has to do in the first place.
+Better prompts help. Better models help. But the structure of the language and toolchain decides how much improvisation the agent has to do before either of those even gets a turn.
 
 X07 is one concrete implementation of that idea, not the only possible one. The broader point is simpler:
 

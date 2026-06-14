@@ -15,7 +15,7 @@ A coding agent works differently.
 
 It is very good at wide edits. It is very good at following explicit contracts. It is very good at retry loops. But it is much worse than a strong engineer at carrying a large unstated architecture around in its head.
 
-That is why modern programming with coding agents is not normal programming, but faster. It is a different optimization problem.
+So working with an agent is not human programming sped up. It is a different optimization problem, and the things you should constrain are different too.
 
 <!-- truncate -->
 
@@ -120,11 +120,7 @@ flowchart LR
 
 ## Contracts over patterns
 
-The programming world has spent decades teaching humans pattern names.
-
-That helped when humans were the primary reasoners.
-
-Agents do better with something else: **contracts**.
+We have spent decades teaching humans pattern names. That worked when humans were the primary reasoners. Agents do better with something more direct: **contracts**.
 
 A contract says:
 
@@ -137,24 +133,18 @@ A contract says:
 Patterns are still useful. In an agent-first system, they should be consequences of contracts, not substitutes for them.
 
 :::note
-The x07 example below uses the canonical `x07AST` JSON form rather than a C-like surface syntax. Each line is commented because many readers will be new to the language and its toolchain.
+Here is what a contract looks like in x07. The canonical form on disk is `x07AST` JSON; this is the readable x07text projection (`x07 ast to-text`), which roundtrips back to the same JSON. The `:requires` clause is the contract: a named precondition the toolchain and reviewers can both point at.
 :::
 
-```jsonc
+```clojure
+; x07text
 {
-  "kind": "defn", // Define a pure x07 function.
-  "name": "app.core.normalize_path_v1", // Use a stable module-qualified symbol name.
-  "params": [
-    {"name": "path", "ty": "bytes_view"} // Accept a byte-view path input.
-  ],
-  "result": "bytes", // Return normalized bytes.
-  "requires": [
-    {
-      "id": "non_empty", // Name the contract clause for diagnostics and review.
-      "expr": [">", ["view.len", "path"], 0] // Require at least one byte of input.
-    }
-  ],
-  "body": ["app.core.trim_path_v1", "path"] // Delegate the actual work to a pure helper.
+  :kind module
+  :module_id app.core
+  :schema_version x07.x07ast@0.8.0
+  :imports ()
+  :decls ({:kind defn :name app.core.normalize_path_v1 :body (app.core.trim_path_v1 path) :params ({:name path :ty bytes_view}) :requires ({:expr (> (view.len path) 0) :id non_empty}) :result bytes}
+  )
 }
 ```
 
@@ -181,7 +171,7 @@ The most agent-friendly default is still the simplest one:
 * a deterministic functional core
 * an effectful shell around it
 
-The reason is not academic purity. The reason is that it makes failures easier to reproduce and fixes easier to validate.
+This is not about purity. It is that the split makes failures easy to reproduce and fixes easy to validate.
 
 Structured concurrency reinforces the same idea. In [Kotlin's structured concurrency model](https://kotlinlang.org/docs/coroutines-basics.html), child tasks are owned by a parent scope, the parent waits for them, and cancellation propagates predictably. That is easier to reason about than fire-and-forget async work, and the same logic matters even more for coding agents.
 
@@ -201,9 +191,7 @@ flowchart TD
     A <--> F
 ```
 
-This is not the only possible design.
-
-It is the best default because it keeps the part you most want to prove or replay as small and deterministic as possible.
+It is not the only workable design, but it is the best starting point: it keeps the part you most want to prove or replay as small and deterministic as you can make it.
 
 ## A practical rule of thumb
 
@@ -236,7 +224,7 @@ These commands target an x07 codebase. The comments explain what each tool check
 
 ```bash
 # Check that the repo still matches the declared architecture contract.
-x07 arch check --format json
+x07 arch check --json
 
 # Run the deterministic project test manifest and fail on behavioral drift.
 x07 test --all --manifest tests/tests.json
@@ -245,10 +233,6 @@ x07 test --all --manifest tests/tests.json
 x07 verify --bmc --entry app.core.normalize_path_v1
 ```
 
-That is the entire philosophy in miniature.
-
-Not "please be careful."
-
-Here is how the repo decides whether you are correct.
+Those three commands are the whole argument, compressed. None of them tells the agent to be careful. Each one is the repo deciding, on its own terms, whether the change is correct: the architecture still holds, the tests still pass, the contract still proves out. Correctness stops living in someone's head and starts living where the agent can read it.
 
 > **Series navigation:** Post 1 of 3 · [Next: How X07 Was Designed for 100% Agentic Coding](/blog/how-x07-was-designed-for-agentic-coding)

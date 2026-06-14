@@ -48,30 +48,24 @@ X07's canonical source form is [x07AST JSON](/docs/language/syntax-x07ast), not 
 That means structural edits can use RFC 6902 JSON Patch rather than whitespace-sensitive line diffs.
 
 :::note
-This example is based on the X07 language itself, using the canonical `x07AST` JSON form. The comments explain what each line means for readers who are new to X07.
+The canonical form on disk is `x07AST` JSON. Here it is shown as **x07text**, the lossless S-expression projection you get from `x07 ast to-text` — easier to read, and convertible back with `x07 ast from-text`.
 :::
 
-```jsonc
+```clojure
+; x07text
 {
-  "kind": "defn", // Define one pure X07 function.
-  "name": "app.core.normalize_path_v1", // Use a stable module-qualified symbol name.
-  "params": [
-    {"name": "path", "ty": "bytes_view"} // Accept a borrowed byte-view path input.
-  ],
-  "result": "bytes", // Return owned bytes after normalization.
-  "requires": [
-    {
-      "id": "non_empty", // Name the contract clause so diagnostics and review can reference it.
-      "expr": [">", ["view.len", "path"], 0] // Require the input path to contain at least one byte.
-    }
-  ],
-  "body": ["app.core.trim_path_v1", "path"] // Delegate the actual work to a pure helper.
+  :kind module
+  :module_id main
+  :schema_version x07.x07ast@0.8.0
+  :imports ()
+  :decls ({:kind defn :name main.normalize_path_v1 :body (main.trim_path_v1 path) :params ({:name path :ty bytes_view}) :requires ({:expr (> (view.len path) 0) :id non_empty}) :result bytes}
+  )
 }
 ```
 
-The point is not that JSON is prettier.
+Here a single pure function, `normalize_path_v1`, takes a borrowed byte view, returns owned bytes, and carries one named contract clause (`non_empty`) that the toolchain and reviewers can reference by name. The work delegates to a helper.
 
-The point is that machines edit trees more reliably than they edit prose.
+The point is not that one notation is prettier than another. It is that machines edit trees more reliably than they edit prose, and a contract attached to the tree travels with every patch.
 
 ### Structured diagnostics and repair
 
@@ -137,12 +131,12 @@ x07 test --manifest tests/tests.json
 The current public X07 stack also includes:
 
 - the [MCP kit](/docs/toolchain/mcp-kit) through `x07-mcp`
-- the [WASM and device pipeline](/docs/toolchain/wasm)
+- the [WASM backend](/docs/toolchain/wasm) for a portable sandboxed target
 - the package registry at [x07.io](https://x07.io)
 - [Genpack](/docs/genpack/) for schema- and grammar-constrained generation of valid x07AST
-- lifecycle and trust surfaces documented under the platform and trust tooling
+- lifecycle and trust surfaces documented under the trust tooling
 
-The goal is to keep the same "structured contracts first" story all the way out to packaging, deployment, and operations.
+The goal is to carry the same "structured contracts first" story out from the compiler into packaging and distribution, not abandon it the moment code leaves the editor.
 
 ## Performance
 
