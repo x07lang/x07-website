@@ -27,16 +27,18 @@ sys.stdout.buffer.write(reversed(data))
 # → TypeError: a bytes-like object is required, not 'reversed'`,
     rightLabel: 'X07',
     rightMeta: 'One canonical bytes operation',
-    rightCode: `{
-  "schema_version": "x07.x07ast@0.4.0", // Canonical x07AST schema.
-  "kind": "entry",
-  "module_id": "main",
-  "imports": ["std.bytes"],             // Import the bytes module.
-  "decls": [],
-  "solve": ["std.bytes.reverse", "input"] // Call the one reverse helper.
+    rightCode: `; x07text: the lossless, human-readable
+; projection of canonical x07AST.
+{
+  :kind entry
+  :module_id main
+  :schema_version x07.x07ast@0.8.0
+  :imports (std.bytes)             ; the bytes module
+  :decls ()
+  :solve (std.bytes.reverse input) ; the one reverse helper
 }`,
     footnote:
-      'The X07 side is the shipped 03_reverse example. The point is not that Python cannot reverse bytes, but that X07 leaves the agent with far less API guesswork.',
+      'The X07 side is the shipped 03_reverse example, shown in x07text (round-trips to canonical x07AST JSON via x07 ast from-text). The point is not that Python cannot reverse bytes, but that X07 leaves the agent with far less API guesswork.',
   },
   {
     title: 'When the first attempt is wrong, the repair surface matters',
