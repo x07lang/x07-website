@@ -1,1 +1,0 @@
-expected-lossy: CSV numeric typing may roundtrip as canonical decimal text.
